@@ -1,7 +1,10 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Objects.Internal
+using System.Data.Entity;
+
+
+namespace System.Data.Objects.Internal
 {
-    using System.Data.Entity.Core.Objects.DataClasses;
+    using System.Data.Objects.DataClasses;
 
     /// <summary>
     /// Implementation of the change tracking strategy for entities that require snapshot change tracking.

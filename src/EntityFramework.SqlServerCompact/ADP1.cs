@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
 namespace System.Data.Entity.SqlServerCompact
 {
-    using System.Data.Entity.Core;
+    using System.Data;
     using System.Data.Entity.SqlServerCompact.Resources;
     using System.Globalization;
 

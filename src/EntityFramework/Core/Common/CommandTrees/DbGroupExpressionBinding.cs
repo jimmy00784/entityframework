@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Common.CommandTrees
+namespace System.Data.Common.CommandTrees
 {
-    using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common.CommandTrees.ExpressionBuilder;
+    using System.Data.Metadata.Edm;
 
     /// <summary>
     /// Defines the binding for the input set to a <see cref="DbGroupByExpression"/>.

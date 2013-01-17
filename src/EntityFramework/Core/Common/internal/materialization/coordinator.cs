@@ -1,5 +1,5 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Common.Internal.Materialization
+namespace System.Data.Common.Internal.Materialization
 {
     /// <summary>
     /// A coordinator is responsible for tracking state and processing result in a root or nested query

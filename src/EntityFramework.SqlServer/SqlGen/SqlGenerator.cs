@@ -2,10 +2,10 @@
 namespace System.Data.Entity.SqlServer.SqlGen
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common;
-    using System.Data.Entity.Core.Common.CommandTrees;
-    using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common;
+    using System.Data.Common.CommandTrees;
+    using System.Data.Common.CommandTrees.ExpressionBuilder.Spatial;
+    using System.Data.Metadata.Edm;
     using System.Data.Entity.Spatial;
     using System.Data.Entity.SqlServer.Resources;
     using System.Data.Entity.SqlServer.Utilities;

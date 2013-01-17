@@ -1,5 +1,5 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Common.CommandTrees.Internal
+namespace System.Data.Common.CommandTrees.Internal
 {
     /// <summary>
     /// Enacapsulates the logic that defines an expression 'rule' which is capable of transforming a candidate <see cref="DbExpression"/>

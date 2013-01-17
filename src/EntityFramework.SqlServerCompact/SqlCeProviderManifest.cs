@@ -2,8 +2,8 @@
 namespace System.Data.Entity.SqlServerCompact
 {
     using System.Collections.ObjectModel;
-    using System.Data.Entity.Core.Common;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common;
+    using System.Data.Metadata.Edm;
     using System.Data.Entity.SqlServerCompact.Resources;
     using System.Data.Entity.SqlServerCompact.SqlGen;
     using System.Diagnostics;

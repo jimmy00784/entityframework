@@ -1,14 +1,14 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Metadata.Edm
+namespace System.Data.Metadata.Edm
 {
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
-    using System.Data.Entity.Core.Common;
-    using System.Data.Entity.Core.Common.CommandTrees;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.EntityModel.SchemaObjectModel;
-    using System.Data.Entity.Core.Mapping.ViewGeneration.Utils;
-    using System.Data.Entity.Core.Objects.ELinq;
+    using System.Data.Common;
+    using System.Data.Common.CommandTrees;
+    using System.Data.Common.Utils;
+    using System.Data.EntityModel.SchemaObjectModel;
+    using System.Data.Mapping.ViewGeneration.Utils;
+    using System.Data.Objects.ELinq;
     using System.Data.Entity.Resources;
     using System.Diagnostics;
     using System.Diagnostics.Contracts;
@@ -67,7 +67,7 @@ namespace System.Data.Entity.Core.Metadata.Edm
         /// <param name="paths">paths where the CDM schemas are loaded</param>
         /// <exception cref="ArgumentException"> Thrown if path name is not valid</exception>
         /// <exception cref="System.ArgumentNullException">thrown if paths argument is null</exception>
-        /// <exception cref="System.Data.Entity.Core.MetadataException">For errors related to invalid schemas.</exception>
+        /// <exception cref="System.Data.MetadataException">For errors related to invalid schemas.</exception>
         [ResourceExposure(ResourceScope.Machine)] //Exposes the file path names which are a Machine resource
         [ResourceConsumption(ResourceScope.Machine)]
         //For MetadataArtifactLoader.CreateCompositeFromFilePaths method call but we do not create the file paths in this method 

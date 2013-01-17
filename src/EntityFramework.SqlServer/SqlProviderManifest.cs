@@ -3,9 +3,9 @@ namespace System.Data.Entity.SqlServer
 {
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
-    using System.Data.Entity.Core;
-    using System.Data.Entity.Core.Common;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data;
+    using System.Data.Common;
+    using System.Data.Metadata.Edm;
     using System.Data.Entity.SqlServer.Resources;
     using System.Data.Entity.SqlServer.Utilities;
     using System.Diagnostics;

@@ -2,8 +2,8 @@
 namespace System.Data.Entity.Internal.Linq
 {
     using System.Collections;
-    using System.Data.Entity.Core.Objects;
-    using System.Data.Entity.Core.Objects.ELinq;
+    using System.Data.Objects;
+    using System.Data.Objects.ELinq;
     using System.Data.Entity.Infrastructure;
     using System.Linq.Expressions;
 

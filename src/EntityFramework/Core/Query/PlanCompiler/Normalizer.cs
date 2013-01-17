@@ -1,9 +1,9 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Query.PlanCompiler
+namespace System.Data.Query.PlanCompiler
 {
-    using System.Data.Entity.Core.Common;
-    using System.Data.Entity.Core.Metadata.Edm;
-    using System.Data.Entity.Core.Query.InternalTrees;
+    using System.Data.Common;
+    using System.Data.Metadata.Edm;
+    using System.Data.Query.InternalTrees;
     using System.Diagnostics.CodeAnalysis;
 
     /// <summary>
@@ -87,7 +87,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <param name="collectionNode">the scalarop collection node</param>
         /// <returns>the unnest node</returns>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private Node BuildUnnest(Node collectionNode)
         {
             PlanCompiler.Assert(collectionNode.Op.IsScalarOp, "non-scalar usage of Un-nest?");
@@ -108,7 +108,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <param name="n">current function subtree</param>
         /// <returns>the new expression that corresponds to the TVF</returns>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private Node VisitCollectionFunction(FunctionOp op, Node n)
         {
             PlanCompiler.Assert(TypeSemantics.IsCollectionType(op.Type), "non-TVF function?");
@@ -200,7 +200,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <returns></returns>
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "functionOp")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         public override Node Visit(FunctionOp op, Node n)
         {
             VisitScalarOpDefault(op, n);

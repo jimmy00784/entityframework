@@ -1,15 +1,15 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-using md = System.Data.Entity.Core.Metadata.Edm;
+using md = System.Data.Metadata.Edm;
 
 //using System.Diagnostics; // Please use PlanCompiler.Assert instead of Debug.Assert in this class...
 
-namespace System.Data.Entity.Core.Query.PlanCompiler
+namespace System.Data.Query.PlanCompiler
 {
     using System.Collections;
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Query.InternalTrees;
+    using System.Data.Common;
+    using System.Data.Common.Utils;
+    using System.Data.Query.InternalTrees;
     using System.Diagnostics.CodeAnalysis;
 
     internal class ColumnMapProcessor
@@ -43,7 +43,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
 
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "Vars")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         internal ColumnMapProcessor(VarRefColumnMap columnMap, VarInfo varInfo, StructuredTypeInfo typeInfo)
         {
             m_columnMap = columnMap;
@@ -71,7 +71,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
 
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "GetNextVar")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private Var GetNextVar()
         {
             if (m_varList.MoveNext())
@@ -184,7 +184,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "keyColumnMap")]
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "EntityType")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private EntityColumnMap CreateEntityColumnMap(
             TypeInfo typeInfo, string name, EntityColumnMap superTypeColumnMap,
             Dictionary<object, TypedColumnMap> discriminatorMap, List<TypedColumnMap> allMaps, bool handleRelProperties)
@@ -347,7 +347,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <param name="name">column name</param>
         /// <returns></returns>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private SimplePolymorphicColumnMap CreatePolymorphicColumnMap(TypeInfo typeInfo, string name)
         {
             // if the typeInfo has a DiscriminatorMap, use TrailingSpaceComparer to ensure that lookups
@@ -411,7 +411,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <returns></returns>
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "RowType")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private RecordColumnMap CreateRecordColumnMap(TypeInfo typeInfo, string name)
         {
             PlanCompiler.Assert(typeInfo.Type.EdmType is md.RowType, "not RowType");
@@ -545,7 +545,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <returns></returns>
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "entitySet")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private EntityIdentity CreateEntityIdentity(
             md.EntityType entityType,
             SimpleColumnMap entitySetIdColumnMap,

@@ -3,7 +3,7 @@ namespace System.Data.Entity.Internal
 {
     using System.Collections.Generic;
     using System.Data.Common;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Metadata.Edm;
     using System.Data.Entity.Infrastructure;
     using System.Diagnostics.Contracts;
     using System.Reflection;

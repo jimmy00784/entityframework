@@ -1,13 +1,13 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-using md = System.Data.Entity.Core.Metadata.Edm;
+using md = System.Data.Metadata.Edm;
 
-namespace System.Data.Entity.Core.Query.PlanCompiler
+namespace System.Data.Query.PlanCompiler
 {
     using System.Collections;
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Query.InternalTrees;
+    using System.Data.Common;
+    using System.Data.Common.Utils;
+    using System.Data.Query.InternalTrees;
     using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
 
@@ -139,7 +139,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <param name="relPropertyHelper">helper for rel properties</param>
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "itree")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private void Process(
             Command itree,
             HashSet<md.TypeUsage> referencedTypes,
@@ -205,7 +205,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <param name="e">the entityset</param>
         /// <returns>entitysetid value</returns>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         internal int GetEntitySetId(md.EntitySet e)
         {
             var result = 0;
@@ -236,7 +236,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <returns>the typeinfo for the type (null if we couldn't find one)</returns>
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "typeInfo")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         internal TypeInfo GetTypeInfo(md.TypeUsage type)
         {
             if (!TypeUtils.IsStructuredType(type))
@@ -483,7 +483,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <param name="discriminatorMap">type discriminator map</param>
         /// <returns>The TypeInfo for this type</returns>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private TypeInfo CreateTypeInfoForStructuredType(md.TypeUsage type, ExplicitDiscriminatorMap discriminatorMap)
         {
             TypeInfo typeInfo;
@@ -930,7 +930,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// </summary>
         /// <param name="type"></param>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private void CreateFlattenedRecordType(RootTypeInfo type)
         {
             //
@@ -1057,7 +1057,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <returns>the datatype of the property</returns>
         [SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private md.TypeUsage GetPropertyType(RootTypeInfo typeInfo, PropertyRef p)
         {
             md.TypeUsage result = null;

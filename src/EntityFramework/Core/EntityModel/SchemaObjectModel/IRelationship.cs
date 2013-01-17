@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.EntityModel.SchemaObjectModel
+namespace System.Data.EntityModel.SchemaObjectModel
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Objects.DataClasses;
+    using System.Data.Objects.DataClasses;
 
     /// <summary>
     /// Abstracts the properties of a relationship element

@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Query.PlanCompiler
+namespace System.Data.Query.PlanCompiler
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Query.InternalTrees;
+    using System.Data.Query.InternalTrees;
     using System.Diagnostics.CodeAnalysis;
 
     /// <summary>
@@ -133,15 +133,15 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         ///   There are several cases to consider here. 
         ///     
         ///   Case 0:
-        ///     Let’s assume that K1 is the set of keys ({k1, k2, ..., kn}) for the 
-        ///     first input, and K2 ({l1, l2, …}) is the set of keys for the second
+        ///     Letï¿½s assume that K1 is the set of keys ({k1, k2, ..., kn}) for the 
+        ///     first input, and K2 ({l1, l2, ï¿½}) is the set of keys for the second
         ///     input.
         /// 
         ///     The best case is when both K1 and K2 have the same cardinality (hopefully
         ///     greater than 0), and the keys are in the same locations (ie) the corresponding
         ///     positions in the select-list.  Even in this case, its not enough to take
-        ///     the keys, and treat them as the keys of the union-all. What we’ll need to 
-        ///     do is to add a “branch” discriminator constant for each branch of the 
+        ///     the keys, and treat them as the keys of the union-all. What weï¿½ll need to 
+        ///     do is to add a ï¿½branchï¿½ discriminator constant for each branch of the 
         ///     union-all, and use this as the prefix for the keys. 
         /// 
         ///     For example, if I had:
@@ -151,7 +151,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         ///         Select d1, d2, d3... from ...
         /// 
         ///     And for the sake of argument, lets say that {c2} and {d2} are the keys of 
-        ///     each of the branches. What you’ll need to do is to translate this into
+        ///     each of the branches. What youï¿½ll need to do is to translate this into
         ///     
         ///         Select 0 as bd, c1, c2, c3... from ...
         ///         Union all
@@ -160,14 +160,14 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         ///     And then treat {bd, c2/d2} as the key of the union-all 
         ///
         ///   Case 1:  (actually, a subcase of Case 0):
-        ///     Now, if the keys don’t align, then we can simply take the union of the 
+        ///     Now, if the keys donï¿½t align, then we can simply take the union of the 
         ///     corresponding positions, and make them all the keys (we would still need 
         ///     the branch discriminator)
         ///
         ///   Case 2:
-        ///     Finally, if you need to “pull” up keys from either of the branches, it is 
+        ///     Finally, if you need to ï¿½pullï¿½ up keys from either of the branches, it is 
         ///     possible that the branches get out of whack.  We will then need to push up 
-        ///     the keys (with nulls if the other branch doesn’t have the corresponding key) 
+        ///     the keys (with nulls if the other branch doesnï¿½t have the corresponding key) 
         ///     into the union-all. (We still need the branch discriminator).
         ///     
         /// Now, unfortunately, whenever we've got polymorphic entity types, we'll end up
@@ -194,7 +194,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <param name="op">the UnionAllOp</param>
         /// <param name="n">current subtree</param>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         public override void Visit(UnionAllOp op, Node n)
         {
 #if DEBUG

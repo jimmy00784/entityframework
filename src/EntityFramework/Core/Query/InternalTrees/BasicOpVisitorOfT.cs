@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Query.InternalTrees
+namespace System.Data.Query.InternalTrees
 {
-    using System.Data.Entity.Core.Query.PlanCompiler;
+    using System.Data.Query.PlanCompiler;
     using System.Diagnostics.CodeAnalysis;
 
     /// <summary>
@@ -65,7 +65,7 @@ namespace System.Data.Entity.Core.Query.InternalTrees
         /// </summary>
         /// <param name="n"></param>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         internal virtual TResultType Unimplemented(Node n)
         {
             PlanCompiler.Assert(false, "Not implemented op type");

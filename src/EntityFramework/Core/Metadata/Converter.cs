@@ -1,11 +1,11 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-using Som = System.Data.Entity.Core.EntityModel.SchemaObjectModel;
+using Som = System.Data.EntityModel.SchemaObjectModel;
 
-namespace System.Data.Entity.Core.Metadata.Edm
+namespace System.Data.Metadata.Edm
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common;
-    using System.Data.Entity.Core.Objects.DataClasses;
+    using System.Data.Common;
+    using System.Data.Objects.DataClasses;
     using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;
     using System.Globalization;

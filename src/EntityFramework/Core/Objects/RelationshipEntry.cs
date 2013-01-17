@@ -1,12 +1,15 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Objects
+using System.Data.Entity;
+
+
+namespace System.Data.Objects
 {
     using System.Collections;
     using System.Collections.Generic;
     using System.Data.Common;
-    using System.Data.Entity.Core.Common;
-    using System.Data.Entity.Core.Metadata.Edm;
-    using System.Data.Entity.Core.Objects.DataClasses;
+    using System.Data.Common;
+    using System.Data.Metadata.Edm;
+    using System.Data.Objects.DataClasses;
     using System.Data.Entity.Resources;
     using System.Diagnostics;
 

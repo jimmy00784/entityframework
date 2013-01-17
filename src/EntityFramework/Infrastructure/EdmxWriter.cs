@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
 namespace System.Data.Entity.Infrastructure
 {
-    using System.Data.Entity.Core.Objects;
+    using System.Data.Objects;
     using System.Data.Entity.Internal;
     using System.Data.Entity.ModelConfiguration.Edm.Db;
     using System.Data.Entity.ModelConfiguration.Edm.Serialization;

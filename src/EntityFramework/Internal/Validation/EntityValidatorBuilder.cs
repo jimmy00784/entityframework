@@ -3,7 +3,7 @@ namespace System.Data.Entity.Internal.Validation
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Metadata.Edm;
     using System.Data.Entity.Edm.Parsing.Xml.Internal.Csdl;
     using System.Data.Entity.Edm.Parsing.Xml.Internal.Ssdl;
     using System.Data.Entity.ModelConfiguration.Utilities;

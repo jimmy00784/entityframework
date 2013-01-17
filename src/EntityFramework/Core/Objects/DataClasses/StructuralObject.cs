@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Objects.DataClasses
+namespace System.Data.Objects.DataClasses
 {
     using System.ComponentModel;
-    using System.Data.Entity.Core.Common.Utils;
+    using System.Data.Common.Utils;
     using System.Data.Entity.Resources;
     using System.Data.Entity.Spatial;
     using System.Diagnostics.CodeAnalysis;

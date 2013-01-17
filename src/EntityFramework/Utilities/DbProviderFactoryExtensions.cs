@@ -3,9 +3,9 @@ namespace System.Data.Entity.Utilities
 {
     using System.Data.Common;
     using System.Data.Entity.Config;
-    using System.Data.Entity.Core.Common;
-    using System.Data.Entity.Core.EntityClient;
-    using System.Data.Entity.Core.EntityClient.Internal;
+    using System.Data.Common;
+    using System.Data.EntityClient;
+    using System.Data.EntityClient.Internal;
     using System.Data.Entity.Resources;
     using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;

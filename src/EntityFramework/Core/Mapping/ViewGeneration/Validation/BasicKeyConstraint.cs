@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Mapping.ViewGeneration.Validation
+namespace System.Data.Mapping.ViewGeneration.Validation
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Mapping.ViewGeneration.Structures;
+    using System.Data.Mapping.ViewGeneration.Structures;
     using BasicSchemaConstraints = SchemaConstraints<BasicKeyConstraint>;
 
     // Class representing a key constraint on the basic cell relations

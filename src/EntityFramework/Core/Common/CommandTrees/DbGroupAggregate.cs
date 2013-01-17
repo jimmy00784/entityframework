@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Common.CommandTrees
+namespace System.Data.Common.CommandTrees
 {
-    using System.Data.Entity.Core.Common.CommandTrees.Internal;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common.CommandTrees.Internal;
+    using System.Data.Metadata.Edm;
 
     /// <summary>
     /// The aggregate type that corresponds to exposing the collection of elements that comprise a group

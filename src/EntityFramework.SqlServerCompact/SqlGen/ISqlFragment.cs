@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
 namespace System.Data.Entity.SqlServerCompact.SqlGen
 {
-    using System.Data.Entity.Core.Common.CommandTrees;
+    using System.Data.Common.CommandTrees;
 
     /// <summary>
     /// Represents the sql fragment for any node in the query tree.

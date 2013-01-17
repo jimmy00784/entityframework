@@ -1,12 +1,12 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Mapping.ViewGeneration.Structures
+namespace System.Data.Mapping.ViewGeneration.Structures
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.CommandTrees;
-    using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Mapping.ViewGeneration.CqlGeneration;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common.CommandTrees;
+    using System.Data.Common.CommandTrees.ExpressionBuilder;
+    using System.Data.Common.Utils;
+    using System.Data.Mapping.ViewGeneration.CqlGeneration;
+    using System.Data.Metadata.Edm;
     using System.Diagnostics;
     using System.Linq;
     using System.Text;

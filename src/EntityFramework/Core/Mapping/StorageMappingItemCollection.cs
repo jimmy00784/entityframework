@@ -1,17 +1,17 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-using som = System.Data.Entity.Core.EntityModel.SchemaObjectModel;
+using som = System.Data.EntityModel.SchemaObjectModel;
 
-namespace System.Data.Entity.Core.Mapping
+namespace System.Data.Mapping
 {
     using System.Collections.Concurrent;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
-    using System.Data.Entity.Core.Common.CommandTrees;
-    using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Mapping.Update.Internal;
-    using System.Data.Entity.Core.Mapping.ViewGeneration;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common.CommandTrees;
+    using System.Data.Common.CommandTrees.ExpressionBuilder;
+    using System.Data.Common.Utils;
+    using System.Data.Mapping.Update.Internal;
+    using System.Data.Mapping.ViewGeneration;
+    using System.Data.Metadata.Edm;
     using System.Data.Entity.Resources;
     using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;
@@ -22,7 +22,7 @@ namespace System.Data.Entity.Core.Mapping
     using System.Runtime.Versioning;
     using System.Xml;
     using OfTypeQVCacheKey =
-        System.Data.Entity.Core.Common.Utils.Pair<Metadata.Edm.EntitySetBase, Common.Utils.Pair<Metadata.Edm.EntityTypeBase, bool>>;
+        System.Data.Common.Utils.Pair<Metadata.Edm.EntitySetBase, Common.Utils.Pair<Metadata.Edm.EntityTypeBase, bool>>;
 
     [SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling")]
     [CLSCompliant(false)]
@@ -396,7 +396,7 @@ namespace System.Data.Entity.Core.Mapping
                     {
                         var viewGenAttributes =
                             assembly.GetCustomAttributes(
-                                typeof(System.Data.Entity.Core.Mapping.EntityViewGenerationAttribute), false /*inherit*/);
+                                typeof(System.Data.Mapping.EntityViewGenerationAttribute), false /*inherit*/);
                         if ((viewGenAttributes != null)
                             && (viewGenAttributes.Length != 0))
                         {

@@ -1,5 +1,5 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Common.EntitySql
+namespace System.Data.Common.EntitySql
 {
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!                                                                            !!
@@ -11,7 +11,7 @@ namespace System.Data.Entity.Core.Common.EntitySql
 !!         ATTENTION ATTENTION ATTENTION ATTENTION ATTENTION ATTENTION        !!
 !!                                                                            !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-    using System.Data.Entity.Core.Common.EntitySql.AST;
+    using System.Data.Common.EntitySql.AST;
     using System.Data.Entity.Resources;
     using System.IO;
 

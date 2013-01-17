@@ -1,12 +1,12 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Query.InternalTrees
+namespace System.Data.Query.InternalTrees
 {
     using System.Collections.Generic;
     using System.Data.Common;
-    using System.Data.Entity.Core.Common;
-    using System.Data.Entity.Core.Mapping;
-    using System.Data.Entity.Core.Metadata.Edm;
-    using System.Data.Entity.Core.Objects.ELinq;
+    using System.Data.Common;
+    using System.Data.Mapping;
+    using System.Data.Metadata.Edm;
+    using System.Data.Objects.ELinq;
     using System.Data.Entity.Resources;
     using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;
@@ -134,7 +134,7 @@ namespace System.Data.Entity.Core.Query.InternalTrees
         /// </summary>
         [SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         internal static CollectionColumnMap CreateColumnMapFromReaderAndClrType(DbDataReader reader, Type type, MetadataWorkspace workspace)
         {
             Debug.Assert(null != reader);

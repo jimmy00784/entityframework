@@ -1,8 +1,11 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.EntityClient.Internal
+using System.Data.Entity;
+
+
+namespace System.Data.EntityClient.Internal
 {
     using System.Data.Common;
-    using System.Data.Entity.Core.Mapping.Update.Internal;
+    using System.Data.Mapping.Update.Internal;
     using System.Data.Entity.Resources;
     using System.Diagnostics;
     using System.Threading;

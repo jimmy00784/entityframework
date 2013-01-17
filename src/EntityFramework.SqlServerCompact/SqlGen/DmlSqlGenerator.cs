@@ -3,8 +3,8 @@ namespace System.Data.Entity.SqlServerCompact.SqlGen
 {
     using System.Collections.Generic;
     using System.Data.Common;
-    using System.Data.Entity.Core.Common.CommandTrees;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common.CommandTrees;
+    using System.Data.Metadata.Edm;
     using System.Data.Entity.SqlServerCompact.Resources;
     using System.Diagnostics;
     using System.Text;

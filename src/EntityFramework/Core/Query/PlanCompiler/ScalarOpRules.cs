@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Query.PlanCompiler
+namespace System.Data.Query.PlanCompiler
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Query.InternalTrees;
+    using System.Data.Query.InternalTrees;
     using System.Diagnostics.CodeAnalysis;
 
     /// <summary>
@@ -102,7 +102,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <param name="newNode">the new subtree</param>
         /// <returns>true, if there was a transformation</returns>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private static bool ProcessSimplifyCase_EliminateWhenClauses(
             RuleProcessingContext context, CaseOp caseOp, Node caseOpNode, out Node newNode)
         {
@@ -213,7 +213,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         ///     WHEN W1 THEN T1 
         ///     WHEN W2 THEN T2 ... 
         ///     ELSE (CASE 
-        ///             WHEN WN1 THEN TN1, … 
+        ///             WHEN WN1 THEN TN1, ï¿½ 
         ///             ELSE E) 
         ///             
         /// Is transformed into 
@@ -272,7 +272,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <param name="newNode">possibly modified subtree</param>
         /// <returns>true, if transformation was successful</returns>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private static bool ProcessComparisonsOverConstant(RuleProcessingContext context, Node node, out Node newNode)
         {
             newNode = node;
@@ -416,7 +416,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "OpType")]
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "constantPredicateOp")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private static bool ProcessLogOpOverConstant(
             RuleProcessingContext context, Node node,
             Node constantPredicateNode, Node otherNode,

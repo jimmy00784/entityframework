@@ -1,5 +1,5 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Objects.Internal
+namespace System.Data.Objects.Internal
 {
     /// <summary>
     /// Implementor of IEntityKeyStrategy for getting and setting a key on an entity that does not

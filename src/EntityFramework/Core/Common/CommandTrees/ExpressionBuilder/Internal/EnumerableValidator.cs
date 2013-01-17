@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Internal
+namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.Utils;
+    using System.Data.Common.Utils;
     using System.Data.Entity.Resources;
     using System.Diagnostics;
     using System.Diagnostics.Contracts;

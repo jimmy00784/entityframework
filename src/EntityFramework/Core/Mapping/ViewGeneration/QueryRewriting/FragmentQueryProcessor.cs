@@ -1,14 +1,14 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Mapping.ViewGeneration.QueryRewriting
+namespace System.Data.Mapping.ViewGeneration.QueryRewriting
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Common.Utils.Boolean;
-    using System.Data.Entity.Core.Mapping.ViewGeneration.Structures;
+    using System.Data.Common.Utils;
+    using System.Data.Common.Utils.Boolean;
+    using System.Data.Mapping.ViewGeneration.Structures;
     using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
     using System.Linq;
-    using BoolDomainConstraint = System.Data.Entity.Core.Common.Utils.Boolean.DomainConstraint<Structures.BoolLiteral, Structures.Constant>;
+    using BoolDomainConstraint = System.Data.Common.Utils.Boolean.DomainConstraint<Structures.BoolLiteral, Structures.Constant>;
 
     internal class FragmentQueryProcessor : TileQueryProcessor<FragmentQuery>
     {

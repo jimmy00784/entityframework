@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
 namespace System.Data.Entity.Utilities
 {
-    using System.Data.Entity.Core.Common;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common;
+    using System.Data.Metadata.Edm;
     using System.Diagnostics.Contracts;
 
     internal static class DbProviderManifestExtensions

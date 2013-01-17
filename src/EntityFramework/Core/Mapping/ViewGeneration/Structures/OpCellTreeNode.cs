@@ -1,17 +1,17 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Mapping.ViewGeneration.Structures
+namespace System.Data.Mapping.ViewGeneration.Structures
 {
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Mapping.ViewGeneration.CqlGeneration;
-    using System.Data.Entity.Core.Mapping.ViewGeneration.QueryRewriting;
-    using System.Data.Entity.Core.Mapping.ViewGeneration.Utils;
+    using System.Data.Common.Utils;
+    using System.Data.Mapping.ViewGeneration.CqlGeneration;
+    using System.Data.Mapping.ViewGeneration.QueryRewriting;
+    using System.Data.Mapping.ViewGeneration.Utils;
     using System.Data.Entity.Resources;
     using System.Diagnostics;
     using System.Linq;
     using System.Text;
-    using AttributeSet = System.Data.Entity.Core.Common.Utils.Set<MemberPath>;
+    using AttributeSet = System.Data.Common.Utils.Set<MemberPath>;
 
     // This class represents th intermediate nodes in the tree (non-leaf nodes)
     internal class OpCellTreeNode : CellTreeNode

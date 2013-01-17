@@ -1,18 +1,18 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Mapping.ViewGeneration
+namespace System.Data.Mapping.ViewGeneration
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Mapping.ViewGeneration.Structures;
-    using System.Data.Entity.Core.Mapping.ViewGeneration.Utils;
-    using System.Data.Entity.Core.Mapping.ViewGeneration.Validation;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common.Utils;
+    using System.Data.Mapping.ViewGeneration.Structures;
+    using System.Data.Mapping.ViewGeneration.Utils;
+    using System.Data.Mapping.ViewGeneration.Validation;
+    using System.Data.Metadata.Edm;
     using System.Data.Entity.Resources;
     using System.Diagnostics;
     using System.Diagnostics.Contracts;
     using System.Linq;
     using System.Text;
-    using CellGroup = System.Data.Entity.Core.Common.Utils.Set<Structures.Cell>;
+    using CellGroup = System.Data.Common.Utils.Set<Structures.Cell>;
 
     internal abstract class ViewgenGatekeeper : InternalBase
     {

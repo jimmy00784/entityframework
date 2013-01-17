@@ -1,14 +1,14 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Objects.Internal
+namespace System.Data.Objects.Internal
 {
     using System.Collections.Generic;
     using System.Data.Common;
-    using System.Data.Entity.Core.Common;
-    using System.Data.Entity.Core.Common.Internal.Materialization;
-    using System.Data.Entity.Core.EntityClient;
-    using System.Data.Entity.Core.EntityClient.Internal;
-    using System.Data.Entity.Core.Metadata.Edm;
-    using System.Data.Entity.Core.Objects.ELinq;
+    using System.Data.Common;
+    using System.Data.Common.Internal.Materialization;
+    using System.Data.EntityClient;
+    using System.Data.EntityClient.Internal;
+    using System.Data.Metadata.Edm;
+    using System.Data.Objects.ELinq;
     using System.Diagnostics.CodeAnalysis;
     using System.Threading;
     using System.Threading.Tasks;

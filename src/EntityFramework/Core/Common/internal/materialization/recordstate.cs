@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Common.Internal.Materialization
+namespace System.Data.Common.Internal.Materialization
 {
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Metadata.Edm;
     using System.Text;
 
     /// <summary>

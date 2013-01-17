@@ -1,11 +1,11 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
 using NodeColor = System.Byte;
 
-namespace System.Data.Entity.Core.Mapping.Update.Internal
+namespace System.Data.Mapping.Update.Internal
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Objects;
+    using System.Data.Common.Utils;
+    using System.Data.Objects;
     using System.Data.Entity.Resources;
     using System.Diagnostics;
     using System.Linq;

@@ -1,5 +1,5 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Query.InternalTrees
+namespace System.Data.Query.InternalTrees
 {
     /// <summary>
     /// A SimpleRule is a rule that specifies a specific OpType to look for, and an

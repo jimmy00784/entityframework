@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Common.EntitySql
+namespace System.Data.Common.EntitySql
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.EntitySql.AST;
+    using System.Data.Common.EntitySql.AST;
     using System.Data.Entity.Resources;
     using System.Diagnostics.Contracts;
     using System.Globalization;
@@ -40,7 +40,7 @@ namespace System.Data.Entity.Core.Common.EntitySql
         /// Main entry point for parsing cql.
         /// </summary>
         /// <param name="query">query text</param>
-        /// <exception cref="System.Data.Entity.Core.EntityException">Thrown when Syntatic rules are violated and the query cannot be accepted</exception>
+        /// <exception cref="System.Data.EntityException">Thrown when Syntatic rules are violated and the query cannot be accepted</exception>
         /// <returns>Abstract Syntax Tree</returns>
         internal Node Parse(string query)
         {

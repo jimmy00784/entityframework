@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-using CqtExpression = System.Data.Entity.Core.Common.CommandTrees.DbExpression;
+using CqtExpression = System.Data.Common.CommandTrees.DbExpression;
 using LinqExpression = System.Linq.Expressions.Expression;
 
-namespace System.Data.Entity.Core.Objects.ELinq
+namespace System.Data.Objects.ELinq
 {
     using System.Collections.Generic;
     using System.Linq;

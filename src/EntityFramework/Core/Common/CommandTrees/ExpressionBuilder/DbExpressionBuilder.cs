@@ -1,12 +1,12 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder
+namespace System.Data.Common.CommandTrees.ExpressionBuilder
 {
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
-    using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Internal;
-    using System.Data.Entity.Core.Common.CommandTrees.Internal;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common.CommandTrees.ExpressionBuilder.Internal;
+    using System.Data.Common.CommandTrees.Internal;
+    using System.Data.Common.Utils;
+    using System.Data.Metadata.Edm;
     using System.Data.Entity.Resources;
     using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;

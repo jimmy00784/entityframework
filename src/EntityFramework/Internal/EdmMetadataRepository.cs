@@ -2,7 +2,7 @@
 namespace System.Data.Entity.Internal
 {
     using System.Data.Common;
-    using System.Data.Entity.Core;
+    using System.Data;
     using System.Linq;
 
     internal class EdmMetadataRepository : RepositoryBase

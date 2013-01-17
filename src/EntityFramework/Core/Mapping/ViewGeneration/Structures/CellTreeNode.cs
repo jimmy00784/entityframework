@@ -1,10 +1,10 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Mapping.ViewGeneration.Structures
+namespace System.Data.Mapping.ViewGeneration.Structures
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Mapping.ViewGeneration.CqlGeneration;
-    using System.Data.Entity.Core.Mapping.ViewGeneration.QueryRewriting;
+    using System.Data.Common.Utils;
+    using System.Data.Mapping.ViewGeneration.CqlGeneration;
+    using System.Data.Mapping.ViewGeneration.QueryRewriting;
     using System.Linq;
     using System.Text;
 

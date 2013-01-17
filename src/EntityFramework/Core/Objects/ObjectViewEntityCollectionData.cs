@@ -1,9 +1,9 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Objects
+namespace System.Data.Objects
 {
     using System.Collections.Generic;
     using System.ComponentModel;
-    using System.Data.Entity.Core.Objects.DataClasses;
+    using System.Data.Objects.DataClasses;
 
     /// <summary>
     /// Manages a binding list constructed from an EntityCollection.

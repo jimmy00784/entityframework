@@ -1,13 +1,13 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Objects.ELinq
+namespace System.Data.Objects.ELinq
 {
     using System.Collections;
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common;
-    using System.Data.Entity.Core.Common.CommandTrees;
-    using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
-    using System.Data.Entity.Core.Metadata.Edm;
-    using System.Data.Entity.Core.Objects.DataClasses;
+    using System.Data.Common;
+    using System.Data.Common.CommandTrees;
+    using System.Data.Common.CommandTrees.ExpressionBuilder;
+    using System.Data.Metadata.Edm;
+    using System.Data.Objects.DataClasses;
     using System.Data.Entity.Resources;
     using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;
@@ -219,7 +219,7 @@ namespace System.Data.Entity.Core.Objects.ELinq
             private static readonly object _vbInitializerLock = new object();
 
             [SuppressMessage("Microsoft.Performance", "CA1810:InitializeReferenceTypeStaticFieldsInline", Scope = "member",
-                Target = "System.Data.Entity.Core.Objects.ELinq.ExpressionConverter+MemberAccessTranslator.#.cctor()")]
+                Target = "System.Data.Objects.ELinq.ExpressionConverter+MemberAccessTranslator.#.cctor()")]
             static MemberAccessTranslator()
             {
                 // initialize translators for specific properties

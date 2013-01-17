@@ -2,12 +2,12 @@
 #pragma warning disable 414
 
 //#####################################################################
-// namespace: System.Data.Entity.Core.Common.EntitySql
+// namespace: System.Data.Common.EntitySql
 //#####################################################################
 
-namespace System.Data.Entity.Core.Common.EntitySql
+namespace System.Data.Common.EntitySql
 {
-    using System.Data.Entity.Core.Common.EntitySql.AST;
+    using System.Data.Common.EntitySql.AST;
     using System.Data.Entity.Resources;
     using System.Diagnostics;
 

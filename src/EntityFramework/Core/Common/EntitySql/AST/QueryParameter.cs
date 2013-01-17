@@ -1,5 +1,5 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Common.EntitySql.AST
+namespace System.Data.Common.EntitySql.AST
 {
     using System.Data.Entity.Resources;
 
@@ -14,7 +14,7 @@ namespace System.Data.Entity.Core.Common.EntitySql.AST
         /// Initializes parameter
         /// </summary>
         /// <remarks>
-        /// <exception cref="System.Data.Entity.Core.EntityException">Thrown if the parameter name does not conform to the expected format</exception>
+        /// <exception cref="System.Data.EntityException">Thrown if the parameter name does not conform to the expected format</exception>
         /// </remarks>
         internal QueryParameter(string parameterName, string query, int inputPos)
             : base(query, inputPos)

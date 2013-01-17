@@ -2,7 +2,7 @@
 namespace System.Data.Entity.SqlServerCompact.SqlGen
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Metadata.Edm;
 
     internal static class Helper
     {

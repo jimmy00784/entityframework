@@ -1,5 +1,5 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Objects.DataClasses
+namespace System.Data.Objects.DataClasses
 {
     using System.Diagnostics.CodeAnalysis;
 
@@ -20,7 +20,7 @@ namespace System.Data.Entity.Core.Objects.DataClasses
         /// <summary>
         /// Setting this parameter to a unique value for each model file in a Visual Basic
         /// assembly will prevent the following error: 
-        /// "'System.Data.Entity.Core.Objects.DataClasses.EdmSchemaAttribute' cannot be specified more than once in this project, even with identical parameter values."
+        /// "'System.Data.Objects.DataClasses.EdmSchemaAttribute' cannot be specified more than once in this project, even with identical parameter values."
         /// </summary>
         public EdmSchemaAttribute(string assemblyGuid)
         {

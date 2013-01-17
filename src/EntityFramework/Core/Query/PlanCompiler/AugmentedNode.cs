@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Query.PlanCompiler
+namespace System.Data.Query.PlanCompiler
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Query.InternalTrees;
+    using System.Data.Query.InternalTrees;
     using System.Diagnostics.CodeAnalysis;
 
     /// <summary>
@@ -43,7 +43,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <param name="node">current node</param>
         /// <param name="children">list of children</param>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         internal AugmentedNode(int id, Node node, List<AugmentedNode> children)
         {
             m_id = id;

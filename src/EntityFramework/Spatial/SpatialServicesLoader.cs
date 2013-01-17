@@ -2,8 +2,8 @@
 namespace System.Data.Entity.Spatial
 {
     using System.Data.Entity.Config;
-    using System.Data.Entity.Core;
-    using System.Data.Entity.Core.Common;
+    using System.Data;
+    using System.Data.Common;
     using System.Diagnostics.Contracts;
 
     internal class SpatialServicesLoader

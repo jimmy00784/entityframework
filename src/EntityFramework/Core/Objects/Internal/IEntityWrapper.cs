@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Objects.Internal
+namespace System.Data.Objects.Internal
 {
-    using System.Data.Entity.Core.Metadata.Edm;
-    using System.Data.Entity.Core.Objects.DataClasses;
+    using System.Data.Metadata.Edm;
+    using System.Data.Objects.DataClasses;
 
     /// <summary>
     /// Internally, entities are wrapped in some implementation of this

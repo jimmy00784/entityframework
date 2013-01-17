@@ -1,9 +1,9 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Common.EntitySql
+namespace System.Data.Common.EntitySql
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.EntitySql.AST;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common.EntitySql.AST;
+    using System.Data.Metadata.Edm;
     using System.Data.Entity.Resources;
     using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
@@ -61,7 +61,7 @@ namespace System.Data.Entity.Core.Common.EntitySql
         /// <param name="contextMessage"></param>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
             MessageId =
-                "System.Data.Entity.Core.EntityUtil.EntitySqlError(System.Data.Entity.Core.Common.EntitySql.ErrorContext,System.String)")]
+                "System.Data.EntityUtil.EntitySqlError(System.Data.Common.EntitySql.ErrorContext,System.String)")]
         internal static void ReportAliasAlreadyUsedError(string aliasName, ErrorContext errCtx, string contextMessage)
         {
             throw EntitySqlException.Create(

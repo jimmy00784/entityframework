@@ -1,15 +1,15 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Mapping.ViewGeneration.Structures
+namespace System.Data.Mapping.ViewGeneration.Structures
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Mapping.ViewGeneration.Utils;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common.Utils;
+    using System.Data.Mapping.ViewGeneration.Utils;
+    using System.Data.Metadata.Edm;
     using System.Data.Entity.Resources;
     using System.Diagnostics;
     using System.Linq;
     using System.Text;
-    using CellConstantSet = System.Data.Entity.Core.Common.Utils.Set<Constant>;
+    using CellConstantSet = System.Data.Common.Utils.Set<Constant>;
 
     // This class keeps track of the domain values of the different members
     // in a schema. E.g., for a discriminator, it keeps track of "P",

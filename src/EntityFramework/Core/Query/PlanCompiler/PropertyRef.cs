@@ -1,5 +1,5 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-using md = System.Data.Entity.Core.Metadata.Edm;
+using md = System.Data.Metadata.Edm;
 
 //
 // The PropertyRef class (and its subclasses) represent references to a property
@@ -17,9 +17,9 @@ using md = System.Data.Entity.Core.Metadata.Edm;
 // only desired properties.
 //
 
-namespace System.Data.Entity.Core.Query.PlanCompiler
+namespace System.Data.Query.PlanCompiler
 {
-    using System.Data.Entity.Core.Query.InternalTrees;
+    using System.Data.Query.InternalTrees;
 
     /// <summary>
     /// A PropertyRef class encapsulates a reference to one or more properties of

@@ -1,8 +1,8 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Mapping.ViewGeneration.QueryRewriting
+namespace System.Data.Mapping.ViewGeneration.QueryRewriting
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Mapping.ViewGeneration.Structures;
+    using System.Data.Mapping.ViewGeneration.Structures;
     using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
     using System.Text;

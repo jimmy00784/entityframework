@@ -4,8 +4,8 @@ namespace System.Data.Entity.Internal.Linq
     using System.Collections;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
-    using System.Data.Entity.Core.Objects;
-    using System.Data.Entity.Core.Objects.ELinq;
+    using System.Data.Objects;
+    using System.Data.Objects.ELinq;
     using System.Data.Entity.Infrastructure;
     using System.Diagnostics.Contracts;
     using System.Linq.Expressions;

@@ -1,8 +1,8 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
 namespace System.Data.Entity.Internal
 {
-    using System.Data.Entity.Core;
-    using System.Data.Entity.Core.Objects;
+    using System.Data;
+    using System.Data.Objects;
     using System.Diagnostics.CodeAnalysis;
     using System.Diagnostics.Contracts;
 

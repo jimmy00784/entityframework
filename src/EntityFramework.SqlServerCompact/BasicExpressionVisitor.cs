@@ -2,8 +2,8 @@
 namespace System.Data.Entity.SqlServerCompact
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.CommandTrees;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common.CommandTrees;
+    using System.Data.Metadata.Edm;
 
     /// <summary>
     /// An abstract base type for types that implement the IExpressionVisitor interface to derive from.

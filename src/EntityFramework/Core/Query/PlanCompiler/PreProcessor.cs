@@ -1,13 +1,13 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Query.PlanCompiler
+namespace System.Data.Query.PlanCompiler
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Mapping;
-    using System.Data.Entity.Core.Mapping.ViewGeneration;
-    using System.Data.Entity.Core.Metadata.Edm;
-    using System.Data.Entity.Core.Query.InternalTrees;
+    using System.Data.Common;
+    using System.Data.Common.Utils;
+    using System.Data.Mapping;
+    using System.Data.Mapping.ViewGeneration;
+    using System.Data.Metadata.Edm;
+    using System.Data.Query.InternalTrees;
     using System.Data.Entity.Resources;
     using System.Diagnostics.CodeAnalysis;
 
@@ -227,12 +227,12 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// </param>
         /// <returns>A node that is the root of the new expanded view</returns>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "ScanTableOp")]
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "ExpandView")]
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "EntitySet")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Common.Utils.TreeNode.#ctor(System.String,System.Data.Entity.Core.Common.Utils.TreeNode[])"
+            MessageId = "System.Data.Common.Utils.TreeNode.#ctor(System.String,System.Data.Common.Utils.TreeNode[])"
             )]
         private Node ExpandView(ScanTableOp scanTableOp, ref IsOfOp typeFilter)
         {
@@ -398,7 +398,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <returns>the resulting node</returns>
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "rel")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private Node RewriteNavigateOp(Node navigateOpNode, NavigateOp navigateOp, out Var outputVar)
         {
             outputVar = null;
@@ -624,7 +624,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <param name="targetEnd">the destination end of the relationship traversal</param>
         /// <returns>the entityset corresponding to the target end</returns>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private static EntitySetBase FindTargetEntitySet(RelationshipSet relationshipSet, RelationshipEndMember targetEnd)
         {
             EntitySetBase entitySet = null;
@@ -794,7 +794,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <returns>the rewritten subtree</returns>
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "rel")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private Node RewriteFromOneNavigationProperty(
             RelProperty relProperty, List<RelationshipSet> relationshipSets, Node sourceRefNode, out Var outputVar)
         {
@@ -868,7 +868,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <param name="sourceRefNode">source ref</param>
         /// <returns></returns>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private Node RewriteManyToManyNavigationProperty(
             RelProperty relProperty,
             List<RelationshipSet> relationshipSets,
@@ -945,7 +945,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <returns>the rewritten tree</returns>
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "rel")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private Node RewriteNavigationProperty(
             NavigationProperty navProperty,
             Node sourceEntityNode, TypeUsage resultType)
@@ -1069,7 +1069,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <returns>the Var from the subquery</returns>
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "ElementOp")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         public override Node Visit(ElementOp op, Node n)
         {
             VisitScalarOpDefault(op, n); // default processing
@@ -1106,7 +1106,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "mentityTypeScopes")]
         [SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         public override Node Visit(FunctionOp op, Node n)
         {
             if (op.Function.IsFunctionImport)
@@ -1573,7 +1573,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <param name="member">the member to lookup</param>
         /// <returns>the position of the member in the type (0-based)</returns>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private static int FindPosition(EdmType type, EdmMember member)
         {
             var pos = 0;
@@ -1606,7 +1606,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "OpType")]
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "BuildKeyExpression")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private Node BuildKeyExpressionForNewEntityOp(Op op, Node n)
         {
             PlanCompiler.Assert(
@@ -1653,7 +1653,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <param name="keyExpr">the "key" of the entity instance</param>
         /// <returns>the rel-property expression</returns>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private Node BuildRelPropertyExpression(
             EntitySetBase entitySet, RelProperty relProperty,
             Node keyExpr)
@@ -1745,7 +1745,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <param name="n">the node tree corresponding to the op</param>
         /// <returns>rewritten tree</returns>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         public override Node Visit(NewEntityOp op, Node n)
         {
             // If this is not an entity type constructor, or it's been already scoped, 
@@ -2131,7 +2131,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <returns></returns>
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "ScanTableOp")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private Node ProcessScanTable(Node scanTableNode, ScanTableOp scanTableOp, ref IsOfOp typeFilter)
         {
             HandleTableOpMetadata(scanTableOp);
@@ -2181,7 +2181,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <returns></returns>
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "mentityTypeScopes")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         public override Node Visit(ScanViewOp op, Node n)
         {
             var entityTypeScopePushed = false;
@@ -2253,7 +2253,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <returns></returns>
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "SortOp")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private bool IsSortUnnecessary()
         {
             var ancestor = m_ancestors.Peek();
@@ -2377,7 +2377,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <returns></returns>
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "projectOp")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         public override Node Visit(ProjectOp op, Node n)
         {
             PlanCompiler.Assert(n.HasChild0, "projectOp without input?");

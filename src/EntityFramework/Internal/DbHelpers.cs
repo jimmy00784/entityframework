@@ -4,7 +4,7 @@ namespace System.Data.Entity.Internal
     using System.Collections.Concurrent;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.Data.Entity.Core.Objects;
+    using System.Data.Objects;
     using System.Data.Entity.Resources;
     using System.Data.Entity.Utilities;
     using System.Data.Entity.Validation;

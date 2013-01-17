@@ -1,5 +1,5 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-using md = System.Data.Entity.Core.Metadata.Edm;
+using md = System.Data.Metadata.Edm;
 
 //
 // The CodeGen module is responsible for translating the ITree finally into a query
@@ -11,10 +11,10 @@ using md = System.Data.Entity.Core.Metadata.Edm;
 //
 // 
 
-namespace System.Data.Entity.Core.Query.PlanCompiler
+namespace System.Data.Query.PlanCompiler
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Query.InternalTrees;
+    using System.Data.Query.InternalTrees;
 
     internal class CodeGen
     {

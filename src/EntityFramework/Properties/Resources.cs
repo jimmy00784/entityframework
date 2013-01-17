@@ -2,7 +2,7 @@
 namespace System.Data.Entity.Resources
 {
     using System.CodeDom.Compiler;
-    using System.Data.Entity.Core;
+    using System.Data;
     using System.Globalization;
     using System.Resources;
     using System.Threading;
@@ -13214,7 +13214,7 @@ namespace System.Data.Entity.Resources
         }
 
         /// <summary>
-        /// A string like "The 'Instance' member of the Entity Framework provider type '{0}' did not return an object that extends from 'System.Data.Entity.Core.Common.DbProviderServices'. Entity Framework providers must extend from this class and the 'Instance' member must return the Singleton instance of the provider."
+        /// A string like "The 'Instance' member of the Entity Framework provider type '{0}' did not return an object that extends from 'System.Data.Common.DbProviderServices'. Entity Framework providers must extend from this class and the 'Instance' member must return the Singleton instance of the provider."
         /// </summary>
         internal static string EF6Providers_NotDbProviderServices(object p0)
         {

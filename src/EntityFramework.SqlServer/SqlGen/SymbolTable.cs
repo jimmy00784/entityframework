@@ -2,7 +2,7 @@
 namespace System.Data.Entity.SqlServer.SqlGen
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.CommandTrees;
+    using System.Data.Common.CommandTrees;
 
     /// <summary>
     /// The symbol table is quite primitive - it is a stack with a new entry for

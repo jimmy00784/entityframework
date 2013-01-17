@@ -1,5 +1,5 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Common.QueryCache
+namespace System.Data.Common.QueryCache
 {
     /// <summary> 
     /// Represents the abstract base class for all cache entry values in the query cache 

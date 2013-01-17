@@ -1,15 +1,15 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Mapping.ViewGeneration
+namespace System.Data.Mapping.ViewGeneration
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.CommandTrees;
-    using System.Data.Entity.Core.Common.CommandTrees.Internal;
-    using System.Data.Entity.Core.Common.EntitySql;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Mapping.ViewGeneration.Utils;
-    using System.Data.Entity.Core.Metadata.Edm;
-    using System.Data.Entity.Core.Query.InternalTrees;
-    using System.Data.Entity.Core.Query.PlanCompiler;
+    using System.Data.Common.CommandTrees;
+    using System.Data.Common.CommandTrees.Internal;
+    using System.Data.Common.EntitySql;
+    using System.Data.Common.Utils;
+    using System.Data.Mapping.ViewGeneration.Utils;
+    using System.Data.Metadata.Edm;
+    using System.Data.Query.InternalTrees;
+    using System.Data.Query.PlanCompiler;
     using System.Data.Entity.Resources;
     using System.Data.Entity.Utilities;
     using System.Diagnostics;
@@ -219,7 +219,7 @@ namespace System.Data.Entity.Core.Mapping.ViewGeneration
 
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "projectOp")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         internal Node GetInternalTree(Command targetIqtCommand)
         {
             Debug.Assert(m_extent.EntityContainer.DataSpace == DataSpace.CSpace, "Internal Tree should be asked only for query view");

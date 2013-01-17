@@ -1,10 +1,10 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Common.QueryCache
+namespace System.Data.Common.QueryCache
 {
     using System.Collections.Concurrent;
-    using System.Data.Entity.Core.Metadata.Edm;
-    using System.Data.Entity.Core.Objects;
-    using System.Data.Entity.Core.Objects.Internal;
+    using System.Data.Metadata.Edm;
+    using System.Data.Objects;
+    using System.Data.Objects.Internal;
     using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;
 

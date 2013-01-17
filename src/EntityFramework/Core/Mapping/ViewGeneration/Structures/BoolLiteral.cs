@@ -1,16 +1,16 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Mapping.ViewGeneration.Structures
+namespace System.Data.Mapping.ViewGeneration.Structures
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.CommandTrees;
-    using System.Data.Entity.Core.Common.Utils;
+    using System.Data.Common.CommandTrees;
+    using System.Data.Common.Utils;
     using System.Text;
-    using DomainConstraint = System.Data.Entity.Core.Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>;
-    using DomainVariable = System.Data.Entity.Core.Common.Utils.Boolean.DomainVariable<BoolLiteral, Constant>;
+    using DomainConstraint = System.Data.Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>;
+    using DomainVariable = System.Data.Common.Utils.Boolean.DomainVariable<BoolLiteral, Constant>;
     using DomainBoolExpr =
-        System.Data.Entity.Core.Common.Utils.Boolean.BoolExpr<Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>>;
+        System.Data.Common.Utils.Boolean.BoolExpr<Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>>;
     using DomainTermExpr =
-        System.Data.Entity.Core.Common.Utils.Boolean.TermExpr<Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>>;
+        System.Data.Common.Utils.Boolean.TermExpr<Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>>;
 
     /// <summary>
     /// A class that ties up all the literals in boolean expressions.

@@ -1,9 +1,9 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Mapping
+namespace System.Data.Mapping
 {
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Metadata.Edm;
     using System.Text;
 
     /// <summary>

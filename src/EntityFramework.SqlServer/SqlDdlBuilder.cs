@@ -2,7 +2,7 @@
 namespace System.Data.Entity.SqlServer
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Metadata.Edm;
     using System.Data.Entity.SqlServer.Utilities;
     using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;

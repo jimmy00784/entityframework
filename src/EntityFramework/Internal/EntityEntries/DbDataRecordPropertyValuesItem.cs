@@ -1,8 +1,8 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
 namespace System.Data.Entity.Internal
 {
-    using System.Data.Entity.Core.Metadata.Edm;
-    using System.Data.Entity.Core.Objects;
+    using System.Data.Metadata.Edm;
+    using System.Data.Objects;
 
     /// <summary>
     ///     An implementation of <see cref = "IPropertyValuesItem" /> for an item in a <see cref = "DbDataRecordPropertyValues" />.

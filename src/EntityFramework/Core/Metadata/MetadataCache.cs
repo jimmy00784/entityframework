@@ -1,10 +1,10 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Metadata.Edm
+namespace System.Data.Metadata.Edm
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.QueryCache;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Mapping;
+    using System.Data.Common.QueryCache;
+    using System.Data.Common.Utils;
+    using System.Data.Mapping;
     using System.Data.Entity.Resources;
     using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;

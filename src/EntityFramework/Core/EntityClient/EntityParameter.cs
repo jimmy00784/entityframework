@@ -1,12 +1,12 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.EntityClient
+namespace System.Data.EntityClient
 {
     using System.ComponentModel;
     using System.Data.Common;
-    using System.Data.Entity.Core.Common;
-    using System.Data.Entity.Core.Common.CommandTrees;
-    using System.Data.Entity.Core.Common.Internal;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common;
+    using System.Data.Common.CommandTrees;
+    using System.Data.Common.Internal;
+    using System.Data.Metadata.Edm;
     using System.Data.Entity.Resources;
     using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;

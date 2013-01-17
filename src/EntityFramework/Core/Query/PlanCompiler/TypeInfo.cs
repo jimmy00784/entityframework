@@ -1,11 +1,11 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-using md = System.Data.Entity.Core.Metadata.Edm;
+using md = System.Data.Metadata.Edm;
 
-namespace System.Data.Entity.Core.Query.PlanCompiler
+namespace System.Data.Query.PlanCompiler
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common;
-    using System.Data.Entity.Core.Query.InternalTrees;
+    using System.Data.Common;
+    using System.Data.Query.InternalTrees;
     using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;
 
@@ -236,7 +236,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <returns>the key property equivalents in the flattened type</returns>
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "Non-EdmProperty")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         internal IEnumerable<PropertyRef> GetKeyPropertyRefs()
         {
             md.EntityTypeBase entityType = null;

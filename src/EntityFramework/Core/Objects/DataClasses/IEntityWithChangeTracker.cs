@@ -1,5 +1,5 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Objects.DataClasses
+namespace System.Data.Objects.DataClasses
 {
     /// <summary>
     /// Minimum interface that a data class must implement in order to be managed by a change tracker.

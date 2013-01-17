@@ -1,23 +1,23 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Mapping.ViewGeneration
+namespace System.Data.Mapping.ViewGeneration
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.CommandTrees;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Mapping.ViewGeneration.QueryRewriting;
-    using System.Data.Entity.Core.Mapping.ViewGeneration.Structures;
-    using System.Data.Entity.Core.Mapping.ViewGeneration.Validation;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common.CommandTrees;
+    using System.Data.Common.Utils;
+    using System.Data.Mapping.ViewGeneration.QueryRewriting;
+    using System.Data.Mapping.ViewGeneration.Structures;
+    using System.Data.Mapping.ViewGeneration.Validation;
+    using System.Data.Metadata.Edm;
     using System.Diagnostics;
     using System.Linq;
     using System.Text;
-    using ViewSet = System.Data.Entity.Core.Common.Utils.KeyToListMap<Metadata.Edm.EntitySetBase, GeneratedView>;
-    using CellGroup = System.Data.Entity.Core.Common.Utils.Set<Structures.Cell>;
-    using WrapperBoolExpr = System.Data.Entity.Core.Common.Utils.Boolean.BoolExpr<Structures.LeftCellWrapper>;
-    using WrapperTrueExpr = System.Data.Entity.Core.Common.Utils.Boolean.TrueExpr<Structures.LeftCellWrapper>;
-    using WrapperFalseExpr = System.Data.Entity.Core.Common.Utils.Boolean.FalseExpr<Structures.LeftCellWrapper>;
-    using WrapperNotExpr = System.Data.Entity.Core.Common.Utils.Boolean.NotExpr<Structures.LeftCellWrapper>;
-    using WrapperOrExpr = System.Data.Entity.Core.Common.Utils.Boolean.OrExpr<Structures.LeftCellWrapper>;
+    using ViewSet = System.Data.Common.Utils.KeyToListMap<Metadata.Edm.EntitySetBase, GeneratedView>;
+    using CellGroup = System.Data.Common.Utils.Set<Structures.Cell>;
+    using WrapperBoolExpr = System.Data.Common.Utils.Boolean.BoolExpr<Structures.LeftCellWrapper>;
+    using WrapperTrueExpr = System.Data.Common.Utils.Boolean.TrueExpr<Structures.LeftCellWrapper>;
+    using WrapperFalseExpr = System.Data.Common.Utils.Boolean.FalseExpr<Structures.LeftCellWrapper>;
+    using WrapperNotExpr = System.Data.Common.Utils.Boolean.NotExpr<Structures.LeftCellWrapper>;
+    using WrapperOrExpr = System.Data.Common.Utils.Boolean.OrExpr<Structures.LeftCellWrapper>;
 
     // This class is responsible for generating query or update mapping
     // views from the initial cells.

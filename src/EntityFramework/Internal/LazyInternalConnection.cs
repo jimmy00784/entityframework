@@ -5,8 +5,8 @@ namespace System.Data.Entity.Internal
     using System.Configuration;
     using System.Data.Common;
     using System.Data.Entity.Config;
-    using System.Data.Entity.Core.EntityClient;
-    using System.Data.Entity.Core.Objects;
+    using System.Data.EntityClient;
+    using System.Data.Objects;
     using System.Data.Entity.Infrastructure;
     using System.Data.Entity.Resources;
     using System.Diagnostics.CodeAnalysis;

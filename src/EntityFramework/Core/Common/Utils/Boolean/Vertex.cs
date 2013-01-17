@@ -1,5 +1,5 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Common.Utils.Boolean
+namespace System.Data.Common.Utils.Boolean
 {
     using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;
@@ -27,7 +27,7 @@ namespace System.Data.Entity.Core.Common.Utils.Boolean
         }
 
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.EntityUtil.BoolExprAssert(System.Boolean,System.String)")]
+            MessageId = "System.Data.EntityUtil.BoolExprAssert(System.Boolean,System.String)")]
         internal Vertex(int variable, Vertex[] children)
         {
             if (!(variable < int.MaxValue))

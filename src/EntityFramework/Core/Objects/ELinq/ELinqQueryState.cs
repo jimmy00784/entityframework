@@ -1,12 +1,12 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Objects.ELinq
+namespace System.Data.Objects.ELinq
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.CommandTrees;
-    using System.Data.Entity.Core.Common.CommandTrees.Internal;
-    using System.Data.Entity.Core.Common.QueryCache;
-    using System.Data.Entity.Core.Metadata.Edm;
-    using System.Data.Entity.Core.Objects.Internal;
+    using System.Data.Common.CommandTrees;
+    using System.Data.Common.CommandTrees.Internal;
+    using System.Data.Common.QueryCache;
+    using System.Data.Metadata.Edm;
+    using System.Data.Objects.Internal;
     using System.Diagnostics;
     using System.Diagnostics.Contracts;
     using System.Linq;

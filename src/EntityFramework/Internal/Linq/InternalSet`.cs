@@ -4,10 +4,10 @@ namespace System.Data.Entity.Internal.Linq
     using System.Collections;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
-    using System.Data.Entity.Core;
-    using System.Data.Entity.Core.Metadata.Edm;
-    using System.Data.Entity.Core.Objects;
-    using System.Data.Entity.Core.Objects.ELinq;
+    using System.Data;
+    using System.Data.Metadata.Edm;
+    using System.Data.Objects;
+    using System.Data.Objects.ELinq;
     using System.Data.Entity.Infrastructure;
     using System.Data.Entity.Resources;
     using System.Diagnostics.Contracts;
@@ -546,7 +546,7 @@ namespace System.Data.Entity.Internal.Linq
         }
 
         /// <summary>
-        ///     Creates an underlying <see cref = "System.Data.Entity.Core.Objects.ObjectQuery{T}" /> for this set.
+        ///     Creates an underlying <see cref = "System.Data.Objects.ObjectQuery{T}" /> for this set.
         /// </summary>
         /// <param name = "asNoTracking">if set to <c>true</c> then the query is set to be no-tracking.</param>
         /// <returns>The query.</returns>

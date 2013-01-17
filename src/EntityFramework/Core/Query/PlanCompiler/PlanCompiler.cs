@@ -1,12 +1,12 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-using cqt = System.Data.Entity.Core.Common.CommandTrees;
-using md = System.Data.Entity.Core.Metadata.Edm;
+using cqt = System.Data.Common.CommandTrees;
+using md = System.Data.Metadata.Edm;
 
-namespace System.Data.Entity.Core.Query.PlanCompiler
+namespace System.Data.Query.PlanCompiler
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Query.InternalTrees;
+    using System.Data.Common.Utils;
+    using System.Data.Query.InternalTrees;
     using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;
 
@@ -49,7 +49,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// </summary>
         private static readonly BooleanSwitch _applyTransformationsRegardlessOfSize =
             new BooleanSwitch(
-                "System.Data.Entity.Core.EntityClient.IgnoreOptimizationLimit",
+                "System.Data.EntityClient.IgnoreOptimizationLimit",
                 "The Entity Framework should try to optimize the query regardless of its size");
 
         /// <summary>
@@ -141,7 +141,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <param name="entitySets">the entity sets referenced in this query</param>
         /// <returns>a compiled plan object</returns>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         internal static void Compile(
             cqt.DbCommandTree ctree, out List<ProviderCommandInfo> providerCommands, out ColumnMap resultColumnMap, out int columnCount,
             out Set<md.EntitySet> entitySets)
@@ -475,7 +475,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// Converts the CTree into an ITree, and initializes the plan
         /// </summary>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private void Initialize()
         {
             // Only support queries for now

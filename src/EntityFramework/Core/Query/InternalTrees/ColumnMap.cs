@@ -1,6 +1,6 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-using md = System.Data.Entity.Core.Metadata.Edm;
-using mp = System.Data.Entity.Core.Mapping;
+using md = System.Data.Metadata.Edm;
+using mp = System.Data.Mapping;
 
 // A ColumnMap is a data structure that maps columns from the C space to
 // the corresponding columns from one or more underlying readers.
@@ -51,7 +51,7 @@ using mp = System.Data.Entity.Core.Mapping;
 //
 //
 
-namespace System.Data.Entity.Core.Query.InternalTrees
+namespace System.Data.Query.InternalTrees
 {
     using System.Diagnostics;
 

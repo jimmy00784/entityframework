@@ -1,14 +1,14 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
 using ReadOnlyModificationClauses =
-    System.Collections.ObjectModel.ReadOnlyCollection<System.Data.Entity.Core.Common.CommandTrees.DbModificationClause>;
+    System.Collections.ObjectModel.ReadOnlyCollection<System.Data.Common.CommandTrees.DbModificationClause>;
 
 // System.Data.Common.ReadOnlyCollection conflicts
 
-namespace System.Data.Entity.Core.Common.CommandTrees
+namespace System.Data.Common.CommandTrees
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.CommandTrees.Internal;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common.CommandTrees.Internal;
+    using System.Data.Metadata.Edm;
     using System.Diagnostics.Contracts;
 
     /// <summary>

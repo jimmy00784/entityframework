@@ -2,7 +2,7 @@
 namespace System.Data.Entity.SqlServerCompact.SqlGen
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.CommandTrees;
+    using System.Data.Common.CommandTrees;
     using System.Diagnostics;
 
     /// <summary>

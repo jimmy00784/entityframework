@@ -3,8 +3,8 @@ namespace System.Data.Entity.Infrastructure
 {
     using System.Collections.Concurrent;
     using System.Data.Common;
-    using System.Data.Entity.Core.EntityClient;
-    using System.Data.Entity.Core.Objects;
+    using System.Data.EntityClient;
+    using System.Data.Objects;
     using System.Data.Entity.Internal;
     using System.Data.Entity.Resources;
     using System.Diagnostics.CodeAnalysis;

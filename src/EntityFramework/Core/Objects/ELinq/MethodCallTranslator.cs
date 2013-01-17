@@ -1,25 +1,28 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Objects.ELinq
+using System.Data.Entity;
+
+
+namespace System.Data.Objects.ELinq
 {
     using System.Collections.Generic;
     using System.Data.Common;
-    using System.Data.Entity.Core.Common;
-    using System.Data.Entity.Core.Common.CommandTrees;
-    using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common;
+    using System.Data.Common.CommandTrees;
+    using System.Data.Common.CommandTrees.ExpressionBuilder;
+    using System.Data.Common.Utils;
+    using System.Data.Metadata.Edm;
     using System.Data.Entity.Resources;
     using System.Diagnostics;
     using System.Linq;
     using System.Linq.Expressions;
     using System.Reflection;
-    using CqtExpression = System.Data.Entity.Core.Common.CommandTrees.DbExpression;
+    using CqtExpression = System.Data.Common.CommandTrees.DbExpression;
     using LinqExpression = System.Linq.Expressions.Expression;
 
     internal sealed partial class ExpressionConverter
     {
         /// <summary>
-        /// Translates System.Linq.Expression.MethodCallExpression to System.Data.Entity.Core.Common.CommandTrees.DbExpression
+        /// Translates System.Linq.Expression.MethodCallExpression to System.Data.Common.CommandTrees.DbExpression
         /// </summary>
         private sealed partial class MethodCallTranslator : TypedTranslator<MethodCallExpression>
         {

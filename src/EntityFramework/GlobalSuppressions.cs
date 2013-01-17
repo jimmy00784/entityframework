@@ -43,20 +43,20 @@ using System.Diagnostics.CodeAnalysis;
         Target = "System.Data.Entity.Edm.Validation.Internal.EdmModel.EdmModelSemanticValidationRules.#.cctor()")]
 [assembly:
     SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace",
-        Target = "System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder")]
+        Target = "System.Data.Common.CommandTrees.ExpressionBuilder")]
 [assembly:
     SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
         MessageId = "System.Console.WriteLine(System.String)", Scope = "member",
-        Target = "System.Data.Entity.Core.Common.EntitySql.CqlParser.#dump_stacks(System.Int32)")]
+        Target = "System.Data.Common.EntitySql.CqlParser.#dump_stacks(System.Int32)")]
 [assembly:
     SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-        MessageId = "System.Data.Entity.Core.EntityModel.SchemaObjectModel.ScalarType.ConvertToByteArray(System.String)", Scope = "member",
-        Target = "System.Data.Entity.Core.Metadata.Edm.MetadataAssemblyHelper.#.cctor()")]
+        MessageId = "System.Data.EntityModel.SchemaObjectModel.ScalarType.ConvertToByteArray(System.String)", Scope = "member",
+        Target = "System.Data.Metadata.Edm.MetadataAssemblyHelper.#.cctor()")]
 [assembly:
     SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-        MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)", Scope = "member",
+        MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)", Scope = "member",
         Target =
-            "System.Data.Entity.Core.Query.PlanCompiler.PreProcessor.#ExpandView(System.Data.Entity.Core.Query.InternalTrees.Node,System.Data.Entity.Core.Query.InternalTrees.ScanTableOp,System.Data.Entity.Core.Query.InternalTrees.IsOfOp&)"
+            "System.Data.Query.PlanCompiler.PreProcessor.#ExpandView(System.Data.Query.InternalTrees.Node,System.Data.Query.InternalTrees.ScanTableOp,System.Data.Query.InternalTrees.IsOfOp&)"
         )]
 [assembly:
     SuppressMessage("Microsoft.Naming", "CA1703:ResourceStringsShouldBeSpelledCorrectly", MessageId = "Def", Scope = "resource",
@@ -70,117 +70,117 @@ using System.Diagnostics.CodeAnalysis;
 [assembly:
     SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Scope = "member",
         Target =
-            "System.Data.Entity.Core.Mapping.StorageMappingItemCollection+ViewDictionary.#GetGeneratedView(System.Data.Entity.Core.Metadata.Edm.EntitySetBase,System.Data.Entity.Core.Metadata.Edm.MetadataWorkspace,System.Data.Entity.Core.Mapping.StorageMappingItemCollection)"
+            "System.Data.Mapping.StorageMappingItemCollection+ViewDictionary.#GetGeneratedView(System.Data.Metadata.Edm.EntitySetBase,System.Data.Metadata.Edm.MetadataWorkspace,System.Data.Mapping.StorageMappingItemCollection)"
         )]
 [assembly:
     SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic", Scope = "member",
-        Target = "System.Data.Entity.Core.Common.EntitySql.CqlLexer.#yy_double(System.Char[])")]
+        Target = "System.Data.Common.EntitySql.CqlLexer.#yy_double(System.Char[])")]
 [assembly:
     SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic", Scope = "member",
-        Target = "System.Data.Entity.Core.Common.EntitySql.CqlLexer.#yy_error(System.Int32,System.Boolean)")]
+        Target = "System.Data.Common.EntitySql.CqlLexer.#yy_error(System.Int32,System.Boolean)")]
 [assembly:
     SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic", Scope = "member",
-        Target = "System.Data.Entity.Core.Common.EntitySql.CqlLexer.#IsCanonicalFunctionCall(System.String,System.Char)")]
+        Target = "System.Data.Common.EntitySql.CqlLexer.#IsCanonicalFunctionCall(System.String,System.Char)")]
 [assembly:
     SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures", Scope = "member",
         Target =
-            "System.Data.Entity.Core.Objects.CompiledQuery.#Compile`17(System.Linq.Expressions.Expression`1<System.Func`17<!!0,!!1,!!2,!!3,!!4,!!5,!!6,!!7,!!8,!!9,!!10,!!11,!!12,!!13,!!14,!!15,!!16>>)"
+            "System.Data.Objects.CompiledQuery.#Compile`17(System.Linq.Expressions.Expression`1<System.Func`17<!!0,!!1,!!2,!!3,!!4,!!5,!!6,!!7,!!8,!!9,!!10,!!11,!!12,!!13,!!14,!!15,!!16>>)"
         )]
 [assembly:
     SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures", Scope = "member",
         Target =
-            "System.Data.Entity.Core.Objects.CompiledQuery.#Compile`16(System.Linq.Expressions.Expression`1<System.Func`16<!!0,!!1,!!2,!!3,!!4,!!5,!!6,!!7,!!8,!!9,!!10,!!11,!!12,!!13,!!14,!!15>>)"
+            "System.Data.Objects.CompiledQuery.#Compile`16(System.Linq.Expressions.Expression`1<System.Func`16<!!0,!!1,!!2,!!3,!!4,!!5,!!6,!!7,!!8,!!9,!!10,!!11,!!12,!!13,!!14,!!15>>)"
         )]
 [assembly:
     SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures", Scope = "member",
         Target =
-            "System.Data.Entity.Core.Objects.CompiledQuery.#Compile`15(System.Linq.Expressions.Expression`1<System.Func`15<!!0,!!1,!!2,!!3,!!4,!!5,!!6,!!7,!!8,!!9,!!10,!!11,!!12,!!13,!!14>>)"
+            "System.Data.Objects.CompiledQuery.#Compile`15(System.Linq.Expressions.Expression`1<System.Func`15<!!0,!!1,!!2,!!3,!!4,!!5,!!6,!!7,!!8,!!9,!!10,!!11,!!12,!!13,!!14>>)"
         )]
 [assembly:
     SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures", Scope = "member",
         Target =
-            "System.Data.Entity.Core.Objects.CompiledQuery.#Compile`14(System.Linq.Expressions.Expression`1<System.Func`14<!!0,!!1,!!2,!!3,!!4,!!5,!!6,!!7,!!8,!!9,!!10,!!11,!!12,!!13>>)"
+            "System.Data.Objects.CompiledQuery.#Compile`14(System.Linq.Expressions.Expression`1<System.Func`14<!!0,!!1,!!2,!!3,!!4,!!5,!!6,!!7,!!8,!!9,!!10,!!11,!!12,!!13>>)"
         )]
 [assembly:
     SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures", Scope = "member",
         Target =
-            "System.Data.Entity.Core.Objects.CompiledQuery.#Compile`13(System.Linq.Expressions.Expression`1<System.Func`13<!!0,!!1,!!2,!!3,!!4,!!5,!!6,!!7,!!8,!!9,!!10,!!11,!!12>>)"
+            "System.Data.Objects.CompiledQuery.#Compile`13(System.Linq.Expressions.Expression`1<System.Func`13<!!0,!!1,!!2,!!3,!!4,!!5,!!6,!!7,!!8,!!9,!!10,!!11,!!12>>)"
         )]
 [assembly:
     SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures", Scope = "member",
         Target =
-            "System.Data.Entity.Core.Objects.CompiledQuery.#Compile`12(System.Linq.Expressions.Expression`1<System.Func`12<!!0,!!1,!!2,!!3,!!4,!!5,!!6,!!7,!!8,!!9,!!10,!!11>>)"
+            "System.Data.Objects.CompiledQuery.#Compile`12(System.Linq.Expressions.Expression`1<System.Func`12<!!0,!!1,!!2,!!3,!!4,!!5,!!6,!!7,!!8,!!9,!!10,!!11>>)"
         )]
 [assembly:
     SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures", Scope = "member",
         Target =
-            "System.Data.Entity.Core.Objects.CompiledQuery.#Compile`11(System.Linq.Expressions.Expression`1<System.Func`11<!!0,!!1,!!2,!!3,!!4,!!5,!!6,!!7,!!8,!!9,!!10>>)"
+            "System.Data.Objects.CompiledQuery.#Compile`11(System.Linq.Expressions.Expression`1<System.Func`11<!!0,!!1,!!2,!!3,!!4,!!5,!!6,!!7,!!8,!!9,!!10>>)"
         )]
 [assembly:
     SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures", Scope = "member",
         Target =
-            "System.Data.Entity.Core.Objects.CompiledQuery.#Compile`10(System.Linq.Expressions.Expression`1<System.Func`10<!!0,!!1,!!2,!!3,!!4,!!5,!!6,!!7,!!8,!!9>>)"
+            "System.Data.Objects.CompiledQuery.#Compile`10(System.Linq.Expressions.Expression`1<System.Func`10<!!0,!!1,!!2,!!3,!!4,!!5,!!6,!!7,!!8,!!9>>)"
         )]
 [assembly:
     SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields", Scope = "member",
-        Target = "System.Data.Entity.Core.Common.EntitySql.CqlLexer.#yy_error_string")]
+        Target = "System.Data.Common.EntitySql.CqlLexer.#yy_error_string")]
 [assembly:
     SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields", Scope = "member",
-        Target = "System.Data.Entity.Core.Common.EntitySql.CqlLexer.#_parserOptions")]
+        Target = "System.Data.Common.EntitySql.CqlLexer.#_parserOptions")]
 [assembly:
     SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields", Scope = "member",
-        Target = "System.Data.Entity.Core.Common.EntitySql.CqlParser.#yyrule")]
+        Target = "System.Data.Common.EntitySql.CqlParser.#yyrule")]
 [assembly:
     SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "code", Scope = "member",
-        Target = "System.Data.Entity.Core.Common.EntitySql.CqlLexer.#yy_error(System.Int32,System.Boolean)")]
+        Target = "System.Data.Common.EntitySql.CqlLexer.#yy_error(System.Int32,System.Boolean)")]
 [assembly:
     SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields", Scope = "member",
-        Target = "System.Data.Entity.Core.Common.EntitySql.CqlParser.#YYMAJOR")]
+        Target = "System.Data.Common.EntitySql.CqlParser.#YYMAJOR")]
 [assembly:
     SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields", Scope = "member",
-        Target = "System.Data.Entity.Core.Common.EntitySql.CqlParser.#YYMINOR")]
+        Target = "System.Data.Common.EntitySql.CqlParser.#YYMINOR")]
 [assembly:
     SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope = "member",
-        Target = "System.Data.Entity.Core.Common.EntitySql.CqlLexer.#yybegin(System.Int32)")]
+        Target = "System.Data.Common.EntitySql.CqlLexer.#yybegin(System.Int32)")]
 [assembly:
     SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope = "member",
-        Target = "System.Data.Entity.Core.Common.EntitySql.CqlLexer.#yylength()")]
+        Target = "System.Data.Common.EntitySql.CqlLexer.#yylength()")]
 [assembly:
     SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope = "member",
-        Target = "System.Data.Entity.Core.Common.EntitySql.CqlParser.#debug(System.String)")]
+        Target = "System.Data.Common.EntitySql.CqlParser.#debug(System.String)")]
 [assembly:
     SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope = "member",
-        Target = "System.Data.Entity.Core.Common.EntitySql.CqlParser.#dump_stacks(System.Int32)")]
+        Target = "System.Data.Common.EntitySql.CqlParser.#dump_stacks(System.Int32)")]
 [assembly:
     SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope = "member",
-        Target = "System.Data.Entity.Core.Common.EntitySql.CqlParser.#yylexdebug(System.Int32,System.Int32)")]
+        Target = "System.Data.Common.EntitySql.CqlParser.#yylexdebug(System.Int32,System.Int32)")]
 [assembly:
     SuppressMessage("Microsoft.Performance", "CA1814:PreferJaggedArraysOverMultidimensional", MessageId = "Member", Scope = "member",
-        Target = "System.Data.Entity.Core.Common.EntitySql.CqlLexer.#yy_nxt")]
+        Target = "System.Data.Common.EntitySql.CqlLexer.#yy_nxt")]
 [assembly:
     SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Scope = "member",
-        Target = "System.Data.Entity.Core.Common.EntitySql.CqlParser.#yyparse()")]
+        Target = "System.Data.Common.EntitySql.CqlParser.#yyparse()")]
 [assembly:
     SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace",
-        Target = "System.Data.Entity.Core.Mapping")]
+        Target = "System.Data.Mapping")]
 [assembly:
     SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace",
-        Target = "System.Data.Entity.Core.Objects.SqlClient")]
+        Target = "System.Data.Objects.SqlClient")]
 [assembly:
     SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace",
-        Target = "System.Data.Entity.Core.Common.EntitySql")]
+        Target = "System.Data.Common.EntitySql")]
 [assembly:
     SuppressMessage("Microsoft.Design", "CA1020:AvoidNamespacesWithFewTypes", Scope = "namespace",
-        Target = "System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial")]
+        Target = "System.Data.Common.CommandTrees.ExpressionBuilder.Spatial")]
 [assembly:
     SuppressMessage("Microsoft.Design", "CA1001:TypesThatOwnDisposableFieldsShouldBeDisposable", Scope = "type",
-        Target = "System.Data.Entity.Core.Common.EntitySql.CqlLexer")]
+        Target = "System.Data.Common.EntitySql.CqlLexer")]
 [assembly:
     SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Scope = "member",
-        Target = "System.Data.Entity.Core.Common.EntitySql.CqlParser.#yyparse()")]
+        Target = "System.Data.Common.EntitySql.CqlParser.#yyparse()")]
 [assembly:
     SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling", Scope = "member",
-        Target = "System.Data.Entity.Core.Common.EntitySql.CqlParser.#yyparse()")]
+        Target = "System.Data.Common.EntitySql.CqlParser.#yyparse()")]
 [assembly: 
     SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode", Scope = "member",
         Target = "System.Data.Entity.IQueryableExtensions.#.cctor()")]

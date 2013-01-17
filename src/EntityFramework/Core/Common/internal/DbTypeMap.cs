@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Common.Internal
+namespace System.Data.Common.Internal
 {
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Metadata.Edm;
 
     /// <summary>
     /// Provides singleton model TypeUsages for each DbType that can be expressed using a supported EDM type and appropriate facet values.

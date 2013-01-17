@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Common.CommandTrees
+namespace System.Data.Common.CommandTrees
 {
-    using System.Data.Entity.Core.Common.CommandTrees.Internal;
-    using System.Data.Entity.Core.Common.Utils;
+    using System.Data.Common.CommandTrees.Internal;
+    using System.Data.Common.Utils;
     using System.Diagnostics.CodeAnalysis;
     using System.Diagnostics.Contracts;
 
@@ -60,7 +60,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees
 
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "DbSetClause")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Common.Utils.TreeNode.#ctor(System.String,System.Data.Entity.Core.Common.Utils.TreeNode[])"
+            MessageId = "System.Data.Common.Utils.TreeNode.#ctor(System.String,System.Data.Common.Utils.TreeNode[])"
             )]
         internal override TreeNode Print(DbExpressionVisitor<TreeNode> visitor)
         {

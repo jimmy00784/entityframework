@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Metadata.Edm
+namespace System.Data.Metadata.Edm
 {
-    using System.Data.Entity.Core.Common;
+    using System.Data.Common;
     using System.Diagnostics;
     using System.Reflection;
     using System.Threading;
@@ -92,7 +92,7 @@ namespace System.Data.Entity.Core.Metadata.Edm
         /// the property is not part of the primary key.
         /// When using attribute based mapping (usually used with entities that derive from the EntityObject
         /// base class), a property is considered nullable if the IsNullable flag is set to true in the
-        /// <see cref="System.Data.Entity.Core.Objects.DataClasses.EdmScalarPropertyAttribute"/> attribute. This flag can
+        /// <see cref="System.Data.Objects.DataClasses.EdmScalarPropertyAttribute"/> attribute. This flag can
         /// be set to true even if the underlying type is not nullable, and can be set to false even if the
         /// underlying type is nullable. The latter case happens as part of default code generation when
         /// a non-nullable property in the conceptual model is mapped to a nullable CLR type such as a string.

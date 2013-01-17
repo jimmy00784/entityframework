@@ -1,14 +1,14 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Mapping.Update.Internal
+namespace System.Data.Mapping.Update.Internal
 {
     // We use CompositeKey on both sides of the dictionary because it is used both to identify rows that should be 
     // joined (the Key part) and to carry context about the rows being joined (e.g. which components of the row 
     // correspond to the join key).
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
-    using System.Data.Entity.Core.Common.CommandTrees;
-    using System.Data.Entity.Core.Metadata.Edm;
-    using System.Data.Entity.Core.Objects;
+    using System.Data.Common.CommandTrees;
+    using System.Data.Metadata.Edm;
+    using System.Data.Objects;
     using System.Data.Entity.Resources;
     using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;

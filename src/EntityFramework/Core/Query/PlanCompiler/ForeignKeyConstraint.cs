@@ -1,9 +1,9 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Query.PlanCompiler
+namespace System.Data.Query.PlanCompiler
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common.Utils;
+    using System.Data.Metadata.Edm;
     using System.Diagnostics.CodeAnalysis;
 
     /// <summary>
@@ -62,7 +62,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         #region constructors
 
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         internal ForeignKeyConstraint(RelationshipSet relationshipSet, ReferentialConstraint constraint)
         {
             var assocSet = relationshipSet as AssociationSet;
@@ -118,7 +118,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// foreign key column, identify the corresponding primary key property
         /// </summary>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private void BuildKeyMap()
         {
             if (m_keyMap != null)

@@ -1,31 +1,31 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Mapping.ViewGeneration.Structures
+namespace System.Data.Mapping.ViewGeneration.Structures
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.CommandTrees;
-    using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Common.Utils.Boolean;
+    using System.Data.Common.CommandTrees;
+    using System.Data.Common.CommandTrees.ExpressionBuilder;
+    using System.Data.Common.Utils;
+    using System.Data.Common.Utils.Boolean;
     using System.Data.Entity.Resources;
     using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;
     using System.Text;
-    using BoolDomainConstraint = System.Data.Entity.Core.Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>;
-    using DomainAndExpr = System.Data.Entity.Core.Common.Utils.Boolean.AndExpr<Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>>
+    using BoolDomainConstraint = System.Data.Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>;
+    using DomainAndExpr = System.Data.Common.Utils.Boolean.AndExpr<Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>>
         ;
     using DomainBoolExpr =
-        System.Data.Entity.Core.Common.Utils.Boolean.BoolExpr<Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>>;
+        System.Data.Common.Utils.Boolean.BoolExpr<Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>>;
     using DomainFalseExpr =
-        System.Data.Entity.Core.Common.Utils.Boolean.FalseExpr<Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>>;
-    using DomainNotExpr = System.Data.Entity.Core.Common.Utils.Boolean.NotExpr<Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>>
+        System.Data.Common.Utils.Boolean.FalseExpr<Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>>;
+    using DomainNotExpr = System.Data.Common.Utils.Boolean.NotExpr<Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>>
         ;
-    using DomainOrExpr = System.Data.Entity.Core.Common.Utils.Boolean.OrExpr<Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>>;
+    using DomainOrExpr = System.Data.Common.Utils.Boolean.OrExpr<Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>>;
     using DomainTermExpr =
-        System.Data.Entity.Core.Common.Utils.Boolean.TermExpr<Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>>;
+        System.Data.Common.Utils.Boolean.TermExpr<Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>>;
     using DomainTreeExpr =
-        System.Data.Entity.Core.Common.Utils.Boolean.TreeExpr<Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>>;
+        System.Data.Common.Utils.Boolean.TreeExpr<Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>>;
     using DomainTrueExpr =
-        System.Data.Entity.Core.Common.Utils.Boolean.TrueExpr<Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>>;
+        System.Data.Common.Utils.Boolean.TrueExpr<Common.Utils.Boolean.DomainConstraint<BoolLiteral, Constant>>;
 
     // This class represents an arbitrary boolean expression
     internal partial class BoolExpression : InternalBase
@@ -596,7 +596,7 @@ namespace System.Data.Entity.Core.Mapping.ViewGeneration.Structures
             #region Constructor/Fields/Invocation
 
             [SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "allowAllOperators", Scope = "member",
-                Target = "System.Data.Entity.Core.Mapping.ViewGeneration.Structures.BoolExpression+TermVisitor.#.ctor(System.Boolean)")]
+                Target = "System.Data.Mapping.ViewGeneration.Structures.BoolExpression+TermVisitor.#.ctor(System.Boolean)")]
             private TermVisitor(bool allowAllOperators)
             {
 #if DEBUG

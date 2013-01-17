@@ -1,9 +1,9 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Query.InternalTrees
+namespace System.Data.Query.InternalTrees
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common.Utils;
+    using System.Data.Metadata.Edm;
     using System.Diagnostics;
     using System.Globalization;
     using System.Text;

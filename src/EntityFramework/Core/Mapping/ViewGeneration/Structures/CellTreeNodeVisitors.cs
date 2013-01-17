@@ -1,16 +1,16 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Mapping.ViewGeneration.Structures
+namespace System.Data.Mapping.ViewGeneration.Structures
 {
     using System.Collections.Generic;
     using System.Diagnostics;
-    using WrapperBoolExpr = System.Data.Entity.Core.Common.Utils.Boolean.BoolExpr<LeftCellWrapper>;
-    using WrapperTreeExpr = System.Data.Entity.Core.Common.Utils.Boolean.TreeExpr<LeftCellWrapper>;
-    using WrapperAndExpr = System.Data.Entity.Core.Common.Utils.Boolean.AndExpr<LeftCellWrapper>;
-    using WrapperOrExpr = System.Data.Entity.Core.Common.Utils.Boolean.OrExpr<LeftCellWrapper>;
-    using WrapperNotExpr = System.Data.Entity.Core.Common.Utils.Boolean.NotExpr<LeftCellWrapper>;
-    using WrapperTermExpr = System.Data.Entity.Core.Common.Utils.Boolean.TermExpr<LeftCellWrapper>;
-    using WrapperTrueExpr = System.Data.Entity.Core.Common.Utils.Boolean.TrueExpr<LeftCellWrapper>;
-    using WrapperFalseExpr = System.Data.Entity.Core.Common.Utils.Boolean.FalseExpr<LeftCellWrapper>;
+    using WrapperBoolExpr = System.Data.Common.Utils.Boolean.BoolExpr<LeftCellWrapper>;
+    using WrapperTreeExpr = System.Data.Common.Utils.Boolean.TreeExpr<LeftCellWrapper>;
+    using WrapperAndExpr = System.Data.Common.Utils.Boolean.AndExpr<LeftCellWrapper>;
+    using WrapperOrExpr = System.Data.Common.Utils.Boolean.OrExpr<LeftCellWrapper>;
+    using WrapperNotExpr = System.Data.Common.Utils.Boolean.NotExpr<LeftCellWrapper>;
+    using WrapperTermExpr = System.Data.Common.Utils.Boolean.TermExpr<LeftCellWrapper>;
+    using WrapperTrueExpr = System.Data.Common.Utils.Boolean.TrueExpr<LeftCellWrapper>;
+    using WrapperFalseExpr = System.Data.Common.Utils.Boolean.FalseExpr<LeftCellWrapper>;
 
     internal partial class CellTreeNode
     {

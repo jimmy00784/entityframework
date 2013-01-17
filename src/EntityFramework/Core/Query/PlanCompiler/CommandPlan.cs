@@ -1,6 +1,6 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-using md = System.Data.Entity.Core.Metadata.Edm;
-using cqt = System.Data.Entity.Core.Common.CommandTrees;
+using md = System.Data.Metadata.Edm;
+using cqt = System.Data.Common.CommandTrees;
 
 //using System.Diagnostics; // Please use PlanCompiler.Assert instead of Debug.Assert in this class...
 
@@ -22,7 +22,7 @@ using cqt = System.Data.Entity.Core.Common.CommandTrees;
 // A CommandPlan represents the plan for a query.
 //
 
-namespace System.Data.Entity.Core.Query.PlanCompiler
+namespace System.Data.Query.PlanCompiler
 {
 
     #region CommandInfo

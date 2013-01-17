@@ -1,9 +1,9 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Mapping.Update.Internal
+namespace System.Data.Mapping.Update.Internal
 {
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
-    using System.Data.Entity.Core.Common.CommandTrees;
+    using System.Data.Common.CommandTrees;
     using System.Diagnostics;
     using System.Diagnostics.Contracts;
 

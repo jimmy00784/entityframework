@@ -1,15 +1,15 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Query.InternalTrees
+namespace System.Data.Query.InternalTrees
 {
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
-    using System.Data.Entity.Core.Mapping.ViewGeneration;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Mapping.ViewGeneration;
+    using System.Data.Metadata.Edm;
     using System.Linq;
 
     /// <summary>
     /// Describes user-defined discriminator metadata (e.g. for a basic TPH mapping). Encapsulates
-    /// relevant data from System.Data.Entity.Core.Mapping.ViewGenerabetion.DiscriminatorMap (that is to say,
+    /// relevant data from System.Data.Mapping.ViewGenerabetion.DiscriminatorMap (that is to say,
     /// data relevant to the PlanCompiler). This separate class accomplishes two things:
     /// 
     /// 1. Maintain separation of ViewGen and PlanCompiler

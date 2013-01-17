@@ -2,7 +2,7 @@
 namespace System.Data.Entity
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Objects;
+    using System.Data.Objects;
     using System.Data.Entity.Resources;
     using System.Diagnostics.CodeAnalysis;
     using System.Linq;

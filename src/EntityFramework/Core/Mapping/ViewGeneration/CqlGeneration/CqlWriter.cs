@@ -1,9 +1,9 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Mapping.ViewGeneration.CqlGeneration
+namespace System.Data.Mapping.ViewGeneration.CqlGeneration
 {
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Mapping.ViewGeneration.Utils;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common.Utils;
+    using System.Data.Mapping.ViewGeneration.Utils;
+    using System.Data.Metadata.Edm;
     using System.Text;
     using System.Text.RegularExpressions;
 

@@ -1,10 +1,10 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Common.CommandTrees.Internal
+namespace System.Data.Common.CommandTrees.Internal
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common.CommandTrees.ExpressionBuilder;
+    using System.Data.Common.Utils;
+    using System.Data.Metadata.Edm;
     using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
@@ -393,7 +393,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees.Internal
         /// WHERE a._from0... OR a._from[n-1]
         /// 
         /// into the DbExpression equivalent of the following, which is matched as a TPH discriminator
-        /// by the <see cref="System.Data.Entity.Core.Mapping.ViewGeneration.GeneratedView"/> class and so allows a <see cref="System.Data.Entity.Core.Mapping.ViewGeneration.DiscriminatorMap"/>
+        /// by the <see cref="System.Data.Mapping.ViewGeneration.GeneratedView"/> class and so allows a <see cref="System.Data.Mapping.ViewGeneration.DiscriminatorMap"/>
         /// to be produced for the view, which would not otherwise be possible. Note that C1 through Cn
         /// are only allowed to be scalars or complex type constructors based on direct property references
         /// to the store entity set's scalar properties.

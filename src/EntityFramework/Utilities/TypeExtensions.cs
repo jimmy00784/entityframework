@@ -2,9 +2,9 @@
 namespace System.Data.Entity.Utilities
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core;
-    using System.Data.Entity.Core.Metadata.Edm;
-    using System.Data.Entity.Core.Objects.DataClasses;
+    using System.Data;
+    using System.Data.Metadata.Edm;
+    using System.Data.Objects.DataClasses;
     using System.Data.Entity.Edm;
     using System.Data.Entity.Resources;
     using System.Diagnostics.CodeAnalysis;

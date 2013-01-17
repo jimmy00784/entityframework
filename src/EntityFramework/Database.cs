@@ -5,7 +5,7 @@ namespace System.Data.Entity
     using System.ComponentModel;
     using System.Data.Common;
     using System.Data.Entity.Config;
-    using System.Data.Entity.Core.Objects;
+    using System.Data.Objects;
     using System.Data.Entity.Infrastructure;
     using System.Data.Entity.Internal;
     using System.Data.Entity.Resources;

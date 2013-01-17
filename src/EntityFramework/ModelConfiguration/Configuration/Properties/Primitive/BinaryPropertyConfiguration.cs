@@ -2,7 +2,7 @@
 namespace System.Data.Entity.ModelConfiguration.Configuration.Properties.Primitive
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common;
+    using System.Data.Common;
     using System.Data.Entity.Edm;
     using System.Data.Entity.Edm.Db;
     using System.Data.Entity.Edm.Db.Mapping;

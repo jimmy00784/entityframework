@@ -1,9 +1,9 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Common.CommandTrees.Internal
+namespace System.Data.Common.CommandTrees.Internal
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common.Utils;
+    using System.Data.Metadata.Edm;
     using System.Data.Entity.Resources;
     using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;
@@ -20,7 +20,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees.Internal
 
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "DbDeleteCommandTree")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Common.Utils.TreeNode.#ctor(System.String,System.Data.Entity.Core.Common.Utils.TreeNode[])"
+            MessageId = "System.Data.Common.Utils.TreeNode.#ctor(System.String,System.Data.Common.Utils.TreeNode[])"
             )]
         internal string Print(DbDeleteCommandTree tree)
         {
@@ -59,7 +59,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees.Internal
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "ResultType")]
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "EdmFunction")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Common.Utils.TreeNode.#ctor(System.String,System.Data.Entity.Core.Common.Utils.TreeNode[])"
+            MessageId = "System.Data.Common.Utils.TreeNode.#ctor(System.String,System.Data.Common.Utils.TreeNode[])"
             )]
         internal string Print(DbFunctionCommandTree tree)
         {
@@ -83,7 +83,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees.Internal
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "DbInsertCommandTree")]
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "SetClauses")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Common.Utils.TreeNode.#ctor(System.String,System.Data.Entity.Core.Common.Utils.TreeNode[])"
+            MessageId = "System.Data.Common.Utils.TreeNode.#ctor(System.String,System.Data.Common.Utils.TreeNode[])"
             )]
         internal string Print(DbInsertCommandTree tree)
         {
@@ -130,7 +130,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees.Internal
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "DbUpdateCommandTree")]
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "SetClauses")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Common.Utils.TreeNode.#ctor(System.String,System.Data.Entity.Core.Common.Utils.TreeNode[])"
+            MessageId = "System.Data.Common.Utils.TreeNode.#ctor(System.String,System.Data.Common.Utils.TreeNode[])"
             )]
         internal string Print(DbUpdateCommandTree tree)
         {
@@ -188,7 +188,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees.Internal
 
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "DbQueryCommandTree")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Common.Utils.TreeNode.#ctor(System.String,System.Data.Entity.Core.Common.Utils.TreeNode[])"
+            MessageId = "System.Data.Common.Utils.TreeNode.#ctor(System.String,System.Data.Common.Utils.TreeNode[])"
             )]
         internal string Print(DbQueryCommandTree tree)
         {
@@ -205,7 +205,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees.Internal
         }
 
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Common.Utils.TreeNode.#ctor(System.String,System.Data.Entity.Core.Common.Utils.TreeNode[])"
+            MessageId = "System.Data.Common.Utils.TreeNode.#ctor(System.String,System.Data.Common.Utils.TreeNode[])"
             )]
         private static TreeNode CreateParametersNode(DbCommandTree tree)
         {
@@ -397,7 +397,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees.Internal
 
             [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
                 MessageId =
-                    "System.Data.Entity.Core.Common.Utils.TreeNode.#ctor(System.String,System.Collections.Generic.List<System.Data.Entity.Core.Common.Utils.TreeNode>)"
+                    "System.Data.Common.Utils.TreeNode.#ctor(System.String,System.Collections.Generic.List<System.Data.Common.Utils.TreeNode>)"
                 )]
             private void AppendArguments(TreeNode node, IList<string> paramNames, IList<DbExpression> args)
             {
@@ -527,7 +527,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees.Internal
 
             [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
                 MessageId =
-                    "System.Data.Entity.Core.Common.Utils.TreeNode.#ctor(System.String,System.Data.Entity.Core.Common.Utils.TreeNode[])")]
+                    "System.Data.Common.Utils.TreeNode.#ctor(System.String,System.Data.Common.Utils.TreeNode[])")]
             public override TreeNode Visit(DbNullExpression e)
             {
                 return new TreeNode("null");
@@ -568,7 +568,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees.Internal
 
             [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
                 MessageId =
-                    "System.Data.Entity.Core.Common.Utils.TreeNode.#ctor(System.String,System.Data.Entity.Core.Common.Utils.TreeNode[])")]
+                    "System.Data.Common.Utils.TreeNode.#ctor(System.String,System.Data.Common.Utils.TreeNode[])")]
             public override TreeNode Visit(DbPropertyExpression e)
             {
                 TreeNode inst = null;
@@ -739,7 +739,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees.Internal
             [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "OfTypeOnly")]
             [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
                 MessageId =
-                    "System.Data.Entity.Core.Common.Utils.TreeNode.#ctor(System.String,System.Data.Entity.Core.Common.Utils.TreeNode[])")]
+                    "System.Data.Common.Utils.TreeNode.#ctor(System.String,System.Data.Common.Utils.TreeNode[])")]
             public override TreeNode Visit(DbOfTypeExpression e)
             {
                 var retInfo = new TreeNode(e.ExpressionKind == DbExpressionKind.OfTypeOnly ? "OfTypeOnly" : "OfType");
@@ -751,7 +751,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees.Internal
 
             [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
                 MessageId =
-                    "System.Data.Entity.Core.Common.Utils.TreeNode.#ctor(System.String,System.Data.Entity.Core.Common.Utils.TreeNode[])")]
+                    "System.Data.Common.Utils.TreeNode.#ctor(System.String,System.Data.Common.Utils.TreeNode[])")]
             public override TreeNode Visit(DbCaseExpression e)
             {
                 var retInfo = new TreeNode("Case");
@@ -769,7 +769,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees.Internal
             [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "RelatedEntityReferences")]
             [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
                 MessageId =
-                    "System.Data.Entity.Core.Common.Utils.TreeNode.#ctor(System.String,System.Data.Entity.Core.Common.Utils.TreeNode[])")]
+                    "System.Data.Common.Utils.TreeNode.#ctor(System.String,System.Data.Common.Utils.TreeNode[])")]
             public override TreeNode Visit(DbNewInstanceExpression e)
             {
                 var retInfo = NodeFromExpression(e);
@@ -815,7 +815,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees.Internal
             [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "EntitySet")]
             [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
                 MessageId =
-                    "System.Data.Entity.Core.Common.Utils.TreeNode.#ctor(System.String,System.Data.Entity.Core.Common.Utils.TreeNode[])")]
+                    "System.Data.Common.Utils.TreeNode.#ctor(System.String,System.Data.Common.Utils.TreeNode[])")]
             public override TreeNode Visit(DbRefExpression e)
             {
                 var retNode = new TreeNode("Ref");
@@ -836,7 +836,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees.Internal
 
             [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
                 MessageId =
-                    "System.Data.Entity.Core.Common.Utils.TreeNode.#ctor(System.String,System.Data.Entity.Core.Common.Utils.TreeNode[])")]
+                    "System.Data.Common.Utils.TreeNode.#ctor(System.String,System.Data.Common.Utils.TreeNode[])")]
             private static TreeNode CreateRelationshipNode(RelationshipType relType)
             {
                 var rel = new TreeNode("Relationship");
@@ -847,7 +847,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees.Internal
 
             [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
                 MessageId =
-                    "System.Data.Entity.Core.Common.Utils.TreeNode.#ctor(System.String,System.Data.Entity.Core.Common.Utils.TreeNode[])")]
+                    "System.Data.Common.Utils.TreeNode.#ctor(System.String,System.Data.Common.Utils.TreeNode[])")]
             private static TreeNode CreateNavigationNode(RelationshipEndMember fromEnd, RelationshipEndMember toEnd)
             {
                 var nav = new TreeNode();
@@ -860,7 +860,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees.Internal
 
             [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
                 MessageId =
-                    "System.Data.Entity.Core.Common.Utils.TreeNode.#ctor(System.String,System.Data.Entity.Core.Common.Utils.TreeNode[])")]
+                    "System.Data.Common.Utils.TreeNode.#ctor(System.String,System.Data.Common.Utils.TreeNode[])")]
             public override TreeNode Visit(DbRelationshipNavigationExpression e)
             {
                 var retInfo = NodeFromExpression(e);
@@ -940,11 +940,11 @@ namespace System.Data.Entity.Core.Common.CommandTrees.Internal
 
             [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
                 MessageId =
-                    "System.Data.Entity.Core.Common.Utils.TreeNode.#ctor(System.String,System.Collections.Generic.List<System.Data.Entity.Core.Common.Utils.TreeNode>)"
+                    "System.Data.Common.Utils.TreeNode.#ctor(System.String,System.Collections.Generic.List<System.Data.Common.Utils.TreeNode>)"
                 )]
             [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
                 MessageId =
-                    "System.Data.Entity.Core.Common.Utils.TreeNode.#ctor(System.String,System.Data.Entity.Core.Common.Utils.TreeNode[])")]
+                    "System.Data.Common.Utils.TreeNode.#ctor(System.String,System.Data.Common.Utils.TreeNode[])")]
             public override TreeNode Visit(DbGroupByExpression e)
             {
                 var keys = new List<TreeNode>();
@@ -1004,7 +1004,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees.Internal
             [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "SortOrder")]
             [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
                 MessageId =
-                    "System.Data.Entity.Core.Common.Utils.TreeNode.#ctor(System.String,System.Data.Entity.Core.Common.Utils.TreeNode[])")]
+                    "System.Data.Common.Utils.TreeNode.#ctor(System.String,System.Data.Common.Utils.TreeNode[])")]
             private TreeNode VisitSortOrder(IList<DbSortClause> sortOrder)
             {
                 var keyInfo = new TreeNode("SortOrder");

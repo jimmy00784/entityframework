@@ -1,9 +1,9 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Objects.ELinq
+namespace System.Data.Objects.ELinq
 {
     using System.Collections;
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Objects.Internal;
+    using System.Data.Objects.Internal;
     using System.Data.Entity.Internal;
     using System.Data.Entity.Infrastructure;
     using System.Data.Entity.Resources;

@@ -1,12 +1,12 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Objects.Internal
+namespace System.Data.Objects.Internal
 {
     using System.Collections.ObjectModel;
-    using System.Data.Entity.Core.Common;
-    using System.Data.Entity.Core.Mapping;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common;
+    using System.Data.Mapping;
+    using System.Data.Metadata.Edm;
     using System.Diagnostics;
-    using Util = System.Data.Entity.Core.Common.Internal.Materialization.Util;
+    using Util = System.Data.Common.Internal.Materialization.Util;
 
     /// <summary>
     /// Supports materialization of complex type instances from records. Used

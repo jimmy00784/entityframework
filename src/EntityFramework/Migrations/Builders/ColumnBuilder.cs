@@ -2,7 +2,7 @@
 namespace System.Data.Entity.Migrations.Builders
 {
     using System.ComponentModel;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Metadata.Edm;
     using System.Data.Entity.Migrations.Model;
     using System.Data.Entity.Spatial;
     using System.Diagnostics.CodeAnalysis;

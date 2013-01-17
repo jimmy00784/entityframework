@@ -1,5 +1,5 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial
+namespace System.Data.Common.CommandTrees.ExpressionBuilder.Spatial
 {
     using System.Diagnostics.CodeAnalysis;
     using System.Diagnostics.Contracts;
@@ -11,8 +11,8 @@ namespace System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial
     {
         #region Spatial Functions - Geometry well known text Constructors
 
-        // Geometry ‘Static’ Functions
-        // Geometry – well known text Constructors
+        // Geometry ï¿½Staticï¿½ Functions
+        // Geometry ï¿½ well known text Constructors
 
         /// <summary>
         /// Creates a <see cref="DbFunctionExpression"/> that invokes the canonical 'GeometryFromText' function with the
@@ -191,7 +191,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial
 
         #region Spatial Functions - Geometry Well Known Binary Constructors
 
-        // Geometry – Well Known Binary Constructors
+        // Geometry ï¿½ Well Known Binary Constructors
 
         /// <summary>
         /// Creates a <see cref="DbFunctionExpression"/> that invokes the canonical 'GeometryFromBinary' function with the
@@ -591,7 +591,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial
 
         #region Spatial Functions - Geography Well Known Binary Constructors
 
-        // Geography – Well Known Binary Constructors
+        // Geography ï¿½ Well Known Binary Constructors
 
         /// <summary>
         /// Creates a <see cref="DbFunctionExpression"/> that invokes the canonical 'GeographyFromBinary' function with the
@@ -811,7 +811,7 @@ namespace System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder.Spatial
 
         #region Spatial Functions - Instance Member Access
 
-        // Spatial ‘Instance’ Functions
+        // Spatial ï¿½Instanceï¿½ Functions
         // Spatial Member Access
 
         /// <summary>

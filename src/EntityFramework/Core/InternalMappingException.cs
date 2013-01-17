@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core
+namespace System.Data
 {
-    using System.Data.Entity.Core.Mapping.ViewGeneration.Structures;
+    using System.Data.Mapping.ViewGeneration.Structures;
     using System.Diagnostics.CodeAnalysis;
     using System.Diagnostics.Contracts;
     using System.Runtime.Serialization;

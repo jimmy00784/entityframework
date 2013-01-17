@@ -1,5 +1,5 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Common.EntitySql.AST
+namespace System.Data.Common.EntitySql.AST
 {
     /// <summary>
     /// Represents the Seached Case Expression - CASE WHEN THEN [ELSE] END.

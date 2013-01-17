@@ -1,8 +1,8 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Query.PlanCompiler
+namespace System.Data.Query.PlanCompiler
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Query.InternalTrees;
+    using System.Data.Query.InternalTrees;
     using System.Diagnostics.CodeAnalysis;
 
     /// <summary>
@@ -34,7 +34,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <param name="leftVars">list of equijoin columns of the left table</param>
         /// <param name="rightVars">equijoin columns of the right table</param>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private JoinEdge(
             AugmentedTableNode left, AugmentedTableNode right,
             AugmentedJoinNode joinNode, JoinKind joinKind,
@@ -116,7 +116,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <param name="rightVar">equijoin column of the right table</param>
         /// <returns>the new join edge</returns>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         internal static JoinEdge CreateJoinEdge(
             AugmentedTableNode left, AugmentedTableNode right,
             AugmentedJoinNode joinNode,

@@ -1,11 +1,11 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-using md = System.Data.Entity.Core.Metadata.Edm;
+using md = System.Data.Metadata.Edm;
 
-namespace System.Data.Entity.Core.Query.PlanCompiler
+namespace System.Data.Query.PlanCompiler
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common;
-    using System.Data.Entity.Core.Query.InternalTrees;
+    using System.Data.Common;
+    using System.Data.Query.InternalTrees;
     using System.Data.Entity.Resources;
     using System.Diagnostics.CodeAnalysis;
     using System.Linq;
@@ -18,7 +18,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
     /// specifically, the nest operations are pulled up to the root of the query instead.
     ///</remarks>
     [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-        MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+        MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
     internal class NestPullup : BasicOpVisitorOfNode
     {
         #region private state
@@ -76,7 +76,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// </summary>
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "physicalProject")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private void Process()
         {
             PlanCompiler.Assert(Command.Root.Op.OpType == OpType.PhysicalProject, "root node is not physicalProject?");
@@ -109,7 +109,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <returns></returns>
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "singleStreamNest")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private static bool IsNestOpNode(Node n)
         {
             PlanCompiler.Assert(n.Op.OpType != OpType.SingleStreamNest, "illegal singleStreamNest?");
@@ -350,7 +350,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "ExistsOp")]
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "NestPull")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         public override Node Visit(ExistsOp op, Node n)
         {
             var inputVar = ((ProjectOp)n.Child0.Op).Outputs.First;
@@ -438,7 +438,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
                         //
                         //      Project(Collect(PhysicalProject(...)))
                         //
-                        // isn’t good enough, because that will get converted to a MultiStreamNest, with
+                        // isnï¿½t good enough, because that will get converted to a MultiStreamNest, with
                         // the SingleStreamNest as the input to the MultiStreamNest.
                         throw new InvalidOperationException(
                             Strings.ADP_InternalProviderError((int)EntityUtil.InternalErrorCode.JoinOverSingleStreamNest));
@@ -626,8 +626,8 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// DistinctOp
         /// </summary>
         /// <remarks>
-        /// The input to a DistinctOp cannot be a NestOp – that would imply that
-        /// we support distinctness over collections - which we don’t.
+        /// The input to a DistinctOp cannot be a NestOp ï¿½ that would imply that
+        /// we support distinctness over collections - which we donï¿½t.
         /// </remarks>
         /// <param name="op"></param>
         /// <param name="n"></param>
@@ -726,7 +726,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <returns></returns>
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "GroupByIntoOp")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         public override Node Visit(GroupByIntoOp op, Node n)
         {
             PlanCompiler.Assert(n.HasChild3 && n.Child3.Children.Count > 0, "GroupByIntoOp with no group aggregates?");
@@ -791,7 +791,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         ///
         ///      Where:
         ///         ProjectOp' is ProjectOp plus any additional Vars needed by NestOp
-        ///                    (see NestOp.Outputs – except the collection vars)
+        ///                    (see NestOp.Outputs ï¿½ except the collection vars)
         ///
         ///         MsnOp'     should be MsnOp. Additionally, its Outputs should be enhanced
         ///                    to include any Vars produced by the ProjectOp
@@ -898,7 +898,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "Vars")]
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "collectionVar")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private Node MergeNestedNestOps(Node nestNode)
         {
             // First, determine if there is anything we can actually do.  If we 
@@ -995,7 +995,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <returns></returns>
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "physicalProject")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private Node ProjectOpCase1(Node projectNode)
         {
 #if DEBUG
@@ -1094,7 +1094,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
                     // rest of the in the VarDefList; we can't just pitch them, but we also 
                     // really want to have the input be a nestop.
                     //
-                    // What we do is essentially push any non-collection VarDef’s down under 
+                    // What we do is essentially push any non-collection VarDefï¿½s down under 
                     // the driving node of the MSN:
                     //
                     //      Project[Z,Y,W](Msn(X,Y),VarDef(Z=blah),VarDef(W=Collect(etc)) ==> MSN(MSN(Project[Z](X,VarDef(Z=blah)),Y),W)
@@ -1350,7 +1350,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <param name="projectNode"></param>
         /// <returns></returns>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private Node ProjectOpCase2(Node projectNode)
         {
 #if DEBUG
@@ -1543,12 +1543,12 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// SetOp common processing
         /// </summary>
         /// <remarks>
-        /// The input to an IntersectOp or an ExceptOp cannot be a NestOp – that
+        /// The input to an IntersectOp or an ExceptOp cannot be a NestOp ï¿½ that
         /// would imply that we support distinctness over collections  - which
-        /// we don’t.
+        /// we donï¿½t.
         ///
         /// UnionAllOp is somewhat trickier. We would need a way to percolate keys
-        /// up the UnionAllOp – and I’m ok with not supporting this case for now.
+        /// up the UnionAllOp ï¿½ and Iï¿½m ok with not supporting this case for now.
         /// </remarks>
         /// <param name="op"></param>
         /// <param name="n"></param>
@@ -1585,7 +1585,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// </summary>
         /// <remarks>
         /// If the input to a SortOp is a NestOp, then none of the sort
-        /// keys can be collection Vars of the NestOp – we don't support
+        /// keys can be collection Vars of the NestOp ï¿½ we don't support
         /// sorts over collections.
         /// </remarks>
         /// <param name="op"></param>
@@ -1653,7 +1653,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <returns></returns>
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "SingleStreamNestOp")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private NestBaseOp GetNestOpWithConsolidatedSortKeys(NestBaseOp inputNestOp, List<SortKey> sortKeys)
         {
             NestBaseOp result;
@@ -1762,7 +1762,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// to the Unnest Vars by the new Vars.
         ///
         /// To simplify this process, as part of the ITreeGenerator, whenever we generate
-        /// an UnnestOp, we will generate a ProjectOp above it – which simply selects out
+        /// an UnnestOp, we will generate a ProjectOp above it ï¿½ which simply selects out
         /// all Vars from the UnnestOp; and has no local definitions. This allows us to
         /// restrict the Var->Var replacement to just ProjectOp.
         /// </remarks>
@@ -1772,7 +1772,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "physicalProject")]
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "VarDef")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         public override Node Visit(UnnestOp op, Node n)
         {
 #if DEBUG
@@ -1972,7 +1972,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <returns></returns>
         [SuppressMessage("Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "physicalProject")]
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         public override Node Visit(PhysicalProjectOp op, Node n)
         {
             // cannot be multi-input (not at this point)
@@ -2084,7 +2084,7 @@ namespace System.Data.Entity.Core.Query.PlanCompiler
         /// <param name="ssnOp"></param>
         /// <returns></returns>
         [SuppressMessage("Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters",
-            MessageId = "System.Data.Entity.Core.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
+            MessageId = "System.Data.Query.PlanCompiler.PlanCompiler.Assert(System.Boolean,System.String)")]
         private List<SortKey> BuildSortKeyList(SingleStreamNestOp ssnOp)
         {
             var sortVars = Command.CreateVarVec();

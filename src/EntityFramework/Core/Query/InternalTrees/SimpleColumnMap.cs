@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Query.InternalTrees
+namespace System.Data.Query.InternalTrees
 {
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Metadata.Edm;
 
     /// <summary>
     /// Base class for simple column maps; can be either a VarRefColumnMap or 

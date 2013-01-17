@@ -1,10 +1,10 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Common.EntitySql
+namespace System.Data.Common.EntitySql
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.CommandTrees;
-    using System.Data.Entity.Core.Common.EntitySql.AST;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common.CommandTrees;
+    using System.Data.Common.EntitySql.AST;
+    using System.Data.Metadata.Edm;
     using System.Data.Entity.Resources;
     using System.Diagnostics;
     using System.Diagnostics.Contracts;
@@ -44,9 +44,9 @@ namespace System.Data.Entity.Core.Common.EntitySql
         /// <param name="parameters">ordinary parameters</param>
         /// <param name="parseResult"></param>
         /// <returns>A parse result with the command tree produced by parsing the given command.</returns>
-        /// <exception cref="System.Data.Entity.Core.EntityException">Thrown when Syntatic or Semantic rules are violated and the query cannot be accepted</exception>
-        /// <exception cref="System.Data.Entity.Core.MetadataException">Thrown when metadata related service requests fail</exception>
-        /// <exception cref="System.Data.Entity.Core.MappingException">Thrown when mapping related service requests fail</exception>
+        /// <exception cref="System.Data.EntityException">Thrown when Syntatic or Semantic rules are violated and the query cannot be accepted</exception>
+        /// <exception cref="System.Data.MetadataException">Thrown when metadata related service requests fail</exception>
+        /// <exception cref="System.Data.MappingException">Thrown when mapping related service requests fail</exception>
         /// <remarks>
         /// This method is not thread safe.
         /// </remarks>
@@ -85,9 +85,9 @@ namespace System.Data.Entity.Core.Common.EntitySql
         /// <param name="parameters">ordinary command parameters</param>
         /// <param name="variables">command free variables</param>
         /// <returns>The query expression tree produced by parsing the given query command.</returns>
-        /// <exception cref="System.Data.Entity.Core.EntityException">Thrown when Syntatic or Semantic rules are violated and the query expression cannot be accepted</exception>
-        /// <exception cref="System.Data.Entity.Core.MetadataException">Thrown when metadata related service requests fail</exception>
-        /// <exception cref="System.Data.Entity.Core.MappingException">Thrown when mapping related service requests fail</exception>
+        /// <exception cref="System.Data.EntityException">Thrown when Syntatic or Semantic rules are violated and the query expression cannot be accepted</exception>
+        /// <exception cref="System.Data.MetadataException">Thrown when metadata related service requests fail</exception>
+        /// <exception cref="System.Data.MappingException">Thrown when mapping related service requests fail</exception>
         /// <remarks>
         /// This method is not thread safe.
         /// </remarks>
@@ -126,7 +126,7 @@ namespace System.Data.Entity.Core.Common.EntitySql
         /// <param name="commandText">eSQL command</param>
         /// <param name="parserOptions">parser options<seealso cref="ParserOptions"/></param>
         /// <returns>Ast</returns>
-        /// <exception cref="System.Data.Entity.Core.EntityException">Thrown when Syntatic or Semantic rules are violated and the query cannot be accepted</exception>
+        /// <exception cref="System.Data.EntityException">Thrown when Syntatic or Semantic rules are violated and the query cannot be accepted</exception>
         /// <remarks>
         /// This method is not thread safe.
         /// </remarks>
@@ -186,9 +186,9 @@ namespace System.Data.Entity.Core.Common.EntitySql
         /// <param name="parameters">ordinary command parameters</param>
         /// <returns>a parse result with a valid command tree</returns>
         /// <remarks>Parameters name/types must be bound before invoking this method</remarks>
-        /// <exception cref="System.Data.Entity.Core.EntityException">Thrown when Syntatic or Semantic rules are violated and the query cannot be accepted.</exception>
-        /// <exception cref="System.Data.Entity.Core.MetadataException">Thrown as inner exception of a EntityException when metadata related service requests fail.</exception>
-        /// <exception cref="System.Data.Entity.Core.MappingException">Thrown as inner exception of a EntityException when mapping related service requests fail.</exception>
+        /// <exception cref="System.Data.EntityException">Thrown when Syntatic or Semantic rules are violated and the query cannot be accepted.</exception>
+        /// <exception cref="System.Data.MetadataException">Thrown as inner exception of a EntityException when metadata related service requests fail.</exception>
+        /// <exception cref="System.Data.MappingException">Thrown as inner exception of a EntityException when mapping related service requests fail.</exception>
         /// <remarks>
         /// This method is not thread safe.
         /// </remarks>
@@ -225,9 +225,9 @@ namespace System.Data.Entity.Core.Common.EntitySql
         /// <param name="parameters">ordinary command parameters</param>
         /// <param name="variables">command free variables</param>
         /// <remarks>Parameters name/types must be bound before invoking this method</remarks>
-        /// <exception cref="System.Data.Entity.Core.EntityException">Thrown when Syntatic or Semantic rules are violated and the query cannot be accepted.</exception>
-        /// <exception cref="System.Data.Entity.Core.MetadataException">Thrown as inner exception of a EntityException when metadata related service requests fail.</exception>
-        /// <exception cref="System.Data.Entity.Core.MappingException">Thrown as inner exception of a EntityException when mapping related service requests fail.</exception>
+        /// <exception cref="System.Data.EntityException">Thrown when Syntatic or Semantic rules are violated and the query cannot be accepted.</exception>
+        /// <exception cref="System.Data.MetadataException">Thrown as inner exception of a EntityException when metadata related service requests fail.</exception>
+        /// <exception cref="System.Data.MappingException">Thrown as inner exception of a EntityException when mapping related service requests fail.</exception>
         /// <remarks>
         /// This method is not thread safe.
         /// </remarks>

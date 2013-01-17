@@ -1,5 +1,5 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Common.EntitySql.AST
+namespace System.Data.Common.EntitySql.AST
 {
     using System.Data.Entity.Resources;
     using System.Diagnostics;
@@ -69,7 +69,7 @@ namespace System.Data.Entity.Core.Common.EntitySql.AST
         /// True if literal is a string.
         /// </summary>
         /// <remarks>
-        /// <exception cref="System.Data.Entity.Core.EntityException"></exception>
+        /// <exception cref="System.Data.EntityException"></exception>
         /// </remarks>
         internal bool IsString
         {
@@ -80,7 +80,7 @@ namespace System.Data.Entity.Core.Common.EntitySql.AST
         /// True if literal is a unicode string.
         /// </summary>
         /// <remarks>
-        /// <exception cref="System.Data.Entity.Core.EntityException"></exception>
+        /// <exception cref="System.Data.EntityException"></exception>
         /// </remarks>
         internal bool IsUnicodeString
         {
@@ -91,7 +91,7 @@ namespace System.Data.Entity.Core.Common.EntitySql.AST
         /// True if literal is the eSQL untyped null.
         /// </summary>
         /// <remarks>
-        /// <exception cref="System.Data.Entity.Core.EntityException"></exception>
+        /// <exception cref="System.Data.EntityException"></exception>
         /// </remarks>
         internal bool IsNullLiteral
         {
@@ -124,7 +124,7 @@ namespace System.Data.Entity.Core.Common.EntitySql.AST
         /// Returns literal converted value.
         /// </summary>
         /// <remarks>
-        /// <exception cref="System.Data.Entity.Core.EntityException"></exception>
+        /// <exception cref="System.Data.EntityException"></exception>
         /// </remarks>
         internal object Value
         {
@@ -140,7 +140,7 @@ namespace System.Data.Entity.Core.Common.EntitySql.AST
         /// Returns literal value type. If value is eSQL untyped null, returns null.
         /// </summary>
         /// <remarks>
-        /// <exception cref="System.Data.Entity.Core.EntityException"></exception>
+        /// <exception cref="System.Data.EntityException"></exception>
         /// </remarks>
         internal Type Type
         {

@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Mapping.ViewGeneration.Validation
+namespace System.Data.Mapping.ViewGeneration.Validation
 {
-    using System.Data.Entity.Core.Common.Utils;
+    using System.Data.Common.Utils;
 
     // Abstract class representing a relation signature for a cell query
     internal abstract class CellRelation : InternalBase

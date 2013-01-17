@@ -1,7 +1,7 @@
 ﻿// Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
 namespace System.Data.Entity.Internal
 {
-    using System.Data.Entity.Core.Objects.DataClasses;
+    using System.Data.Objects.DataClasses;
     using System.Data.Entity.Resources;
     using System.Linq;
 
@@ -167,7 +167,7 @@ namespace System.Data.Entity.Internal
         #region Handling entries for detached entities
 
         /// <summary>
-        ///     Validates that the owning entity entry is associated with an underlying <see cref = "System.Data.Entity.Core.Objects.ObjectStateEntry" /> and
+        ///     Validates that the owning entity entry is associated with an underlying <see cref = "System.Data.Objects.ObjectStateEntry" /> and
         ///     is not just wrapping a non-attached entity.
         ///     If the entity is not detached, then the RelatedEnd for this navigation property is obtained.
         /// </summary>

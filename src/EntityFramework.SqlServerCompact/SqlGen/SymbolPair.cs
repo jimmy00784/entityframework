@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
 namespace System.Data.Entity.SqlServerCompact.SqlGen
 {
-    using System.Data.Entity.Core.Common.CommandTrees;
+    using System.Data.Common.CommandTrees;
     using System.Diagnostics;
 
     /// <summary>

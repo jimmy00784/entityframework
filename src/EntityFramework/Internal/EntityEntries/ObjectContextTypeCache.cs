@@ -2,7 +2,7 @@
 namespace System.Data.Entity.Internal
 {
     using System.Collections.Concurrent;
-    using System.Data.Entity.Core.Objects;
+    using System.Data.Objects;
 
     internal static class ObjectContextTypeCache
     {

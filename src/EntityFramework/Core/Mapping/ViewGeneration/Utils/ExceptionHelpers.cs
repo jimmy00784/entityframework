@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Mapping.ViewGeneration.Utils
+namespace System.Data.Mapping.ViewGeneration.Utils
 {
-    using System.Data.Entity.Core.Mapping.ViewGeneration.Structures;
+    using System.Data.Mapping.ViewGeneration.Structures;
 
     // Miscellaneous helper routines for generating mapping exceptions
     internal static class ExceptionHelpers

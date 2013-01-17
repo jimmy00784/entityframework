@@ -1,14 +1,14 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Common.EntitySql
+namespace System.Data.Common.EntitySql
 {
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
-    using System.Data.Entity.Core.Common.CommandTrees;
-    using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
-    using System.Data.Entity.Core.Common.EntitySql.AST;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.Mapping;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common.CommandTrees;
+    using System.Data.Common.CommandTrees.ExpressionBuilder;
+    using System.Data.Common.EntitySql.AST;
+    using System.Data.Common.Utils;
+    using System.Data.Mapping;
+    using System.Data.Metadata.Edm;
     using System.Data.Entity.Resources;
     using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;
@@ -42,9 +42,9 @@ namespace System.Data.Entity.Core.Common.EntitySql
         /// </summary>
         /// <param name="astExpr">ast command tree</param>
         /// <remarks>
-        /// <exception cref="System.Data.Entity.Core.EntityException">Thrown when Syntatic or Semantic rules are violated and the query cannot be accepted</exception>
-        /// <exception cref="System.Data.Entity.Core.MetadataException">Thrown when metadata related service requests fail</exception>
-        /// <exception cref="System.Data.Entity.Core.MappingException">Thrown when mapping related service requests fail</exception>
+        /// <exception cref="System.Data.EntityException">Thrown when Syntatic or Semantic rules are violated and the query cannot be accepted</exception>
+        /// <exception cref="System.Data.MetadataException">Thrown when metadata related service requests fail</exception>
+        /// <exception cref="System.Data.MappingException">Thrown when mapping related service requests fail</exception>
         /// </remarks>
         /// <returns>ParseResult with a valid DbCommandTree</returns>
         internal ParseResult AnalyzeCommand(Node astExpr)
@@ -75,9 +75,9 @@ namespace System.Data.Entity.Core.Common.EntitySql
         /// </summary>
         /// <param name="astExpr">ast command tree</param>
         /// <remarks>
-        /// <exception cref="System.Data.Entity.Core.EntityException">Thrown when Syntatic or Semantic rules are violated and the query cannot be accepted</exception>
-        /// <exception cref="System.Data.Entity.Core.MetadataException">Thrown when metadata related service requests fail</exception>
-        /// <exception cref="System.Data.Entity.Core.MappingException">Thrown when mapping related service requests fail</exception>
+        /// <exception cref="System.Data.EntityException">Thrown when Syntatic or Semantic rules are violated and the query cannot be accepted</exception>
+        /// <exception cref="System.Data.MetadataException">Thrown when metadata related service requests fail</exception>
+        /// <exception cref="System.Data.MappingException">Thrown when mapping related service requests fail</exception>
         /// </remarks>
         /// <returns>DbExpression</returns>
         internal DbLambda AnalyzeQueryCommand(Node astExpr)

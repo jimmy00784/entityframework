@@ -1,12 +1,12 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
 using ReadOnlyVariables =
-    System.Collections.ObjectModel.ReadOnlyCollection<System.Data.Entity.Core.Common.CommandTrees.DbVariableReferenceExpression>;
+    System.Collections.ObjectModel.ReadOnlyCollection<System.Data.Common.CommandTrees.DbVariableReferenceExpression>;
 
-namespace System.Data.Entity.Core.Common.CommandTrees
+namespace System.Data.Common.CommandTrees
 {
     using System.Collections.Generic;
-    using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common.CommandTrees.ExpressionBuilder;
+    using System.Data.Metadata.Edm;
     using System.Diagnostics;
     using System.Diagnostics.Contracts;
     using System.Reflection;

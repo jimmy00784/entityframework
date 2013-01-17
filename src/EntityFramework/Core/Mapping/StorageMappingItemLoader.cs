@@ -1,12 +1,12 @@
 // Copyright (c) Microsoft Open Technologies, Inc. All rights reserved. See License.txt in the project root for license information.
-namespace System.Data.Entity.Core.Mapping
+namespace System.Data.Mapping
 {
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
-    using System.Data.Entity.Core.Common;
-    using System.Data.Entity.Core.Common.Utils;
-    using System.Data.Entity.Core.EntityModel.SchemaObjectModel;
-    using System.Data.Entity.Core.Metadata.Edm;
+    using System.Data.Common;
+    using System.Data.Common.Utils;
+    using System.Data.EntityModel.SchemaObjectModel;
+    using System.Data.Metadata.Edm;
     using System.Data.Entity.Resources;
     using System.Diagnostics;
     using System.Diagnostics.CodeAnalysis;
@@ -18,9 +18,9 @@ namespace System.Data.Entity.Core.Mapping
     using System.Xml;
     using System.Xml.Schema;
     using System.Xml.XPath;
-    using EntityContainer = System.Data.Entity.Core.Metadata.Edm.EntityContainer;
+    using EntityContainer = System.Data.Metadata.Edm.EntityContainer;
     using Triple =
-        System.Data.Entity.Core.Common.Utils.Pair<Metadata.Edm.EntitySetBase, Common.Utils.Pair<Metadata.Edm.EntityTypeBase, bool>>;
+        System.Data.Common.Utils.Pair<Metadata.Edm.EntitySetBase, Common.Utils.Pair<Metadata.Edm.EntityTypeBase, bool>>;
 
     /// <summary>
     /// The class loads an MSL file into memory and exposes CSMappingMetadata interfaces.
