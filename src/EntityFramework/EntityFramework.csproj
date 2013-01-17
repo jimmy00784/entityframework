@@ -10,19 +10,19 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>System.Data.Entity</RootNamespace>
     <AssemblyName>EntityFramework</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <CodeContractsAssemblyMode>1</CodeContractsAssemblyMode>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>..\EcmaPublicKey.snk</AssemblyOriginatorKeyFile>
     <DelaySign>true</DelaySign>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
+    <DebugSymbols>True</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
+    <Optimize>False</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>TRACE;DEBUG;CONTRACTS_FULL</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -53,7 +53,6 @@
     <CodeContractsReferenceAssembly>Build</CodeContractsReferenceAssembly>
     <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
     <DocumentationFile>bin\Debug\EntityFramework.xml</DocumentationFile>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <NoWarn>1591;1573;1572;1570</NoWarn>
     <CodeContractsPointerObligations>False</CodeContractsPointerObligations>
     <CodeContractsInferRequires>False</CodeContractsInferRequires>
@@ -65,10 +64,11 @@
     <CodeContractsSuggestObjectInvariants>False</CodeContractsSuggestObjectInvariants>
     <CodeContractsDisjunctiveRequires>False</CodeContractsDisjunctiveRequires>
     <CodeAnalysisRuleSet>..\Strict.ruleset</CodeAnalysisRuleSet>
+    <additionalargs>-delaysign</additionalargs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
+    <Optimize>True</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE;CODE_ANALYSIS;CONTRACTS_FULL</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -99,7 +99,7 @@
     <CodeContractsReferenceAssembly>Build</CodeContractsReferenceAssembly>
     <CodeContractsAnalysisWarningLevel>0</CodeContractsAnalysisWarningLevel>
     <DocumentationFile>bin\Release\EntityFramework.xml</DocumentationFile>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <NoWarn>1591;1573;1572;1570</NoWarn>
     <CodeContractsPointerObligations>False</CodeContractsPointerObligations>
     <CodeContractsInferRequires>False</CodeContractsInferRequires>
@@ -117,7 +117,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -125,6 +124,7 @@
     <Reference Include="System.Transactions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\SharedAssemblyInfo.cs">
@@ -370,13 +370,10 @@
     <Compile Include="Core\Common\internal\materialization\CollectionTranslatorResult.cs" />
     <Compile Include="Core\Common\internal\materialization\columnmapkeybuilder.cs" />
     <Compile Include="Core\Common\internal\materialization\compensatingcollection.cs" />
-    <Compile Include="Core\Common\internal\materialization\Coordinator.cs" />
-    <Compile Include="Core\Common\internal\materialization\CoordinatorFactory.cs" />
     <Compile Include="Core\Common\internal\materialization\coordinatorscratchpad.cs" />
     <Compile Include="Core\Common\internal\materialization\recordstate.cs" />
     <Compile Include="Core\Common\internal\materialization\recordstatefactory.cs" />
     <Compile Include="Core\Common\internal\materialization\recordstatescratchpad.cs" />
-    <Compile Include="Core\Common\internal\materialization\Shaper.cs" />
     <Compile Include="Core\Common\internal\materialization\shaperfactory.cs" />
     <Compile Include="Core\Common\internal\materialization\ShaperFactory`.cs" />
     <Compile Include="Core\Common\internal\materialization\Shaper`.cs" />
@@ -1754,6 +1751,9 @@
     <Compile Include="Validation\DbEntityValidationResult.cs" />
     <Compile Include="Validation\DbUnexpectedValidationException.cs" />
     <Compile Include="Validation\DbValidationError.cs" />
+    <Compile Include="Core\Common\internal\materialization\coordinator.cs" />
+    <Compile Include="Core\Common\internal\materialization\coordinatorfactory.cs" />
+    <Compile Include="Core\Common\internal\materialization\shaper.cs" />
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDictionary Include="..\CodeAnalysisDictionary.xml" />
