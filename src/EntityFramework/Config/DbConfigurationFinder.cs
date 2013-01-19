@@ -14,7 +14,7 @@ namespace System.Data.Entity.Config
     {
         public virtual Type TryFindConfigurationType(IEnumerable<Type> typesToSearch)
         {
-            Contract.Requires(typesToSearch != null);
+            //Contract.Requires(typesToSearch != null);
 
             var configurations = typesToSearch
                 .Where(
@@ -56,7 +56,7 @@ namespace System.Data.Entity.Config
 
         public virtual DbConfiguration TryCreateConfiguration(IEnumerable<Type> typesToSearch)
         {
-            Contract.Requires(typesToSearch != null);
+            //Contract.Requires(typesToSearch != null);
 
             var configType = TryFindConfigurationType(typesToSearch);
 

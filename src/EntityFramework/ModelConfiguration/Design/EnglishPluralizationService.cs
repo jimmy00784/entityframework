@@ -1326,7 +1326,7 @@ namespace System.Data.Entity.ModelConfiguration.Design.PluralizationServices
         [SuppressMessage("Microsoft.Globalization", "CA1308:NormalizeStringsToUppercase")]
         private bool IsUninflective(string word)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(word));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(word));
 
             if (PluralizationServiceUtil.DoesWordContainSuffix(word, _uninflectiveSuffixes, Culture)
                 || (!word.ToLower(Culture).Equals(word) && word.EndsWith("ese", false, Culture))

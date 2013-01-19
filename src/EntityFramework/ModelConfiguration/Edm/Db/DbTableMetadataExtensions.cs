@@ -16,8 +16,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db
 
         public static DbTableColumnMetadata AddColumn(this DbTableMetadata table, string name)
         {
-            Contract.Requires(table != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(name));
+            //Contract.Requires(table != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(name));
 
             var tableColumn = new DbTableColumnMetadata
                 {
@@ -44,45 +44,45 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db
             Justification = "Used by test code.")]
         public static object GetConfiguration(this DbTableMetadata table)
         {
-            Contract.Requires(table != null);
+            //Contract.Requires(table != null);
 
             return table.Annotations.GetConfiguration();
         }
 
         public static void SetConfiguration(this DbTableMetadata table, object configuration)
         {
-            Contract.Requires(table != null);
-            Contract.Requires(configuration != null);
+            //Contract.Requires(table != null);
+            //Contract.Requires(configuration != null);
 
             table.Annotations.SetConfiguration(configuration);
         }
 
         public static DatabaseName GetTableName(this DbTableMetadata table)
         {
-            Contract.Requires(table != null);
+            //Contract.Requires(table != null);
 
             return (DatabaseName)table.Annotations.GetAnnotation(TableNameAnnotation);
         }
 
         public static void SetTableName(this DbTableMetadata table, DatabaseName tableName)
         {
-            Contract.Requires(table != null);
-            Contract.Requires(tableName != null);
+            //Contract.Requires(table != null);
+            //Contract.Requires(tableName != null);
 
             table.Annotations.SetAnnotation(TableNameAnnotation, tableName);
         }
 
         public static EdmEntityType GetKeyNamesType(this DbTableMetadata table)
         {
-            Contract.Requires(table != null);
+            //Contract.Requires(table != null);
 
             return (EdmEntityType)table.Annotations.GetAnnotation(KeyNamesTypeAnnotation);
         }
 
         public static void SetKeyNamesType(this DbTableMetadata table, EdmEntityType entityType)
         {
-            Contract.Requires(table != null);
-            Contract.Requires(entityType != null);
+            //Contract.Requires(table != null);
+            //Contract.Requires(entityType != null);
 
             table.Annotations.SetAnnotation(KeyNamesTypeAnnotation, entityType);
         }

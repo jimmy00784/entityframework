@@ -12,7 +12,7 @@ namespace System.Data.Entity.Utilities
     {
         public static StoreItemCollection GetStoreItemCollection(this XDocument model, out DbProviderInfo providerInfo)
         {
-            Contract.Requires(model != null);
+            //Contract.Requires(model != null);
 
             var schemaElement = model.Descendants(EdmXNames.Ssdl.SchemaNames).Single();
 
@@ -25,7 +25,7 @@ namespace System.Data.Entity.Utilities
 
         public static bool HasSystemOperations(this XDocument model)
         {
-            Contract.Requires(model != null);
+            //Contract.Requires(model != null);
 
             return model.Descendants().Attributes(EdmXNames.IsSystem).Any();
         }

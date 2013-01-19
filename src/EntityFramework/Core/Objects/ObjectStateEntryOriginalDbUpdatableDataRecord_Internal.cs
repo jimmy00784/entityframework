@@ -16,9 +16,9 @@ namespace System.Data.Objects
             EntityEntry cacheEntry, StateManagerTypeMetadata metadata, object userObject)
             : base(cacheEntry, metadata, userObject)
         {
-            Contract.Requires(cacheEntry != null);
-            Contract.Requires(userObject != null);
-            Contract.Requires(metadata != null);
+            //Contract.Requires(cacheEntry != null);
+            //Contract.Requires(userObject != null);
+            //Contract.Requires(metadata != null);
             Debug.Assert(!cacheEntry.IsKeyEntry, "Cannot create an ObjectStateEntryOriginalDbUpdatableDataRecord_Internal for a key entry");
             switch (cacheEntry.State)
             {

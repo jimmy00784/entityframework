@@ -25,7 +25,7 @@ namespace System.Data.Entity.Migrations.Infrastructure
         public MigratorScriptingDecorator(MigratorBase innerMigrator)
             : base(innerMigrator)
         {
-            Contract.Requires(innerMigrator != null);
+            //Contract.Requires(innerMigrator != null);
         }
 
         /// <summary>

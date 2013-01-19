@@ -22,9 +22,9 @@ namespace System.Data.Mapping
             FunctionParameter rowsAffectedParameter,
             IEnumerable<StorageModificationFunctionResultBinding> resultBindings)
         {
-            Contract.Requires(entitySet != null);
-            Contract.Requires(function != null);
-            Contract.Requires(parameterBindings != null);
+            //Contract.Requires(entitySet != null);
+            //Contract.Requires(function != null);
+            //Contract.Requires(parameterBindings != null);
 
             Function = function;
             RowsAffectedParameter = rowsAffectedParameter;

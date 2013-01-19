@@ -164,7 +164,7 @@ namespace System.Data.Common.EntitySql
             Func<Node, ParserOptions, TResult> compilationFunction)
             where TResult : class
         {
-            Contract.Requires(commandText != null);
+            //Contract.Requires(commandText != null);
 
             //
             // Validate parser options - if null, give default options
@@ -263,8 +263,8 @@ namespace System.Data.Common.EntitySql
             Func<SemanticAnalyzer, Node, TResult> analysisFunction)
             where TResult : class
         {
-            Contract.Requires(astExpr != null);
-            Contract.Requires(perspective != null);
+            //Contract.Requires(astExpr != null);
+            //Contract.Requires(perspective != null);
 
             TResult result = null;
 

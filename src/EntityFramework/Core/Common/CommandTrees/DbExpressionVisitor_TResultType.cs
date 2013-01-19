@@ -319,253 +319,253 @@ namespace System.Data.Common.CommandTrees
     {
         public override TResultType Visit(DbExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbAndExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbApplyExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbArithmeticExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbCaseExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbCastExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbComparisonExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbConstantExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbCrossJoinExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbDerefExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbDistinctExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbElementExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbExceptExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbFilterExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbFunctionExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbEntityRefExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbRefKeyExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbGroupByExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbIntersectExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbIsEmptyExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbIsNullExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbIsOfExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbJoinExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbLikeExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbLimitExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbNewInstanceExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbNotExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbNullExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbOfTypeExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbOrExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbParameterReferenceExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbProjectExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbPropertyExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbQuantifierExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbRefExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbRelationshipNavigationExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbScanExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbSortExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbSkipExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbTreatExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbUnionAllExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
 
         public override TResultType Visit(DbVariableReferenceExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             throw new NotImplementedException();
         }
     }

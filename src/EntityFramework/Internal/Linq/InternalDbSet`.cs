@@ -29,7 +29,7 @@ namespace System.Data.Entity.Internal.Linq
         /// <param name = "internalSet">The internal set.</param>
         public InternalDbSet(IInternalSet<TEntity> internalSet)
         {
-            Contract.Requires(internalSet != null);
+            //Contract.Requires(internalSet != null);
 
             _internalSet = internalSet;
         }

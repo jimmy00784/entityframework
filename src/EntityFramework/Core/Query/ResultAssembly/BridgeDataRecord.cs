@@ -82,7 +82,7 @@ namespace System.Data.Query.ResultAssembly
 
         internal BridgeDataRecord(Shaper<RecordState> shaper, int depth)
         {
-            Contract.Requires(null != shaper);
+            //Contract.Requires(null != shaper);
             Shaper = shaper;
             Depth = depth;
             // Rest of state is set through the SetRecordSource method.

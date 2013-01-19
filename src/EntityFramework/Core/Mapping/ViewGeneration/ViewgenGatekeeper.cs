@@ -25,8 +25,8 @@ namespace System.Data.Mapping.ViewGeneration
         /// <returns>Generated Views for EntitySets</returns>
         internal static ViewGenResults GenerateViewsFromMapping(StorageEntityContainerMapping containerMapping, ConfigViewGenerator config)
         {
-            Contract.Requires(containerMapping != null);
-            Contract.Requires(config != null);
+            //Contract.Requires(containerMapping != null);
+            //Contract.Requires(config != null);
             Debug.Assert(containerMapping.HasViews, "Precondition Violated: No mapping exists to generate views for!");
 
 #if DEBUG
@@ -55,10 +55,10 @@ namespace System.Data.Mapping.ViewGeneration
             bool includeSubtypes,
             out bool success)
         {
-            Contract.Requires(containerMapping != null);
-            Contract.Requires(config != null);
-            Contract.Requires(entity != null);
-            Contract.Requires(type != null);
+            //Contract.Requires(containerMapping != null);
+            //Contract.Requires(config != null);
+            //Contract.Requires(entity != null);
+            //Contract.Requires(type != null);
             Debug.Assert(!type.Abstract, "Can not generate OfType/OfTypeOnly query view for and abstract type");
 
             if (config.IsNormalTracing)
@@ -154,8 +154,8 @@ namespace System.Data.Mapping.ViewGeneration
             CqlIdentifiers identifiers,
             StorageEntityContainerMapping containerMapping)
         {
-            Contract.Requires(cells != null);
-            Contract.Requires(config != null);
+            //Contract.Requires(cells != null);
+            //Contract.Requires(config != null);
             Debug.Assert(cells.Count > 0, "There must be at least one cell in the container mapping");
 
             // Go through each table and determine their foreign key constraints

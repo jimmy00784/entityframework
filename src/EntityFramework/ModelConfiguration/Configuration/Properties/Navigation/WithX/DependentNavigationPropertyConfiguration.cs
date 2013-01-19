@@ -41,7 +41,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         public CascadableNavigationPropertyConfiguration HasForeignKey<TKey>(
             Expression<Func<TDependentEntityType, TKey>> foreignKeyExpression)
         {
-            Contract.Requires(foreignKeyExpression != null);
+            //Contract.Requires(foreignKeyExpression != null);
 
             NavigationPropertyConfiguration.Constraint
                 = new ForeignKeyConstraintConfiguration(

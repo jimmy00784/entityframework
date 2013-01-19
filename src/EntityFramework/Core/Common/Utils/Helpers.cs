@@ -88,8 +88,8 @@ namespace System.Data.Common.Utils
         /// <returns>The single node that is the root of the balanced binary tree</returns>
         internal static TNode BuildBalancedTreeInPlace<TNode>(IList<TNode> nodes, Func<TNode, TNode, TNode> combinator)
         {
-            Contract.Requires(nodes != null);
-            Contract.Requires(combinator != null);
+            //Contract.Requires(nodes != null);
+            //Contract.Requires(combinator != null);
 
             Debug.Assert(nodes.Count > 0, "At least one node is required");
 
@@ -156,8 +156,8 @@ namespace System.Data.Common.Utils
         internal static IEnumerable<TNode> GetLeafNodes<TNode>(
             TNode root, Func<TNode, bool> isLeaf, Func<TNode, IEnumerable<TNode>> getImmediateSubNodes)
         {
-            Contract.Requires(isLeaf != null);
-            Contract.Requires(getImmediateSubNodes != null);
+            //Contract.Requires(isLeaf != null);
+            //Contract.Requires(getImmediateSubNodes != null);
 
             var nodes = new Stack<TNode>();
             nodes.Push(root);

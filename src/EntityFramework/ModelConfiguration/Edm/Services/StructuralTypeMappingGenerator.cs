@@ -19,7 +19,7 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Services
 
         protected StructuralTypeMappingGenerator(DbProviderManifest providerManifest)
         {
-            Contract.Requires(providerManifest != null);
+            //Contract.Requires(providerManifest != null);
 
             _providerManifest = providerManifest;
         }
@@ -30,8 +30,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Services
             bool isInstancePropertyOnDerivedType,
             bool isKeyProperty = false)
         {
-            Contract.Requires(property != null);
-            Contract.Requires(tableColumnMetadata != null);
+            //Contract.Requires(property != null);
+            //Contract.Requires(tableColumnMetadata != null);
 
             var storeTypeUsage = _providerManifest.GetStoreType(GetEdmTypeUsage(property.PropertyType));
 
@@ -65,7 +65,7 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Services
 
         private static TypeUsage GetEdmTypeUsage(EdmTypeReference edmTypeReference)
         {
-            Contract.Requires(edmTypeReference != null);
+            //Contract.Requires(edmTypeReference != null);
 
             var primitiveTypeFacets = edmTypeReference.PrimitiveTypeFacets;
 
@@ -150,9 +150,9 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Services
         internal static void MapPrimitivePropertyFacets(
             EdmPrimitiveTypeFacets primitiveTypeFacets, DbPrimitiveTypeFacets dbPrimitiveTypeFacets, TypeUsage typeUsage)
         {
-            Contract.Requires(primitiveTypeFacets != null);
-            Contract.Requires(dbPrimitiveTypeFacets != null);
-            Contract.Requires(typeUsage != null);
+            //Contract.Requires(primitiveTypeFacets != null);
+            //Contract.Requires(dbPrimitiveTypeFacets != null);
+            //Contract.Requires(typeUsage != null);
 
             if (IsValidFacet(typeUsage, SsdlConstants.Attribute_FixedLength))
             {
@@ -194,8 +194,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Services
 
         private static bool IsValidFacet(TypeUsage typeUsage, string name)
         {
-            Contract.Requires(typeUsage != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(name));
+            //Contract.Requires(typeUsage != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(name));
 
             Facet facet;
 
@@ -206,8 +206,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Services
         protected static DbEntityTypeMapping GetEntityTypeMappingInHierarchy(
             DbDatabaseMapping databaseMapping, EdmEntityType entityType)
         {
-            Contract.Requires(databaseMapping != null);
-            Contract.Requires(entityType != null);
+            //Contract.Requires(databaseMapping != null);
+            //Contract.Requires(entityType != null);
 
             var entityTypeMapping = databaseMapping.GetEntityTypeMapping(entityType);
 

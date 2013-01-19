@@ -70,8 +70,8 @@ namespace System.Data.Objects
         /// </exception>
         public ObjectParameter(string name, Type type)
         {
-            Contract.Requires(name != null);
-            Contract.Requires(type != null);
+            //Contract.Requires(name != null);
+            //Contract.Requires(type != null);
 
             if (!ValidateParameterName(name))
             {
@@ -114,8 +114,8 @@ namespace System.Data.Objects
         /// </exception>
         public ObjectParameter(string name, object value)
         {
-            Contract.Requires(name != null);
-            Contract.Requires(value != null);
+            //Contract.Requires(name != null);
+            //Contract.Requires(value != null);
 
             if (!ValidateParameterName(name))
             {

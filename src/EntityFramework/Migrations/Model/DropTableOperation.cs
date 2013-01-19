@@ -24,7 +24,7 @@ namespace System.Data.Entity.Migrations.Model
         public DropTableOperation(string name, object anonymousArguments = null)
             : base(anonymousArguments)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(name));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(name));
 
             _name = name;
         }
@@ -42,7 +42,7 @@ namespace System.Data.Entity.Migrations.Model
         public DropTableOperation(string name, CreateTableOperation inverse, object anonymousArguments = null)
             : this(name, anonymousArguments)
         {
-            Contract.Requires(inverse != null);
+            //Contract.Requires(inverse != null);
 
             _inverse = inverse;
         }

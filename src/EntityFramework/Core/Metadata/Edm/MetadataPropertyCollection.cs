@@ -28,7 +28,7 @@ namespace System.Data.Metadata.Edm
         // Given an item, returns all system type attributes for the item.
         private static IEnumerable<MetadataProperty> GetSystemMetadataProperties(MetadataItem item)
         {
-            Contract.Requires(item != null);
+            //Contract.Requires(item != null);
             var type = item.GetType();
             var itemTypeInformation = GetItemTypeInformation(type);
             return itemTypeInformation.GetItemAttributes(item);

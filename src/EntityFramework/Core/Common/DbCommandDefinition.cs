@@ -23,7 +23,7 @@ namespace System.Data.Common
         /// <returns>the DbCommandDefinition</returns>
         internal static DbCommandDefinition CreateCommandDefinition(DbCommand prototype)
         {
-            Contract.Requires(prototype != null);
+            //Contract.Requires(prototype != null);
             var cloneablePrototype = prototype as ICloneable;
             if (null == cloneablePrototype)
             {
@@ -39,7 +39,7 @@ namespace System.Data.Common
         /// </summary>
         protected DbCommandDefinition(DbCommand prototype)
         {
-            Contract.Requires(prototype != null);
+            //Contract.Requires(prototype != null);
             _prototype = prototype as ICloneable;
             if (null == _prototype)
             {
@@ -65,8 +65,8 @@ namespace System.Data.Common
 
         internal static void PopulateParameterFromTypeUsage(DbParameter parameter, TypeUsage type, bool isOutParam)
         {
-            Contract.Requires(parameter != null);
-            Contract.Requires(type != null);
+            //Contract.Requires(parameter != null);
+            //Contract.Requires(type != null);
 
             // parameter.IsNullable - from the NullableConstraintAttribute value
             parameter.IsNullable = TypeSemantics.IsNullable(type);

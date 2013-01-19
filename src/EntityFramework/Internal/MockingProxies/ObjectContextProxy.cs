@@ -25,7 +25,7 @@ namespace System.Data.Entity.Internal.MockingProxies
 
         public ObjectContextProxy(ObjectContext objectContext)
         {
-            Contract.Requires(objectContext != null);
+            //Contract.Requires(objectContext != null);
 
             _objectContext = objectContext;
         }

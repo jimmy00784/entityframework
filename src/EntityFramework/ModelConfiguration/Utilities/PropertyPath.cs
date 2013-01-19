@@ -19,7 +19,7 @@ namespace System.Data.Entity.ModelConfiguration.Utilities
 
         public PropertyPath(IEnumerable<PropertyInfo> components)
         {
-            Contract.Requires(components != null);
+            //Contract.Requires(components != null);
             Contract.Assert(components.Any());
 
             _components.AddRange(components);
@@ -27,7 +27,7 @@ namespace System.Data.Entity.ModelConfiguration.Utilities
 
         public PropertyPath(PropertyInfo component)
         {
-            Contract.Requires(component != null);
+            //Contract.Requires(component != null);
 
             _components.Add(component);
         }

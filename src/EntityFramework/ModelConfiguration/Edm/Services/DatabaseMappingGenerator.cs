@@ -20,14 +20,14 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Services
 
         public DatabaseMappingGenerator(DbProviderManifest providerManifest)
         {
-            Contract.Requires(providerManifest != null);
+            //Contract.Requires(providerManifest != null);
 
             _providerManifest = providerManifest;
         }
 
         public DbDatabaseMapping Generate(EdmModel model)
         {
-            Contract.Requires(model != null);
+            //Contract.Requires(model != null);
 
             var databaseMapping = InitializeDatabaseMapping(model);
 
@@ -40,7 +40,7 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Services
 
         private static DbDatabaseMapping InitializeDatabaseMapping(EdmModel model)
         {
-            Contract.Requires(model != null);
+            //Contract.Requires(model != null);
 
             var databaseMapping = new DbDatabaseMapping().Initialize(
                 model, new DbDatabaseMetadata().Initialize(model.Version));
@@ -52,8 +52,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Services
 
         private void GenerateEntityTypes(EdmModel model, DbDatabaseMapping databaseMapping)
         {
-            Contract.Requires(model != null);
-            Contract.Requires(databaseMapping != null);
+            //Contract.Requires(model != null);
+            //Contract.Requires(databaseMapping != null);
 
             foreach (var entityType in model.GetEntityTypes())
             {
@@ -67,7 +67,7 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Services
 
         private void GenerateDiscriminators(DbDatabaseMapping databaseMapping)
         {
-            Contract.Requires(databaseMapping != null);
+            //Contract.Requires(databaseMapping != null);
 
             foreach (var entitySetMapping in databaseMapping.GetEntitySetMappings())
             {
@@ -117,8 +117,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Services
 
         private void GenerateAssociationTypes(EdmModel model, DbDatabaseMapping databaseMapping)
         {
-            Contract.Requires(model != null);
-            Contract.Requires(databaseMapping != null);
+            //Contract.Requires(model != null);
+            //Contract.Requires(databaseMapping != null);
 
             foreach (var associationType in model.GetAssociationTypes())
             {

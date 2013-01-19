@@ -49,7 +49,7 @@ namespace System.Data.Metadata.Edm
         public EdmItemCollection(IEnumerable<XmlReader> xmlReaders)
             : base(DataSpace.CSpace)
         {
-            Contract.Requires(xmlReaders != null);
+            //Contract.Requires(xmlReaders != null);
             EntityUtil.CheckArgumentContainsNull(ref xmlReaders, "xmlReaders");
 
             var composite = MetadataArtifactLoader.CreateCompositeFromXmlReaders(xmlReaders);
@@ -74,7 +74,7 @@ namespace System.Data.Metadata.Edm
         public EdmItemCollection(params string[] filePaths)
             : base(DataSpace.CSpace)
         {
-            Contract.Requires(filePaths != null);
+            //Contract.Requires(filePaths != null);
 
             // Wrap the file paths in instances of the MetadataArtifactLoader class, which provides
             // an abstraction and a uniform interface over a diverse set of metadata artifacts.
@@ -118,7 +118,7 @@ namespace System.Data.Metadata.Edm
             IEnumerable<string> filePaths,
             bool throwOnError)
         {
-            Contract.Requires(xmlReaders != null);
+            //Contract.Requires(xmlReaders != null);
 
             // do the basic initialization
             Init();

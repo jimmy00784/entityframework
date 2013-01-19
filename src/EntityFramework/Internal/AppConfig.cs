@@ -42,7 +42,7 @@ namespace System.Data.Entity.Internal
                 configuration.AppSettings.Settings,
                 (EntityFrameworkSection)configuration.GetSection(EFSectionName))
         {
-            Contract.Requires(configuration != null);
+            //Contract.Requires(configuration != null);
         }
 
         /// <summary>
@@ -53,7 +53,7 @@ namespace System.Data.Entity.Internal
         public AppConfig(ConnectionStringSettingsCollection connectionStrings)
             : this(connectionStrings, null, null)
         {
-            Contract.Requires(connectionStrings != null);
+            //Contract.Requires(connectionStrings != null);
         }
 
         /// <summary>
@@ -75,7 +75,7 @@ namespace System.Data.Entity.Internal
             KeyValueConfigurationCollection appSettings,
             EntityFrameworkSection entityFrameworkSettings)
         {
-            Contract.Requires(connectionStrings != null);
+            //Contract.Requires(connectionStrings != null);
 
             _connectionStrings = connectionStrings;
             _appSettings = appSettings;
@@ -195,7 +195,7 @@ namespace System.Data.Entity.Internal
         /// <returns>The connection string, or null if there is no connection string with the specified name</returns>
         public ConnectionStringSettings GetConnectionString(string name)
         {
-            Contract.Requires(!String.IsNullOrWhiteSpace(name));
+            //Contract.Requires(!String.IsNullOrWhiteSpace(name));
 
             return _connectionStrings[name];
         }

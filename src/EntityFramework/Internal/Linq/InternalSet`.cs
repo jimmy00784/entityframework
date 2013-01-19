@@ -146,7 +146,7 @@ namespace System.Data.Entity.Internal.Linq
         /// </summary>
         private object FindInStateManager(WrappedEntityKey key)
         {
-            Contract.Requires(key != null);
+            //Contract.Requires(key != null);
 
             // If the key has null values, then it cannot be in the state manager in anything other
             // than the Added state and we cannot create an EntityKey for it, so skip the first check.
@@ -207,7 +207,7 @@ namespace System.Data.Entity.Internal.Linq
         /// </summary>
         private object FindInStore(WrappedEntityKey key, string keyValuesParamName)
         {
-            Contract.Requires(key != null);
+            //Contract.Requires(key != null);
 
             // If the key has null values, then we cannot query it from the store, so it cannot
             // be found, so just return null.
@@ -234,7 +234,7 @@ namespace System.Data.Entity.Internal.Linq
         /// </summary>
         private async Task<object> FindInStoreAsync(WrappedEntityKey key, string keyValuesParamName, CancellationToken cancellationToken)
         {
-            Contract.Requires(key != null);
+            //Contract.Requires(key != null);
 
             // If the key has null values, then we cannot query it from the store, so it cannot
             // be found, so just return null.
@@ -368,7 +368,7 @@ namespace System.Data.Entity.Internal.Linq
         /// <param name = "methodName">Name of the method.</param>
         private void ActOnSet(Action action, EntityState newState, object entity, string methodName)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
 
             if (!(entity is TEntity))
             {

@@ -26,7 +26,7 @@ namespace System.Data.Entity.Infrastructure
         /// <param name = "internalEntityEntry">The internal entry.</param>
         internal DbEntityEntry(InternalEntityEntry internalEntityEntry)
         {
-            Contract.Requires(internalEntityEntry != null);
+            //Contract.Requires(internalEntityEntry != null);
 
             _internalEntityEntry = internalEntityEntry;
         }
@@ -143,7 +143,7 @@ namespace System.Data.Entity.Infrastructure
         /// <returns>An object representing the navigation property.</returns>
         public DbReferenceEntry Reference(string navigationProperty)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(navigationProperty));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(navigationProperty));
 
             return DbReferenceEntry.Create(_internalEntityEntry.Reference(navigationProperty));
         }
@@ -156,7 +156,7 @@ namespace System.Data.Entity.Infrastructure
         /// <returns>An object representing the navigation property.</returns>
         public DbCollectionEntry Collection(string navigationProperty)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(navigationProperty));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(navigationProperty));
 
             return DbCollectionEntry.Create(_internalEntityEntry.Collection(navigationProperty));
         }
@@ -168,7 +168,7 @@ namespace System.Data.Entity.Infrastructure
         /// <returns>An object representing the property.</returns>
         public DbPropertyEntry Property(string propertyName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
 
             return DbPropertyEntry.Create(_internalEntityEntry.Property(propertyName));
         }
@@ -180,7 +180,7 @@ namespace System.Data.Entity.Infrastructure
         /// <returns>An object representing the complex property.</returns>
         public DbComplexPropertyEntry ComplexProperty(string propertyName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
 
             return DbComplexPropertyEntry.Create(
                 _internalEntityEntry.Property(propertyName, null, requireComplex: true));
@@ -199,7 +199,7 @@ namespace System.Data.Entity.Infrastructure
         /// <returns>An object representing the member.</returns>
         public DbMemberEntry Member(string propertyName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
 
             return DbMemberEntry.Create(_internalEntityEntry.Member(propertyName));
         }

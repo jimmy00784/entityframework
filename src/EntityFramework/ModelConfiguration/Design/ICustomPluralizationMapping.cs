@@ -16,8 +16,8 @@ namespace System.Data.Entity.ModelConfiguration.Design.PluralizationServices
     {
         void ICustomPluralizationMapping.AddWord(string singular, string plural)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(singular));
-            Contract.Requires(!string.IsNullOrWhiteSpace(plural));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(singular));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(plural));
 
             throw new NotImplementedException();
         }

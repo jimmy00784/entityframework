@@ -123,17 +123,17 @@ namespace System.Data.Metadata.Edm
         /// <exception cref="System.ArgumentNullException">thrown if assembly argument is null</exception>
         public void LoadFromAssembly(Assembly assembly, EdmItemCollection edmItemCollection, Action<String> logLoadMessage)
         {
-            Contract.Requires(assembly != null);
-            Contract.Requires(edmItemCollection != null);
-            Contract.Requires(logLoadMessage != null);
+            //Contract.Requires(assembly != null);
+            //Contract.Requires(edmItemCollection != null);
+            //Contract.Requires(logLoadMessage != null);
 
             ExplicitLoadFromAssembly(assembly, edmItemCollection, logLoadMessage);
         }
 
         public void LoadFromAssembly(Assembly assembly, EdmItemCollection edmItemCollection)
         {
-            Contract.Requires(assembly != null);
-            Contract.Requires(edmItemCollection != null);
+            //Contract.Requires(assembly != null);
+            //Contract.Requires(edmItemCollection != null);
 
             ExplicitLoadFromAssembly(assembly, edmItemCollection, null);
         }
@@ -519,7 +519,7 @@ namespace System.Data.Metadata.Edm
         /// <returns>true on success, false on failure</returns>
         private static bool TryGetClrType(EdmType objectSpaceType, out Type clrType)
         {
-            Contract.Requires(objectSpaceType != null);
+            //Contract.Requires(objectSpaceType != null);
 
             Debug.Assert(
                 objectSpaceType == null || objectSpaceType is StructuralType || objectSpaceType is EnumType,

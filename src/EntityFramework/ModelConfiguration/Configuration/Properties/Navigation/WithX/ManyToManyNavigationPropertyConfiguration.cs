@@ -17,7 +17,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         internal ManyToManyNavigationPropertyConfiguration(
             NavigationPropertyConfiguration navigationPropertyConfiguration)
         {
-            Contract.Requires(navigationPropertyConfiguration != null);
+            //Contract.Requires(navigationPropertyConfiguration != null);
 
             _navigationPropertyConfiguration = navigationPropertyConfiguration;
         }
@@ -28,7 +28,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         /// <param name = "configurationAction">Action that configures the foreign key column(s) and table.</param>
         public void Map(Action<ManyToManyAssociationMappingConfiguration> configurationAction)
         {
-            Contract.Requires(configurationAction != null);
+            //Contract.Requires(configurationAction != null);
 
             var manyToManyMappingConfiguration = new ManyToManyAssociationMappingConfiguration();
 

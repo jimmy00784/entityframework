@@ -43,8 +43,8 @@ namespace System.Data.Common.EntitySql
             IEnumerable<DbParameterReferenceExpression> parameters,
             IEnumerable<DbVariableReferenceExpression> variables)
         {
-            Contract.Requires(perspective != null);
-            Contract.Requires(parserOptions != null);
+            //Contract.Requires(perspective != null);
+            //Contract.Requires(parserOptions != null);
 
             return new SemanticResolver(
                 parserOptions,

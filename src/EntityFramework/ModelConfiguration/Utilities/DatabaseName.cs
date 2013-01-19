@@ -18,7 +18,7 @@ namespace System.Data.Entity.ModelConfiguration.Utilities
 
         public DatabaseName(string name, string schema)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(name));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(name));
 
             _name = name;
             _schema = schema;
@@ -93,7 +93,7 @@ namespace System.Data.Entity.ModelConfiguration.Utilities
 
         public static void ParseQualifiedTableName(string qualifiedName, out string schemaName, out string tableName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(qualifiedName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(qualifiedName));
 
             qualifiedName = qualifiedName.Trim();
 

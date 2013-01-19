@@ -21,8 +21,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
     {
         private static DbTableColumnMetadata AddColumn(DbTableMetadata table, DbTableColumnMetadata column)
         {
-            Contract.Requires(table != null);
-            Contract.Requires(column != null);
+            //Contract.Requires(table != null);
+            //Contract.Requires(column != null);
 
             if (!table.Columns.Contains(column))
             {
@@ -44,8 +44,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
 
         public static DbTableColumnMetadata RemoveColumn(DbTableMetadata table, DbTableColumnMetadata column)
         {
-            Contract.Requires(table != null);
-            Contract.Requires(column != null);
+            //Contract.Requires(table != null);
+            //Contract.Requires(column != null);
 
             if (!column.IsPrimaryKeyColumn)
             {
@@ -58,8 +58,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
         public static DbTableColumnMetadata IncludeColumn(
             DbTableMetadata table, DbTableColumnMetadata templateColumn, bool useExisting)
         {
-            Contract.Requires(table != null);
-            Contract.Requires(templateColumn != null);
+            //Contract.Requires(table != null);
+            //Contract.Requires(templateColumn != null);
 
             var existingColumn =
                 table.Columns.SingleOrDefault(c => string.Equals(c.Name, templateColumn.Name, StringComparison.Ordinal));
@@ -83,8 +83,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
 
         public static DbTableColumnMetadata IncludeColumn(DbTableMetadata table, string columnName, bool useExisting)
         {
-            Contract.Requires(table != null);
-            Contract.Requires(columnName != null);
+            //Contract.Requires(table != null);
+            //Contract.Requires(columnName != null);
 
             var existingColumn =
                 table.Columns.SingleOrDefault(c => string.Equals(c.Name, columnName, StringComparison.Ordinal));
@@ -116,9 +116,9 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
             DbTableMetadata toTable,
             bool isMappingAnyInheritedProperty)
         {
-            Contract.Requires(databaseMapping != null);
-            Contract.Requires(fromTable != null);
-            Contract.Requires(toTable != null);
+            //Contract.Requires(databaseMapping != null);
+            //Contract.Requires(fromTable != null);
+            //Contract.Requires(toTable != null);
 
             if (fromTable != toTable)
             {
@@ -250,9 +250,9 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
         private static void MoveForeignKeyConstraint(
             DbTableMetadata fromTable, DbTableMetadata toTable, DbForeignKeyConstraintMetadata fk)
         {
-            Contract.Requires(fromTable != null);
-            Contract.Requires(toTable != null);
-            Contract.Requires(fk != null);
+            //Contract.Requires(fromTable != null);
+            //Contract.Requires(toTable != null);
+            //Contract.Requires(fk != null);
 
             fromTable.ForeignKeyConstraints.Remove(fk);
 
@@ -278,8 +278,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
             DbDatabaseMetadata database, DbTableMetadata toTable,
             DbForeignKeyConstraintMetadata fk)
         {
-            Contract.Requires(toTable != null);
-            Contract.Requires(fk != null);
+            //Contract.Requires(toTable != null);
+            //Contract.Requires(fk != null);
 
             var newFk = new DbForeignKeyConstraintMetadata
                 {
@@ -332,9 +332,9 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
             DbDatabaseMetadata database, DbTableMetadata fromTable, DbTableMetadata toTable,
             DbTableColumnMetadata column)
         {
-            Contract.Requires(fromTable != null);
-            Contract.Requires(toTable != null);
-            Contract.Requires(column != null);
+            //Contract.Requires(fromTable != null);
+            //Contract.Requires(toTable != null);
+            //Contract.Requires(column != null);
 
             FindAllForeignKeyConstraintsForColumn(fromTable, toTable, column)
                 .ToArray()
@@ -344,8 +344,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
         public static void MoveAllDeclaredForeignKeyConstraintsForPrimaryKeyColumns(
             EdmEntityType entityType, DbTableMetadata fromTable, DbTableMetadata toTable)
         {
-            Contract.Requires(fromTable != null);
-            Contract.Requires(toTable != null);
+            //Contract.Requires(fromTable != null);
+            //Contract.Requires(toTable != null);
 
             foreach (var column in fromTable.KeyColumns)
             {
@@ -367,8 +367,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
         public static void CopyAllForeignKeyConstraintsForPrimaryKeyColumns(
             DbDatabaseMetadata database, DbTableMetadata fromTable, DbTableMetadata toTable)
         {
-            Contract.Requires(fromTable != null);
-            Contract.Requires(toTable != null);
+            //Contract.Requires(fromTable != null);
+            //Contract.Requires(toTable != null);
 
             foreach (var column in fromTable.KeyColumns)
             {
@@ -391,9 +391,9 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
         public static void MoveAllForeignKeyConstraintsForColumn(
             DbTableMetadata fromTable, DbTableMetadata toTable, DbTableColumnMetadata column)
         {
-            Contract.Requires(fromTable != null);
-            Contract.Requires(toTable != null);
-            Contract.Requires(column != null);
+            //Contract.Requires(fromTable != null);
+            //Contract.Requires(toTable != null);
+            //Contract.Requires(column != null);
 
             FindAllForeignKeyConstraintsForColumn(fromTable, toTable, column)
                 .ToArray()
@@ -402,8 +402,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
 
         public static void RemoveAllForeignKeyConstraintsForColumn(DbTableMetadata table, DbTableColumnMetadata column)
         {
-            Contract.Requires(table != null);
-            Contract.Requires(column != null);
+            //Contract.Requires(table != null);
+            //Contract.Requires(column != null);
 
             table.ForeignKeyConstraints
                 .Where(fk => fk.DependentColumns.Contains(column))
@@ -422,9 +422,9 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
             bool useExisting,
             bool allowPkConstraintCopy)
         {
-            Contract.Requires(fromTable != null);
-            Contract.Requires(toTable != null);
-            Contract.Requires(column != null);
+            //Contract.Requires(fromTable != null);
+            //Contract.Requires(toTable != null);
+            //Contract.Requires(column != null);
 
             var movedColumn = column;
 
@@ -444,9 +444,9 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
         public static DbTableColumnMetadata MoveColumnAndAnyConstraints(
             DbTableMetadata fromTable, DbTableMetadata toTable, DbTableColumnMetadata column, bool useExisting)
         {
-            Contract.Requires(fromTable != null);
-            Contract.Requires(toTable != null);
-            Contract.Requires(column != null);
+            //Contract.Requires(fromTable != null);
+            //Contract.Requires(toTable != null);
+            //Contract.Requires(column != null);
 
             var movedColumn = column;
 
@@ -566,9 +566,9 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
             DbTableMetadata toTable,
             bool useExistingColumns)
         {
-            Contract.Requires(associationSetMapping != null);
-            Contract.Requires(dependentMapping != null);
-            Contract.Requires(toTable != null);
+            //Contract.Requires(associationSetMapping != null);
+            //Contract.Requires(dependentMapping != null);
+            //Contract.Requires(toTable != null);
 
             dependentMapping.PropertyMappings.Each(
                 pm =>
@@ -591,10 +591,10 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
             DbTableMetadata toTable,
             bool useExistingColumns)
         {
-            Contract.Requires(databaseMapping != null);
-            Contract.Requires(entityType != null);
-            Contract.Requires(fromTable != null);
-            Contract.Requires(toTable != null);
+            //Contract.Requires(databaseMapping != null);
+            //Contract.Requires(entityType != null);
+            //Contract.Requires(fromTable != null);
+            //Contract.Requires(toTable != null);
 
             foreach (
                 var associationSetMapping in
@@ -631,9 +631,9 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
         public static void AddTypeConstraint(
             EdmEntityType entityType, DbTableMetadata principalTable, DbTableMetadata dependentTable, bool isSplitting)
         {
-            Contract.Requires(principalTable != null);
-            Contract.Requires(dependentTable != null);
-            Contract.Requires(entityType != null);
+            //Contract.Requires(principalTable != null);
+            //Contract.Requires(dependentTable != null);
+            //Contract.Requires(entityType != null);
 
             var foreignKeyConstraintMetadata = new DbForeignKeyConstraintMetadata
                 {

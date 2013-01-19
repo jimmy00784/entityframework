@@ -16,7 +16,7 @@ namespace System.Data.Mapping
             StorageModificationFunctionMapping deleteFunctionMapping,
             StorageModificationFunctionMapping insertFunctionMapping)
         {
-            Contract.Requires(associationSet != null);
+            //Contract.Requires(associationSet != null);
 
             AssociationSet = associationSet;
             DeleteFunctionMapping = deleteFunctionMapping;

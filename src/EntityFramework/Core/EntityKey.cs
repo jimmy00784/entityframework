@@ -97,8 +97,8 @@ namespace System.Data
         [SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
         public EntityKey(string qualifiedEntitySetName, IEnumerable<KeyValuePair<string, object>> entityKeyValues)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(qualifiedEntitySetName));
-            Contract.Requires(entityKeyValues != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(qualifiedEntitySetName));
+            //Contract.Requires(entityKeyValues != null);
 
             InitializeEntitySetName(qualifiedEntitySetName);
             InitializeKeyValues(entityKeyValues);
@@ -114,8 +114,8 @@ namespace System.Data
         /// <param name="entityKeyValues">The key-value pairs that identify the entity</param>
         public EntityKey(string qualifiedEntitySetName, IEnumerable<EntityKeyMember> entityKeyValues)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(qualifiedEntitySetName));
-            Contract.Requires(entityKeyValues != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(qualifiedEntitySetName));
+            //Contract.Requires(entityKeyValues != null);
 
             InitializeEntitySetName(qualifiedEntitySetName);
             InitializeKeyValues(new KeyValueReader(entityKeyValues));
@@ -132,9 +132,9 @@ namespace System.Data
         /// <param name="keyValue">The key value that identifies the entity</param>
         public EntityKey(string qualifiedEntitySetName, string keyName, object keyValue)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(qualifiedEntitySetName));
-            Contract.Requires(!string.IsNullOrWhiteSpace(keyName));
-            Contract.Requires(keyValue != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(qualifiedEntitySetName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(keyName));
+            //Contract.Requires(keyValue != null);
 
             InitializeEntitySetName(qualifiedEntitySetName);
 
@@ -158,11 +158,11 @@ namespace System.Data
         /// <param name="record">an IExtendedDataRecord that represents the entity</param>
         internal EntityKey(EntitySet entitySet, IExtendedDataRecord record)
         {
-            Contract.Requires(entitySet != null);
-            Contract.Requires(entitySet.Name != null);
-            Contract.Requires(entitySet.EntityContainer != null);
-            Contract.Requires(entitySet.EntityContainer.Name != null);
-            Contract.Requires(record != null);
+            //Contract.Requires(entitySet != null);
+            //Contract.Requires(entitySet.Name != null);
+            //Contract.Requires(entitySet.EntityContainer != null);
+            //Contract.Requires(entitySet.EntityContainer.Name != null);
+            //Contract.Requires(record != null);
 
             _entitySetName = entitySet.Name;
             _entityContainerName = entitySet.EntityContainer.Name;
@@ -180,7 +180,7 @@ namespace System.Data
         /// <param name="record">an IExtendedDataRecord that represents the entity</param>
         internal EntityKey(string qualifiedEntitySetName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(qualifiedEntitySetName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(qualifiedEntitySetName));
 
             InitializeEntitySetName(qualifiedEntitySetName);
 
@@ -194,8 +194,8 @@ namespace System.Data
         /// <param name="entitySet">EntitySet of the entity</param>
         internal EntityKey(EntitySetBase entitySet)
         {
-            Contract.Requires(entitySet != null);
-            Contract.Requires(entitySet.EntityContainer != null);
+            //Contract.Requires(entitySet != null);
+            //Contract.Requires(entitySet.EntityContainer != null);
 
             _entitySetName = entitySet.Name;
             _entityContainerName = entitySet.EntityContainer.Name;
@@ -213,9 +213,9 @@ namespace System.Data
         /// <param name="singletonKeyValue">The single value that composes the entity's key, assumed to contain the correct type.</param>
         internal EntityKey(EntitySetBase entitySet, object singletonKeyValue)
         {
-            Contract.Requires(entitySet != null);
-            Contract.Requires(entitySet.EntityContainer != null);
-            Contract.Requires(singletonKeyValue != null);
+            //Contract.Requires(entitySet != null);
+            //Contract.Requires(entitySet.EntityContainer != null);
+            //Contract.Requires(singletonKeyValue != null);
 
             _singletonKeyValue = singletonKeyValue;
             _entitySetName = entitySet.Name;
@@ -235,9 +235,9 @@ namespace System.Data
         /// <param name="compositeKeyValues">A list of the values (at least 2) that compose the entity's key, assumed to contain correct types.</param>
         internal EntityKey(EntitySetBase entitySet, object[] compositeKeyValues)
         {
-            Contract.Requires(entitySet != null);
-            Contract.Requires(entitySet.EntityContainer != null);
-            Contract.Requires(compositeKeyValues != null);
+            //Contract.Requires(entitySet != null);
+            //Contract.Requires(entitySet.EntityContainer != null);
+            //Contract.Requires(compositeKeyValues != null);
 
             _compositeKeyValues = compositeKeyValues;
             _entitySetName = entitySet.Name;
@@ -385,7 +385,7 @@ namespace System.Data
         /// <exception cref="ArgumentException">the entity set could not be located in the workspace</exception>
         public EntitySet GetEntitySet(MetadataWorkspace metadataWorkspace)
         {
-            Contract.Requires(metadataWorkspace != null);
+            //Contract.Requires(metadataWorkspace != null);
             if (String.IsNullOrEmpty(_entityContainerName)
                 || String.IsNullOrEmpty(_entitySetName))
             {
@@ -824,7 +824,7 @@ namespace System.Data
 
         internal void InitializeEntitySetName(string qualifiedEntitySetName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(qualifiedEntitySetName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(qualifiedEntitySetName));
 
             var result = qualifiedEntitySetName.Split('.');
             if (result.Length != 2 || string.IsNullOrWhiteSpace(result[0])
@@ -855,7 +855,7 @@ namespace System.Data
             bool allowNullKeys = false,
             bool tokenizeStrings = false)
         {
-            Contract.Requires(entityKeyValues != null);
+            //Contract.Requires(entityKeyValues != null);
 
             var numExpectedKeyValues = entityKeyValues.Count();
             if (numExpectedKeyValues == 1)
@@ -908,8 +908,8 @@ namespace System.Data
         /// <param name="record">the parameter to validate</param>
         private void InitializeKeyValues(EntitySet entitySet, IExtendedDataRecord record)
         {
-            Contract.Requires(entitySet != null);
-            Contract.Requires(record != null);
+            //Contract.Requires(entitySet != null);
+            //Contract.Requires(record != null);
 
             // Note that this method is only called when constructing keys from internal code
             // paths such as the materializer and therefore uses Asserts to check conditions

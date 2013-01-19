@@ -22,7 +22,7 @@ namespace System.Data.Entity.Infrastructure
         /// <returns>The new entry.</returns>
         internal new static DbComplexPropertyEntry Create(InternalPropertyEntry internalPropertyEntry)
         {
-            Contract.Requires(internalPropertyEntry != null);
+            //Contract.Requires(internalPropertyEntry != null);
 
             return (DbComplexPropertyEntry)internalPropertyEntry.CreateDbMemberEntry();
         }
@@ -48,7 +48,7 @@ namespace System.Data.Entity.Infrastructure
         /// <returns>An object representing the nested property.</returns>
         public DbPropertyEntry Property(string propertyName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
 
             return DbPropertyEntry.Create(((InternalPropertyEntry)InternalMemberEntry).Property(propertyName));
         }
@@ -62,7 +62,7 @@ namespace System.Data.Entity.Infrastructure
             Justification = "Rule predates more fluent naming conventions.")]
         public DbComplexPropertyEntry ComplexProperty(string propertyName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
 
             return
                 Create(((InternalPropertyEntry)InternalMemberEntry).Property(propertyName, null, requireComplex: true));

@@ -26,8 +26,8 @@ namespace System.Data.Entity.Migrations.Model
         protected HistoryOperation(string table, string migrationId, object anonymousArguments = null)
             : base(anonymousArguments)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(table));
-            Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(table));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
 
             _table = table;
             _migrationId = migrationId;

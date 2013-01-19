@@ -44,7 +44,7 @@ namespace System.Data.Mapping.ViewGeneration.Validation
         // effects: Adds a key constraint to this
         internal void Add(TKeyConstraint constraint)
         {
-            Contract.Requires(constraint != null);
+            //Contract.Requires(constraint != null);
             m_keyConstraints.Add(constraint);
         }
 

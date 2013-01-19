@@ -17,7 +17,7 @@ namespace System.Data.Entity.ModelConfiguration.Conventions
     {
         void IDbConvention.Apply(DbDatabaseMetadata database)
         {
-            Contract.Requires(database != null);
+            //Contract.Requires(database != null);
         }
     }
 

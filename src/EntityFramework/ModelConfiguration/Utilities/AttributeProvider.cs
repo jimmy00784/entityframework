@@ -12,7 +12,7 @@ namespace System.Data.Entity.ModelConfiguration.Utilities
     {
         public virtual IEnumerable<Attribute> GetAttributes(MemberInfo memberInfo)
         {
-            Contract.Requires(memberInfo != null);
+            //Contract.Requires(memberInfo != null);
 
             var type = memberInfo as Type;
 
@@ -26,7 +26,7 @@ namespace System.Data.Entity.ModelConfiguration.Utilities
 
         public virtual IEnumerable<Attribute> GetAttributes(Type type)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             var attrs = new HashSet<Attribute>(GetTypeDescriptor(type).GetAttributes().Cast<Attribute>());
 
@@ -46,7 +46,7 @@ namespace System.Data.Entity.ModelConfiguration.Utilities
 
         public virtual IEnumerable<Attribute> GetAttributes(PropertyInfo propertyInfo)
         {
-            Contract.Requires(propertyInfo != null);
+            //Contract.Requires(propertyInfo != null);
 
             var typeDescriptor = GetTypeDescriptor(propertyInfo.DeclaringType);
             var propertyCollection = typeDescriptor.GetProperties();
@@ -66,7 +66,7 @@ namespace System.Data.Entity.ModelConfiguration.Utilities
 
         private static ICustomTypeDescriptor GetTypeDescriptor(Type type)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             return new AssociatedMetadataTypeTypeDescriptionProvider(type).GetTypeDescriptor(type);
         }

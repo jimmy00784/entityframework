@@ -13,7 +13,7 @@ namespace System.Data.Entity.ModelConfiguration.Edm
     {
         public static DbStoreGeneratedPattern? GetStoreGeneratedPattern(this EdmProperty property)
         {
-            Contract.Requires(property != null);
+            //Contract.Requires(property != null);
 
             return
                 (DbStoreGeneratedPattern?)
@@ -23,28 +23,28 @@ namespace System.Data.Entity.ModelConfiguration.Edm
         public static void SetStoreGeneratedPattern(
             this EdmProperty property, DbStoreGeneratedPattern storeGeneratedPattern)
         {
-            Contract.Requires(property != null);
+            //Contract.Requires(property != null);
 
             property.Annotations.SetAnnotation(SsdlConstants.Attribute_StoreGeneratedPattern, storeGeneratedPattern);
         }
 
         public static object GetConfiguration(this EdmProperty property)
         {
-            Contract.Requires(property != null);
+            //Contract.Requires(property != null);
 
             return property.Annotations.GetConfiguration();
         }
 
         public static void SetConfiguration(this EdmProperty property, object configuration)
         {
-            Contract.Requires(property != null);
+            //Contract.Requires(property != null);
 
             property.Annotations.SetConfiguration(configuration);
         }
 
         public static EdmProperty AsPrimitive(this EdmProperty property)
         {
-            Contract.Requires(property != null);
+            //Contract.Requires(property != null);
 
             property.PropertyType = new EdmTypeReference
                 {
@@ -56,8 +56,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm
 
         public static EdmProperty AsComplex(this EdmProperty property, EdmComplexType complexType)
         {
-            Contract.Requires(property != null);
-            Contract.Requires(complexType != null);
+            //Contract.Requires(property != null);
+            //Contract.Requires(complexType != null);
 
             property.PropertyType = new EdmTypeReference
                 {
@@ -70,8 +70,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm
 
         public static EdmProperty AsEnum(this EdmProperty property, EdmEnumType enumType)
         {
-            Contract.Requires(property != null);
-            Contract.Requires(enumType != null);
+            //Contract.Requires(property != null);
+            //Contract.Requires(enumType != null);
 
             property.PropertyType = new EdmTypeReference
                 {

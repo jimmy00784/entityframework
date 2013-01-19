@@ -9,14 +9,14 @@ namespace System.Data.Entity.ModelConfiguration.Edm
     {
         public static object GetConfiguration(this EdmEntitySet entitySet)
         {
-            Contract.Requires(entitySet != null);
+            //Contract.Requires(entitySet != null);
 
             return entitySet.Annotations.GetConfiguration();
         }
 
         public static void SetConfiguration(this EdmEntitySet entitySet, object configuration)
         {
-            Contract.Requires(entitySet != null);
+            //Contract.Requires(entitySet != null);
 
             entitySet.Annotations.SetConfiguration(configuration);
         }

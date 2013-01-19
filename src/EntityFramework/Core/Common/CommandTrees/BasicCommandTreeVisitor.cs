@@ -13,21 +13,21 @@ namespace System.Data.Common.CommandTrees
 
         protected virtual void VisitSetClause(DbSetClause setClause)
         {
-            Contract.Requires(setClause != null);
+            //Contract.Requires(setClause != null);
             VisitExpression(setClause.Property);
             VisitExpression(setClause.Value);
         }
 
         protected virtual void VisitModificationClause(DbModificationClause modificationClause)
         {
-            Contract.Requires(modificationClause != null);
+            //Contract.Requires(modificationClause != null);
             // Set clause is the only current possibility
             VisitSetClause((DbSetClause)modificationClause);
         }
 
         protected virtual void VisitModificationClauses(IList<DbModificationClause> modificationClauses)
         {
-            Contract.Requires(modificationClauses != null);
+            //Contract.Requires(modificationClauses != null);
             for (var idx = 0; idx < modificationClauses.Count; idx++)
             {
                 VisitModificationClause(modificationClauses[idx]);
@@ -40,7 +40,7 @@ namespace System.Data.Common.CommandTrees
 
         public virtual void VisitCommandTree(DbCommandTree commandTree)
         {
-            Contract.Requires(commandTree != null);
+            //Contract.Requires(commandTree != null);
             switch (commandTree.CommandTreeKind)
             {
                 case DbCommandTreeKind.Delete:
@@ -74,7 +74,7 @@ namespace System.Data.Common.CommandTrees
 
         protected virtual void VisitDeleteCommandTree(DbDeleteCommandTree deleteTree)
         {
-            Contract.Requires(deleteTree != null);
+            //Contract.Requires(deleteTree != null);
             VisitExpressionBindingPre(deleteTree.Target);
             VisitExpression(deleteTree.Predicate);
             VisitExpressionBindingPost(deleteTree.Target);
@@ -82,12 +82,12 @@ namespace System.Data.Common.CommandTrees
 
         protected virtual void VisitFunctionCommandTree(DbFunctionCommandTree functionTree)
         {
-            Contract.Requires(functionTree != null);
+            //Contract.Requires(functionTree != null);
         }
 
         protected virtual void VisitInsertCommandTree(DbInsertCommandTree insertTree)
         {
-            Contract.Requires(insertTree != null);
+            //Contract.Requires(insertTree != null);
             VisitExpressionBindingPre(insertTree.Target);
             VisitModificationClauses(insertTree.SetClauses);
             if (insertTree.Returning != null)
@@ -99,13 +99,13 @@ namespace System.Data.Common.CommandTrees
 
         protected virtual void VisitQueryCommandTree(DbQueryCommandTree queryTree)
         {
-            Contract.Requires(queryTree != null);
+            //Contract.Requires(queryTree != null);
             VisitExpression(queryTree.Query);
         }
 
         protected virtual void VisitUpdateCommandTree(DbUpdateCommandTree updateTree)
         {
-            Contract.Requires(updateTree != null);
+            //Contract.Requires(updateTree != null);
             VisitExpressionBindingPre(updateTree.Target);
             VisitModificationClauses(updateTree.SetClauses);
             VisitExpression(updateTree.Predicate);

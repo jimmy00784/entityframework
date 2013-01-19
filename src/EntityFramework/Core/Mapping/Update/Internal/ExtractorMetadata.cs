@@ -22,9 +22,9 @@ namespace System.Data.Mapping.Update.Internal
     {
         internal ExtractorMetadata(EntitySetBase entitySetBase, StructuralType type, UpdateTranslator translator)
         {
-            Contract.Requires(entitySetBase != null);
-            Contract.Requires(type != null);
-            Contract.Requires(translator != null);
+            //Contract.Requires(entitySetBase != null);
+            //Contract.Requires(type != null);
+            //Contract.Requires(translator != null);
 
             m_type = type;
             m_translator = translator;

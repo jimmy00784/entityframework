@@ -29,21 +29,21 @@ namespace System.Data.Entity.Internal.Linq
     {
         void IInternalSet.Attach(object entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
 
             throw new NotImplementedException();
         }
 
         void IInternalSet.Add(object entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
 
             throw new NotImplementedException();
         }
 
         void IInternalSet.Remove(object entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
 
             throw new NotImplementedException();
         }
@@ -60,16 +60,16 @@ namespace System.Data.Entity.Internal.Linq
 
         IEnumerator IInternalSet.ExecuteSqlQuery(string sql, bool asNoTracking, object[] parameters)
         {
-            Contract.Requires(sql != null);
-            Contract.Requires(parameters != null);
+            //Contract.Requires(sql != null);
+            //Contract.Requires(parameters != null);
 
             throw new NotImplementedException();
         }
 
         IDbAsyncEnumerator IInternalSet.ExecuteSqlQueryAsync(string sql, bool asNoTracking, object[] parameters)
         {
-            Contract.Requires(sql != null);
-            Contract.Requires(parameters != null);
+            //Contract.Requires(sql != null);
+            //Contract.Requires(parameters != null);
 
             throw new NotImplementedException();
         }

@@ -28,9 +28,9 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Properties.Navigat
                 EdmAssociationType associationType, EdmAssociationEnd dependentEnd,
                 EntityTypeConfiguration entityTypeConfiguration)
             {
-                Contract.Requires(associationType != null);
-                Contract.Requires(dependentEnd != null);
-                Contract.Requires(entityTypeConfiguration != null);
+                //Contract.Requires(associationType != null);
+                //Contract.Requires(dependentEnd != null);
+                //Contract.Requires(entityTypeConfiguration != null);
             }
         }
 

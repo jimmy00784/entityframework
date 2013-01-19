@@ -21,8 +21,8 @@ namespace System.Data.Mapping
             Dictionary<EntityType, Collection<FunctionImportReturnTypePropertyMapping>> isOfTypeEntityTypeColumnsRenameMapping,
             Dictionary<EntityType, Collection<FunctionImportReturnTypePropertyMapping>> entityTypeColumnsRenameMapping)
         {
-            Contract.Requires(isOfTypeEntityTypeColumnsRenameMapping != null);
-            Contract.Requires(entityTypeColumnsRenameMapping != null);
+            //Contract.Requires(isOfTypeEntityTypeColumnsRenameMapping != null);
+            //Contract.Requires(entityTypeColumnsRenameMapping != null);
 
             ColumnRenameMapping = new Dictionary<string, FunctionImportReturnTypeStructuralTypeColumnRenameMapping>();
 
@@ -48,8 +48,8 @@ namespace System.Data.Mapping
             Collection<FunctionImportReturnTypePropertyMapping> columnsRenameMapping,
             bool isTypeOf)
         {
-            Contract.Requires(entityType != null);
-            Contract.Requires(columnsRenameMapping != null);
+            //Contract.Requires(entityType != null);
+            //Contract.Requires(columnsRenameMapping != null);
 
             foreach (var mapping in columnsRenameMapping)
             {

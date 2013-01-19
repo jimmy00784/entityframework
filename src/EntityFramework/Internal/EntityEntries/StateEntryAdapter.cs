@@ -21,7 +21,7 @@ namespace System.Data.Entity.Internal
 
         public StateEntryAdapter(ObjectStateEntry stateEntry)
         {
-            Contract.Requires(stateEntry != null);
+            //Contract.Requires(stateEntry != null);
 
             _stateEntry = stateEntry;
         }

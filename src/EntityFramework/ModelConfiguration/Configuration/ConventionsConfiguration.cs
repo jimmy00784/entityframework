@@ -33,7 +33,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         internal ConventionsConfiguration(IEnumerable<IConvention> conventionSet)
         {
-            Contract.Requires(conventionSet != null);
+            //Contract.Requires(conventionSet != null);
             Contract.Assert(conventionSet.All(c => c != null));
 
             _conventions.AddRange(conventionSet);
@@ -41,7 +41,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         private ConventionsConfiguration(ConventionsConfiguration source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             _conventions.AddRange(source._conventions);
         }
@@ -53,7 +53,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         internal void Add(params IConvention[] conventions)
         {
-            Contract.Requires(conventions != null);
+            //Contract.Requires(conventions != null);
             Contract.Assert(conventions.All(c => c != null));
 
             conventions.Each(c => _conventions.Add(c));
@@ -71,7 +71,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         internal void AddAfter<TExistingConvention>(IConvention newConvention)
             where TExistingConvention : IConvention
         {
-            Contract.Requires(newConvention != null);
+            //Contract.Requires(newConvention != null);
 
             var index = 0;
 
@@ -117,7 +117,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         internal void ApplyModel(EdmModel model)
         {
-            Contract.Requires(model != null);
+            //Contract.Requires(model != null);
 
             foreach (var convention in _conventions)
             {
@@ -127,7 +127,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         internal void ApplyDatabase(DbDatabaseMetadata database)
         {
-            Contract.Requires(database != null);
+            //Contract.Requires(database != null);
 
             foreach (var convention in _conventions)
             {
@@ -137,7 +137,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         internal void ApplyMapping(DbDatabaseMapping databaseMapping)
         {
-            Contract.Requires(databaseMapping != null);
+            //Contract.Requires(databaseMapping != null);
 
             foreach (var convention in _conventions)
             {
@@ -152,7 +152,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         internal void ApplyModelConfiguration(ModelConfiguration modelConfiguration)
         {
-            Contract.Requires(modelConfiguration != null);
+            //Contract.Requires(modelConfiguration != null);
 
             foreach (var convention in _conventions.OfType<IConfigurationConvention>())
             {
@@ -162,8 +162,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         internal void ApplyModelConfiguration(Type type, ModelConfiguration modelConfiguration)
         {
-            Contract.Requires(type != null);
-            Contract.Requires(modelConfiguration != null);
+            //Contract.Requires(type != null);
+            //Contract.Requires(modelConfiguration != null);
 
             foreach (var convention in _conventions.OfType<IConfigurationConvention<Type, ModelConfiguration>>())
             {
@@ -175,8 +175,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
             Type type, Func<TStructuralTypeConfiguration> structuralTypeConfiguration)
             where TStructuralTypeConfiguration : StructuralTypeConfiguration
         {
-            Contract.Requires(type != null);
-            Contract.Requires(structuralTypeConfiguration != null);
+            //Contract.Requires(type != null);
+            //Contract.Requires(structuralTypeConfiguration != null);
 
             foreach (var convention in _conventions)
             {
@@ -200,8 +200,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         internal void ApplyPropertyConfiguration(PropertyInfo propertyInfo, ModelConfiguration modelConfiguration)
         {
-            Contract.Requires(propertyInfo != null);
-            Contract.Requires(modelConfiguration != null);
+            //Contract.Requires(propertyInfo != null);
+            //Contract.Requires(modelConfiguration != null);
 
             foreach (var convention in _conventions.OfType<IConfigurationConvention<PropertyInfo, ModelConfiguration>>()
                 )
@@ -213,8 +213,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         internal void ApplyPropertyConfiguration(
             PropertyInfo propertyInfo, Func<PropertyConfiguration> propertyConfiguration)
         {
-            Contract.Requires(propertyInfo != null);
-            Contract.Requires(propertyConfiguration != null);
+            //Contract.Requires(propertyInfo != null);
+            //Contract.Requires(propertyConfiguration != null);
 
             var propertyConfigurationType
                 = StructuralTypeConfiguration.GetPropertyConfigurationType(propertyInfo.PropertyType);
@@ -231,8 +231,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
             PropertyInfo propertyInfo, Func<TStructuralTypeConfiguration> structuralTypeConfiguration)
             where TStructuralTypeConfiguration : StructuralTypeConfiguration
         {
-            Contract.Requires(propertyInfo != null);
-            Contract.Requires(structuralTypeConfiguration != null);
+            //Contract.Requires(propertyInfo != null);
+            //Contract.Requires(structuralTypeConfiguration != null);
 
             foreach (var convention in _conventions)
             {

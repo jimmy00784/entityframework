@@ -31,9 +31,9 @@ namespace System.Data.Entity.Internal.Validation
         /// <param name = "propertyValidators">Validators used to validate the given property.</param>
         public PropertyValidator(string propertyName, IEnumerable<IValidator> propertyValidators)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
 
-            Contract.Requires(propertyValidators != null);
+            //Contract.Requires(propertyValidators != null);
 
             _propertyValidators = propertyValidators;
             _propertyName = propertyName;
@@ -67,8 +67,8 @@ namespace System.Data.Entity.Internal.Validation
         public virtual IEnumerable<DbValidationError> Validate(
             EntityValidationContext entityValidationContext, InternalMemberEntry property)
         {
-            Contract.Requires(entityValidationContext != null);
-            Contract.Requires(property != null);
+            //Contract.Requires(entityValidationContext != null);
+            //Contract.Requires(property != null);
 
             var validationErrors = new List<DbValidationError>();
 

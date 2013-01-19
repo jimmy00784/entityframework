@@ -44,10 +44,10 @@ namespace System.Data.Entity.Internal
         public static PropertyEntryMetadata ValidateNameAndGetMetadata(
             InternalContext internalContext, Type declaringType, Type requestedType, string propertyName)
         {
-            Contract.Requires(internalContext != null);
-            Contract.Requires(declaringType != null);
-            Contract.Requires(requestedType != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
+            //Contract.Requires(internalContext != null);
+            //Contract.Requires(declaringType != null);
+            //Contract.Requires(requestedType != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
 
             Type propertyType;
             DbHelpers.GetPropertyTypes(declaringType).TryGetValue(propertyName, out propertyType);

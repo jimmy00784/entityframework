@@ -72,7 +72,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Avg' function accepts an argument with the result type of <paramref name="collection"/>.</exception>
         public static DbFunctionExpression Average(this DbExpression collection)
         {
-            Contract.Requires(collection != null);
+            //Contract.Requires(collection != null);
             return InvokeCanonicalFunction("Avg", collection);
         }
 
@@ -86,7 +86,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Count' function accepts an argument with the result type of <paramref name="collection"/>.</exception>
         public static DbFunctionExpression Count(this DbExpression collection)
         {
-            Contract.Requires(collection != null);
+            //Contract.Requires(collection != null);
             return InvokeCanonicalFunction("Count", collection);
         }
 
@@ -100,7 +100,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'BigCount' function accepts an argument with the result type of <paramref name="collection"/>.</exception>
         public static DbFunctionExpression LongCount(this DbExpression collection)
         {
-            Contract.Requires(collection != null);
+            //Contract.Requires(collection != null);
             return InvokeCanonicalFunction("BigCount", collection);
         }
 
@@ -114,7 +114,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Max' function accepts an argument with the result type of <paramref name="collection"/>.</exception>
         public static DbFunctionExpression Max(this DbExpression collection)
         {
-            Contract.Requires(collection != null);
+            //Contract.Requires(collection != null);
             return InvokeCanonicalFunction("Max", collection);
         }
 
@@ -128,7 +128,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Min' function accepts an argument with the result type of <paramref name="collection"/>.</exception>
         public static DbFunctionExpression Min(this DbExpression collection)
         {
-            Contract.Requires(collection != null);
+            //Contract.Requires(collection != null);
             return InvokeCanonicalFunction("Min", collection);
         }
 
@@ -142,7 +142,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Sum' function accepts an argument with the result type of <paramref name="collection"/>.</exception>
         public static DbFunctionExpression Sum(this DbExpression collection)
         {
-            Contract.Requires(collection != null);
+            //Contract.Requires(collection != null);
             return InvokeCanonicalFunction("Sum", collection);
         }
 
@@ -157,7 +157,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         [SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "St")]
         public static DbFunctionExpression StDev(this DbExpression collection)
         {
-            Contract.Requires(collection != null);
+            //Contract.Requires(collection != null);
             return InvokeCanonicalFunction("StDev", collection);
         }
 
@@ -172,7 +172,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         [SuppressMessage("Microsoft.Naming", "CA1709:IdentifiersShouldBeCasedCorrectly", MessageId = "St")]
         public static DbFunctionExpression StDevP(this DbExpression collection)
         {
-            Contract.Requires(collection != null);
+            //Contract.Requires(collection != null);
             return InvokeCanonicalFunction("StDevP", collection);
         }
 
@@ -186,7 +186,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Var' function accepts an argument with the result type of <paramref name="collection"/>.</exception>
         public static DbFunctionExpression Var(this DbExpression collection)
         {
-            Contract.Requires(collection != null);
+            //Contract.Requires(collection != null);
             return InvokeCanonicalFunction("Var", collection);
         }
 
@@ -200,7 +200,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'VarP' function accepts an argument with the result type of <paramref name="collection"/>.</exception>
         public static DbFunctionExpression VarP(this DbExpression collection)
         {
-            Contract.Requires(collection != null);
+            //Contract.Requires(collection != null);
             return InvokeCanonicalFunction("VarP", collection);
         }
 
@@ -220,8 +220,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Concat' function accepts arguments with the result types of <paramref name="string1"/> and <paramref name="string2"/>.</exception>
         public static DbFunctionExpression Concat(this DbExpression string1, DbExpression string2)
         {
-            Contract.Requires(string1 != null);
-            Contract.Requires(string2 != null);
+            //Contract.Requires(string1 != null);
+            //Contract.Requires(string2 != null);
             return InvokeCanonicalFunction("Concat", string1, string2);
         }
 
@@ -239,8 +239,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Contains' function accepts arguments with the result types of <paramref name="searchedString"/> and <paramref name="searchedForString"/>.</exception>
         public static DbExpression Contains(this DbExpression searchedString, DbExpression searchedForString)
         {
-            Contract.Requires(searchedString != null);
-            Contract.Requires(searchedForString != null);
+            //Contract.Requires(searchedString != null);
+            //Contract.Requires(searchedForString != null);
             return InvokeCanonicalFunction("Contains", searchedString, searchedForString);
         }
 
@@ -256,8 +256,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'EndsWith' function accepts arguments with the result types of <paramref name="stringArgument"/> and <paramref name="suffix"/>.</exception>
         public static DbFunctionExpression EndsWith(this DbExpression stringArgument, DbExpression suffix)
         {
-            Contract.Requires(stringArgument != null);
-            Contract.Requires(suffix != null);
+            //Contract.Requires(stringArgument != null);
+            //Contract.Requires(suffix != null);
             return InvokeCanonicalFunction("EndsWith", stringArgument, suffix);
         }
 
@@ -274,8 +274,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'IndexOf' function accepts arguments with the result types of <paramref name="searchString"/> and <paramref name="stringToFind"/>.</exception>
         public static DbFunctionExpression IndexOf(this DbExpression searchString, DbExpression stringToFind)
         {
-            Contract.Requires(searchString != null);
-            Contract.Requires(stringToFind != null);
+            //Contract.Requires(searchString != null);
+            //Contract.Requires(stringToFind != null);
             return InvokeCanonicalFunction("IndexOf", stringToFind, searchString);
         }
 
@@ -291,8 +291,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Left' function accepts arguments with the result types of <paramref name="stringArgument"/>.</exception>
         public static DbFunctionExpression Left(this DbExpression stringArgument, DbExpression length)
         {
-            Contract.Requires(stringArgument != null);
-            Contract.Requires(length != null);
+            //Contract.Requires(stringArgument != null);
+            //Contract.Requires(length != null);
             return InvokeCanonicalFunction("Left", stringArgument, length);
         }
 
@@ -307,7 +307,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Length' function accepts an argument with the result type of <paramref name="stringArgument"/>.</exception>
         public static DbFunctionExpression Length(this DbExpression stringArgument)
         {
-            Contract.Requires(stringArgument != null);
+            //Contract.Requires(stringArgument != null);
             return InvokeCanonicalFunction("Length", stringArgument);
         }
 
@@ -324,9 +324,9 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Length' function accepts arguments with the result types of <paramref name="stringArgument"/>, <paramref name="toReplace"/> and <paramref name="replacement"/>.</exception>
         public static DbFunctionExpression Replace(this DbExpression stringArgument, DbExpression toReplace, DbExpression replacement)
         {
-            Contract.Requires(stringArgument != null);
-            Contract.Requires(toReplace != null);
-            Contract.Requires(replacement != null);
+            //Contract.Requires(stringArgument != null);
+            //Contract.Requires(toReplace != null);
+            //Contract.Requires(replacement != null);
             return InvokeCanonicalFunction("Replace", stringArgument, toReplace, replacement);
         }
 
@@ -341,7 +341,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Reverse' function accepts an argument with the result type of <paramref name="stringArgument"/>.</exception>
         public static DbFunctionExpression Reverse(this DbExpression stringArgument)
         {
-            Contract.Requires(stringArgument != null);
+            //Contract.Requires(stringArgument != null);
             return InvokeCanonicalFunction("Reverse", stringArgument);
         }
 
@@ -357,8 +357,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Right' function accepts arguments with the result types of <paramref name="stringArgument"/>.</exception>
         public static DbFunctionExpression Right(this DbExpression stringArgument, DbExpression length)
         {
-            Contract.Requires(stringArgument != null);
-            Contract.Requires(length != null);
+            //Contract.Requires(stringArgument != null);
+            //Contract.Requires(length != null);
             return InvokeCanonicalFunction("Right", stringArgument, length);
         }
 
@@ -374,8 +374,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'StartsWith' function accepts arguments with the result types of <paramref name="stringArgument"/> and <paramref name="prefix"/>.</exception>
         public static DbFunctionExpression StartsWith(this DbExpression stringArgument, DbExpression prefix)
         {
-            Contract.Requires(stringArgument != null);
-            Contract.Requires(prefix != null);
+            //Contract.Requires(stringArgument != null);
+            //Contract.Requires(prefix != null);
             return InvokeCanonicalFunction("StartsWith", stringArgument, prefix);
         }
 
@@ -395,9 +395,9 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Substring' function accepts arguments with the result types of <paramref name="stringArgument"/>, <paramref name="start"/> and <paramref name="length"/>.</exception>
         public static DbFunctionExpression Substring(this DbExpression stringArgument, DbExpression start, DbExpression length)
         {
-            Contract.Requires(stringArgument != null);
-            Contract.Requires(start != null);
-            Contract.Requires(length != null);
+            //Contract.Requires(stringArgument != null);
+            //Contract.Requires(start != null);
+            //Contract.Requires(length != null);
             return InvokeCanonicalFunction("Substring", stringArgument, start, length);
         }
 
@@ -412,7 +412,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'ToLower' function accepts an argument with the result type of <paramref name="stringArgument"/>.</exception>
         public static DbFunctionExpression ToLower(this DbExpression stringArgument)
         {
-            Contract.Requires(stringArgument != null);
+            //Contract.Requires(stringArgument != null);
             return InvokeCanonicalFunction("ToLower", stringArgument);
         }
 
@@ -427,7 +427,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'ToUpper' function accepts an argument with the result type of <paramref name="stringArgument"/>.</exception>
         public static DbFunctionExpression ToUpper(this DbExpression stringArgument)
         {
-            Contract.Requires(stringArgument != null);
+            //Contract.Requires(stringArgument != null);
             return InvokeCanonicalFunction("ToUpper", stringArgument);
         }
 
@@ -442,7 +442,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Trim' function accepts an argument with the result type of <paramref name="stringArgument"/>.</exception>
         public static DbFunctionExpression Trim(this DbExpression stringArgument)
         {
-            Contract.Requires(stringArgument != null);
+            //Contract.Requires(stringArgument != null);
             return InvokeCanonicalFunction("Trim", stringArgument);
         }
 
@@ -457,7 +457,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'RTrim' function accepts an argument with the result type of <paramref name="stringArgument"/>.</exception>
         public static DbFunctionExpression TrimEnd(this DbExpression stringArgument)
         {
-            Contract.Requires(stringArgument != null);
+            //Contract.Requires(stringArgument != null);
             return InvokeCanonicalFunction("RTrim", stringArgument);
         }
 
@@ -472,7 +472,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'LTrim' function accepts an argument with the result type of <paramref name="stringArgument"/>.</exception>
         public static DbFunctionExpression TrimStart(this DbExpression stringArgument)
         {
-            Contract.Requires(stringArgument != null);
+            //Contract.Requires(stringArgument != null);
             return InvokeCanonicalFunction("LTrim", stringArgument);
         }
 
@@ -491,7 +491,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Year' function accepts an argument with the result type of <paramref name="dateValue"/>.</exception>
         public static DbFunctionExpression Year(this DbExpression dateValue)
         {
-            Contract.Requires(dateValue != null);
+            //Contract.Requires(dateValue != null);
             return InvokeCanonicalFunction("Year", dateValue);
         }
 
@@ -506,7 +506,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Month' function accepts an argument with the result type of <paramref name="dateValue"/>.</exception>
         public static DbFunctionExpression Month(this DbExpression dateValue)
         {
-            Contract.Requires(dateValue != null);
+            //Contract.Requires(dateValue != null);
             return InvokeCanonicalFunction("Month", dateValue);
         }
 
@@ -521,7 +521,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Day' function accepts an argument with the result type of <paramref name="dateValue"/>.</exception>
         public static DbFunctionExpression Day(this DbExpression dateValue)
         {
-            Contract.Requires(dateValue != null);
+            //Contract.Requires(dateValue != null);
             return InvokeCanonicalFunction("Day", dateValue);
         }
 
@@ -536,7 +536,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'DayOfYear' function accepts an argument with the result type of <paramref name="dateValue"/>.</exception>
         public static DbFunctionExpression DayOfYear(this DbExpression dateValue)
         {
-            Contract.Requires(dateValue != null);
+            //Contract.Requires(dateValue != null);
             return InvokeCanonicalFunction("DayOfYear", dateValue);
         }
 
@@ -551,7 +551,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Hour' function accepts an argument with the result type of <paramref name="timeValue"/>.</exception>
         public static DbFunctionExpression Hour(this DbExpression timeValue)
         {
-            Contract.Requires(timeValue != null);
+            //Contract.Requires(timeValue != null);
             return InvokeCanonicalFunction("Hour", timeValue);
         }
 
@@ -566,7 +566,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Minute' function accepts an argument with the result type of <paramref name="timeValue"/>.</exception>
         public static DbFunctionExpression Minute(this DbExpression timeValue)
         {
-            Contract.Requires(timeValue != null);
+            //Contract.Requires(timeValue != null);
             return InvokeCanonicalFunction("Minute", timeValue);
         }
 
@@ -581,7 +581,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Second' function accepts an argument with the result type of <paramref name="timeValue"/>.</exception>
         public static DbFunctionExpression Second(this DbExpression timeValue)
         {
-            Contract.Requires(timeValue != null);
+            //Contract.Requires(timeValue != null);
             return InvokeCanonicalFunction("Second", timeValue);
         }
 
@@ -596,7 +596,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Millisecond' function accepts an argument with the result type of <paramref name="timeValue"/>.</exception>
         public static DbFunctionExpression Millisecond(this DbExpression timeValue)
         {
-            Contract.Requires(timeValue != null);
+            //Contract.Requires(timeValue != null);
             return InvokeCanonicalFunction("Millisecond", timeValue);
         }
 
@@ -610,7 +610,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'GetTotalOffsetMinutes' function accepts an argument with the result type of <paramref name="dateTimeOffsetArgument"/>.</exception>
         public static DbFunctionExpression GetTotalOffsetMinutes(this DbExpression dateTimeOffsetArgument)
         {
-            Contract.Requires(dateTimeOffsetArgument != null);
+            //Contract.Requires(dateTimeOffsetArgument != null);
             return InvokeCanonicalFunction("GetTotalOffsetMinutes", dateTimeOffsetArgument);
         }
 
@@ -656,7 +656,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'TruncateTime' function accepts an argument with the result type of <paramref name="dateValue"/>.</exception>
         public static DbFunctionExpression TruncateTime(this DbExpression dateValue)
         {
-            Contract.Requires(dateValue != null);
+            //Contract.Requires(dateValue != null);
             return InvokeCanonicalFunction("TruncateTime", dateValue);
         }
 
@@ -677,12 +677,12 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         public static DbFunctionExpression CreateDateTime(
             DbExpression year, DbExpression month, DbExpression day, DbExpression hour, DbExpression minute, DbExpression second)
         {
-            Contract.Requires(year != null);
-            Contract.Requires(month != null);
-            Contract.Requires(day != null);
-            Contract.Requires(hour != null);
-            Contract.Requires(minute != null);
-            Contract.Requires(second != null);
+            //Contract.Requires(year != null);
+            //Contract.Requires(month != null);
+            //Contract.Requires(day != null);
+            //Contract.Requires(hour != null);
+            //Contract.Requires(minute != null);
+            //Contract.Requires(second != null);
             return InvokeCanonicalFunction("CreateDateTime", year, month, day, hour, minute, second);
         }
 
@@ -705,13 +705,13 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
             DbExpression year, DbExpression month, DbExpression day, DbExpression hour, DbExpression minute, DbExpression second,
             DbExpression timeZoneOffset)
         {
-            Contract.Requires(year != null);
-            Contract.Requires(month != null);
-            Contract.Requires(day != null);
-            Contract.Requires(hour != null);
-            Contract.Requires(minute != null);
-            Contract.Requires(second != null);
-            Contract.Requires(timeZoneOffset != null);
+            //Contract.Requires(year != null);
+            //Contract.Requires(month != null);
+            //Contract.Requires(day != null);
+            //Contract.Requires(hour != null);
+            //Contract.Requires(minute != null);
+            //Contract.Requires(second != null);
+            //Contract.Requires(timeZoneOffset != null);
             return InvokeCanonicalFunction("CreateDateTimeOffset", year, month, day, hour, minute, second, timeZoneOffset);
         }
 
@@ -728,9 +728,9 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'CreateTime' function accepts arguments with the result types of <paramref name="hour"/>, <paramref name="minute"/>, and <paramref name="second"/>.</exception>
         public static DbFunctionExpression CreateTime(DbExpression hour, DbExpression minute, DbExpression second)
         {
-            Contract.Requires(hour != null);
-            Contract.Requires(minute != null);
-            Contract.Requires(second != null);
+            //Contract.Requires(hour != null);
+            //Contract.Requires(minute != null);
+            //Contract.Requires(second != null);
             return InvokeCanonicalFunction("CreateTime", hour, minute, second);
         }
 
@@ -750,8 +750,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'AddYears' function accepts arguments with the result types of <paramref name="dateValue"/> and <paramref name="addValue"/>.</exception>
         public static DbFunctionExpression AddYears(this DbExpression dateValue, DbExpression addValue)
         {
-            Contract.Requires(dateValue != null);
-            Contract.Requires(addValue != null);
+            //Contract.Requires(dateValue != null);
+            //Contract.Requires(addValue != null);
             return InvokeCanonicalFunction("AddYears", dateValue, addValue);
         }
 
@@ -767,8 +767,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'AddMonths' function accepts arguments with the result types of <paramref name="dateValue"/> and <paramref name="addValue"/>.</exception>
         public static DbFunctionExpression AddMonths(this DbExpression dateValue, DbExpression addValue)
         {
-            Contract.Requires(dateValue != null);
-            Contract.Requires(addValue != null);
+            //Contract.Requires(dateValue != null);
+            //Contract.Requires(addValue != null);
             return InvokeCanonicalFunction("AddMonths", dateValue, addValue);
         }
 
@@ -784,8 +784,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'AddDays' function accepts arguments with the result types of <paramref name="dateValue"/> and <paramref name="addValue"/>.</exception>
         public static DbFunctionExpression AddDays(this DbExpression dateValue, DbExpression addValue)
         {
-            Contract.Requires(dateValue != null);
-            Contract.Requires(addValue != null);
+            //Contract.Requires(dateValue != null);
+            //Contract.Requires(addValue != null);
             return InvokeCanonicalFunction("AddDays", dateValue, addValue);
         }
 
@@ -801,8 +801,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'AddHours' function accepts arguments with the result types of <paramref name="timeValue"/> and <paramref name="addValue"/>.</exception>
         public static DbFunctionExpression AddHours(this DbExpression timeValue, DbExpression addValue)
         {
-            Contract.Requires(timeValue != null);
-            Contract.Requires(addValue != null);
+            //Contract.Requires(timeValue != null);
+            //Contract.Requires(addValue != null);
             return InvokeCanonicalFunction("AddHours", timeValue, addValue);
         }
 
@@ -818,8 +818,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'AddMinutes' function accepts arguments with the result types of <paramref name="timeValue"/> and <paramref name="addValue"/>.</exception>
         public static DbFunctionExpression AddMinutes(this DbExpression timeValue, DbExpression addValue)
         {
-            Contract.Requires(timeValue != null);
-            Contract.Requires(addValue != null);
+            //Contract.Requires(timeValue != null);
+            //Contract.Requires(addValue != null);
             return InvokeCanonicalFunction("AddMinutes", timeValue, addValue);
         }
 
@@ -835,8 +835,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'AddSeconds' function accepts arguments with the result types of <paramref name="timeValue"/> and <paramref name="addValue"/>.</exception>
         public static DbFunctionExpression AddSeconds(this DbExpression timeValue, DbExpression addValue)
         {
-            Contract.Requires(timeValue != null);
-            Contract.Requires(addValue != null);
+            //Contract.Requires(timeValue != null);
+            //Contract.Requires(addValue != null);
             return InvokeCanonicalFunction("AddSeconds", timeValue, addValue);
         }
 
@@ -852,8 +852,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'AddMilliseconds' function accepts arguments with the result types of <paramref name="timeValue"/> and <paramref name="addValue"/>.</exception>
         public static DbFunctionExpression AddMilliseconds(this DbExpression timeValue, DbExpression addValue)
         {
-            Contract.Requires(timeValue != null);
-            Contract.Requires(addValue != null);
+            //Contract.Requires(timeValue != null);
+            //Contract.Requires(addValue != null);
             return InvokeCanonicalFunction("AddMilliseconds", timeValue, addValue);
         }
 
@@ -869,8 +869,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'AddMicroseconds' function accepts arguments with the result types of <paramref name="timeValue"/> and <paramref name="addValue"/>.</exception>
         public static DbFunctionExpression AddMicroseconds(this DbExpression timeValue, DbExpression addValue)
         {
-            Contract.Requires(timeValue != null);
-            Contract.Requires(addValue != null);
+            //Contract.Requires(timeValue != null);
+            //Contract.Requires(addValue != null);
             return InvokeCanonicalFunction("AddMicroseconds", timeValue, addValue);
         }
 
@@ -886,8 +886,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'AddNanoseconds' function accepts arguments with the result types of <paramref name="timeValue"/> and <paramref name="addValue"/>.</exception>
         public static DbFunctionExpression AddNanoseconds(this DbExpression timeValue, DbExpression addValue)
         {
-            Contract.Requires(timeValue != null);
-            Contract.Requires(addValue != null);
+            //Contract.Requires(timeValue != null);
+            //Contract.Requires(addValue != null);
             return InvokeCanonicalFunction("AddNanoseconds", timeValue, addValue);
         }
 
@@ -908,8 +908,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'DiffYears' function accepts arguments with the result types of <paramref name="dateValue1"/> and <paramref name="dateValue2"/>.</exception>
         public static DbFunctionExpression DiffYears(this DbExpression dateValue1, DbExpression dateValue2)
         {
-            Contract.Requires(dateValue1 != null);
-            Contract.Requires(dateValue2 != null);
+            //Contract.Requires(dateValue1 != null);
+            //Contract.Requires(dateValue2 != null);
             return InvokeCanonicalFunction("DiffYears", dateValue1, dateValue2);
         }
 
@@ -926,8 +926,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'DiffMonths' function accepts arguments with the result types of <paramref name="dateValue1"/> and <paramref name="dateValue2"/>.</exception>
         public static DbFunctionExpression DiffMonths(this DbExpression dateValue1, DbExpression dateValue2)
         {
-            Contract.Requires(dateValue1 != null);
-            Contract.Requires(dateValue2 != null);
+            //Contract.Requires(dateValue1 != null);
+            //Contract.Requires(dateValue2 != null);
             return InvokeCanonicalFunction("DiffMonths", dateValue1, dateValue2);
         }
 
@@ -944,8 +944,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'DiffDays' function accepts arguments with the result types of <paramref name="dateValue1"/> and <paramref name="dateValue2"/>.</exception>
         public static DbFunctionExpression DiffDays(this DbExpression dateValue1, DbExpression dateValue2)
         {
-            Contract.Requires(dateValue1 != null);
-            Contract.Requires(dateValue2 != null);
+            //Contract.Requires(dateValue1 != null);
+            //Contract.Requires(dateValue2 != null);
             return InvokeCanonicalFunction("DiffDays", dateValue1, dateValue2);
         }
 
@@ -962,8 +962,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'DiffHours' function accepts arguments with the result types of <paramref name="timeValue1"/> and <paramref name="timeValue2"/>.</exception>
         public static DbFunctionExpression DiffHours(this DbExpression timeValue1, DbExpression timeValue2)
         {
-            Contract.Requires(timeValue1 != null);
-            Contract.Requires(timeValue2 != null);
+            //Contract.Requires(timeValue1 != null);
+            //Contract.Requires(timeValue2 != null);
             return InvokeCanonicalFunction("DiffHours", timeValue1, timeValue2);
         }
 
@@ -980,8 +980,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'DiffMinutes' function accepts arguments with the result types of <paramref name="timeValue1"/> and <paramref name="timeValue2"/>.</exception>
         public static DbFunctionExpression DiffMinutes(this DbExpression timeValue1, DbExpression timeValue2)
         {
-            Contract.Requires(timeValue1 != null);
-            Contract.Requires(timeValue2 != null);
+            //Contract.Requires(timeValue1 != null);
+            //Contract.Requires(timeValue2 != null);
             return InvokeCanonicalFunction("DiffMinutes", timeValue1, timeValue2);
         }
 
@@ -998,8 +998,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'DiffSeconds' function accepts arguments with the result types of <paramref name="timeValue1"/> and <paramref name="timeValue2"/>.</exception>
         public static DbFunctionExpression DiffSeconds(this DbExpression timeValue1, DbExpression timeValue2)
         {
-            Contract.Requires(timeValue1 != null);
-            Contract.Requires(timeValue2 != null);
+            //Contract.Requires(timeValue1 != null);
+            //Contract.Requires(timeValue2 != null);
             return InvokeCanonicalFunction("DiffSeconds", timeValue1, timeValue2);
         }
 
@@ -1016,8 +1016,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'DiffMilliseconds' function accepts arguments with the result types of <paramref name="timeValue1"/> and <paramref name="timeValue2"/>.</exception>
         public static DbFunctionExpression DiffMilliseconds(this DbExpression timeValue1, DbExpression timeValue2)
         {
-            Contract.Requires(timeValue1 != null);
-            Contract.Requires(timeValue2 != null);
+            //Contract.Requires(timeValue1 != null);
+            //Contract.Requires(timeValue2 != null);
             return InvokeCanonicalFunction("DiffMilliseconds", timeValue1, timeValue2);
         }
 
@@ -1034,8 +1034,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'DiffMicroseconds' function accepts arguments with the result types of <paramref name="timeValue1"/> and <paramref name="timeValue2"/>.</exception>
         public static DbFunctionExpression DiffMicroseconds(this DbExpression timeValue1, DbExpression timeValue2)
         {
-            Contract.Requires(timeValue1 != null);
-            Contract.Requires(timeValue2 != null);
+            //Contract.Requires(timeValue1 != null);
+            //Contract.Requires(timeValue2 != null);
             return InvokeCanonicalFunction("DiffMicroseconds", timeValue1, timeValue2);
         }
 
@@ -1052,8 +1052,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'DiffNanoseconds' function accepts arguments with the result types of <paramref name="timeValue1"/> and <paramref name="timeValue2"/>.</exception>
         public static DbFunctionExpression DiffNanoseconds(this DbExpression timeValue1, DbExpression timeValue2)
         {
-            Contract.Requires(timeValue1 != null);
-            Contract.Requires(timeValue2 != null);
+            //Contract.Requires(timeValue1 != null);
+            //Contract.Requires(timeValue2 != null);
             return InvokeCanonicalFunction("DiffNanoseconds", timeValue1, timeValue2);
         }
 
@@ -1072,7 +1072,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Round' function accepts an argument with the result type of <paramref name="value"/>.</exception>
         public static DbFunctionExpression Round(this DbExpression value)
         {
-            Contract.Requires(value != null);
+            //Contract.Requires(value != null);
             return InvokeCanonicalFunction("Round", value);
         }
 
@@ -1088,8 +1088,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Round' function accepts arguments with the result types of <paramref name="value"/> and <paramref name="digits"/>.</exception>
         public static DbFunctionExpression Round(this DbExpression value, DbExpression digits)
         {
-            Contract.Requires(value != null);
-            Contract.Requires(digits != null);
+            //Contract.Requires(value != null);
+            //Contract.Requires(digits != null);
             return InvokeCanonicalFunction("Round", value, digits);
         }
 
@@ -1104,7 +1104,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Floor' function accepts an argument with the result type of <paramref name="value"/>.</exception>
         public static DbFunctionExpression Floor(this DbExpression value)
         {
-            Contract.Requires(value != null);
+            //Contract.Requires(value != null);
             return InvokeCanonicalFunction("Floor", value);
         }
 
@@ -1119,7 +1119,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Ceiling' function accepts an argument with the result type of <paramref name="value"/>.</exception>
         public static DbFunctionExpression Ceiling(this DbExpression value)
         {
-            Contract.Requires(value != null);
+            //Contract.Requires(value != null);
             return InvokeCanonicalFunction("Ceiling", value);
         }
 
@@ -1134,7 +1134,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Abs' function accepts an argument with the result type of <paramref name="value"/>.</exception>
         public static DbFunctionExpression Abs(this DbExpression value)
         {
-            Contract.Requires(value != null);
+            //Contract.Requires(value != null);
             return InvokeCanonicalFunction("Abs", value);
         }
 
@@ -1150,8 +1150,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Truncate' function accepts arguments with the result types of <paramref name="value"/> and <paramref name="digits"/>.</exception>
         public static DbFunctionExpression Truncate(this DbExpression value, DbExpression digits)
         {
-            Contract.Requires(value != null);
-            Contract.Requires(digits != null);
+            //Contract.Requires(value != null);
+            //Contract.Requires(digits != null);
             return InvokeCanonicalFunction("Truncate", value, digits);
         }
 
@@ -1167,8 +1167,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'Power' function accepts arguments with the result types of <paramref name="baseArgument"/> and <paramref name="exponent"/>.</exception>
         public static DbFunctionExpression Power(this DbExpression baseArgument, DbExpression exponent)
         {
-            Contract.Requires(baseArgument != null);
-            Contract.Requires(exponent != null);
+            //Contract.Requires(baseArgument != null);
+            //Contract.Requires(exponent != null);
             return InvokeCanonicalFunction("Power", baseArgument, exponent);
         }
 
@@ -1188,8 +1188,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'BitwiseAnd' function accepts arguments with the result types of <paramref name="value1"/> and <paramref name="value2"/>.</exception>
         public static DbFunctionExpression BitwiseAnd(this DbExpression value1, DbExpression value2)
         {
-            Contract.Requires(value1 != null);
-            Contract.Requires(value2 != null);
+            //Contract.Requires(value1 != null);
+            //Contract.Requires(value2 != null);
             return InvokeCanonicalFunction("BitwiseAnd", value1, value2);
         }
 
@@ -1205,8 +1205,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'BitwiseOr' function accepts arguments with the result types of <paramref name="value1"/> and <paramref name="value2"/>.</exception>
         public static DbFunctionExpression BitwiseOr(this DbExpression value1, DbExpression value2)
         {
-            Contract.Requires(value1 != null);
-            Contract.Requires(value2 != null);
+            //Contract.Requires(value1 != null);
+            //Contract.Requires(value2 != null);
             return InvokeCanonicalFunction("BitwiseOr", value1, value2);
         }
 
@@ -1221,7 +1221,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'BitwiseNot' function accepts an argument with the result type of <paramref name="value"/>.</exception>
         public static DbFunctionExpression BitwiseNot(this DbExpression value)
         {
-            Contract.Requires(value != null);
+            //Contract.Requires(value != null);
             return InvokeCanonicalFunction("BitwiseNot", value);
         }
 
@@ -1237,8 +1237,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentException">No overload of the canonical 'BitwiseXor' function accepts arguments with the result types of <paramref name="value1"/> and <paramref name="value2"/>.</exception>
         public static DbFunctionExpression BitwiseXor(this DbExpression value1, DbExpression value2)
         {
-            Contract.Requires(value1 != null);
-            Contract.Requires(value2 != null);
+            //Contract.Requires(value1 != null);
+            //Contract.Requires(value2 != null);
             return InvokeCanonicalFunction("BitwiseXor", value1, value2);
         }
 

@@ -12,7 +12,7 @@ namespace System.Data.Entity.Migrations.Edm
         [SuppressMessage("Microsoft.Usage", "CA2202:Do not dispose objects multiple times")]
         public virtual byte[] Compress(XDocument model)
         {
-            Contract.Requires(model != null);
+            //Contract.Requires(model != null);
 
             using (var outStream = new MemoryStream())
             {
@@ -28,7 +28,7 @@ namespace System.Data.Entity.Migrations.Edm
         [SuppressMessage("Microsoft.Usage", "CA2202:Do not dispose objects multiple times")]
         public virtual XDocument Decompress(byte[] bytes)
         {
-            Contract.Requires(bytes != null);
+            //Contract.Requires(bytes != null);
 
             using (var memoryStream = new MemoryStream(bytes))
             {

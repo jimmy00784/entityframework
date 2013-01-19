@@ -24,7 +24,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Properties.Navigat
 
         internal ForeignKeyConstraintConfiguration(IEnumerable<PropertyInfo> dependentProperties)
         {
-            Contract.Requires(dependentProperties != null);
+            //Contract.Requires(dependentProperties != null);
             Contract.Assert(dependentProperties.Any());
 
             _dependentProperties.AddRange(dependentProperties);
@@ -34,7 +34,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Properties.Navigat
 
         private ForeignKeyConstraintConfiguration(ForeignKeyConstraintConfiguration source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             _dependentProperties.AddRange(source._dependentProperties);
             _isFullySpecified = source._isFullySpecified;
@@ -57,7 +57,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Properties.Navigat
 
         internal void AddColumn(PropertyInfo propertyInfo)
         {
-            Contract.Requires(propertyInfo != null);
+            //Contract.Requires(propertyInfo != null);
 
             // DevDiv #324763 (DbModelBuilder.Build is not idempotent):  If build is called twice when foreign keys are 
             // configured via attributes, we need to check whether the key has already been included.

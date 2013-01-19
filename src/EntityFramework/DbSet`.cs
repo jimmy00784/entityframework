@@ -36,7 +36,7 @@ namespace System.Data.Entity
         internal DbSet(InternalSet<TEntity> internalSet)
             : base(internalSet)
         {
-            Contract.Requires(internalSet != null);
+            //Contract.Requires(internalSet != null);
 
             _internalSet = internalSet;
         }
@@ -213,7 +213,7 @@ namespace System.Data.Entity
             Justification = "Intentionally just implicit to reduce API clutter.")]
         public static implicit operator DbSet(DbSet<TEntity> entry)
         {
-            Contract.Requires(entry != null);
+            //Contract.Requires(entry != null);
 
             return (DbSet)entry._internalSet.InternalContext.Set(entry._internalSet.ElementType);
         }
@@ -249,8 +249,8 @@ namespace System.Data.Entity
         /// <returns>A <see cref = "DbSqlSetQuery{TEntity}" /> object that will execute the query when it is enumerated.</returns>
         public DbSqlSetQuery<TEntity> SqlQuery(string sql, params object[] parameters)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(sql));
-            Contract.Requires(parameters != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(sql));
+            //Contract.Requires(parameters != null);
 
             return new DbSqlSetQuery<TEntity>(new InternalSqlSetQuery(_internalSet, sql, false, parameters));
         }

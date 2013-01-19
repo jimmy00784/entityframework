@@ -29,7 +29,7 @@ namespace System.Data.Entity.Internal
         /// <param name = "valueFactory">The value factory.</param>
         public RetryLazy(Func<TInput, TResult> valueFactory)
         {
-            Contract.Requires(valueFactory != null);
+            //Contract.Requires(valueFactory != null);
 
             _valueFactory = valueFactory;
         }

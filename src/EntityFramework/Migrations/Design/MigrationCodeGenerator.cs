@@ -93,10 +93,10 @@ namespace System.Data.Entity.Migrations.Design
                 string @namespace,
                 string className)
             {
-                Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
-                Contract.Requires(operations != null);
-                Contract.Requires(!string.IsNullOrWhiteSpace(targetModel));
-                Contract.Requires(!string.IsNullOrWhiteSpace(className));
+                //Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
+                //Contract.Requires(operations != null);
+                //Contract.Requires(!string.IsNullOrWhiteSpace(targetModel));
+                //Contract.Requires(!string.IsNullOrWhiteSpace(className));
 
                 return default(ScaffoldedMigration);
             }

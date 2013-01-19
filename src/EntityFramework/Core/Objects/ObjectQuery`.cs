@@ -172,7 +172,7 @@ namespace System.Data.Objects
 
         private static string BuildScanEntitySetEsql(EntitySetBase entitySet)
         {
-            Contract.Requires(entitySet != null);
+            //Contract.Requires(entitySet != null);
             return String.Format(
                 CultureInfo.InvariantCulture,
                 "{0}.{1}",
@@ -201,7 +201,7 @@ namespace System.Data.Objects
             get { return _name; }
             set
             {
-                Contract.Requires(value != null);
+                //Contract.Requires(value != null);
 
                 if (!ObjectParameter.ValidateParameterName(value))
                 {
@@ -320,7 +320,7 @@ namespace System.Data.Objects
         /// </exception>
         public ObjectQuery<T> Except(ObjectQuery<T> query)
         {
-            Contract.Requires(query != null);
+            //Contract.Requires(query != null);
 
             if (IsLinqQuery(this)
                 || IsLinqQuery(query))
@@ -348,9 +348,9 @@ namespace System.Data.Objects
         /// </returns>
         public ObjectQuery<DbDataRecord> GroupBy(string keys, string projection, params ObjectParameter[] parameters)
         {
-            Contract.Requires(keys != null);
-            Contract.Requires(projection != null);
-            Contract.Requires(parameters != null);
+            //Contract.Requires(keys != null);
+            //Contract.Requires(projection != null);
+            //Contract.Requires(parameters != null);
 
             if (StringUtil.IsNullOrEmptyOrWhiteSpace(keys))
             {
@@ -380,7 +380,7 @@ namespace System.Data.Objects
         /// </exception>
         public ObjectQuery<T> Intersect(ObjectQuery<T> query)
         {
-            Contract.Requires(query != null);
+            //Contract.Requires(query != null);
 
             if (IsLinqQuery(this)
                 || IsLinqQuery(query))
@@ -453,8 +453,8 @@ namespace System.Data.Objects
         /// </exception>
         public ObjectQuery<T> OrderBy(string keys, params ObjectParameter[] parameters)
         {
-            Contract.Requires(keys != null);
-            Contract.Requires(parameters != null);
+            //Contract.Requires(keys != null);
+            //Contract.Requires(parameters != null);
 
             if (StringUtil.IsNullOrEmptyOrWhiteSpace(keys))
             {
@@ -485,8 +485,8 @@ namespace System.Data.Objects
         /// </exception>
         public ObjectQuery<DbDataRecord> Select(string projection, params ObjectParameter[] parameters)
         {
-            Contract.Requires(projection != null);
-            Contract.Requires(parameters != null);
+            //Contract.Requires(projection != null);
+            //Contract.Requires(parameters != null);
 
             if (StringUtil.IsNullOrEmptyOrWhiteSpace(projection))
             {
@@ -517,8 +517,8 @@ namespace System.Data.Objects
         /// </exception>
         public ObjectQuery<TResultType> SelectValue<TResultType>(string projection, params ObjectParameter[] parameters)
         {
-            Contract.Requires(projection != null);
-            Contract.Requires(parameters != null);
+            //Contract.Requires(projection != null);
+            //Contract.Requires(parameters != null);
 
             if (StringUtil.IsNullOrEmptyOrWhiteSpace(projection))
             {
@@ -559,9 +559,9 @@ namespace System.Data.Objects
         /// </exception>
         public ObjectQuery<T> Skip(string keys, string count, params ObjectParameter[] parameters)
         {
-            Contract.Requires(keys != null);
-            Contract.Requires(count != null);
-            Contract.Requires(parameters != null);
+            //Contract.Requires(keys != null);
+            //Contract.Requires(count != null);
+            //Contract.Requires(parameters != null);
 
             if (StringUtil.IsNullOrEmptyOrWhiteSpace(keys))
             {
@@ -598,7 +598,7 @@ namespace System.Data.Objects
         /// </exception>
         public ObjectQuery<T> Top(string count, params ObjectParameter[] parameters)
         {
-            Contract.Requires(count != null);
+            //Contract.Requires(count != null);
 
             if (StringUtil.IsNullOrEmptyOrWhiteSpace(count))
             {
@@ -624,7 +624,7 @@ namespace System.Data.Objects
         /// </exception>
         public ObjectQuery<T> Union(ObjectQuery<T> query)
         {
-            Contract.Requires(query != null);
+            //Contract.Requires(query != null);
 
             if (IsLinqQuery(this)
                 || IsLinqQuery(query))
@@ -650,7 +650,7 @@ namespace System.Data.Objects
         /// </exception>
         public ObjectQuery<T> UnionAll(ObjectQuery<T> query)
         {
-            Contract.Requires(query != null);
+            //Contract.Requires(query != null);
 
             return new ObjectQuery<T>(EntitySqlQueryBuilder.UnionAll(QueryState, query.QueryState));
         }
@@ -676,8 +676,8 @@ namespace System.Data.Objects
         /// </exception>
         public ObjectQuery<T> Where(string predicate, params ObjectParameter[] parameters)
         {
-            Contract.Requires(predicate != null);
-            Contract.Requires(parameters != null);
+            //Contract.Requires(predicate != null);
+            //Contract.Requires(parameters != null);
 
             if (StringUtil.IsNullOrEmptyOrWhiteSpace(predicate))
             {

@@ -12,8 +12,8 @@ namespace System.Data.Entity.Utilities
         public static IEnumerable<T> Distinct<T>(this IEnumerable<T> source, Func<T, T, bool> func)
             where T : class
         {
-            Contract.Requires(source != null);
-            Contract.Requires(func != null);
+            //Contract.Requires(source != null);
+            //Contract.Requires(func != null);
 
             return source.Distinct(new DynamicEqualityComparer<T>(func));
         }
@@ -23,8 +23,8 @@ namespace System.Data.Entity.Utilities
             this IEnumerable<TSource> source, Func<TSource, TSource, bool> func)
             where TSource : class
         {
-            Contract.Requires(source != null);
-            Contract.Requires(func != null);
+            //Contract.Requires(source != null);
+            //Contract.Requires(func != null);
 
             return source.GroupBy(t => t, new DynamicEqualityComparer<TSource>(func));
         }
@@ -34,9 +34,9 @@ namespace System.Data.Entity.Utilities
             this IEnumerable<T> first, IEnumerable<T> second, Func<T, T, bool> func)
             where T : class
         {
-            Contract.Requires(first != null);
-            Contract.Requires(second != null);
-            Contract.Requires(func != null);
+            //Contract.Requires(first != null);
+            //Contract.Requires(second != null);
+            //Contract.Requires(func != null);
 
             return first.Intersect(second, new DynamicEqualityComparer<T>(func));
         }
@@ -44,9 +44,9 @@ namespace System.Data.Entity.Utilities
         public static IEnumerable<T> Except<T>(this IEnumerable<T> first, IEnumerable<T> second, Func<T, T, bool> func)
             where T : class
         {
-            Contract.Requires(first != null);
-            Contract.Requires(second != null);
-            Contract.Requires(func != null);
+            //Contract.Requires(first != null);
+            //Contract.Requires(second != null);
+            //Contract.Requires(func != null);
 
             return first.Except(second, new DynamicEqualityComparer<T>(func));
         }
@@ -56,9 +56,9 @@ namespace System.Data.Entity.Utilities
             this IEnumerable<TSource> source, IEnumerable<TSource> other, Func<TSource, TSource, bool> func)
             where TSource : class
         {
-            Contract.Requires(source != null);
-            Contract.Requires(other != null);
-            Contract.Requires(func != null);
+            //Contract.Requires(source != null);
+            //Contract.Requires(other != null);
+            //Contract.Requires(func != null);
 
             return source.SequenceEqual(other, new DynamicEqualityComparer<TSource>(func));
         }

@@ -77,7 +77,7 @@ namespace System.Data.Mapping.Update.Internal
         private PropagatorResult ConvertStateEntryToPropagatorResult(
             IEntityStateEntry stateEntry, bool useCurrentValues, ModifiedPropertiesBehavior modifiedPropertiesBehavior)
         {
-            Contract.Requires(stateEntry != null);
+            //Contract.Requires(stateEntry != null);
 
             try
             {

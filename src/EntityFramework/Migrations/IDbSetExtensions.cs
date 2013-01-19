@@ -34,8 +34,8 @@ namespace System.Data.Entity.Migrations
             this IDbSet<TEntity> set, params TEntity[] entities)
             where TEntity : class
         {
-            Contract.Requires(set != null);
-            Contract.Requires(entities != null);
+            //Contract.Requires(set != null);
+            //Contract.Requires(entities != null);
 
             var dbSet = set as DbSet<TEntity>;
 
@@ -79,9 +79,9 @@ namespace System.Data.Entity.Migrations
             this IDbSet<TEntity> set, Expression<Func<TEntity, object>> identifierExpression, params TEntity[] entities)
             where TEntity : class
         {
-            Contract.Requires(set != null);
-            Contract.Requires(identifierExpression != null);
-            Contract.Requires(entities != null);
+            //Contract.Requires(set != null);
+            //Contract.Requires(identifierExpression != null);
+            //Contract.Requires(entities != null);
 
             var dbSet = set as DbSet<TEntity>;
 
@@ -113,9 +113,9 @@ namespace System.Data.Entity.Migrations
             this DbSet<TEntity> set, IEnumerable<PropertyPath> identifyingProperties, params TEntity[] entities)
             where TEntity : class
         {
-            Contract.Requires(set != null);
-            Contract.Requires(identifyingProperties != null);
-            Contract.Requires(entities != null);
+            //Contract.Requires(set != null);
+            //Contract.Requires(identifyingProperties != null);
+            //Contract.Requires(entities != null);
 
             var internalSet = (InternalSet<TEntity>)((IInternalSetAdapter)set).InternalSet;
             var keyProperties = GetKeyProperties(typeof(TEntity), internalSet);
@@ -159,8 +159,8 @@ namespace System.Data.Entity.Migrations
             Type entityType, InternalSet<TEntity> internalSet)
             where TEntity : class
         {
-            Contract.Requires(entityType != null);
-            Contract.Requires(internalSet != null);
+            //Contract.Requires(entityType != null);
+            //Contract.Requires(internalSet != null);
 
             return internalSet.InternalContext
                 .GetEntitySetAndBaseTypeForType(typeof(TEntity))

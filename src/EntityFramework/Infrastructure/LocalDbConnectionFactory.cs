@@ -31,7 +31,7 @@ namespace System.Data.Entity.Infrastructure
         /// <param name="localDbVersion">The LocalDb version to use.</param>
         public LocalDbConnectionFactory(string localDbVersion)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(localDbVersion));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(localDbVersion));
 
             _localDbVersion = localDbVersion;
             _baseConnectionString = @"Integrated Security=True; MultipleActiveResultSets=True;";
@@ -52,8 +52,8 @@ namespace System.Data.Entity.Infrastructure
         /// </param>
         public LocalDbConnectionFactory(string localDbVersion, string baseConnectionString)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(localDbVersion));
-            Contract.Requires(baseConnectionString != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(localDbVersion));
+            //Contract.Requires(baseConnectionString != null);
 
             _localDbVersion = localDbVersion;
             _baseConnectionString = baseConnectionString;

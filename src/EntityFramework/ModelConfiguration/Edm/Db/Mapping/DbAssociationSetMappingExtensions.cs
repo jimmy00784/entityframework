@@ -10,7 +10,7 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db.Mapping
     {
         public static DbAssociationSetMapping Initialize(this DbAssociationSetMapping associationSetMapping)
         {
-            Contract.Requires(associationSetMapping != null);
+            //Contract.Requires(associationSetMapping != null);
 
             associationSetMapping.SourceEndMapping = new DbAssociationEndMapping();
             associationSetMapping.TargetEndMapping = new DbAssociationEndMapping();
@@ -21,14 +21,14 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db.Mapping
         [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         public static object GetConfiguration(this DbAssociationSetMapping associationSetMapping)
         {
-            Contract.Requires(associationSetMapping != null);
+            //Contract.Requires(associationSetMapping != null);
 
             return associationSetMapping.Annotations.GetConfiguration();
         }
 
         public static void SetConfiguration(this DbAssociationSetMapping associationSetMapping, object configuration)
         {
-            Contract.Requires(associationSetMapping != null);
+            //Contract.Requires(associationSetMapping != null);
 
             associationSetMapping.Annotations.SetConfiguration(configuration);
         }

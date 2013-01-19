@@ -4044,8 +4044,8 @@ namespace System.Data.Mapping
                 StorageMappingItemLoader parentLoader,
                 EntitySetBase extent)
             {
-                Contract.Requires(parentLoader != null);
-                Contract.Requires(extent != null);
+                //Contract.Requires(parentLoader != null);
+                //Contract.Requires(extent != null);
 
                 m_parentLoader = parentLoader;
                 // initialize member fields

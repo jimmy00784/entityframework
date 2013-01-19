@@ -47,8 +47,8 @@ namespace System.Data.Mapping.Update.Internal
         private Propagator(UpdateTranslator parent, EntitySet table)
         {
             // Initialize propagator state.
-            Contract.Requires(parent != null);
-            Contract.Requires(table != null);
+            //Contract.Requires(parent != null);
+            //Contract.Requires(table != null);
 
             m_updateTranslator = parent;
             m_table = table;
@@ -245,7 +245,7 @@ namespace System.Data.Mapping.Update.Internal
         /// <returns>Projected row.</returns>
         private static PropagatorResult Project(DbProjectExpression node, PropagatorResult row, TypeUsage resultType)
         {
-            Contract.Requires(node != null);
+            //Contract.Requires(node != null);
 
             Debug.Assert(null != node.Projection, "CQT validates DbProjectExpression.Projection property");
 

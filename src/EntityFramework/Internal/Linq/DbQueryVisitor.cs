@@ -138,7 +138,7 @@ namespace System.Data.Entity.Internal.Linq
         /// <returns>The context or null.</returns>
         private static DbContext GetContextFromConstantExpression(Expression expression, MemberInfo member)
         {
-            Contract.Requires(member != null);
+            //Contract.Requires(member != null);
 
             if (expression == null)
             {
@@ -167,7 +167,7 @@ namespace System.Data.Entity.Internal.Linq
         /// <returns>The context instance or null.</returns>
         private static DbContext GetContextFromMember(MemberInfo member, object value)
         {
-            Contract.Requires(member != null);
+            //Contract.Requires(member != null);
 
             var asField = member as FieldInfo;
             if (asField != null)

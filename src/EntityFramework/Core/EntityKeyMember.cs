@@ -31,8 +31,8 @@ namespace System.Data
         /// <param name="keyValue">The key value</param>
         public EntityKeyMember(string keyName, object keyValue)
         {
-            Contract.Requires(keyName != null);
-            Contract.Requires(keyValue != null);
+            //Contract.Requires(keyName != null);
+            //Contract.Requires(keyValue != null);
             _keyName = keyName;
             _keyValue = keyValue;
         }
@@ -46,7 +46,7 @@ namespace System.Data
             get { return _keyName; }
             set
             {
-                Contract.Requires(value != null);
+                //Contract.Requires(value != null);
 
                 ValidateWritable(_keyName);
                 _keyName = value;
@@ -62,7 +62,7 @@ namespace System.Data
             get { return _keyValue; }
             set
             {
-                Contract.Requires(value != null);
+                //Contract.Requires(value != null);
 
                 ValidateWritable(_keyValue);
                 _keyValue = value;

@@ -21,7 +21,7 @@ namespace System.Data.Entity.Internal.MockingProxies
 
         public EntityConnectionProxy(EntityConnection entityConnection)
         {
-            Contract.Requires(entityConnection != null);
+            //Contract.Requires(entityConnection != null);
 
             _entityConnection = entityConnection;
         }

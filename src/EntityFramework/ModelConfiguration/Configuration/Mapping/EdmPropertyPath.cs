@@ -17,7 +17,7 @@ namespace System.Data.Entity.ModelConfiguration.Utilities
 
         public EdmPropertyPath(IEnumerable<EdmProperty> components)
         {
-            Contract.Requires(components != null);
+            //Contract.Requires(components != null);
             Contract.Assert(components.Any());
 
             _components.AddRange(components);
@@ -25,7 +25,7 @@ namespace System.Data.Entity.ModelConfiguration.Utilities
 
         public EdmPropertyPath(EdmProperty component)
         {
-            Contract.Requires(component != null);
+            //Contract.Requires(component != null);
 
             _components.Add(component);
         }

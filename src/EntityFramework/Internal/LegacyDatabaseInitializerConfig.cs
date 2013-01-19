@@ -32,7 +32,7 @@ namespace System.Data.Entity.Internal
         /// <param name = "configValue">The value from the enrty in the config file.</param>
         public LegacyDatabaseInitializerConfig(string configKey, string configValue)
         {
-            Contract.Requires(configKey != null);
+            //Contract.Requires(configKey != null);
 
             Contract.Assert(
                 configKey.StartsWith(ConfigKeyKey, StringComparison.OrdinalIgnoreCase),

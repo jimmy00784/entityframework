@@ -311,7 +311,7 @@ namespace System.Data.Objects.DataClasses
         /// <exception cref="InvalidOperationException">Thrown when the entity cannot be related via the current relationship end.</exception>
         public void Attach(TEntity entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
 
             CheckOwnerNull();
             Attach(new[] { EntityWrapperFactory.WrapEntityUsingContext(entity, ObjectContext) }, false);

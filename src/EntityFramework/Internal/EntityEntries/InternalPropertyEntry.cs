@@ -28,7 +28,7 @@ namespace System.Data.Entity.Internal
         protected InternalPropertyEntry(InternalEntityEntry internalEntityEntry, PropertyEntryMetadata propertyMetadata)
             : base(internalEntityEntry, propertyMetadata)
         {
-            Contract.Requires(propertyMetadata != null);
+            //Contract.Requires(propertyMetadata != null);
         }
 
         #endregion
@@ -340,7 +340,7 @@ namespace System.Data.Entity.Internal
         public virtual InternalPropertyEntry Property(
             string property, Type requestedType = null, bool requireComplex = false)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(property));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(property));
 
             Contract.Assert(
                 EntryMetadata.IsMapped && EntryMetadata.IsComplex,

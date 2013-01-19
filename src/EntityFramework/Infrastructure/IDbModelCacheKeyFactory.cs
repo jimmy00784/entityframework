@@ -16,7 +16,7 @@ namespace System.Data.Entity.Infrastructure
     {
         public IDbModelCacheKey Create(DbContext context)
         {
-            Contract.Requires(context != null);
+            //Contract.Requires(context != null);
 
             throw new NotImplementedException();
         }

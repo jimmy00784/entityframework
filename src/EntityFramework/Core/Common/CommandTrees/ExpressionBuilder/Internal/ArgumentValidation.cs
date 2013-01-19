@@ -236,8 +236,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         private static TypeUsage ValidateBinary(DbExpression left, DbExpression right)
         {
-            Contract.Requires(left != null);
-            Contract.Requires(right != null);
+            //Contract.Requires(left != null);
+            //Contract.Requires(right != null);
 
             return TypeHelpers.GetCommonTypeUsage(left.ResultType, right.ResultType);
         }
@@ -249,8 +249,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
             //
             // Ensure no argument is null
             //
-            Contract.Requires(varName != null);
-            Contract.Requires(input != null);
+            //Contract.Requires(varName != null);
+            //Contract.Requires(input != null);
 
             //
             // Ensure Variable name is non-empty
@@ -279,9 +279,9 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
             //
             // Ensure no argument is null
             //
-            Contract.Requires(varName != null);
-            Contract.Requires(groupVarName != null);
-            Contract.Requires(input != null);
+            //Contract.Requires(varName != null);
+            //Contract.Requires(groupVarName != null);
+            //Contract.Requires(input != null);
 
             //
             // Ensure Variable and Group names are both non-empty
@@ -355,13 +355,13 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static DbExpressionList ValidateGroupAggregate(DbExpression argument)
         {
-            Contract.Requires(argument != null);
+            //Contract.Requires(argument != null);
             return new DbExpressionList(new[] { argument });
         }
 
         internal static void ValidateSortClause(DbExpression key)
         {
-            Contract.Requires(key != null);
+            //Contract.Requires(key != null);
 
             if (!TypeHelpers.IsValidSortOpKeyType(key.ResultType))
             {
@@ -371,7 +371,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static void ValidateSortClause(DbExpression key, string collation)
         {
-            Contract.Requires(collation != null);
+            //Contract.Requires(collation != null);
 
             ValidateSortClause(key);
 
@@ -425,8 +425,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static TypeUsage ValidateApply(DbExpressionBinding input, DbExpressionBinding apply)
         {
-            Contract.Requires(input != null);
-            Contract.Requires(apply != null);
+            //Contract.Requires(input != null);
+            //Contract.Requires(apply != null);
 
             //
             // Duplicate Input and Apply binding names are not allowed
@@ -452,7 +452,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
             //
             // Ensure that the list of input expression bindings is non-null.
             //
-            Contract.Requires(inputs != null);
+            //Contract.Requires(inputs != null);
 
             //
             // Validate the input expression bindings and build the column types for the record type
@@ -511,13 +511,13 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static TypeUsage ValidateJoin(DbExpressionBinding left, DbExpressionBinding right, DbExpression joinCondition)
         {
-            Contract.Requires(joinCondition != null);
+            //Contract.Requires(joinCondition != null);
 
             //
             // Validate
             //
-            Contract.Requires(left != null);
-            Contract.Requires(left != null);
+            //Contract.Requires(left != null);
+            //Contract.Requires(left != null);
 
             //
             // Duplicate Left and Right binding names are not allowed
@@ -544,9 +544,9 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static TypeUsage ValidateFilter(DbExpressionBinding input, DbExpression predicate)
         {
-            Contract.Requires(predicate != null);
+            //Contract.Requires(predicate != null);
 
-            Contract.Requires(input != null);
+            //Contract.Requires(input != null);
             RequireCompatibleType(predicate, PrimitiveTypeKind.Boolean, "predicate");
             return input.Expression.ResultType;
         }
@@ -720,7 +720,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static TypeUsage ValidateConstant(object value)
         {
-            Contract.Requires(value != null);
+            //Contract.Requires(value != null);
 
             //
             // Check that typeof(value) is actually a valid constant (i.e. primitive) type
@@ -739,7 +739,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
             //
             // Basic validation of constant value and constant type (non-null, read-only, etc)
             //
-            Contract.Requires(value != null);
+            //Contract.Requires(value != null);
             CheckType(constantType, "constantType");
 
             //
@@ -789,7 +789,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static void ValidateParameter(TypeUsage type, string name)
         {
-            Contract.Requires(name != null);
+            //Contract.Requires(name != null);
 
             CheckType(type);
 
@@ -807,7 +807,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static void ValidateVariable(TypeUsage type, string name)
         {
-            Contract.Requires(name != null);
+            //Contract.Requires(name != null);
 
             CheckType(type);
 
@@ -847,7 +847,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static TypeUsage ValidateNot(DbExpression argument)
         {
-            Contract.Requires(argument != null);
+            //Contract.Requires(argument != null);
 
             //
             // Argument to Not must have Boolean result type
@@ -866,7 +866,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static DbExpressionList ValidateArithmetic(DbExpression argument, out TypeUsage resultType)
         {
-            Contract.Requires(argument != null);
+            //Contract.Requires(argument != null);
             resultType = argument.ResultType;
             if (!TypeSemantics.IsNumericType(resultType))
             {
@@ -908,8 +908,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static TypeUsage ValidateComparison(DbExpressionKind kind, DbExpression left, DbExpression right)
         {
-            Contract.Requires(left != null);
-            Contract.Requires(right != null);
+            //Contract.Requires(left != null);
+            //Contract.Requires(right != null);
 
             //
             // A comparison of the specified kind must exist between the left and right arguments
@@ -950,7 +950,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static TypeUsage ValidateIsNull(DbExpression argument, bool allowRowType)
         {
-            Contract.Requires(argument != null);
+            //Contract.Requires(argument != null);
 
             //
             // The argument cannot be of a collection type
@@ -978,8 +978,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static TypeUsage ValidateLike(DbExpression argument, DbExpression pattern)
         {
-            Contract.Requires(argument != null);
-            Contract.Requires(pattern != null);
+            //Contract.Requires(argument != null);
+            //Contract.Requires(pattern != null);
 
             RequireCompatibleType(argument, PrimitiveTypeKind.String, "argument");
             RequireCompatibleType(pattern, PrimitiveTypeKind.String, "pattern");
@@ -989,7 +989,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static TypeUsage ValidateLike(DbExpression argument, DbExpression pattern, DbExpression escape)
         {
-            Contract.Requires(escape != null);
+            //Contract.Requires(escape != null);
 
             var resultType = ValidateLike(argument, pattern);
 
@@ -1004,7 +1004,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static void ValidateCastTo(DbExpression argument, TypeUsage toType)
         {
-            Contract.Requires(argument != null);
+            //Contract.Requires(argument != null);
             CheckType(toType, "toType");
 
             //
@@ -1018,7 +1018,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static void ValidateTreatAs(DbExpression argument, TypeUsage asType)
         {
-            Contract.Requires(argument != null);
+            //Contract.Requires(argument != null);
             CheckType(asType, "asType");
 
             //
@@ -1037,7 +1037,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static TypeUsage ValidateOfType(DbExpression argument, TypeUsage type)
         {
-            Contract.Requires(argument != null);
+            //Contract.Requires(argument != null);
             CheckType(type, "type");
 
             //
@@ -1070,7 +1070,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static TypeUsage ValidateIsOf(DbExpression argument, TypeUsage type)
         {
-            Contract.Requires(argument != null);
+            //Contract.Requires(argument != null);
             CheckType(type, "type");
 
             //
@@ -1096,7 +1096,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static TypeUsage ValidateDeref(DbExpression argument)
         {
-            Contract.Requires(argument != null);
+            //Contract.Requires(argument != null);
 
             //
             // Ensure that the operand is actually of a reference type.
@@ -1115,7 +1115,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static TypeUsage ValidateGetEntityRef(DbExpression argument)
         {
-            Contract.Requires(argument != null);
+            //Contract.Requires(argument != null);
 
             EntityType entityType = null;
             if (!TypeHelpers.TryGetEdmType(argument.ResultType, out entityType)
@@ -1130,7 +1130,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
         internal static TypeUsage ValidateCreateRef(
             EntitySet entitySet, IEnumerable<DbExpression> keyValues, out DbExpression keyConstructor)
         {
-            Contract.Requires(entitySet != null);
+            //Contract.Requires(entitySet != null);
             return ValidateCreateRef(entitySet, entitySet.ElementType, keyValues, out keyConstructor);
         }
 
@@ -1171,13 +1171,13 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static TypeUsage ValidateRefFromKey(EntitySet entitySet, DbExpression keyValues)
         {
-            Contract.Requires(entitySet != null);
+            //Contract.Requires(entitySet != null);
             return ValidateRefFromKey(entitySet, keyValues, entitySet.ElementType);
         }
 
         internal static TypeUsage ValidateRefFromKey(EntitySet entitySet, DbExpression keyValues, EntityType entityType)
         {
-            Contract.Requires(keyValues != null);
+            //Contract.Requires(keyValues != null);
 
             CheckEntitySet(entitySet, "entitySet");
             CheckType(entityType);
@@ -1210,7 +1210,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static TypeUsage ValidateGetRefKey(DbExpression argument)
         {
-            Contract.Requires(argument != null);
+            //Contract.Requires(argument != null);
 
             RefType refType = null;
             if (!TypeHelpers.TryGetEdmType(argument.ResultType, out refType)
@@ -1229,9 +1229,9 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
             DbExpression navigateFrom, RelationshipType type, string fromEndName, string toEndName, out RelationshipEndMember fromEnd,
             out RelationshipEndMember toEnd)
         {
-            Contract.Requires(navigateFrom != null);
-            Contract.Requires(fromEndName != null);
-            Contract.Requires(toEndName != null);
+            //Contract.Requires(navigateFrom != null);
+            //Contract.Requires(fromEndName != null);
+            //Contract.Requires(toEndName != null);
 
             //
             // Ensure that the relation type is non-null and from the same metadata workspace as the command tree
@@ -1263,7 +1263,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
             DbExpression navigateFrom, RelationshipEndMember fromEnd, RelationshipEndMember toEnd, out RelationshipType relType,
             bool allowAllRelationshipsInSameTypeHierarchy)
         {
-            Contract.Requires(navigateFrom != null);
+            //Contract.Requires(navigateFrom != null);
 
             //
             // Validate the relationship ends before use
@@ -1297,7 +1297,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static TypeUsage ValidateDistinct(DbExpression argument)
         {
-            Contract.Requires(argument != null);
+            //Contract.Requires(argument != null);
 
             //
             // Ensure that the Argument is of a collection type
@@ -1318,7 +1318,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static TypeUsage ValidateElement(DbExpression argument)
         {
-            Contract.Requires(argument != null);
+            //Contract.Requires(argument != null);
 
             //
             // Ensure that the operand is actually of a collection type.
@@ -1333,7 +1333,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static TypeUsage ValidateIsEmpty(DbExpression argument)
         {
-            Contract.Requires(argument != null);
+            //Contract.Requires(argument != null);
 
             //
             // Ensure that the Argument is of a collection type
@@ -1377,8 +1377,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static TypeUsage ValidateLimit(DbExpression argument, DbExpression limit)
         {
-            Contract.Requires(argument != null);
-            Contract.Requires(limit != null);
+            //Contract.Requires(argument != null);
+            //Contract.Requires(limit != null);
 
             //
             // Initialize the Argument ExpressionLink. In addition to being non-null and from the same command tree,
@@ -1424,9 +1424,9 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
             IEnumerable<DbExpression> whenExpressions, IEnumerable<DbExpression> thenExpressions, DbExpression elseExpression,
             out DbExpressionList validWhens, out DbExpressionList validThens)
         {
-            Contract.Requires(whenExpressions != null);
-            Contract.Requires(thenExpressions != null);
-            Contract.Requires(elseExpression != null);
+            //Contract.Requires(whenExpressions != null);
+            //Contract.Requires(thenExpressions != null);
+            //Contract.Requires(elseExpression != null);
 
             //
             // All 'When's must produce a Boolean result, and a common (non-null) result type must exist
@@ -1524,8 +1524,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static TypeUsage ValidateInvoke(DbLambda lambda, IEnumerable<DbExpression> arguments, out DbExpressionList validArguments)
         {
-            Contract.Requires(lambda != null);
-            Contract.Requires(arguments != null);
+            //Contract.Requires(lambda != null);
+            //Contract.Requires(arguments != null);
 
             // Each argument must be type-compatible with the corresponding lambda variable for which it supplies the value
             validArguments = null;
@@ -1674,9 +1674,9 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
             EntityType entityType, IEnumerable<DbExpression> attributeValues, IList<DbRelatedEntityRef> relationships,
             out DbExpressionList validArguments, out ReadOnlyCollection<DbRelatedEntityRef> validRelatedRefs)
         {
-            Contract.Requires(entityType != null);
-            Contract.Requires(attributeValues != null);
-            Contract.Requires(relationships != null);
+            //Contract.Requires(entityType != null);
+            //Contract.Requires(attributeValues != null);
+            //Contract.Requires(relationships != null);
 
             var resultType = CreateResultType(entityType);
             resultType = ValidateNew(resultType, attributeValues, out validArguments);
@@ -1738,8 +1738,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         internal static TypeUsage ValidateProperty(DbExpression instance, string propertyName, bool ignoreCase, out EdmMember foundMember)
         {
-            Contract.Requires(instance != null);
-            Contract.Requires(propertyName != null);
+            //Contract.Requires(instance != null);
+            //Contract.Requires(propertyName != null);
 
             //
             // EdmProperty, NavigationProperty and RelationshipEndMember are the only valid members for DbPropertyExpression.
@@ -1798,7 +1798,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         private static void CheckReadOnly(GlobalItem item, string varName)
         {
-            Contract.Requires(item != null);
+            //Contract.Requires(item != null);
             if (!(item.IsReadOnly))
             {
                 throw new ArgumentException(Strings.Cqt_General_MetadataNotReadOnly, varName);
@@ -1807,7 +1807,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         private static void CheckReadOnly(TypeUsage item, string varName)
         {
-            Contract.Requires(item != null);
+            //Contract.Requires(item != null);
             if (!(item.IsReadOnly))
             {
                 throw new ArgumentException(Strings.Cqt_General_MetadataNotReadOnly, varName);
@@ -1816,7 +1816,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         private static void CheckReadOnly(EntitySetBase item, string varName)
         {
-            Contract.Requires(item != null);
+            //Contract.Requires(item != null);
             if (!(item.IsReadOnly))
             {
                 throw new ArgumentException(Strings.Cqt_General_MetadataNotReadOnly, varName);
@@ -1830,7 +1830,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         private static void CheckType(EdmType type, string argumentName)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
             CheckReadOnly(type, argumentName);
         }
 
@@ -1848,7 +1848,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         private static void CheckType(TypeUsage type, string varName)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
             CheckReadOnly(type, varName);
 
             // TypeUsage constructor is responsible for basic validation of EdmType
@@ -1867,7 +1867,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
         /// <param name="varName">The name of the variable to which this member instance is being assigned</param>
         private static void CheckMember(EdmMember memberMeta, string varName)
         {
-            Contract.Requires(memberMeta != null);
+            //Contract.Requires(memberMeta != null);
             CheckReadOnly(memberMeta.DeclaringType, varName);
 
             // EdmMember constructor is responsible for basic validation
@@ -1883,7 +1883,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
 
         private static void CheckParameter(FunctionParameter paramMeta, string varName)
         {
-            Contract.Requires(paramMeta != null);
+            //Contract.Requires(paramMeta != null);
             CheckReadOnly(paramMeta.DeclaringFunction, varName);
 
             // FunctionParameter constructor is responsible for basic validation
@@ -1903,7 +1903,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
         [SuppressMessage("Microsoft.Usage", "CA2208:InstantiateArgumentExceptionsCorrectly")]
         private static void CheckFunction(EdmFunction function)
         {
-            Contract.Requires(function != null);
+            //Contract.Requires(function != null);
             CheckReadOnly(function, "function");
 
             Debug.Assert(function.Name != null, "EdmType constructor allowed null name?");
@@ -1948,7 +1948,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
         /// <param name="varName">The variable name to use if an exception should be thrown</param>
         private static void CheckEntitySet(EntitySetBase entitySet, string varName)
         {
-            Contract.Requires(entitySet != null);
+            //Contract.Requires(entitySet != null);
             CheckReadOnly(entitySet, varName);
 
             // EntitySetBase constructor is responsible for basic validation of set name and element type

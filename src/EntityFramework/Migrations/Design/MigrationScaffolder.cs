@@ -18,7 +18,7 @@ namespace System.Data.Entity.Migrations.Design
         /// <param name = "migrationsConfiguration">Configuration to be used for scaffolding.</param>
         public MigrationScaffolder(DbMigrationsConfiguration migrationsConfiguration)
         {
-            Contract.Requires(migrationsConfiguration != null);
+            //Contract.Requires(migrationsConfiguration != null);
 
             _migrator = new DbMigrator(migrationsConfiguration);
         }
@@ -52,7 +52,7 @@ namespace System.Data.Entity.Migrations.Design
         /// <returns>The scaffolded migration.</returns>
         public virtual ScaffoldedMigration Scaffold(string migrationName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(migrationName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(migrationName));
 
             return _migrator.Scaffold(migrationName, Namespace, ignoreChanges: false);
         }
@@ -65,7 +65,7 @@ namespace System.Data.Entity.Migrations.Design
         /// <returns>The scaffolded migration.</returns>
         public virtual ScaffoldedMigration Scaffold(string migrationName, bool ignoreChanges)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(migrationName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(migrationName));
 
             return _migrator.Scaffold(migrationName, Namespace, ignoreChanges);
         }

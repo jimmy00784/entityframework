@@ -22,10 +22,10 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
                 PropertyInfo propertyInfo,
                 Func<PropertyConfiguration> propertyConfiguration)
             {
-                Contract.Requires(convention != null);
-                Contract.Requires(propertyConfigurationType != null);
-                Contract.Requires(propertyInfo != null);
-                Contract.Requires(propertyConfiguration != null);
+                //Contract.Requires(convention != null);
+                //Contract.Requires(propertyConfigurationType != null);
+                //Contract.Requires(propertyInfo != null);
+                //Contract.Requires(propertyConfiguration != null);
 
                 _convention = convention;
                 _propertyConfigurationType = propertyConfigurationType;

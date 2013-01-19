@@ -33,7 +33,7 @@ namespace System.Data.Entity.Internal
         /// <param name = "internalContext">The internal context.</param>
         public DbLocalView(InternalContext internalContext)
         {
-            Contract.Requires(internalContext != null);
+            //Contract.Requires(internalContext != null);
 
             _internalContext = internalContext;
 

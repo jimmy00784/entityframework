@@ -12,7 +12,7 @@ namespace System.Data.Mapping
         internal FunctionImportEntityTypeMappingConditionValue(string columnName, XPathNavigator columnValue, LineInfo lineInfo)
             : base(columnName, lineInfo)
         {
-            Contract.Requires(columnValue != null);
+            //Contract.Requires(columnValue != null);
 
             _xPathValue = columnValue;
             _convertedValues = new Memoizer<Type, object>(GetConditionValue, null);

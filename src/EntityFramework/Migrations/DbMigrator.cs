@@ -59,16 +59,16 @@ namespace System.Data.Entity.Migrations
         public DbMigrator(DbMigrationsConfiguration configuration)
             : this(configuration, null)
         {
-            Contract.Requires(configuration != null);
-            Contract.Requires(configuration.ContextType != null);
+            //Contract.Requires(configuration != null);
+            //Contract.Requires(configuration.ContextType != null);
         }
 
         [SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         internal DbMigrator(DbMigrationsConfiguration configuration, DbContext usersContext)
             : base(null)
         {
-            Contract.Requires(configuration != null);
-            Contract.Requires(configuration.ContextType != null);
+            //Contract.Requires(configuration != null);
+            //Contract.Requires(configuration.ContextType != null);
 
             _configuration = configuration;
             _calledByCreateDatabase = usersContext != null;
@@ -153,7 +153,7 @@ namespace System.Data.Entity.Migrations
 
         internal virtual void DisableInitializer(Type contextType)
         {
-            Contract.Requires(contextType != null);
+            //Contract.Requires(contextType != null);
 
             _setInitializerMethod
                 .MakeGenericMethod(contextType)
@@ -278,7 +278,7 @@ namespace System.Data.Entity.Migrations
         [SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes")]
         private void CheckLegacyCompatibility(Action onCompatible)
         {
-            Contract.Requires(onCompatible != null);
+            //Contract.Requires(onCompatible != null);
 
             if (!_calledByCreateDatabase
                 && !_historyRepository.Exists)
@@ -470,7 +470,7 @@ namespace System.Data.Entity.Migrations
 
         private bool IsModelOutOfDate(XDocument model, DbMigration lastMigration)
         {
-            Contract.Requires(model != null);
+            //Contract.Requires(model != null);
 
             var sourceModel = GetLastModel(lastMigration);
 
@@ -639,9 +639,9 @@ namespace System.Data.Entity.Migrations
         private void ExecuteOperations(
             string migrationId, XDocument targetModel, IEnumerable<MigrationOperation> operations, bool downgrading, bool auto = false)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
-            Contract.Requires(targetModel != null);
-            Contract.Requires(operations != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
+            //Contract.Requires(targetModel != null);
+            //Contract.Requires(operations != null);
 
             FillInForeignKeyOperations(operations, targetModel);
 
@@ -752,8 +752,8 @@ namespace System.Data.Entity.Migrations
         private void FillInForeignKeyOperations(
             IEnumerable<MigrationOperation> operations, XDocument targetModel)
         {
-            Contract.Requires(operations != null);
-            Contract.Requires(targetModel != null);
+            //Contract.Requires(operations != null);
+            //Contract.Requires(targetModel != null);
 
             foreach (var foreignKeyOperation
                 in operations.OfType<AddForeignKeyOperation>()

@@ -32,7 +32,7 @@ namespace System.Data.Common.CommandTrees
         internal DbCommandTree(MetadataWorkspace metadata, DataSpace dataSpace)
         {
             // Ensure the metadata workspace is non-null
-            Contract.Requires(metadata != null);
+            //Contract.Requires(metadata != null);
 
             // Ensure that the data space value is valid
             if (!IsValidDataSpace(dataSpace))

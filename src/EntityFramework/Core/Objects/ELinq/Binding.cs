@@ -16,8 +16,8 @@ namespace System.Data.Objects.ELinq
     {
         internal Binding(Expression linqExpression, DbExpression cqtExpression)
         {
-            Contract.Requires(linqExpression != null);
-            Contract.Requires(cqtExpression != null);
+            //Contract.Requires(linqExpression != null);
+            //Contract.Requires(cqtExpression != null);
             LinqExpression = linqExpression;
             CqtExpression = cqtExpression;
         }

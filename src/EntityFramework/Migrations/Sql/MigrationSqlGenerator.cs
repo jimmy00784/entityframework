@@ -29,8 +29,8 @@ namespace System.Data.Entity.Migrations.Sql
             public override IEnumerable<MigrationStatement> Generate(
                 IEnumerable<MigrationOperation> migrationOperations, string providerManifestToken)
             {
-                Contract.Requires(migrationOperations != null);
-                Contract.Requires(!string.IsNullOrWhiteSpace(providerManifestToken));
+                //Contract.Requires(migrationOperations != null);
+                //Contract.Requires(!string.IsNullOrWhiteSpace(providerManifestToken));
 
                 return default(IEnumerable<MigrationStatement>);
             }

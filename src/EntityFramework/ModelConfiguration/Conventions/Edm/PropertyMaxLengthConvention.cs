@@ -93,7 +93,7 @@ namespace System.Data.Entity.ModelConfiguration.Conventions
 
         private static void SetStringDefaults(EdmProperty property, bool isKey)
         {
-            Contract.Requires(property != null);
+            //Contract.Requires(property != null);
 
             var primitiveTypeFacets = property.PropertyType.PrimitiveTypeFacets;
 
@@ -107,7 +107,7 @@ namespace System.Data.Entity.ModelConfiguration.Conventions
 
         private static void SetBinaryDefaults(EdmProperty property, bool isKey)
         {
-            Contract.Requires(property != null);
+            //Contract.Requires(property != null);
 
             var primitiveTypeFacets = property.PropertyType.PrimitiveTypeFacets;
 

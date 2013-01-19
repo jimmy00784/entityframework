@@ -10,7 +10,7 @@ namespace System.Data.Entity.Utilities
     {
         public static XElement GetOrAddElement(this XContainer container, XName name)
         {
-            Contract.Requires(container != null);
+            //Contract.Requires(container != null);
 
             var child = container.Element(name);
 

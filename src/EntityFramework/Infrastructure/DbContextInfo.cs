@@ -35,7 +35,7 @@ namespace System.Data.Entity.Infrastructure
         public DbContextInfo(Type contextType)
             : this(contextType, null, AppConfig.DefaultInstance, null)
         {
-            Contract.Requires(contextType != null);
+            //Contract.Requires(contextType != null);
         }
 
         /// <summary>
@@ -46,8 +46,8 @@ namespace System.Data.Entity.Infrastructure
         public DbContextInfo(Type contextType, DbConnectionInfo connectionInfo)
             : this(contextType, null, AppConfig.DefaultInstance, connectionInfo)
         {
-            Contract.Requires(contextType != null);
-            Contract.Requires(connectionInfo != null);
+            //Contract.Requires(contextType != null);
+            //Contract.Requires(connectionInfo != null);
         }
 
         /// <summary>
@@ -68,8 +68,8 @@ namespace System.Data.Entity.Infrastructure
         public DbContextInfo(Type contextType, ConnectionStringSettingsCollection connectionStringSettings)
             : this(contextType, null, new AppConfig(connectionStringSettings), null)
         {
-            Contract.Requires(contextType != null);
-            Contract.Requires(connectionStringSettings != null);
+            //Contract.Requires(contextType != null);
+            //Contract.Requires(connectionStringSettings != null);
         }
 
         /// <summary>
@@ -82,8 +82,8 @@ namespace System.Data.Entity.Infrastructure
         public DbContextInfo(Type contextType, Configuration config)
             : this(contextType, null, new AppConfig(config), null)
         {
-            Contract.Requires(contextType != null);
-            Contract.Requires(config != null);
+            //Contract.Requires(contextType != null);
+            //Contract.Requires(config != null);
         }
 
         /// <summary>
@@ -97,9 +97,9 @@ namespace System.Data.Entity.Infrastructure
         public DbContextInfo(Type contextType, Configuration config, DbConnectionInfo connectionInfo)
             : this(contextType, null, new AppConfig(config), connectionInfo)
         {
-            Contract.Requires(contextType != null);
-            Contract.Requires(config != null);
-            Contract.Requires(connectionInfo != null);
+            //Contract.Requires(contextType != null);
+            //Contract.Requires(config != null);
+            //Contract.Requires(connectionInfo != null);
         }
 
         /// <summary>
@@ -112,8 +112,8 @@ namespace System.Data.Entity.Infrastructure
         public DbContextInfo(Type contextType, DbProviderInfo modelProviderInfo)
             : this(contextType, modelProviderInfo, AppConfig.DefaultInstance, null)
         {
-            Contract.Requires(contextType != null);
-            Contract.Requires(modelProviderInfo != null);
+            //Contract.Requires(contextType != null);
+            //Contract.Requires(modelProviderInfo != null);
         }
 
         /// <summary>
@@ -130,9 +130,9 @@ namespace System.Data.Entity.Infrastructure
         public DbContextInfo(Type contextType, Configuration config, DbProviderInfo modelProviderInfo)
             : this(contextType, modelProviderInfo, new AppConfig(config), null)
         {
-            Contract.Requires(contextType != null);
-            Contract.Requires(config != null);
-            Contract.Requires(modelProviderInfo != null);
+            //Contract.Requires(contextType != null);
+            //Contract.Requires(config != null);
+            //Contract.Requires(modelProviderInfo != null);
         }
 
         /// <summary>
@@ -141,7 +141,7 @@ namespace System.Data.Entity.Infrastructure
         /// <param name="context">The context instance to get info from.</param>
         internal DbContextInfo(DbContext context)
         {
-            Contract.Requires(context != null);
+            //Contract.Requires(context != null);
 
             _contextType = context.GetType();
             _appConfig = AppConfig.DefaultInstance;
@@ -285,7 +285,7 @@ namespace System.Data.Entity.Infrastructure
         [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
         private void ConfigureContext(DbContext context)
         {
-            Contract.Requires(context != null);
+            //Contract.Requires(context != null);
 
             if (_modelProviderInfo != null)
             {

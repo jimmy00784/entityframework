@@ -59,7 +59,7 @@ namespace System.Data.Entity.ModelConfiguration.Conventions
 
         private static void SetDefaults(EdmProperty property)
         {
-            Contract.Requires(property != null);
+            //Contract.Requires(property != null);
 
             var primitiveTypeFacets = property.PropertyType.PrimitiveTypeFacets;
 

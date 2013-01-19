@@ -38,7 +38,7 @@ namespace System.Data.Entity.Infrastructure
         /// <returns>The hash string.</returns>
         public static string TryGetModelHash(DbContext context)
         {
-            Contract.Requires(context != null);
+            //Contract.Requires(context != null);
 
             var compiledModel = context.InternalContext.CodeFirstModel;
             return compiledModel == null ? null : new ModelHashCalculator().Calculate(compiledModel);

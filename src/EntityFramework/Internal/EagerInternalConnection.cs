@@ -21,7 +21,7 @@ namespace System.Data.Entity.Internal
         /// <param name = "connectionOwned">If set to <c>true</c> then the underlying connection should be disposed when this object is disposed.</param>
         public EagerInternalConnection(DbConnection existingConnection, bool connectionOwned)
         {
-            Contract.Requires(existingConnection != null);
+            //Contract.Requires(existingConnection != null);
 
             UnderlyingConnection = existingConnection;
             _connectionOwned = connectionOwned;

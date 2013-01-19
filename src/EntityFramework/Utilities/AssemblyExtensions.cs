@@ -10,7 +10,7 @@ namespace System.Data.Entity.Utilities
     {
         public static string GetInformationalVersion(this Assembly assembly)
         {
-            Contract.Requires(assembly != null);
+            //Contract.Requires(assembly != null);
 
             return assembly
                 .GetCustomAttributes(false)

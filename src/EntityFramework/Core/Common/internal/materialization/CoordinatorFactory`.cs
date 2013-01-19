@@ -87,11 +87,11 @@ namespace System.Data.Common.Internal.Materialization
                 nestedCoordinators,
                 recordStateFactories)
         {
-            Contract.Requires(depth >= 0);
-            Contract.Requires(stateSlot >= 0);
-            Contract.Requires(nestedCoordinators != null);
-            Contract.Requires(recordStateFactories != null);
-            Contract.Requires(elementWithErrorHandling != null);
+            //Contract.Requires(depth >= 0);
+            //Contract.Requires(stateSlot >= 0);
+            //Contract.Requires(nestedCoordinators != null);
+            //Contract.Requires(recordStateFactories != null);
+            //Contract.Requires(elementWithErrorHandling != null);
 
             Contract.Assert((element == null) != (wrappedElement == null));
 

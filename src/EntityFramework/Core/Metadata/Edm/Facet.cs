@@ -56,7 +56,7 @@ namespace System.Data.Metadata.Edm
         /// <exception cref="System.ArgumentNullException">Thrown if facetDescription argument is null</exception>
         internal static Facet Create(FacetDescription facetDescription, object value, bool bypassKnownValues)
         {
-            Contract.Requires(facetDescription != null);
+            //Contract.Requires(facetDescription != null);
 
             if (!bypassKnownValues)
             {

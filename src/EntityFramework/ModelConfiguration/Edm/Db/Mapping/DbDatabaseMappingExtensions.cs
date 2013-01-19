@@ -20,9 +20,9 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db.Mapping
         internal static DbDatabaseMapping Initialize(
             this DbDatabaseMapping databaseMapping, EdmModel model, DbDatabaseMetadata database)
         {
-            Contract.Requires(databaseMapping != null);
-            Contract.Requires(databaseMapping != null);
-            Contract.Requires(database != null);
+            //Contract.Requires(databaseMapping != null);
+            //Contract.Requires(databaseMapping != null);
+            //Contract.Requires(database != null);
 
             databaseMapping.Model = model;
             databaseMapping.Database = database;
@@ -40,7 +40,7 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db.Mapping
             Justification = "Used by test code.")]
         internal static MetadataWorkspace ToMetadataWorkspace(this DbDatabaseMapping databaseMapping)
         {
-            Contract.Requires(databaseMapping != null);
+            //Contract.Requires(databaseMapping != null);
 
             var metadataWorkspace = new MetadataWorkspace();
 
@@ -63,7 +63,7 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db.Mapping
         internal static StorageMappingItemCollection ToStorageMappingItemCollection(
             this DbDatabaseMapping databaseMapping)
         {
-            Contract.Requires(databaseMapping != null);
+            //Contract.Requires(databaseMapping != null);
 
             return databaseMapping.ToStorageMappingItemCollection(
                 databaseMapping.Model.ToEdmItemCollection(),
@@ -75,9 +75,9 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db.Mapping
             this DbDatabaseMapping databaseMapping, EdmItemCollection itemCollection,
             StoreItemCollection storeItemCollection)
         {
-            Contract.Requires(databaseMapping != null);
-            Contract.Requires(itemCollection != null);
-            Contract.Requires(storeItemCollection != null);
+            //Contract.Requires(databaseMapping != null);
+            //Contract.Requires(itemCollection != null);
+            //Contract.Requires(storeItemCollection != null);
 
             var stringBuilder = new StringBuilder();
 
@@ -99,8 +99,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db.Mapping
         internal static DbEntityTypeMapping GetEntityTypeMapping(
             this DbDatabaseMapping databaseMapping, EdmEntityType entityType)
         {
-            Contract.Requires(databaseMapping != null);
-            Contract.Requires(entityType != null);
+            //Contract.Requires(databaseMapping != null);
+            //Contract.Requires(entityType != null);
 
             var mappings = databaseMapping.GetEntityTypeMappings(entityType);
 
@@ -118,8 +118,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db.Mapping
         internal static IEnumerable<DbEntityTypeMapping> GetEntityTypeMappings(
             this DbDatabaseMapping databaseMapping, EdmEntityType entityType)
         {
-            Contract.Requires(databaseMapping != null);
-            Contract.Requires(entityType != null);
+            //Contract.Requires(databaseMapping != null);
+            //Contract.Requires(entityType != null);
 
             return (from esm in databaseMapping.EntityContainerMappings.Single().EntitySetMappings
                     from etm in esm.EntityTypeMappings
@@ -130,8 +130,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db.Mapping
         internal static DbEntityTypeMapping GetEntityTypeMapping(
             this DbDatabaseMapping databaseMapping, Type entityType)
         {
-            Contract.Requires(databaseMapping != null);
-            Contract.Requires(entityType != null);
+            //Contract.Requires(databaseMapping != null);
+            //Contract.Requires(entityType != null);
 
             var mappings = (from esm in databaseMapping.EntityContainerMappings.Single().EntitySetMappings
                             from etm in esm.EntityTypeMappings
@@ -152,8 +152,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db.Mapping
         internal static IEnumerable<Tuple<DbEdmPropertyMapping, DbTableMetadata>> GetComplexPropertyMappings(
             this DbDatabaseMapping databaseMapping, Type complexType)
         {
-            Contract.Requires(databaseMapping != null);
-            Contract.Requires(complexType != null);
+            //Contract.Requires(databaseMapping != null);
+            //Contract.Requires(complexType != null);
 
             return from esm in databaseMapping.EntityContainerMappings.Single().EntitySetMappings
                    from etm in esm.EntityTypeMappings
@@ -169,8 +169,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db.Mapping
         internal static DbEntitySetMapping GetEntitySetMapping(
             this DbDatabaseMapping databaseMapping, EdmEntitySet entitySet)
         {
-            Contract.Requires(databaseMapping != null);
-            Contract.Requires(entitySet != null);
+            //Contract.Requires(databaseMapping != null);
+            //Contract.Requires(entitySet != null);
 
             return databaseMapping
                 .EntityContainerMappings
@@ -181,7 +181,7 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db.Mapping
 
         internal static IEnumerable<DbEntitySetMapping> GetEntitySetMappings(this DbDatabaseMapping databaseMapping)
         {
-            Contract.Requires(databaseMapping != null);
+            //Contract.Requires(databaseMapping != null);
 
             return databaseMapping
                 .EntityContainerMappings
@@ -192,7 +192,7 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db.Mapping
         internal static IEnumerable<DbAssociationSetMapping> GetAssociationSetMappings(
             this DbDatabaseMapping databaseMapping)
         {
-            Contract.Requires(databaseMapping != null);
+            //Contract.Requires(databaseMapping != null);
 
             return databaseMapping
                 .EntityContainerMappings
@@ -203,8 +203,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db.Mapping
         internal static DbEntitySetMapping AddEntitySetMapping(
             this DbDatabaseMapping databaseMapping, EdmEntitySet entitySet)
         {
-            Contract.Requires(databaseMapping != null);
-            Contract.Requires(entitySet != null);
+            //Contract.Requires(databaseMapping != null);
+            //Contract.Requires(entitySet != null);
 
             var entitySetMapping = new DbEntitySetMapping
                 {
@@ -223,8 +223,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db.Mapping
         internal static DbAssociationSetMapping AddAssociationSetMapping(
             this DbDatabaseMapping databaseMapping, EdmAssociationSet associationSet)
         {
-            Contract.Requires(databaseMapping != null);
-            Contract.Requires(associationSet != null);
+            //Contract.Requires(databaseMapping != null);
+            //Contract.Requires(associationSet != null);
 
             var associationSetMapping
                 = new DbAssociationSetMapping

@@ -27,7 +27,7 @@ namespace System.Data.Entity
         public static Task<TEntity> FindAsync<TEntity>(this IDbSet<TEntity> set, params object[] keyValues)
             where TEntity : class
         {
-            Contract.Requires(set != null);
+            //Contract.Requires(set != null);
 
             return set.FindAsync(CancellationToken.None, keyValues);
         }

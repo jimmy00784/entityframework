@@ -25,7 +25,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         internal RequiredNavigationPropertyConfiguration(
             NavigationPropertyConfiguration navigationPropertyConfiguration)
         {
-            Contract.Requires(navigationPropertyConfiguration != null);
+            //Contract.Requires(navigationPropertyConfiguration != null);
 
             navigationPropertyConfiguration.Reset();
             _navigationPropertyConfiguration = navigationPropertyConfiguration;
@@ -46,7 +46,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         public DependentNavigationPropertyConfiguration<TEntityType> WithMany(
             Expression<Func<TTargetEntityType, ICollection<TEntityType>>> navigationPropertyExpression)
         {
-            Contract.Requires(navigationPropertyExpression != null);
+            //Contract.Requires(navigationPropertyExpression != null);
 
             _navigationPropertyConfiguration.InverseNavigationProperty
                 = navigationPropertyExpression.GetSimplePropertyAccess().Single();
@@ -79,7 +79,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         public ForeignKeyNavigationPropertyConfiguration WithOptional(
             Expression<Func<TTargetEntityType, TEntityType>> navigationPropertyExpression)
         {
-            Contract.Requires(navigationPropertyExpression != null);
+            //Contract.Requires(navigationPropertyExpression != null);
 
             _navigationPropertyConfiguration.InverseNavigationProperty
                 = navigationPropertyExpression.GetSimplePropertyAccess().Single();
@@ -114,7 +114,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         public ForeignKeyNavigationPropertyConfiguration WithRequiredDependent(
             Expression<Func<TTargetEntityType, TEntityType>> navigationPropertyExpression)
         {
-            Contract.Requires(navigationPropertyExpression != null);
+            //Contract.Requires(navigationPropertyExpression != null);
 
             _navigationPropertyConfiguration.InverseNavigationProperty
                 = navigationPropertyExpression.GetSimplePropertyAccess().Single();
@@ -153,7 +153,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         public ForeignKeyNavigationPropertyConfiguration WithRequiredPrincipal(
             Expression<Func<TTargetEntityType, TEntityType>> navigationPropertyExpression)
         {
-            Contract.Requires(navigationPropertyExpression != null);
+            //Contract.Requires(navigationPropertyExpression != null);
 
             _navigationPropertyConfiguration.InverseNavigationProperty
                 = navigationPropertyExpression.GetSimplePropertyAccess().Single();

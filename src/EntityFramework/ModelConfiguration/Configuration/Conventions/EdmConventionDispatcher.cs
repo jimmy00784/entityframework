@@ -15,8 +15,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
             public EdmConventionDispatcher(IConvention convention, EdmModel model)
             {
-                Contract.Requires(convention != null);
-                Contract.Requires(model != null);
+                //Contract.Requires(convention != null);
+                //Contract.Requires(model != null);
 
                 _convention = convention;
                 _model = model;

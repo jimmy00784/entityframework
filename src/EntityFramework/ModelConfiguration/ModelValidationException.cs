@@ -43,7 +43,7 @@ namespace System.Data.Entity.ModelConfiguration
         internal ModelValidationException(IEnumerable<DataModelErrorEventArgs> validationErrors)
             : base(validationErrors.ToErrorMessage())
         {
-            Contract.Requires(validationErrors != null);
+            //Contract.Requires(validationErrors != null);
             Contract.Assert(validationErrors.Any());
         }
 

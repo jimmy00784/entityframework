@@ -30,7 +30,7 @@ namespace System.Data.Entity.Internal.Linq
         /// <param name = "internalContext">The backing context.</param>
         public InternalQuery(InternalContext context)
         {
-            Contract.Requires(context != null);
+            //Contract.Requires(context != null);
 
             _internalContext = context;
         }

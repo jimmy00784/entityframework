@@ -28,8 +28,8 @@ namespace System.Data.EntityClient
             Justification = "Object is in fact passed to property of the class and gets Disposed properly in the Dispose() method.")]
         internal EntityTransaction(EntityConnection connection, DbTransaction storeTransaction)
         {
-            Contract.Requires(connection != null);
-            Contract.Requires(storeTransaction != null);
+            //Contract.Requires(connection != null);
+            //Contract.Requires(storeTransaction != null);
 
             _connection = connection;
             _storeTransaction = storeTransaction;

@@ -27,7 +27,7 @@ namespace System.Data.Entity.Internal
             InternalContext internalContext, Type type, DbUpdatableDataRecord dataRecord, bool isEntity)
             : base(internalContext, type, isEntity)
         {
-            Contract.Requires(dataRecord != null);
+            //Contract.Requires(dataRecord != null);
 
             _dataRecord = dataRecord;
         }

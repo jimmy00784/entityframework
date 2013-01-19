@@ -10,8 +10,8 @@ namespace System.Data.Entity.Infrastructure
 
         public DbProviderInfo(string providerInvariantName, string providerManifestToken)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(providerInvariantName));
-            Contract.Requires(!string.IsNullOrWhiteSpace(providerManifestToken));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(providerInvariantName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(providerManifestToken));
 
             _providerInvariantName = providerInvariantName;
             _providerManifestToken = providerManifestToken;

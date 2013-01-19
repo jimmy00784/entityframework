@@ -19,7 +19,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
             IList<DbColumnCondition> conditions,
             bool isDefaultDiscriminatorCondition)
         {
-            Contract.Requires(entityType != null);
+            //Contract.Requires(entityType != null);
 
             _entityType = entityType;
             _propertyPath = propertyPath;

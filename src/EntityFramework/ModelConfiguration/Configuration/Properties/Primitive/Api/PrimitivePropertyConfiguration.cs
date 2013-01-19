@@ -17,7 +17,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         internal PrimitivePropertyConfiguration(Properties.Primitive.PrimitivePropertyConfiguration configuration)
         {
-            Contract.Requires(configuration != null);
+            //Contract.Requires(configuration != null);
 
             _configuration = configuration;
         }

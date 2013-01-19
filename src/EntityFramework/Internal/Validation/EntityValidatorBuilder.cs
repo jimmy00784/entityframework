@@ -23,7 +23,7 @@ namespace System.Data.Entity.Internal.Validation
 
         public EntityValidatorBuilder(AttributeProvider attributeProvider)
         {
-            Contract.Requires(attributeProvider != null);
+            //Contract.Requires(attributeProvider != null);
 
             _attributeProvider = attributeProvider;
         }
@@ -40,7 +40,7 @@ namespace System.Data.Entity.Internal.Validation
         /// </returns>
         public virtual EntityValidator BuildEntityValidator(InternalEntityEntry entityEntry)
         {
-            Contract.Requires(entityEntry != null);
+            //Contract.Requires(entityEntry != null);
 
             return BuildTypeValidator(
                 entityEntry.EntityType,
@@ -59,8 +59,8 @@ namespace System.Data.Entity.Internal.Validation
         /// <returns>A <see cref = "ComplexTypeValidator" /> for the given complex type. May be null if no validation specified.</returns>
         protected virtual ComplexTypeValidator BuildComplexTypeValidator(Type clrType, ComplexType complexType)
         {
-            Contract.Requires(complexType != null);
-            Contract.Requires(clrType != null);
+            //Contract.Requires(complexType != null);
+            //Contract.Requires(clrType != null);
             Contract.Assert(complexType.Name == clrType.Name);
 
             return BuildTypeValidator(
@@ -112,9 +112,9 @@ namespace System.Data.Entity.Internal.Validation
             IEnumerable<EdmProperty> edmProperties,
             IEnumerable<NavigationProperty> navigationProperties)
         {
-            Contract.Requires(edmProperties != null);
-            Contract.Requires(navigationProperties != null);
-            Contract.Requires(clrProperties != null);
+            //Contract.Requires(edmProperties != null);
+            //Contract.Requires(navigationProperties != null);
+            //Contract.Requires(clrProperties != null);
 
             var validators = new List<PropertyValidator>();
 
@@ -171,8 +171,8 @@ namespace System.Data.Entity.Internal.Validation
         protected virtual PropertyValidator BuildPropertyValidator(
             PropertyInfo clrProperty, EdmProperty edmProperty, bool buildFacetValidators)
         {
-            Contract.Requires(clrProperty != null);
-            Contract.Requires(edmProperty != null);
+            //Contract.Requires(clrProperty != null);
+            //Contract.Requires(edmProperty != null);
             Contract.Assert(clrProperty.Name == edmProperty.Name);
 
             var propertyAttributeValidators = new List<IValidator>();
@@ -214,7 +214,7 @@ namespace System.Data.Entity.Internal.Validation
         /// </returns>
         protected virtual PropertyValidator BuildPropertyValidator(PropertyInfo clrProperty)
         {
-            Contract.Requires(clrProperty != null);
+            //Contract.Requires(clrProperty != null);
 
             var propertyValidators = BuildValidationAttributeValidators(_attributeProvider.GetAttributes(clrProperty));
 
@@ -234,7 +234,7 @@ namespace System.Data.Entity.Internal.Validation
         /// </returns>
         protected virtual IList<IValidator> BuildValidationAttributeValidators(IEnumerable<Attribute> attributes)
         {
-            Contract.Requires(attributes != null);
+            //Contract.Requires(attributes != null);
 
             return (from validationAttribute in attributes
                     where validationAttribute is ValidationAttribute
@@ -253,7 +253,7 @@ namespace System.Data.Entity.Internal.Validation
         /// </returns>
         protected virtual IEnumerable<PropertyInfo> GetPublicInstanceProperties(Type type)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             return type.GetProperties(BindingFlags.Public | BindingFlags.Instance)
                 .Where(p => p.GetIndexParameters().Length == 0 && p.GetGetMethod() != null);
@@ -271,9 +271,9 @@ namespace System.Data.Entity.Internal.Validation
         protected virtual IEnumerable<IValidator> BuildFacetValidators(
             PropertyInfo clrProperty, EdmMember edmProperty, IEnumerable<Attribute> existingAttributes)
         {
-            Contract.Requires(clrProperty != null);
-            Contract.Requires(edmProperty != null);
-            Contract.Requires(existingAttributes != null);
+            //Contract.Requires(clrProperty != null);
+            //Contract.Requires(edmProperty != null);
+            //Contract.Requires(existingAttributes != null);
 
             var facetDerivedAttributes = new List<ValidationAttribute>();
 

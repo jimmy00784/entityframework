@@ -28,7 +28,7 @@ namespace System.Data.Entity.Infrastructure
         /// <returns>The new entry.</returns>
         internal static DbPropertyEntry<TEntity, TProperty> Create(InternalPropertyEntry internalPropertyEntry)
         {
-            Contract.Requires(internalPropertyEntry != null);
+            //Contract.Requires(internalPropertyEntry != null);
 
             return (DbPropertyEntry<TEntity, TProperty>)internalPropertyEntry.CreateDbMemberEntry<TEntity, TProperty>();
         }
@@ -39,7 +39,7 @@ namespace System.Data.Entity.Infrastructure
         /// <param name = "internalPropertyEntry">The internal entry.</param>
         internal DbPropertyEntry(InternalPropertyEntry internalPropertyEntry)
         {
-            Contract.Requires(internalPropertyEntry != null);
+            //Contract.Requires(internalPropertyEntry != null);
 
             _internalPropertyEntry = internalPropertyEntry;
         }

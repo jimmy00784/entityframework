@@ -11,8 +11,8 @@ namespace System.Data.Entity.Utilities
     {
         public static bool IsSameAs(this PropertyInfo propertyInfo, PropertyInfo otherPropertyInfo)
         {
-            Contract.Requires(propertyInfo != null);
-            Contract.Requires(otherPropertyInfo != null);
+            //Contract.Requires(propertyInfo != null);
+            //Contract.Requires(otherPropertyInfo != null);
 
             return (propertyInfo == otherPropertyInfo) ||
                    (propertyInfo.Name == otherPropertyInfo.Name
@@ -23,8 +23,8 @@ namespace System.Data.Entity.Utilities
 
         public static bool ContainsSame(this IEnumerable<PropertyInfo> enumerable, PropertyInfo propertyInfo)
         {
-            Contract.Requires(enumerable != null);
-            Contract.Requires(propertyInfo != null);
+            //Contract.Requires(enumerable != null);
+            //Contract.Requires(propertyInfo != null);
 
             foreach (var member in enumerable)
             {
@@ -38,7 +38,7 @@ namespace System.Data.Entity.Utilities
 
         public static bool IsValidStructuralProperty(this PropertyInfo propertyInfo)
         {
-            Contract.Requires(propertyInfo != null);
+            //Contract.Requires(propertyInfo != null);
 
             return propertyInfo.CanRead
                    && (propertyInfo.CanWrite || propertyInfo.PropertyType.IsCollection())
@@ -48,7 +48,7 @@ namespace System.Data.Entity.Utilities
 
         public static bool IsValidEdmScalarProperty(this PropertyInfo propertyInfo)
         {
-            Contract.Requires(propertyInfo != null);
+            //Contract.Requires(propertyInfo != null);
 
             var propertyType = propertyInfo.PropertyType;
 
@@ -60,7 +60,7 @@ namespace System.Data.Entity.Utilities
 
         public static EdmProperty AsEdmPrimitiveProperty(this PropertyInfo propertyInfo)
         {
-            Contract.Requires(propertyInfo != null);
+            //Contract.Requires(propertyInfo != null);
 
             var propertyType = propertyInfo.PropertyType;
             var isNullable = propertyType.TryUnwrapNullableType(out propertyType) || !propertyType.IsValueType;

@@ -29,7 +29,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         private ManyToManyAssociationMappingConfiguration(ManyToManyAssociationMappingConfiguration source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             _leftKeyColumnNames.AddRange(source._leftKeyColumnNames);
             _rightKeyColumnNames.AddRange(source._rightKeyColumnNames);
@@ -48,7 +48,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         /// <returns>The same ManyToManyAssociationMappingConfiguration instance so that multiple calls can be chained.</returns>
         public ManyToManyAssociationMappingConfiguration ToTable(string tableName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(tableName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(tableName));
 
             return ToTable(tableName, null);
         }
@@ -61,7 +61,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         /// <returns>The same ManyToManyAssociationMappingConfiguration instance so that multiple calls can be chained.</returns>
         public ManyToManyAssociationMappingConfiguration ToTable(string tableName, string schemaName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(tableName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(tableName));
 
             _tableName = new DatabaseName(tableName, schemaName);
 
@@ -80,7 +80,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         /// <returns>The same ManyToManyAssociationMappingConfiguration instance so that multiple calls can be chained.</returns>
         public ManyToManyAssociationMappingConfiguration MapLeftKey(params string[] keyColumnNames)
         {
-            Contract.Requires(keyColumnNames != null);
+            //Contract.Requires(keyColumnNames != null);
 
             _leftKeyColumnNames.Clear();
             _leftKeyColumnNames.AddRange(keyColumnNames);
@@ -100,7 +100,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         /// <returns>The same ManyToManyAssociationMappingConfiguration instance so that multiple calls can be chained.</returns>
         public ManyToManyAssociationMappingConfiguration MapRightKey(params string[] keyColumnNames)
         {
-            Contract.Requires(keyColumnNames != null);
+            //Contract.Requires(keyColumnNames != null);
 
             _rightKeyColumnNames.Clear();
             _rightKeyColumnNames.AddRange(keyColumnNames);
@@ -125,8 +125,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         private static void ConfigureColumnNames(
             ICollection<string> keyColumnNames, IList<DbEdmPropertyMapping> propertyMappings)
         {
-            Contract.Requires(keyColumnNames != null);
-            Contract.Requires(propertyMappings != null);
+            //Contract.Requires(keyColumnNames != null);
+            //Contract.Requires(propertyMappings != null);
 
             if ((keyColumnNames.Count > 0)
                 && (keyColumnNames.Count != propertyMappings.Count))

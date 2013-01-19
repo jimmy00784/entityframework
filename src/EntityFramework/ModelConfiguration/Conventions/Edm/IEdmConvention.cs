@@ -17,7 +17,7 @@ namespace System.Data.Entity.ModelConfiguration.Conventions
     {
         void IEdmConvention.Apply(EdmModel model)
         {
-            Contract.Requires(model != null);
+            //Contract.Requires(model != null);
         }
     }
 

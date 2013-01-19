@@ -17,8 +17,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
             public DatabaseConventionDispatcher(IConvention convention, DbDatabaseMetadata database)
             {
-                Contract.Requires(convention != null);
-                Contract.Requires(database != null);
+                //Contract.Requires(convention != null);
+                //Contract.Requires(database != null);
 
                 _convention = convention;
                 _database = database;

@@ -24,8 +24,8 @@ namespace System.Data.Entity.ModelConfiguration.Conventions
         void IConfigurationConvention<TMemberInfo, TConfiguration>.Apply(
             TMemberInfo memberInfo, Func<TConfiguration> configuration)
         {
-            Contract.Requires(memberInfo != null);
-            Contract.Requires(configuration != null);
+            //Contract.Requires(memberInfo != null);
+            //Contract.Requires(configuration != null);
         }
     }
 

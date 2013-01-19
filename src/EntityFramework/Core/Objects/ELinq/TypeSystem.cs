@@ -46,7 +46,7 @@ namespace System.Data.Objects.ELinq
 
         internal static Type GetDelegateType(IEnumerable<Type> inputTypes, Type returnType)
         {
-            Contract.Requires(returnType != null);
+            //Contract.Requires(returnType != null);
 
             // Determine Func<> type (generic args are the input parameter types plus the return type)
             inputTypes = inputTypes ?? Enumerable.Empty<Type>();

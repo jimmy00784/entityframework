@@ -16,8 +16,8 @@ namespace System.Data.Common.CommandTrees
 
         internal DbSetClause(DbExpression targetProperty, DbExpression sourceValue)
         {
-            Contract.Requires(targetProperty != null);
-            Contract.Requires(sourceValue != null);
+            //Contract.Requires(targetProperty != null);
+            //Contract.Requires(sourceValue != null);
             _prop = targetProperty;
             _val = sourceValue;
         }

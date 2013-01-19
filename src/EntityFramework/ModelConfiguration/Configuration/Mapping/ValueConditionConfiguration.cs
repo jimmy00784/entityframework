@@ -34,8 +34,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         internal ValueConditionConfiguration(EntityMappingConfiguration entityMapConfiguration, string discriminator)
         {
-            Contract.Requires(entityMapConfiguration != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(discriminator));
+            //Contract.Requires(entityMapConfiguration != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(discriminator));
 
             _entityMappingConfiguration = entityMapConfiguration;
             Discriminator = discriminator;
@@ -43,7 +43,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         private ValueConditionConfiguration(EntityMappingConfiguration owner, ValueConditionConfiguration source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             _entityMappingConfiguration = owner;
 
@@ -165,8 +165,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
             EdmEntityType entityType,
             DbProviderManifest providerManifest)
         {
-            Contract.Requires(fragment != null);
-            Contract.Requires(providerManifest != null);
+            //Contract.Requires(fragment != null);
+            //Contract.Requires(providerManifest != null);
 
             var discriminatorColumn = TablePrimitiveOperations.IncludeColumn(fragment.Table, Discriminator, true);
 

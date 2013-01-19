@@ -20,7 +20,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Properties.Primiti
         protected LengthPropertyConfiguration(LengthPropertyConfiguration source)
             : base(source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             IsFixedLength = source.IsFixedLength;
             MaxLength = source.MaxLength;

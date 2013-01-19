@@ -33,21 +33,21 @@ namespace System.Data.Entity.Migrations.Edm
 
         public static string IsSystemAttribute(this XElement element)
         {
-            Contract.Requires(element != null);
+            //Contract.Requires(element != null);
 
             return (string)element.Attribute(IsSystem);
         }
 
         public static string ActionAttribute(this XElement element)
         {
-            Contract.Requires(element != null);
+            //Contract.Requires(element != null);
 
             return (string)element.Attribute("Action");
         }
 
         public static string ColumnNameAttribute(this XElement element)
         {
-            Contract.Requires(element != null);
+            //Contract.Requires(element != null);
 
             return (string)element.Attribute("ColumnName");
         }
@@ -55,35 +55,35 @@ namespace System.Data.Entity.Migrations.Edm
         [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         public static string EntitySetAttribute(this XElement element)
         {
-            Contract.Requires(element != null);
+            //Contract.Requires(element != null);
 
             return (string)element.Attribute("EntitySet");
         }
 
         public static string NameAttribute(this XElement element)
         {
-            Contract.Requires(element != null);
+            //Contract.Requires(element != null);
 
             return (string)element.Attribute("Name");
         }
 
         public static string EntityTypeAttribute(this XElement element)
         {
-            Contract.Requires(element != null);
+            //Contract.Requires(element != null);
 
             return (string)element.Attribute("EntityType");
         }
 
         public static string NullableAttribute(this XElement element)
         {
-            Contract.Requires(element != null);
+            //Contract.Requires(element != null);
 
             return (string)element.Attribute("Nullable");
         }
 
         public static string MaxLengthAttribute(this XElement element)
         {
-            Contract.Requires(element != null);
+            //Contract.Requires(element != null);
 
             return (string)element.Attribute("MaxLength");
         }
@@ -91,42 +91,42 @@ namespace System.Data.Entity.Migrations.Edm
         [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         public static string FixedLengthAttribute(this XElement element)
         {
-            Contract.Requires(element != null);
+            //Contract.Requires(element != null);
 
             return (string)element.Attribute("FixedLength");
         }
 
         public static string PrecisionAttribute(this XElement element)
         {
-            Contract.Requires(element != null);
+            //Contract.Requires(element != null);
 
             return (string)element.Attribute("Precision");
         }
 
         public static string ProviderAttribute(this XElement element)
         {
-            Contract.Requires(element != null);
+            //Contract.Requires(element != null);
 
             return (string)element.Attribute("Provider");
         }
 
         public static string ProviderManifestTokenAttribute(this XElement element)
         {
-            Contract.Requires(element != null);
+            //Contract.Requires(element != null);
 
             return (string)element.Attribute("ProviderManifestToken");
         }
 
         public static string ScaleAttribute(this XElement element)
         {
-            Contract.Requires(element != null);
+            //Contract.Requires(element != null);
 
             return (string)element.Attribute("Scale");
         }
 
         public static string StoreGeneratedPatternAttribute(this XElement element)
         {
-            Contract.Requires(element != null);
+            //Contract.Requires(element != null);
 
             return (string)element.Attribute("StoreGeneratedPattern");
         }
@@ -134,56 +134,56 @@ namespace System.Data.Entity.Migrations.Edm
         [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         public static string UnicodeAttribute(this XElement element)
         {
-            Contract.Requires(element != null);
+            //Contract.Requires(element != null);
 
             return (string)element.Attribute("Unicode");
         }
 
         public static string RoleAttribute(this XElement element)
         {
-            Contract.Requires(element != null);
+            //Contract.Requires(element != null);
 
             return (string)element.Attribute("Role");
         }
 
         public static string SchemaAttribute(this XElement element)
         {
-            Contract.Requires(element != null);
+            //Contract.Requires(element != null);
 
             return (string)element.Attribute("Schema");
         }
 
         public static string StoreEntitySetAttribute(this XElement element)
         {
-            Contract.Requires(element != null);
+            //Contract.Requires(element != null);
 
             return (string)element.Attribute("StoreEntitySet");
         }
 
         public static string TableAttribute(this XElement element)
         {
-            Contract.Requires(element != null);
+            //Contract.Requires(element != null);
 
             return (string)element.Attribute("Table");
         }
 
         public static string TypeAttribute(this XElement element)
         {
-            Contract.Requires(element != null);
+            //Contract.Requires(element != null);
 
             return (string)element.Attribute("Type");
         }
 
         public static string TypeNameAttribute(this XElement element)
         {
-            Contract.Requires(element != null);
+            //Contract.Requires(element != null);
 
             return (string)element.Attribute("TypeName");
         }
 
         public static string ValueAttribute(this XElement element)
         {
-            Contract.Requires(element != null);
+            //Contract.Requires(element != null);
 
             return (string)element.Attribute("Value");
         }
@@ -210,7 +210,7 @@ namespace System.Data.Entity.Migrations.Edm
 
             private static IEnumerable<XName> Names(string elementName)
             {
-                Contract.Requires(!string.IsNullOrWhiteSpace(elementName));
+                //Contract.Requires(!string.IsNullOrWhiteSpace(elementName));
 
                 return new List<XName>
                     {
@@ -239,7 +239,7 @@ namespace System.Data.Entity.Migrations.Edm
 
             private static IEnumerable<XName> Names(string elementName)
             {
-                Contract.Requires(!string.IsNullOrWhiteSpace(elementName));
+                //Contract.Requires(!string.IsNullOrWhiteSpace(elementName));
 
                 return new List<XName>
                     {
@@ -266,7 +266,7 @@ namespace System.Data.Entity.Migrations.Edm
 
             private static IEnumerable<XName> Names(string elementName)
             {
-                Contract.Requires(!string.IsNullOrWhiteSpace(elementName));
+                //Contract.Requires(!string.IsNullOrWhiteSpace(elementName));
 
                 return new List<XName>
                     {

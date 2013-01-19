@@ -17,14 +17,14 @@ namespace System.Data.Entity.Infrastructure
         /// </returns>
         public static Task<bool> MoveNextAsync(this IDbAsyncEnumerator enumerator)
         {
-            Contract.Requires(enumerator != null);
+            //Contract.Requires(enumerator != null);
 
             return enumerator.MoveNextAsync(CancellationToken.None);
         }
 
         internal static IDbAsyncEnumerator<TResult> Cast<TResult>(this IDbAsyncEnumerator source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
             Contract.Ensures(Contract.Result<IDbAsyncEnumerator<TResult>>() != null);
 
             return new CastDbAsyncEnumerator<TResult>(source);
@@ -36,7 +36,7 @@ namespace System.Data.Entity.Infrastructure
 
             public CastDbAsyncEnumerator(IDbAsyncEnumerator sourceEnumerator)
             {
-                Contract.Requires(sourceEnumerator != null);
+                //Contract.Requires(sourceEnumerator != null);
 
                 _underlyingEnumerator = sourceEnumerator;
             }

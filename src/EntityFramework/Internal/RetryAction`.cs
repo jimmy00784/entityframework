@@ -22,7 +22,7 @@ namespace System.Data.Entity.Internal
         /// <param name = "action">The action.</param>
         public RetryAction(Action<TInput> action)
         {
-            Contract.Requires(action != null);
+            //Contract.Requires(action != null);
 
             _action = action;
         }

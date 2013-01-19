@@ -23,9 +23,9 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Serialization
 
         public void Serialize(DbDatabaseMapping databaseMapping, DbProviderInfo providerInfo, XmlWriter xmlWriter)
         {
-            Contract.Requires(xmlWriter != null);
-            Contract.Requires(databaseMapping != null);
-            Contract.Requires(providerInfo != null);
+            //Contract.Requires(xmlWriter != null);
+            //Contract.Requires(databaseMapping != null);
+            //Contract.Requires(providerInfo != null);
             Contract.Assert(databaseMapping.Model != null);
             Contract.Assert(databaseMapping.Database != null);
 
@@ -122,8 +122,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Serialization
 
         private IDisposable Element(string elementName, params string[] attributes)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(elementName));
-            Contract.Requires(attributes != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(elementName));
+            //Contract.Requires(attributes != null);
 
             _xmlWriter.WriteStartElement(elementName, _namespace);
 

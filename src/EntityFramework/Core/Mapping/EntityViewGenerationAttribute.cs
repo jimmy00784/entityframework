@@ -16,7 +16,7 @@ namespace System.Data.Mapping
         /// </summary>
         public EntityViewGenerationAttribute(Type viewGenerationType)
         {
-            Contract.Requires(viewGenerationType != null);
+            //Contract.Requires(viewGenerationType != null);
             m_viewGenType = viewGenerationType;
         }
 

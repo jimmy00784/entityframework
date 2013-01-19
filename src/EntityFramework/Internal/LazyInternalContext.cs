@@ -86,7 +86,7 @@ namespace System.Data.Entity.Internal
             IDbModelCacheKeyFactory cacheKeyFactory = null)
             : base(owner)
         {
-            Contract.Requires(internalConnection != null);
+            //Contract.Requires(internalConnection != null);
 
             _internalConnection = internalConnection;
             _model = model;

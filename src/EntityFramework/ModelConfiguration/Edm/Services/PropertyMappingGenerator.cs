@@ -25,10 +25,10 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Services
             IList<EdmProperty> propertyPath,
             bool createNewColumn)
         {
-            Contract.Requires(entityType != null);
-            Contract.Requires(properties != null);
-            Contract.Requires(entityTypeMappingFragment != null);
-            Contract.Requires(propertyPath != null);
+            //Contract.Requires(entityType != null);
+            //Contract.Requires(properties != null);
+            //Contract.Requires(entityTypeMappingFragment != null);
+            //Contract.Requires(propertyPath != null);
 
             var rootDeclaredProperties = entityType.GetRootType().DeclaredProperties;
 

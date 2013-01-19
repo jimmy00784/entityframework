@@ -29,7 +29,7 @@ namespace System.Data.Entity.ModelConfiguration.Conventions
 
         private AttributeConfigurationConvention(AttributeProvider attributeProvider)
         {
-            Contract.Requires(attributeProvider != null);
+            //Contract.Requires(attributeProvider != null);
 
             _attributeProvider = attributeProvider;
         }
@@ -57,9 +57,9 @@ namespace System.Data.Entity.ModelConfiguration.Conventions
     {
         internal override void Apply(TMemberInfo memberInfo, TConfiguration configuration, TAttribute attribute)
         {
-            Contract.Requires(memberInfo != null);
-            Contract.Requires(configuration != null);
-            Contract.Requires(attribute != null);
+            //Contract.Requires(memberInfo != null);
+            //Contract.Requires(configuration != null);
+            //Contract.Requires(attribute != null);
         }
     }
 

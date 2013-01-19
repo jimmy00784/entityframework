@@ -9,23 +9,23 @@ namespace System.Data.Entity.ModelConfiguration.Edm
     {
         public static Type GetClrType(this EdmEnumType enumType)
         {
-            Contract.Requires(enumType != null);
+            //Contract.Requires(enumType != null);
 
             return enumType.Annotations.GetClrType();
         }
 
         public static void SetClrType(this EdmEnumType enumType, Type type)
         {
-            Contract.Requires(enumType != null);
-            Contract.Requires(type != null);
+            //Contract.Requires(enumType != null);
+            //Contract.Requires(type != null);
 
             enumType.Annotations.SetClrType(type);
         }
 
         public static EdmEnumTypeMember AddMember(this EdmEnumType enumType, string name, long value)
         {
-            Contract.Requires(enumType != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(name));
+            //Contract.Requires(enumType != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(name));
 
             var enumTypeMember = new EdmEnumTypeMember
                 {

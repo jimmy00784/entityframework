@@ -17,7 +17,7 @@ namespace System.Data.Entity.Config
 
         public virtual void Add(IDbDependencyResolver resolver)
         {
-            Contract.Requires(resolver != null);
+            //Contract.Requires(resolver != null);
 
             // The idea here is that Add, GetService, and Release must all be thread-safe, but
             // Add is only called infrequently. Therefore each time Add is called a snapshot is taken

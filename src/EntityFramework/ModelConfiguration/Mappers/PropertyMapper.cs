@@ -15,7 +15,7 @@ namespace System.Data.Entity.ModelConfiguration.Mappers
 
         public PropertyMapper(TypeMapper typeMapper)
         {
-            Contract.Requires(typeMapper != null);
+            //Contract.Requires(typeMapper != null);
 
             _typeMapper = typeMapper;
         }
@@ -24,8 +24,8 @@ namespace System.Data.Entity.ModelConfiguration.Mappers
             PropertyInfo propertyInfo, EdmComplexType complexType,
             Func<ComplexTypeConfiguration> complexTypeConfiguration)
         {
-            Contract.Requires(propertyInfo != null);
-            Contract.Requires(complexType != null);
+            //Contract.Requires(propertyInfo != null);
+            //Contract.Requires(complexType != null);
 
             var property = MapPrimitiveOrComplexOrEnumProperty(
                 propertyInfo, complexTypeConfiguration, discoverComplexTypes: true);
@@ -39,8 +39,8 @@ namespace System.Data.Entity.ModelConfiguration.Mappers
         public void Map(
             PropertyInfo propertyInfo, EdmEntityType entityType, Func<EntityTypeConfiguration> entityTypeConfiguration)
         {
-            Contract.Requires(propertyInfo != null);
-            Contract.Requires(entityType != null);
+            //Contract.Requires(propertyInfo != null);
+            //Contract.Requires(entityType != null);
 
             var property = MapPrimitiveOrComplexOrEnumProperty(propertyInfo, entityTypeConfiguration);
 
@@ -58,7 +58,7 @@ namespace System.Data.Entity.ModelConfiguration.Mappers
             PropertyInfo propertyInfo, Func<StructuralTypeConfiguration> structuralTypeConfiguration,
             bool discoverComplexTypes = false)
         {
-            Contract.Requires(propertyInfo != null);
+            //Contract.Requires(propertyInfo != null);
 
             var property = propertyInfo.AsEdmPrimitiveProperty();
 

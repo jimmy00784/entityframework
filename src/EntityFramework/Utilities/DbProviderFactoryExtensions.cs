@@ -17,7 +17,7 @@ namespace System.Data.Entity.Utilities
         [SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes")]
         public static string GetProviderInvariantName(this DbProviderFactory factory)
         {
-            Contract.Requires(factory != null);
+            //Contract.Requires(factory != null);
 
             const int assemblyQualifiedNameIndex = 3;
             const int invariantNameIndex = 2;
@@ -73,7 +73,7 @@ namespace System.Data.Entity.Utilities
 
         internal static DbProviderServices GetProviderServices(this DbProviderFactory factory)
         {
-            Contract.Requires(factory != null);
+            //Contract.Requires(factory != null);
 
             // The EntityClient provider invariant name is not normally registered so we can't use
             // the normal method for looking up this factory.

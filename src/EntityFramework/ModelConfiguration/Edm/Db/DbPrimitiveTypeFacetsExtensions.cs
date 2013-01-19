@@ -8,7 +8,7 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db
     {
         public static DbPrimitiveTypeFacets Clone(this DbPrimitiveTypeFacets toClone)
         {
-            Contract.Requires(toClone != null);
+            //Contract.Requires(toClone != null);
 
             var clone = new DbPrimitiveTypeFacets();
 
@@ -19,8 +19,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db
 
         public static void CopyFrom(this DbPrimitiveTypeFacets facets, DbPrimitiveTypeFacets other)
         {
-            Contract.Requires(facets != null);
-            Contract.Requires(other != null);
+            //Contract.Requires(facets != null);
+            //Contract.Requires(other != null);
 
             facets.IsFixedLength = other.IsFixedLength;
             facets.IsMaxLength = other.IsMaxLength;

@@ -31,7 +31,7 @@ namespace System.Data.Entity.Internal
 
         public static void ConfigureEdmMetadata(ModelConfiguration modelConfiguration)
         {
-            Contract.Requires(modelConfiguration != null);
+            //Contract.Requires(modelConfiguration != null);
 
 #pragma warning disable 612,618
             modelConfiguration.Entity(typeof(EdmMetadata)).ToTable(TableName);

@@ -18,9 +18,9 @@ namespace System.Data.Entity.ModelConfiguration.Mappers
             ConventionsConfiguration conventionsConfiguration,
             EdmModel model)
         {
-            Contract.Requires(modelConfiguration != null);
-            Contract.Requires(conventionsConfiguration != null);
-            Contract.Requires(model != null);
+            //Contract.Requires(modelConfiguration != null);
+            //Contract.Requires(conventionsConfiguration != null);
+            //Contract.Requires(model != null);
 
             _modelConfiguration = modelConfiguration;
             _conventionsConfiguration = conventionsConfiguration;

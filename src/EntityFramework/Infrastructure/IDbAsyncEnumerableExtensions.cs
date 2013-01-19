@@ -76,7 +76,7 @@ namespace System.Data.Entity.Infrastructure
         [SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
         internal static Task<List<T>> ToListAsync<T>(this IDbAsyncEnumerable<T> enumerable)
         {
-            Contract.Requires(enumerable != null);
+            //Contract.Requires(enumerable != null);
             Contract.Ensures(Contract.Result<Task<List<T>>>() != null);
 
             return enumerable.ToListAsync(CancellationToken.None);
@@ -90,7 +90,7 @@ namespace System.Data.Entity.Infrastructure
         [SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
         internal async static Task<List<T>> ToListAsync<T>(this IDbAsyncEnumerable<T> enumerable, CancellationToken cancellationToken)
         {
-            Contract.Requires(enumerable != null);
+            //Contract.Requires(enumerable != null);
             Contract.Ensures(Contract.Result<Task<List<T>>>() != null);
 
             var list = new List<T>();
@@ -100,7 +100,7 @@ namespace System.Data.Entity.Infrastructure
 
         internal static Task<TSource> FirstAsync<TSource>(this IDbAsyncEnumerable<TSource> source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             return source.FirstAsync(CancellationToken.None);
         }
@@ -120,7 +120,7 @@ namespace System.Data.Entity.Infrastructure
 
         internal static Task<TSource> FirstOrDefaultAsync<TSource>(this IDbAsyncEnumerable<TSource> source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             return source.FirstOrDefaultAsync(CancellationToken.None);
         }
@@ -140,7 +140,7 @@ namespace System.Data.Entity.Infrastructure
 
         internal static Task<TSource> SingleAsync<TSource>(this IDbAsyncEnumerable<TSource> source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             return source.SingleAsync(CancellationToken.None);
         }
@@ -168,7 +168,7 @@ namespace System.Data.Entity.Infrastructure
 
         internal static Task<TSource> SingleOrDefaultAsync<TSource>(this IDbAsyncEnumerable<TSource> source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             return source.SingleOrDefaultAsync(CancellationToken.None);
         }
@@ -196,7 +196,7 @@ namespace System.Data.Entity.Infrastructure
 
         internal static IDbAsyncEnumerable<TResult> Cast<TResult>(this IDbAsyncEnumerable source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
             Contract.Ensures(Contract.Result<IDbAsyncEnumerable<TResult>>() != null);
 
             return new CastDbAsyncEnumerable<TResult>(source);
@@ -208,7 +208,7 @@ namespace System.Data.Entity.Infrastructure
 
             public CastDbAsyncEnumerable(IDbAsyncEnumerable sourceEnumerable)
             {
-                Contract.Requires(sourceEnumerable != null);
+                //Contract.Requires(sourceEnumerable != null);
 
                 _underlyingEnumerable = sourceEnumerable;
             }

@@ -11,8 +11,8 @@ namespace System.Data.Entity.Internal
 
         protected RepositoryBase(string connectionString, DbProviderFactory providerFactory)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(connectionString));
-            Contract.Requires(providerFactory != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(connectionString));
+            //Contract.Requires(providerFactory != null);
 
             _connectionString = connectionString;
             _providerFactory = providerFactory;

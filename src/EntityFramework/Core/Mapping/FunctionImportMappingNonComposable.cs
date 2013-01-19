@@ -24,8 +24,8 @@ namespace System.Data.Mapping
             ItemCollection itemCollection)
             : base(functionImport, targetFunction)
         {
-            Contract.Requires(structuralTypeMappingsList != null);
-            Contract.Requires(itemCollection != null);
+            //Contract.Requires(structuralTypeMappingsList != null);
+            //Contract.Requires(itemCollection != null);
             Debug.Assert(!functionImport.IsComposableAttribute, "!functionImport.IsComposableAttribute");
             Debug.Assert(!targetFunction.IsComposableAttribute, "!targetFunction.IsComposableAttribute");
 

@@ -12,7 +12,7 @@ namespace System.Data.Entity.Utilities
         [SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes")]
         public static string GetProviderInvariantName(this DbConnection connection)
         {
-            Contract.Requires(connection != null);
+            //Contract.Requires(connection != null);
 
             return DbProviderServices.GetProviderFactory(connection).GetProviderInvariantName();
         }
@@ -20,7 +20,7 @@ namespace System.Data.Entity.Utilities
         public static DbProviderInfo GetProviderInfo(
             this DbConnection connection, out DbProviderManifest providerManifest)
         {
-            Contract.Requires(connection != null);
+            //Contract.Requires(connection != null);
 
             var providerServices = DbProviderServices.GetProviderServices(connection);
             var providerManifestToken = providerServices.GetProviderManifestTokenChecked(connection);

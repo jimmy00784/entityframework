@@ -53,8 +53,8 @@ namespace System.Data.Common.CommandTrees.Internal
         internal static PatternMatchRule Create(
             Func<DbExpression, bool> matchFunc, Func<DbExpression, DbExpression> processor, ProcessedAction onProcessed)
         {
-            Contract.Requires(matchFunc != null);
-            Contract.Requires(processor != null);
+            //Contract.Requires(matchFunc != null);
+            //Contract.Requires(processor != null);
 
             return new PatternMatchRule(matchFunc, processor, onProcessed);
         }

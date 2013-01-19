@@ -15,7 +15,7 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db.Mapping
             Justification = "Used by test code.")]
         public static object GetConfiguration(this DbEntityTypeMapping entityTypeMapping)
         {
-            Contract.Requires(entityTypeMapping != null);
+            //Contract.Requires(entityTypeMapping != null);
 
             return entityTypeMapping.Annotations.GetConfiguration();
         }
@@ -24,8 +24,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db.Mapping
             Justification = "Used by test code.")]
         public static void SetConfiguration(this DbEntityTypeMapping entityTypeMapping, object configuration)
         {
-            Contract.Requires(entityTypeMapping != null);
-            Contract.Requires(configuration != null);
+            //Contract.Requires(entityTypeMapping != null);
+            //Contract.Requires(configuration != null);
 
             entityTypeMapping.Annotations.SetConfiguration(configuration);
         }
@@ -33,8 +33,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db.Mapping
         public static DbEdmPropertyMapping GetPropertyMapping(
             this DbEntityTypeMapping entityTypeMapping, params EdmProperty[] propertyPath)
         {
-            Contract.Requires(entityTypeMapping != null);
-            Contract.Requires(propertyPath != null);
+            //Contract.Requires(entityTypeMapping != null);
+            //Contract.Requires(propertyPath != null);
             Contract.Assert(propertyPath.Length > 0);
 
             return entityTypeMapping.TypeMappingFragments
@@ -54,22 +54,22 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db.Mapping
 
         public static Type GetClrType(this DbEntityTypeMapping entityTypeMappping)
         {
-            Contract.Requires(entityTypeMappping != null);
+            //Contract.Requires(entityTypeMappping != null);
 
             return entityTypeMappping.Annotations.GetClrType();
         }
 
         public static void SetClrType(this DbEntityTypeMapping entityTypeMapping, Type type)
         {
-            Contract.Requires(entityTypeMapping != null);
-            Contract.Requires(type != null);
+            //Contract.Requires(entityTypeMapping != null);
+            //Contract.Requires(type != null);
 
             entityTypeMapping.Annotations.SetClrType(type);
         }
 
         public static DbEntityTypeMapping Clone(this DbEntityTypeMapping entityTypeMappping)
         {
-            Contract.Requires(entityTypeMappping != null);
+            //Contract.Requires(entityTypeMappping != null);
 
             var clone = new DbEntityTypeMapping
                 {

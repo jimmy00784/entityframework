@@ -23,7 +23,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
     {
         internal static Type GetPropertyConfigurationType(Type propertyType)
         {
-            Contract.Requires(propertyType != null);
+            //Contract.Requires(propertyType != null);
 
             propertyType.TryUnwrapNullableType(out propertyType);
 
@@ -70,7 +70,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
 
         internal StructuralTypeConfiguration(Type clrType)
         {
-            Contract.Requires(clrType != null);
+            //Contract.Requires(clrType != null);
 
             _clrType = clrType;
         }
@@ -107,7 +107,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
 
         public void Ignore(PropertyInfo propertyInfo)
         {
-            Contract.Requires(propertyInfo != null);
+            //Contract.Requires(propertyInfo != null);
 
             _ignoredProperties.Add(propertyInfo);
         }
@@ -115,7 +115,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
         internal PrimitivePropertyConfiguration Property(
             PropertyPath propertyPath, OverridableConfigurationParts? overridableConfigurationParts = null)
         {
-            Contract.Requires(propertyPath != null);
+            //Contract.Requires(propertyPath != null);
 
             return Property(
                 propertyPath,
@@ -142,7 +142,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
             PropertyPath propertyPath, Func<TPrimitivePropertyConfiguration> primitivePropertyConfigurationCreator)
             where TPrimitivePropertyConfiguration : PrimitivePropertyConfiguration
         {
-            Contract.Requires(propertyPath != null);
+            //Contract.Requires(propertyPath != null);
 
             PrimitivePropertyConfiguration primitivePropertyConfiguration;
             if (!_primitivePropertyConfigurations.TryGetValue(propertyPath, out primitivePropertyConfiguration))
@@ -159,8 +159,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
             DbProviderManifest providerManifest,
             bool allowOverride = false)
         {
-            Contract.Requires(propertyMappings != null);
-            Contract.Requires(providerManifest != null);
+            //Contract.Requires(propertyMappings != null);
+            //Contract.Requires(providerManifest != null);
 
             foreach (var configuration in PrimitivePropertyConfigurations)
             {
@@ -186,9 +186,9 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
             IEnumerable<EdmProperty> properties,
             ICollection<DataModelAnnotation> dataModelAnnotations)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(structuralTypeName));
-            Contract.Requires(properties != null);
-            Contract.Requires(dataModelAnnotations != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(structuralTypeName));
+            //Contract.Requires(properties != null);
+            //Contract.Requires(dataModelAnnotations != null);
 
             dataModelAnnotations.SetConfiguration(this);
 

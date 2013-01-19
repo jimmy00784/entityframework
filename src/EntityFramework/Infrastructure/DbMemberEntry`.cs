@@ -31,7 +31,7 @@ namespace System.Data.Entity.Infrastructure
         /// <returns>The new entry.</returns>
         internal static DbMemberEntry<TEntity, TProperty> Create(InternalMemberEntry internalMemberEntry)
         {
-            Contract.Requires(internalMemberEntry != null);
+            //Contract.Requires(internalMemberEntry != null);
 
             return internalMemberEntry.CreateDbMemberEntry<TEntity, TProperty>();
         }

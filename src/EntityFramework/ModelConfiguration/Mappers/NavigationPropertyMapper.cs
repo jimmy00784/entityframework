@@ -17,7 +17,7 @@ namespace System.Data.Entity.ModelConfiguration.Mappers
 
         public NavigationPropertyMapper(TypeMapper typeMapper)
         {
-            Contract.Requires(typeMapper != null);
+            //Contract.Requires(typeMapper != null);
 
             _typeMapper = typeMapper;
         }
@@ -25,9 +25,9 @@ namespace System.Data.Entity.ModelConfiguration.Mappers
         public void Map(
             PropertyInfo propertyInfo, EdmEntityType entityType, Func<EntityTypeConfiguration> entityTypeConfiguration)
         {
-            Contract.Requires(propertyInfo != null);
-            Contract.Requires(entityType != null);
-            Contract.Requires(entityTypeConfiguration != null);
+            //Contract.Requires(propertyInfo != null);
+            //Contract.Requires(entityType != null);
+            //Contract.Requires(entityTypeConfiguration != null);
 
             var targetType = propertyInfo.PropertyType;
             var targetAssociationEndKind = EdmAssociationEndKind.Optional;

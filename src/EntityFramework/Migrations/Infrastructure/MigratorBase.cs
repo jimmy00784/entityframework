@@ -82,8 +82,8 @@ namespace System.Data.Entity.Migrations.Infrastructure
 
         internal virtual string GetMigrationId(string migration)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(migration));
-            Contract.Requires(migration != Strings.AutomaticMigration);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(migration));
+            //Contract.Requires(migration != Strings.AutomaticMigration);
 
             return _this.GetMigrationId(migration);
         }
@@ -111,14 +111,14 @@ namespace System.Data.Entity.Migrations.Infrastructure
         internal virtual void AutoMigrate(
             string migrationId, XDocument sourceModel, XDocument targetModel, bool downgrading)
         {
-            Contract.Requires(targetModel != null);
+            //Contract.Requires(targetModel != null);
 
             _this.AutoMigrate(migrationId, sourceModel, targetModel, downgrading);
         }
 
         internal virtual void ApplyMigration(DbMigration migration, DbMigration lastMigration)
         {
-            Contract.Requires(migration != null);
+            //Contract.Requires(migration != null);
 
             _this.ApplyMigration(migration, lastMigration);
         }
@@ -130,10 +130,10 @@ namespace System.Data.Entity.Migrations.Infrastructure
 
         internal virtual void RevertMigration(string migrationId, DbMigration migration, XDocument sourceModel, XDocument targetModel)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
-            Contract.Requires(migration != null);
-            Contract.Requires(sourceModel != null);
-            Contract.Requires(targetModel != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
+            //Contract.Requires(migration != null);
+            //Contract.Requires(sourceModel != null);
+            //Contract.Requires(targetModel != null);
 
             _this.RevertMigration(migrationId, migration, sourceModel, targetModel);
         }
@@ -145,15 +145,15 @@ namespace System.Data.Entity.Migrations.Infrastructure
 
         internal virtual void ExecuteStatements(IEnumerable<MigrationStatement> migrationStatements)
         {
-            Contract.Requires(migrationStatements != null);
+            //Contract.Requires(migrationStatements != null);
 
             _this.ExecuteStatements(migrationStatements);
         }
 
         internal virtual void ExecuteSql(DbTransaction transaction, MigrationStatement migrationStatement)
         {
-            Contract.Requires(transaction != null);
-            Contract.Requires(migrationStatement != null);
+            //Contract.Requires(transaction != null);
+            //Contract.Requires(migrationStatement != null);
 
             _this.ExecuteSql(transaction, migrationStatement);
         }
@@ -161,29 +161,29 @@ namespace System.Data.Entity.Migrations.Infrastructure
         internal virtual void Upgrade(
             IEnumerable<string> pendingMigrations, string targetMigrationId, string lastMigrationId)
         {
-            Contract.Requires(pendingMigrations != null);
+            //Contract.Requires(pendingMigrations != null);
 
             _this.Upgrade(pendingMigrations, targetMigrationId, lastMigrationId);
         }
 
         internal virtual void Downgrade(IEnumerable<string> pendingMigrations)
         {
-            Contract.Requires(pendingMigrations != null);
-            Contract.Requires(pendingMigrations.Count() > 1);
+            //Contract.Requires(pendingMigrations != null);
+            //Contract.Requires(pendingMigrations.Count() > 1);
 
             _this.Downgrade(pendingMigrations);
         }
 
         internal virtual void UpgradeHistory(IEnumerable<MigrationOperation> upgradeOperations)
         {
-            Contract.Requires(upgradeOperations != null);
+            //Contract.Requires(upgradeOperations != null);
 
             _this.UpgradeHistory(upgradeOperations);
         }
 
         internal virtual DbMigration GetMigration(string migrationId)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
 
             return _this.GetMigration(migrationId);
         }

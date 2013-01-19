@@ -19,7 +19,7 @@ namespace System.Data.Entity.Config
         /// <returns>The resolved dependency, or null if the resolver could not resolve it.</returns>
         public static T GetService<T>(this IDbDependencyResolver resolver, string name)
         {
-            Contract.Requires(resolver != null);
+            //Contract.Requires(resolver != null);
 
             return (T)resolver.GetService(typeof(T), name);
         }
@@ -33,7 +33,7 @@ namespace System.Data.Entity.Config
         /// <returns>The resolved dependency, or null if the resolver could not resolve it.</returns>
         public static T GetService<T>(this IDbDependencyResolver resolver)
         {
-            Contract.Requires(resolver != null);
+            //Contract.Requires(resolver != null);
 
             return (T)resolver.GetService(typeof(T), null);
         }
@@ -47,8 +47,8 @@ namespace System.Data.Entity.Config
         /// <returns>The resolved dependency, or null if the resolver could not resolve it.</returns>
         public static object GetService(this IDbDependencyResolver resolver, Type type)
         {
-            Contract.Requires(resolver != null);
-            Contract.Requires(type != null);
+            //Contract.Requires(resolver != null);
+            //Contract.Requires(type != null);
 
             return resolver.GetService(type, null);
         }

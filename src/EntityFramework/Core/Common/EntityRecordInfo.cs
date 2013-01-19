@@ -25,8 +25,8 @@ namespace System.Data.Common
         public EntityRecordInfo(EntityType metadata, IEnumerable<EdmMember> memberInfo, EntityKey entityKey, EntitySet entitySet)
             : base(TypeUsage.Create(metadata), memberInfo)
         {
-            Contract.Requires(entityKey != null);
-            Contract.Requires(entitySet != null);
+            //Contract.Requires(entityKey != null);
+            //Contract.Requires(entitySet != null);
 
             _entityKey = entityKey;
             ValidateEntityType(entitySet);
@@ -41,7 +41,7 @@ namespace System.Data.Common
         internal EntityRecordInfo(EntityType metadata, EntityKey entityKey, EntitySet entitySet)
             : base(TypeUsage.Create(metadata))
         {
-            Contract.Requires(entityKey != null);
+            //Contract.Requires(entityKey != null);
 
             _entityKey = entityKey;
 #if DEBUG

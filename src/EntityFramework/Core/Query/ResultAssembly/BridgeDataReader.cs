@@ -66,9 +66,9 @@ namespace System.Data.Query.ResultAssembly
             Shaper<RecordState> shaper, CoordinatorFactory<RecordState> coordinatorFactory, int depth,
             IEnumerator<KeyValuePair<Shaper<RecordState>, CoordinatorFactory<RecordState>>> nextResultShaperInfos)
         {
-            Contract.Requires(null != shaper);
-            Contract.Requires(null != coordinatorFactory);
-            Contract.Requires(depth == 0 || nextResultShaperInfos == null, "Nested data readers should not have multiple result sets.");
+            //Contract.Requires(null != shaper);
+            //Contract.Requires(null != coordinatorFactory);
+            //Contract.Requires(depth == 0 || nextResultShaperInfos == null, "Nested data readers should not have multiple result sets.");
 
             _nextResultShaperInfoEnumerator = nextResultShaperInfos;
             SetShaper(shaper, coordinatorFactory, depth);

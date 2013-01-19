@@ -36,8 +36,8 @@ namespace System.Data.Entity.Internal
         /// <param name = "stateEntry">The state entry.</param>
         public InternalEntityEntry(InternalContext internalContext, IEntityStateEntry stateEntry)
         {
-            Contract.Requires(internalContext != null);
-            Contract.Requires(stateEntry != null);
+            //Contract.Requires(internalContext != null);
+            //Contract.Requires(stateEntry != null);
             Contract.Assert(stateEntry.Entity != null);
 
             _internalContext = internalContext;
@@ -54,8 +54,8 @@ namespace System.Data.Entity.Internal
         /// <param name = "entity">The entity.</param>
         public InternalEntityEntry(InternalContext internalContext, object entity)
         {
-            Contract.Requires(internalContext != null);
-            Contract.Requires(entity != null);
+            //Contract.Requires(internalContext != null);
+            //Contract.Requires(entity != null);
 
             _internalContext = internalContext;
             _entity = entity;
@@ -323,7 +323,7 @@ namespace System.Data.Entity.Internal
         /// <returns>The entry.</returns>
         public virtual InternalReferenceEntry Reference(string navigationProperty, Type requestedType = null)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(navigationProperty));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(navigationProperty));
 
             return
                 (InternalReferenceEntry)
@@ -341,7 +341,7 @@ namespace System.Data.Entity.Internal
         /// <returns>The entry.</returns>
         public virtual InternalCollectionEntry Collection(string navigationProperty, Type requestedType = null)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(navigationProperty));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(navigationProperty));
 
             return
                 (InternalCollectionEntry)
@@ -359,7 +359,7 @@ namespace System.Data.Entity.Internal
         /// <returns>The entry.</returns>
         public virtual InternalMemberEntry Member(string propertyName, Type requestedType = null)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
 
             requestedType = requestedType ?? typeof(object);
 
@@ -406,7 +406,7 @@ namespace System.Data.Entity.Internal
         public virtual InternalPropertyEntry Property(
             string property, Type requestedType = null, bool requireComplex = false)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(property));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(property));
 
             return Property(null, property, requestedType ?? typeof(object), requireComplex);
         }
@@ -589,7 +589,7 @@ namespace System.Data.Entity.Internal
         /// <returns>The parts of the name.</returns>
         private static IList<string> SplitName(string propertyName)
         {
-            Contract.Requires(propertyName != null);
+            //Contract.Requires(propertyName != null);
 
             return propertyName.Split('.');
         }

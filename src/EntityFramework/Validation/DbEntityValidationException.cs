@@ -46,7 +46,7 @@ namespace System.Data.Entity.Validation
             : base(message)
         {
             // Users should be able to set the errors to null but we should not
-            Contract.Requires(entityValidationResults != null);
+            //Contract.Requires(entityValidationResults != null);
 
             _state.InititializeValidationResults(entityValidationResults);
             SubscribeToSerializeObjectState();
@@ -73,7 +73,7 @@ namespace System.Data.Entity.Validation
             : base(message, innerException)
         {
             // Users should be able to set the errors to null but we should not. 
-            Contract.Requires(entityValidationResults != null);
+            //Contract.Requires(entityValidationResults != null);
 
             _state.InititializeValidationResults(entityValidationResults);
             SubscribeToSerializeObjectState();

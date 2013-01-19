@@ -25,8 +25,8 @@ namespace System.Data.Entity.Migrations.Model
         public AddColumnOperation(string table, ColumnModel column, object anonymousArguments = null)
             : base(anonymousArguments)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(table));
-            Contract.Requires(column != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(table));
+            //Contract.Requires(column != null);
 
             _table = table;
             _column = column;

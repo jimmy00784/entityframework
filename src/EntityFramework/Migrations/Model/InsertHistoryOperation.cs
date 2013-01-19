@@ -35,7 +35,7 @@ namespace System.Data.Entity.Migrations.Model
             object anonymousArguments = null)
             : base(table, migrationId, anonymousArguments)
         {
-            Contract.Requires(model != null);
+            //Contract.Requires(model != null);
 
             _model = model;
         }

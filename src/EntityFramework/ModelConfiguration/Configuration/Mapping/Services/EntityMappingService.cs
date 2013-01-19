@@ -22,7 +22,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
 
         public EntityMappingService(DbDatabaseMapping databaseMapping)
         {
-            Contract.Requires(databaseMapping != null);
+            //Contract.Requires(databaseMapping != null);
             _databaseMapping = databaseMapping;
         }
 

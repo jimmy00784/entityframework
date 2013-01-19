@@ -24,12 +24,12 @@ namespace System.Data.Common.CommandTrees
             // Validate that the specified relationship ends are:
             // 1. Non-null
             // 2. From the same metadata workspace as that used by the command tree
-            Contract.Requires(sourceEnd != null);
-            Contract.Requires(targetEnd != null);
+            //Contract.Requires(sourceEnd != null);
+            //Contract.Requires(targetEnd != null);
 
             // Validate that the specified target entity ref is:
             // 1. Non-null
-            Contract.Requires(targetEntityRef != null);
+            //Contract.Requires(targetEntityRef != null);
 
             // Validate that the specified source and target ends are:
             // 1. Declared by the same relationship type

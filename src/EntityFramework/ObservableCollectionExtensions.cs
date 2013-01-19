@@ -16,7 +16,7 @@ namespace System.Data.Entity
         /// <returns>The binding list.</returns>
         public static BindingList<T> ToBindingList<T>(this ObservableCollection<T> source) where T : class
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             var asLocalView = source as DbLocalView<T>;
             return asLocalView != null ? asLocalView.BindingList : new ObservableBackedBindingList<T>(source);

@@ -37,8 +37,8 @@ namespace System.Data.Entity.Config
 
         public DbConfigurationManager(DbConfigurationLoader loader, DbConfigurationFinder finder)
         {
-            Contract.Requires(loader != null);
-            Contract.Requires(finder != null);
+            //Contract.Requires(loader != null);
+            //Contract.Requires(finder != null);
 
             _loader = loader;
             _finder = finder;
@@ -75,7 +75,7 @@ namespace System.Data.Entity.Config
 
         public virtual void SetConfiguration(DbConfiguration configuration)
         {
-            Contract.Requires(configuration != null);
+            //Contract.Requires(configuration != null);
 
             configuration = _loader.TryLoadFromConfig(AppConfig.DefaultInstance) ?? configuration;
             _newConfiguration = configuration;
@@ -94,8 +94,8 @@ namespace System.Data.Entity.Config
 
         public virtual void EnsureLoadedForContext(Type contextType)
         {
-            Contract.Requires(contextType != null);
-            Contract.Requires(typeof(DbContext).IsAssignableFrom(contextType));
+            //Contract.Requires(contextType != null);
+            //Contract.Requires(typeof(DbContext).IsAssignableFrom(contextType));
 
             var contextAssembly = contextType.Assembly;
 
@@ -153,9 +153,9 @@ namespace System.Data.Entity.Config
 
         public virtual void PushConfiguration(AppConfig config, Type contextType)
         {
-            Contract.Requires(config != null);
-            Contract.Requires(contextType != null);
-            Contract.Requires(typeof(DbContext).IsAssignableFrom(contextType));
+            //Contract.Requires(config != null);
+            //Contract.Requires(contextType != null);
+            //Contract.Requires(typeof(DbContext).IsAssignableFrom(contextType));
 
             var configuration = _loader.TryLoadFromConfig(config)
                                 ?? _finder.TryCreateConfiguration(contextType.Assembly.GetAccessibleTypes())
@@ -173,7 +173,7 @@ namespace System.Data.Entity.Config
 
         public virtual void PopConfiguration(AppConfig config)
         {
-            Contract.Requires(config != null);
+            //Contract.Requires(config != null);
 
             lock (_lock)
             {

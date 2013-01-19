@@ -33,8 +33,8 @@ namespace System.Data.EntityClient.Internal
 
         internal static EntityCommandDefinition CreateCommandDefinition(DbProviderFactory storeProviderFactory, DbCommandTree commandTree)
         {
-            Contract.Requires(storeProviderFactory != null);
-            Contract.Requires(commandTree != null);
+            //Contract.Requires(storeProviderFactory != null);
+            //Contract.Requires(commandTree != null);
 
             return new EntityCommandDefinition(storeProviderFactory, commandTree);
         }

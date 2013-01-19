@@ -27,8 +27,8 @@ namespace System.Data.Entity.Internal
             InternalContext internalContext, Type elementType, string sql, object[] parameters)
             : base(sql, parameters)
         {
-            Contract.Requires(internalContext != null);
-            Contract.Requires(elementType != null);
+            //Contract.Requires(internalContext != null);
+            //Contract.Requires(elementType != null);
 
             _internalContext = internalContext;
             _elementType = elementType;

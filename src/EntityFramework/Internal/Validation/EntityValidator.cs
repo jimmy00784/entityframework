@@ -33,7 +33,7 @@ namespace System.Data.Entity.Internal.Validation
         /// <returns><see cref = "DbEntityValidationResult" /> instance. Never null.</returns>
         public DbEntityValidationResult Validate(EntityValidationContext entityValidationContext)
         {
-            Contract.Requires(entityValidationContext != null);
+            //Contract.Requires(entityValidationContext != null);
             Contract.Assert(entityValidationContext.InternalEntity != null);
 
             var validationErrors = Validate(entityValidationContext, null);

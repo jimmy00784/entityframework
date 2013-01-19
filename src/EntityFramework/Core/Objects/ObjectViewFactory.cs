@@ -69,8 +69,8 @@ namespace System.Data.Objects
             TypeUsage elementEdmTypeUsage, IEnumerable<TElement> queryResults, ObjectContext objectContext, bool forceReadOnly,
             EntitySet singleEntitySet)
         {
-            Contract.Requires(queryResults != null);
-            Contract.Requires(objectContext != null);
+            //Contract.Requires(queryResults != null);
+            //Contract.Requires(objectContext != null);
 
             Type clrElementType = null;
             var ospaceElementTypeUsage = GetOSpaceTypeUsage(elementEdmTypeUsage, objectContext);

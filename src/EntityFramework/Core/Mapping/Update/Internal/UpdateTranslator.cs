@@ -46,8 +46,8 @@ namespace System.Data.Mapping.Update.Internal
         internal UpdateTranslator(IEntityStateManager stateManager, EntityAdapter adapter)
             : this()
         {
-            Contract.Requires(stateManager != null);
-            Contract.Requires(adapter != null);
+            //Contract.Requires(stateManager != null);
+            //Contract.Requires(adapter != null);
 
             _stateManager = stateManager;
             _adapter = adapter;
@@ -371,8 +371,8 @@ namespace System.Data.Mapping.Update.Internal
         // requires: role must not be null and property must be a key member for the role end
         private static int GetKeyMemberOffset(RelationshipEndMember role, EdmProperty property, out int keyMemberCount)
         {
-            Contract.Requires(null != role);
-            Contract.Requires(null != property);
+            //Contract.Requires(null != role);
+            //Contract.Requires(null != property);
 
             Contract.Assert(
                 BuiltInTypeKind.RefType == role.TypeUsage.EdmType.BuiltInTypeKind,
@@ -907,7 +907,7 @@ namespace System.Data.Mapping.Update.Internal
         /// <param name="stateEntry"></param>
         private void ValidateAndRegisterStateEntry(IEntityStateEntry stateEntry)
         {
-            Contract.Requires(stateEntry != null);
+            //Contract.Requires(stateEntry != null);
 
             var extent = stateEntry.EntitySet;
             if (null == extent)
@@ -1098,7 +1098,7 @@ namespace System.Data.Mapping.Update.Internal
         /// <returns>Change node for requested extent.</returns>
         internal ChangeNode GetExtentModifications(EntitySetBase extent)
         {
-            Contract.Requires(extent != null);
+            //Contract.Requires(extent != null);
             Debug.Assert(null != _changes, "(UpdateTranslator/GetChangeNodeForExtent) method called before translator initialized");
 
             ChangeNode changeNode;
@@ -1119,7 +1119,7 @@ namespace System.Data.Mapping.Update.Internal
         /// <returns>List storing the entries.</returns>
         internal List<ExtractedStateEntry> GetExtentFunctionModifications(EntitySetBase extent)
         {
-            Contract.Requires(extent != null);
+            //Contract.Requires(extent != null);
             Debug.Assert(null != _functionChanges, "method called before translator initialized");
 
             List<ExtractedStateEntry> entries;
@@ -1185,7 +1185,7 @@ namespace System.Data.Mapping.Update.Internal
             /// <param name="stateEntry">State entry for the entity being tracked.</param>
             internal void RegisterEntity(IEntityStateEntry stateEntry)
             {
-                Contract.Requires(stateEntry != null);
+                //Contract.Requires(stateEntry != null);
 
                 if (EntityState.Added == stateEntry.State
                     || EntityState.Deleted == stateEntry.State)
@@ -1267,9 +1267,9 @@ namespace System.Data.Mapping.Update.Internal
             /// <param name="stateEntry">State entry for the relationship being tracked</param>
             internal void RegisterAssociation(AssociationSet associationSet, IExtendedDataRecord record, IEntityStateEntry stateEntry)
             {
-                Contract.Requires(associationSet != null);
-                Contract.Requires(record != null);
-                Contract.Requires(stateEntry != null);
+                //Contract.Requires(associationSet != null);
+                //Contract.Requires(record != null);
+                //Contract.Requires(stateEntry != null);
 
                 Debug.Assert(associationSet.ElementType.Equals(record.DataRecordInfo.RecordType.EdmType));
 
@@ -1534,11 +1534,11 @@ namespace System.Data.Mapping.Update.Internal
                     EntityKey toEntityKey, AssociationEndMember fromEnd, AssociationEndMember toEnd, AssociationSet associationSet,
                     IEntityStateEntry stateEntry)
                 {
-                    Contract.Requires(toEntityKey != null);
-                    Contract.Requires(fromEnd != null);
-                    Contract.Requires(toEnd != null);
-                    Contract.Requires(associationSet != null);
-                    Contract.Requires(stateEntry != null);
+                    //Contract.Requires(toEntityKey != null);
+                    //Contract.Requires(fromEnd != null);
+                    //Contract.Requires(toEnd != null);
+                    //Contract.Requires(associationSet != null);
+                    //Contract.Requires(stateEntry != null);
 
                     ToEntityKey = toEntityKey;
                     FromEnd = fromEnd;

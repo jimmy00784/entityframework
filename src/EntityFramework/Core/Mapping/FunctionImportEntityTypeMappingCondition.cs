@@ -7,7 +7,7 @@ namespace System.Data.Mapping
     {
         protected FunctionImportEntityTypeMappingCondition(string columnName, LineInfo lineInfo)
         {
-            Contract.Requires(columnName != null);
+            //Contract.Requires(columnName != null);
 
             ColumnName = columnName;
             LineInfo = lineInfo;

@@ -23,7 +23,7 @@ namespace System.Data.Entity.Infrastructure
         /// <param name = "containerName">The model container name.</param>
         internal ModelContainerConvention(string containerName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(containerName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(containerName));
 
             _containerName = containerName;
         }

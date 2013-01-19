@@ -27,7 +27,7 @@ namespace System.Data.Entity.Infrastructure
         /// <returns>The new entry.</returns>
         internal static DbCollectionEntry Create(InternalCollectionEntry internalCollectionEntry)
         {
-            Contract.Requires(internalCollectionEntry != null);
+            //Contract.Requires(internalCollectionEntry != null);
 
             return (DbCollectionEntry)internalCollectionEntry.CreateDbMemberEntry();
         }
@@ -38,7 +38,7 @@ namespace System.Data.Entity.Infrastructure
         /// <param name = "internalCollectionEntry">The internal entry.</param>
         internal DbCollectionEntry(InternalCollectionEntry internalCollectionEntry)
         {
-            Contract.Requires(internalCollectionEntry != null);
+            //Contract.Requires(internalCollectionEntry != null);
 
             _internalCollectionEntry = internalCollectionEntry;
         }

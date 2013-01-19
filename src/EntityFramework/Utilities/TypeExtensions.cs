@@ -33,14 +33,14 @@ namespace System.Data.Entity.Utilities
 
         public static bool IsCollection(this Type type)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             return type.IsCollection(out type);
         }
 
         public static bool IsCollection(this Type type, out Type elementType)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
             Contract.Assert(!type.IsGenericTypeDefinition);
 
             elementType = type;
@@ -65,7 +65,7 @@ namespace System.Data.Entity.Utilities
 
         public static Type GetTargetType(this Type type)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             Type elementType;
             if (!type.IsCollection(out elementType))
@@ -78,7 +78,7 @@ namespace System.Data.Entity.Utilities
 
         public static bool TryUnwrapNullableType(this Type type, out Type underlyingType)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
             Contract.Assert(!type.IsGenericTypeDefinition);
 
             underlyingType = Nullable.GetUnderlyingType(type) ?? type;
@@ -96,14 +96,14 @@ namespace System.Data.Entity.Utilities
         /// </returns>
         public static bool IsNullable(this Type type)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             return !type.IsValueType || Nullable.GetUnderlyingType(type) != null;
         }
 
         public static bool IsValidStructuralType(this Type type)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             return !(type.IsGenericType
                      || type.IsValueType
@@ -116,7 +116,7 @@ namespace System.Data.Entity.Utilities
 
         public static bool IsValidStructuralPropertyType(this Type type)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             return !(type.IsGenericTypeDefinition
                      || type.IsNested
@@ -139,8 +139,8 @@ namespace System.Data.Entity.Utilities
             Func<string, string, string> typeMessageFactory,
             Func<string, Exception> exceptionFactory = null)
         {
-            Contract.Requires(type != null);
-            Contract.Requires(typeMessageFactory != null);
+            //Contract.Requires(type != null);
+            //Contract.Requires(typeMessageFactory != null);
 
             exceptionFactory = exceptionFactory ?? (s => new InvalidOperationException(s));
 
@@ -154,8 +154,8 @@ namespace System.Data.Entity.Utilities
 
         public static T CreateInstance<T>(this Type type, Func<string, Exception> exceptionFactory = null)
         {
-            Contract.Requires(type != null);
-            Contract.Requires(typeof(T).IsAssignableFrom(type));
+            //Contract.Requires(type != null);
+            //Contract.Requires(typeof(T).IsAssignableFrom(type));
 
             exceptionFactory = exceptionFactory ?? (s => new InvalidOperationException(s));
 

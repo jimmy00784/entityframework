@@ -16,8 +16,8 @@ namespace System.Data.Entity.Edm.Serialization
         /// <param name = "xmlWriter"> The XmlWriter to serialize to </param>
         public virtual bool Serialize(DbDatabaseMapping databaseMapping, XmlWriter xmlWriter)
         {
-            Contract.Requires(databaseMapping != null);
-            Contract.Requires(xmlWriter != null);
+            //Contract.Requires(databaseMapping != null);
+            //Contract.Requires(xmlWriter != null);
 
             // TODO: add the validation for MSL
 

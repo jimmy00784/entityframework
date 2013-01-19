@@ -38,7 +38,7 @@ namespace System.Data.Entity.Migrations.Model
         public DropForeignKeyOperation(AddForeignKeyOperation inverse, object anonymousArguments = null)
             : base(anonymousArguments)
         {
-            Contract.Requires(inverse != null);
+            //Contract.Requires(inverse != null);
 
             _inverse = inverse;
         }

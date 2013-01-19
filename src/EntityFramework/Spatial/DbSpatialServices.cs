@@ -1548,175 +1548,175 @@ namespace System.Data.Entity.Spatial
 
         public override int GetCoordinateSystemId(DbGeography geographyValue)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override int GetDimension(DbGeography geographyValue)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override string GetSpatialTypeName(DbGeography geographyValue)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override bool GetIsEmpty(DbGeography geographyValue)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override string AsText(DbGeography geographyValue)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override byte[] AsBinary(DbGeography geographyValue)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override string AsGml(DbGeography geographyValue)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override bool SpatialEquals(DbGeography geographyValue, DbGeography otherGeography)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override bool Disjoint(DbGeography geographyValue, DbGeography otherGeography)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override bool Intersects(DbGeography geographyValue, DbGeography otherGeography)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeography Buffer(DbGeography geographyValue, double distance)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override double Distance(DbGeography geographyValue, DbGeography otherGeography)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeography Intersection(DbGeography geographyValue, DbGeography otherGeography)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeography Union(DbGeography geographyValue, DbGeography otherGeography)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeography Difference(DbGeography geographyValue, DbGeography otherGeography)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeography SymmetricDifference(DbGeography geographyValue, DbGeography otherGeography)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override int? GetElementCount(DbGeography geographyValue)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeography ElementAt(DbGeography geographyValue, int index)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override double? GetLatitude(DbGeography geographyValue)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override double? GetLongitude(DbGeography geographyValue)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override double? GetElevation(DbGeography geographyValue)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override double? GetMeasure(DbGeography geographyValue)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override double? GetLength(DbGeography geographyValue)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeography GetStartPoint(DbGeography geographyValue)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeography GetEndPoint(DbGeography geographyValue)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override bool? GetIsClosed(DbGeography geographyValue)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override int? GetPointCount(DbGeography geographyValue)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeography PointAt(DbGeography geographyValue, int index)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
         public override double? GetArea(DbGeography geographyValue)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             throw new NotImplementedException();
         }
 
@@ -1837,277 +1837,277 @@ namespace System.Data.Entity.Spatial
 
         public override int GetCoordinateSystemId(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeometry GetBoundary(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override int GetDimension(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeometry GetEnvelope(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override string GetSpatialTypeName(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override bool GetIsEmpty(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override bool GetIsSimple(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override bool GetIsValid(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override string AsText(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override byte[] AsBinary(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override string AsGml(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override bool SpatialEquals(DbGeometry geometryValue, DbGeometry otherGeometry)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override bool Disjoint(DbGeometry geometryValue, DbGeometry otherGeometry)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override bool Intersects(DbGeometry geometryValue, DbGeometry otherGeometry)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override bool Touches(DbGeometry geometryValue, DbGeometry otherGeometry)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override bool Crosses(DbGeometry geometryValue, DbGeometry otherGeometry)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override bool Within(DbGeometry geometryValue, DbGeometry otherGeometry)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override bool Contains(DbGeometry geometryValue, DbGeometry otherGeometry)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override bool Overlaps(DbGeometry geometryValue, DbGeometry otherGeometry)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override bool Relate(DbGeometry geometryValue, DbGeometry otherGeometry, string matrix)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeometry Buffer(DbGeometry geometryValue, double distance)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override double Distance(DbGeometry geometryValue, DbGeometry otherGeometry)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeometry GetConvexHull(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeometry Intersection(DbGeometry geometryValue, DbGeometry otherGeometry)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeometry Union(DbGeometry geometryValue, DbGeometry otherGeometry)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeometry Difference(DbGeometry geometryValue, DbGeometry otherGeometry)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeometry SymmetricDifference(DbGeometry geometryValue, DbGeometry otherGeometry)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override int? GetElementCount(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeometry ElementAt(DbGeometry geometryValue, int index)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override double? GetXCoordinate(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override double? GetYCoordinate(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override double? GetElevation(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override double? GetMeasure(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override double? GetLength(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeometry GetStartPoint(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeometry GetEndPoint(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override bool? GetIsClosed(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override bool? GetIsRing(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override int? GetPointCount(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeometry PointAt(DbGeometry geometryValue, int index)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override double? GetArea(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeometry GetCentroid(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeometry GetPointOnSurface(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeometry GetExteriorRing(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override int? GetInteriorRingCount(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
 
         public override DbGeometry InteriorRingAt(DbGeometry geometryValue, int index)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
             throw new NotImplementedException();
         }
     }

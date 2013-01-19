@@ -264,7 +264,7 @@ namespace System.Data.Common.Internal.Materialization
         internal static Expression Emit_NullConstant(Type type)
         {
             Expression nullConstant;
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             // check if null can be assigned to the type
             if (type.IsClass
@@ -454,8 +454,8 @@ namespace System.Data.Common.Internal.Materialization
         /// </summary>
         internal static Expression Emit_Equal(Expression left, Expression right)
         {
-            Contract.Requires(left != null);
-            Contract.Requires(right != null);
+            //Contract.Requires(left != null);
+            //Contract.Requires(right != null);
             Contract.Assert(left.Type == right.Type);
 
             Expression result;
@@ -477,7 +477,7 @@ namespace System.Data.Common.Internal.Materialization
         /// </summary>
         internal static Expression Emit_EntityKey_HasValue(SimpleColumnMap[] keyColumns)
         {
-            Contract.Requires(0 < keyColumns.Length);
+            //Contract.Requires(0 < keyColumns.Length);
 
             // !shaper.Reader.IsDBNull(keyColumn[0].ordinal)
             var result = Emit_Reader_IsDBNull(keyColumns[0]);
@@ -527,7 +527,7 @@ namespace System.Data.Common.Internal.Materialization
 
         internal static MethodInfo GetReaderMethod(Type type, out bool isNullable)
         {
-            Contract.Requires(null != type);
+            //Contract.Requires(null != type);
 
             MethodInfo result;
             isNullable = false;

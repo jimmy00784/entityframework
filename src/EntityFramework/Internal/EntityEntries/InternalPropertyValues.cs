@@ -35,8 +35,8 @@ namespace System.Data.Entity.Internal
         /// <param name = "isEntityValues">If set to <c>true</c> this is a dictionary for an entity, otherwise it is a dictionary for a complex object.</param>
         protected InternalPropertyValues(InternalContext internalContext, Type type, bool isEntityValues)
         {
-            Contract.Requires(internalContext != null);
-            Contract.Requires(type != null);
+            //Contract.Requires(internalContext != null);
+            //Contract.Requires(type != null);
 
             _internalContext = internalContext;
             _type = type;
@@ -129,7 +129,7 @@ namespace System.Data.Entity.Internal
         /// <param name = "value">The object to read values from.</param>
         public void SetValues(object value)
         {
-            Contract.Requires(value != null);
+            //Contract.Requires(value != null);
 
             var getters = DbHelpers.GetPropertyGetters(value.GetType());
 
@@ -185,7 +185,7 @@ namespace System.Data.Entity.Internal
         /// <param name = "values">The dictionary to read values from.</param>
         public void SetValues(InternalPropertyValues values)
         {
-            Contract.Requires(values != null);
+            //Contract.Requires(values != null);
 
             // Setting values from a derived type is allowed, but setting values from a base type is not.
             if (!_type.IsAssignableFrom(values.ObjectType))
@@ -221,13 +221,13 @@ namespace System.Data.Entity.Internal
         {
             get
             {
-                Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
+                //Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
 
                 return GetItem(propertyName).Value;
             }
             set
             {
-                Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
+                //Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
 
                 var asPropertyValues = value as DbPropertyValues;
                 if (asPropertyValues != null)

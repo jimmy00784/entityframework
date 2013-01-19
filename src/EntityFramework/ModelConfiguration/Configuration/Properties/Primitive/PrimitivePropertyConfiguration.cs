@@ -30,7 +30,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Properties.Primiti
 
         public PrimitivePropertyConfiguration(PrimitivePropertyConfiguration source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             IsNullable = source.IsNullable;
             ConcurrencyMode = source.ConcurrencyMode;
@@ -59,7 +59,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Properties.Primiti
 
         internal virtual void Configure(EdmProperty property)
         {
-            Contract.Requires(property != null);
+            //Contract.Requires(property != null);
             Contract.Assert(property.PropertyType != null);
             Contract.Assert(property.PropertyType.PrimitiveTypeFacets != null);
 
@@ -126,8 +126,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Properties.Primiti
             DbProviderManifest providerManifest,
             bool allowOverride = false)
         {
-            Contract.Requires(propertyMappings != null);
-            Contract.Requires(providerManifest != null);
+            //Contract.Requires(propertyMappings != null);
+            //Contract.Requires(providerManifest != null);
 
             propertyMappings.Each(pm => Configure(pm.Item1.Column, pm.Item2, providerManifest, allowOverride));
         }
@@ -136,9 +136,9 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Properties.Primiti
             DbTableColumnMetadata column, DbTableMetadata table, DbProviderManifest providerManifest,
             bool allowOverride = false)
         {
-            Contract.Requires(column != null);
-            Contract.Requires(table != null);
-            Contract.Requires(providerManifest != null);
+            //Contract.Requires(column != null);
+            //Contract.Requires(table != null);
+            //Contract.Requires(providerManifest != null);
 
             var existingConfiguration = column.GetConfiguration() as PrimitivePropertyConfiguration;
 
@@ -221,8 +221,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Properties.Primiti
 
         internal virtual void Configure(DbPrimitiveTypeFacets facets, FacetDescription facetDescription)
         {
-            Contract.Requires(facets != null);
-            Contract.Requires(facetDescription != null);
+            //Contract.Requires(facets != null);
+            //Contract.Requires(facetDescription != null);
         }
 
         internal virtual void CopyFrom(PrimitivePropertyConfiguration other)
@@ -299,8 +299,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Properties.Primiti
             where T : struct
             where C : PrimitivePropertyConfiguration
         {
-            Contract.Requires(propertyExpression != null);
-            Contract.Requires(other != null);
+            //Contract.Requires(propertyExpression != null);
+            //Contract.Requires(other != null);
 
             var propertyInfo = propertyExpression.GetSimplePropertyAccess().Single();
             var thisValue = (T?)propertyInfo.GetValue(this, null);
@@ -320,8 +320,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Properties.Primiti
         protected bool IsCompatible<C>(Expression<Func<C, string>> propertyExpression, C other, ref string errorMessage)
             where C : PrimitivePropertyConfiguration
         {
-            Contract.Requires(propertyExpression != null);
-            Contract.Requires(other != null);
+            //Contract.Requires(propertyExpression != null);
+            //Contract.Requires(other != null);
 
             var propertyInfo = propertyExpression.GetSimplePropertyAccess().Single();
             var thisValue = (string)propertyInfo.GetValue(this, null);

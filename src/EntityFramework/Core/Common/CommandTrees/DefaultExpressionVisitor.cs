@@ -181,7 +181,7 @@ namespace System.Data.Common.CommandTrees
 
         protected virtual DbLambda VisitLambda(DbLambda lambda)
         {
-            Contract.Requires(lambda != null);
+            //Contract.Requires(lambda != null);
 
             var result = lambda;
             var newFormals = VisitList(

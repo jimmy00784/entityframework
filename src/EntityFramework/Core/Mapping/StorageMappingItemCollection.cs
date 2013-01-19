@@ -648,9 +648,9 @@ namespace System.Data.Mapping
             params string[] filePaths)
             : base(DataSpace.CSSpace)
         {
-            Contract.Requires(edmCollection != null);
-            Contract.Requires(storeCollection != null);
-            Contract.Requires(filePaths != null);
+            //Contract.Requires(edmCollection != null);
+            //Contract.Requires(storeCollection != null);
+            //Contract.Requires(filePaths != null);
 
             m_edmCollection = edmCollection;
             m_storeItemCollection = storeCollection;
@@ -692,7 +692,7 @@ namespace System.Data.Mapping
             IEnumerable<XmlReader> xmlReaders)
             : base(DataSpace.CSSpace)
         {
-            Contract.Requires(xmlReaders != null);
+            //Contract.Requires(xmlReaders != null);
 
             var composite = MetadataArtifactLoader.CreateCompositeFromXmlReaders(xmlReaders);
 
@@ -727,7 +727,7 @@ namespace System.Data.Mapping
             // we will check the parameters for this internal ctor becuase
             // it is pretty much publicly exposed through the MetadataItemCollectionFactory
             // in System.Data.Entity.Design
-            Contract.Requires(xmlReaders != null);
+            //Contract.Requires(xmlReaders != null);
             EntityUtil.CheckArgumentContainsNull(ref xmlReaders, "xmlReaders");
             // filePaths is allowed to be null
 
@@ -769,9 +769,9 @@ namespace System.Data.Mapping
             List<string> filePaths,
             bool throwOnError)
         {
-            Contract.Requires(xmlReaders != null);
-            Contract.Requires(edmCollection != null);
-            Contract.Requires(storeCollection != null);
+            //Contract.Requires(xmlReaders != null);
+            //Contract.Requires(edmCollection != null);
+            //Contract.Requires(storeCollection != null);
 
             m_edmCollection = edmCollection;
             m_storeItemCollection = storeCollection;

@@ -46,7 +46,7 @@ namespace System.Data.Entity.Internal
     {
         MetadataWorkspace ICachedMetadataWorkspace.GetMetadataWorkspace(DbConnection storeConnection)
         {
-            Contract.Requires(storeConnection != null);
+            //Contract.Requires(storeConnection != null);
 
             throw new NotImplementedException();
         }

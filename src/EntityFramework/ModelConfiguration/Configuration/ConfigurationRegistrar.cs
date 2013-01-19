@@ -25,7 +25,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         internal ConfigurationRegistrar(ModelConfiguration modelConfiguration)
         {
-            Contract.Requires(modelConfiguration != null);
+            //Contract.Requires(modelConfiguration != null);
 
             _modelConfiguration = modelConfiguration;
         }
@@ -41,7 +41,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
             EntityTypeConfiguration<TEntityType> entityTypeConfiguration)
             where TEntityType : class
         {
-            Contract.Requires(entityTypeConfiguration != null);
+            //Contract.Requires(entityTypeConfiguration != null);
             Contract.Assert(entityTypeConfiguration.Configuration != null);
 
             _modelConfiguration.Add((EntityTypeConfiguration)entityTypeConfiguration.Configuration);
@@ -60,7 +60,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
             ComplexTypeConfiguration<TComplexType> complexTypeConfiguration)
             where TComplexType : class
         {
-            Contract.Requires(complexTypeConfiguration != null);
+            //Contract.Requires(complexTypeConfiguration != null);
             Contract.Assert(complexTypeConfiguration.Configuration != null);
 
             _modelConfiguration.Add((ComplexTypeConfiguration)complexTypeConfiguration.Configuration);

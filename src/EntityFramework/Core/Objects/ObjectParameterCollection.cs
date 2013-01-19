@@ -32,7 +32,7 @@ namespace System.Data.Objects
         /// </summary>
         internal ObjectParameterCollection(ClrPerspective perspective)
         {
-            Contract.Requires(perspective != null);
+            //Contract.Requires(perspective != null);
 
             // The perspective is required to do type-checking on parameters as they
             // are added to the collection.
@@ -260,7 +260,7 @@ namespace System.Data.Objects
         /// </exception>
         public bool Contains(string name)
         {
-            Contract.Requires(name != null);
+            //Contract.Requires(name != null);
 
             if (IndexOf(name)
                 != -1)

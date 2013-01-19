@@ -23,7 +23,7 @@ namespace System.Data.Entity.Internal
 
         public DatabaseCreator(Lazy<IDbDependencyResolver> resolver)
         {
-            Contract.Requires(resolver != null);
+            //Contract.Requires(resolver != null);
 
             _resolver = resolver;
         }
@@ -41,8 +41,8 @@ namespace System.Data.Entity.Internal
             Func<DbMigrationsConfiguration, DbContext, MigratorBase> createMigrator,
             ObjectContext objectContext)
         {
-            Contract.Requires(internalContext != null);
-            Contract.Requires(createMigrator != null);
+            //Contract.Requires(internalContext != null);
+            //Contract.Requires(createMigrator != null);
             // objectContext may be null when testing.
 
             var sqlGenerator = _resolver.Value.GetService<MigrationSqlGenerator>(internalContext.ProviderName);

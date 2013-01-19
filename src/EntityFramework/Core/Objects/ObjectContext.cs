@@ -582,7 +582,7 @@ namespace System.Data.Objects
         /// <param name="entity">Object to be added.</param>
         public virtual void AddObject(string entitySetName, object entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
 
             Debug.Assert(!(entity is IEntityWrapper), "Object is an IEntityWrapper instance instead of the raw entity.");
             ObjectStateManager.AssertAllForeignKeyIndexEntriesAreValid();
@@ -674,9 +674,9 @@ namespace System.Data.Objects
         /// <param name="argumentName">Name of the argument passed to a public method, for use in exceptions.</param>
         internal void AddSingleObject(EntitySet entitySet, IEntityWrapper wrappedEntity, string argumentName)
         {
-            Contract.Requires(entitySet != null);
-            Contract.Requires(wrappedEntity != null);
-            Contract.Requires(wrappedEntity.Entity != null);
+            //Contract.Requires(entitySet != null);
+            //Contract.Requires(wrappedEntity != null);
+            //Contract.Requires(wrappedEntity.Entity != null);
 
             var key = wrappedEntity.GetEntityKeyFromEntity();
             if (null != (object)key)
@@ -823,7 +823,7 @@ namespace System.Data.Objects
         // RelationshipManager while loading the RelatedEnd.
         internal static string ParsePropertySelectorExpression<TEntity>(Expression<Func<TEntity, object>> selector, out bool removedConvert)
         {
-            Contract.Requires(selector != null);
+            //Contract.Requires(selector != null);
 
             // We used to throw an ArgumentException if the expression contained a Convert.  Now we remove the convert,
             // but if we still need to throw, then we should still throw an ArgumentException to avoid a breaking change.
@@ -861,7 +861,7 @@ namespace System.Data.Objects
         [Obsolete("Use ApplyCurrentValues instead")]
         public virtual void ApplyPropertyChanges(string entitySetName, object changed)
         {
-            Contract.Requires(changed != null);
+            //Contract.Requires(changed != null);
             EntityUtil.CheckStringArgument(entitySetName, "entitySetName");
 
             ApplyCurrentValues(entitySetName, changed);
@@ -874,7 +874,7 @@ namespace System.Data.Objects
         /// <param name="currentEntity">object with modified properties</param>
         public virtual TEntity ApplyCurrentValues<TEntity>(string entitySetName, TEntity currentEntity) where TEntity : class
         {
-            Contract.Requires(currentEntity != null);
+            //Contract.Requires(currentEntity != null);
             EntityUtil.CheckStringArgument(entitySetName, "entitySetName");
 
             var wrappedEntity = EntityWrapperFactory.WrapEntityUsingContext(currentEntity, this);
@@ -920,7 +920,7 @@ namespace System.Data.Objects
         /// <returns>Updated entity.</returns>
         public virtual TEntity ApplyOriginalValues<TEntity>(string entitySetName, TEntity originalEntity) where TEntity : class
         {
-            Contract.Requires(originalEntity != null);
+            //Contract.Requires(originalEntity != null);
 
             EntityUtil.CheckStringArgument(entitySetName, "entitySetName");
             var wrappedOriginalEntity = EntityWrapperFactory.WrapEntityUsingContext(originalEntity, this);
@@ -987,7 +987,7 @@ namespace System.Data.Objects
         /// <param name="entity">The entity to be attached.</param>
         public virtual void AttachTo(string entitySetName, object entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
 
             Contract.Assert(!(entity is IEntityWrapper), "Object is an IEntityWrapper instance instead of the raw entity.");
             ObjectStateManager.AssertAllForeignKeyIndexEntriesAreValid();
@@ -1077,7 +1077,7 @@ namespace System.Data.Objects
         /// <param name="entity">The entity to be attached.</param>
         public virtual void Attach(IEntityWithKey entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
 
             if (null == (object)entity.EntityKey)
             {
@@ -1094,9 +1094,9 @@ namespace System.Data.Objects
         /// <param name="entitySet">"Computed" entity set.</param>
         internal void AttachSingleObject(IEntityWrapper wrappedEntity, EntitySet entitySet)
         {
-            Contract.Requires(wrappedEntity != null);
-            Contract.Requires(wrappedEntity.Entity != null);
-            Contract.Requires(entitySet != null);
+            //Contract.Requires(wrappedEntity != null);
+            //Contract.Requires(wrappedEntity.Entity != null);
+            //Contract.Requires(entitySet != null);
 
             // Try to detect if the entity is invalid as soon as possible
             // (before adding the entity to the ObjectStateManager)
@@ -1217,7 +1217,7 @@ namespace System.Data.Objects
         /// <returns>New instance of <see cref="EntityKey"/> for the provided <paramref name="entity"/>.</returns>
         public virtual EntityKey CreateEntityKey(string entitySetName, object entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
             Debug.Assert(!(entity is IEntityWrapper), "Object is an IEntityWrapper instance instead of the raw entity.");
             EntityUtil.CheckStringArgument(entitySetName, "entitySetName");
 
@@ -1788,8 +1788,8 @@ namespace System.Data.Objects
         /// <returns>an ObjectQuery instance, ready to be executed</returns>
         public virtual ObjectQuery<T> CreateQuery<T>(string queryString, params ObjectParameter[] parameters)
         {
-            Contract.Requires(queryString != null);
-            Contract.Requires(parameters != null);
+            //Contract.Requires(queryString != null);
+            //Contract.Requires(parameters != null);
 
             // SQLBUDT 447285: Ensure the assembly containing the entity's CLR type is loaded into the workspace.
             // If the schema types are not loaded: metadata, cache & query would be unable to reason about the type.
@@ -1872,7 +1872,7 @@ namespace System.Data.Objects
         /// </param>
         internal void DeleteObject(object entity, EntitySet expectedEntitySet)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
             Debug.Assert(!(entity is IEntityWrapper), "Object is an IEntityWrapper instance instead of the raw entity.");
 
             var cacheEntry = ObjectStateManager.FindEntityEntry(entity);
@@ -1925,7 +1925,7 @@ namespace System.Data.Objects
         /// </param>        
         internal void Detach(object entity, EntitySet expectedEntitySet)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
             Debug.Assert(!(entity is IEntityWrapper), "Object is an IEntityWrapper instance instead of the raw entity.");
 
             var cacheEntry = ObjectStateManager.FindEntityEntry(entity);
@@ -2010,7 +2010,7 @@ namespace System.Data.Objects
         /// <exception cref="InvalidOperationException">The entity container could not be found for the given name.</exception>
         internal EntitySet GetEntitySet(string entitySetName, string entityContainerName)
         {
-            Contract.Requires(entitySetName != null);
+            //Contract.Requires(entitySetName != null);
 
             EntityContainer container = null;
 
@@ -2121,7 +2121,7 @@ namespace System.Data.Objects
         /// <returns>Entity object.</returns>
         public virtual object GetObjectByKey(EntityKey key)
         {
-            Contract.Requires(key != null);
+            //Contract.Requires(key != null);
 
             var entitySet = key.GetEntitySet(MetadataWorkspace);
             Debug.Assert(entitySet != null, "Key's EntitySet should not be null in the MetadataWorkspace");
@@ -2154,7 +2154,7 @@ namespace System.Data.Objects
         /// <exception cref="ArgumentException">collection contains null or non entities or entities not attached to this context</exception>
         public virtual void Refresh(RefreshMode refreshMode, IEnumerable collection)
         {
-            Contract.Requires(collection != null);
+            //Contract.Requires(collection != null);
 
             ObjectStateManager.AssertAllForeignKeyIndexEntriesAreValid();
             try
@@ -2179,7 +2179,7 @@ namespace System.Data.Objects
         /// <exception cref="ArgumentException">entity is not attached to this context</exception>
         public virtual void Refresh(RefreshMode refreshMode, object entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
             Contract.Assert(!(entity is IEntityWrapper), "Object is an IEntityWrapper instance instead of the raw entity.");
 
             ObjectStateManager.AssertAllForeignKeyIndexEntriesAreValid();
@@ -2922,7 +2922,7 @@ namespace System.Data.Objects
         /// does not exist, refers to a function with return type incompatible with T)</exception>
         public ObjectResult<TElement> ExecuteFunction<TElement>(string functionName, params ObjectParameter[] parameters)
         {
-            Contract.Requires(parameters != null);
+            //Contract.Requires(parameters != null);
 
             return ExecuteFunction<TElement>(functionName, MergeOption.AppendOnly, parameters);
         }
@@ -2941,7 +2941,7 @@ namespace System.Data.Objects
         public virtual ObjectResult<TElement> ExecuteFunction<TElement>(
             string functionName, MergeOption mergeOption, params ObjectParameter[] parameters)
         {
-            Contract.Requires(parameters != null);
+            //Contract.Requires(parameters != null);
             EntityUtil.CheckStringArgument(functionName, "function");
 
             EdmFunction functionImport;
@@ -2972,7 +2972,7 @@ namespace System.Data.Objects
         /// does not exist, refers to a function with return type incompatible with T)</exception>
         public virtual int ExecuteFunction(string functionName, params ObjectParameter[] parameters)
         {
-            Contract.Requires(parameters != null);
+            //Contract.Requires(parameters != null);
             EntityUtil.CheckStringArgument(functionName, "function");
 
             EdmFunction functionImport;
@@ -3317,7 +3317,7 @@ namespace System.Data.Objects
         /// </exception
         public static Type GetObjectType(Type type)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             return EntityProxyFactory.IsProxyType(type) ? type.BaseType : type;
         }
@@ -3695,7 +3695,7 @@ namespace System.Data.Objects
         private ObjectResult<TElement> InternalTranslate<TElement>(
             DbDataReader reader, string entitySetName, MergeOption mergeOption, bool readerOwned)
         {
-            Contract.Requires(reader != null);
+            //Contract.Requires(reader != null);
             EntityUtil.CheckArgumentMergeOption(mergeOption);
             EntitySet entitySet = null;
             if (!string.IsNullOrEmpty(entitySetName))

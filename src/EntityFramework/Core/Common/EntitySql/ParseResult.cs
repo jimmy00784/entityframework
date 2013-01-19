@@ -16,8 +16,8 @@ namespace System.Data.Common.EntitySql
 
         internal ParseResult(DbCommandTree commandTree, List<FunctionDefinition> functionDefs)
         {
-            Contract.Requires(commandTree != null);
-            Contract.Requires(functionDefs != null);
+            //Contract.Requires(commandTree != null);
+            //Contract.Requires(functionDefs != null);
 
             _commandTree = commandTree;
             _functionDefs = functionDefs.AsReadOnly();

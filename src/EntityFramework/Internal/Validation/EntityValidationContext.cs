@@ -25,8 +25,8 @@ namespace System.Data.Entity.Internal.Validation
         /// </param>
         public EntityValidationContext(InternalEntityEntry entityEntry, ValidationContext externalValidationContext)
         {
-            Contract.Requires(entityEntry != null);
-            Contract.Requires(externalValidationContext != null);
+            //Contract.Requires(entityEntry != null);
+            //Contract.Requires(externalValidationContext != null);
 
             _entityEntry = entityEntry;
             ExternalValidationContext = externalValidationContext;

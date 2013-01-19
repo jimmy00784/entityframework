@@ -32,7 +32,7 @@ namespace System.Data.Common.CommandTrees
             : base(metadata, dataSpace)
         {
             // Ensure the query expression is non-null
-            Contract.Requires(query != null);
+            //Contract.Requires(query != null);
 
             if (validate)
             {

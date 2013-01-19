@@ -69,11 +69,11 @@ namespace System.Data.Objects
             StateManagerTypeMetadata typeMetadata, EntityState state)
             : base(cache, entitySet, state)
         {
-            Contract.Requires(wrappedEntity != null);
-            Contract.Requires(wrappedEntity.Entity != null);
-            Contract.Requires(typeMetadata != null);
-            Contract.Requires(entitySet != null);
-            Contract.Requires((entityKey == null) || (entityKey.EntitySetName == entitySet.Name), "different entitySet");
+            //Contract.Requires(wrappedEntity != null);
+            //Contract.Requires(wrappedEntity.Entity != null);
+            //Contract.Requires(typeMetadata != null);
+            //Contract.Requires(entitySet != null);
+            //Contract.Requires((entityKey == null) || (entityKey.EntitySetName == entitySet.Name), "different entitySet");
 
             _wrappedEntity = wrappedEntity;
             _cacheTypeMetadata = typeMetadata;
@@ -109,10 +109,10 @@ namespace System.Data.Objects
         internal EntityEntry(EntityKey entityKey, EntitySet entitySet, ObjectStateManager cache, StateManagerTypeMetadata typeMetadata)
             : base(cache, entitySet, EntityState.Unchanged)
         {
-            Contract.Requires(entityKey != null);
-            Contract.Requires(entitySet != null);
-            Contract.Requires(typeMetadata != null);
-            Contract.Requires(entityKey.EntitySetName == entitySet.Name, "different entitySet");
+            //Contract.Requires(entityKey != null);
+            //Contract.Requires(entitySet != null);
+            //Contract.Requires(typeMetadata != null);
+            //Contract.Requires(entityKey.EntitySetName == entitySet.Name, "different entitySet");
 
             _wrappedEntity = NullEntityWrapper.NullWrapper;
             _entityKey = entityKey;
@@ -244,7 +244,7 @@ namespace System.Data.Objects
 
         private int ValidateAndGetOrdinalForProperty(string propertyName, string methodName)
         {
-            Contract.Requires(propertyName != null);
+            //Contract.Requires(propertyName != null);
 
             // Throw for detached entities
             ValidateState();
@@ -627,8 +627,8 @@ namespace System.Data.Objects
         /// </summary>
         internal void AddRelationshipEnd(RelationshipEntry item)
         {
-            Contract.Requires(null != item);
-            Contract.Requires(null != item.RelationshipWrapper);
+            //Contract.Requires(null != item);
+            //Contract.Requires(null != item.RelationshipWrapper);
             Contract.Assert(0 <= _countRelationshipEnds, "negative _relationshipEndCount");
             Contract.Assert(
                 EntityKey.Equals(item.RelationshipWrapper.Key0) || EntityKey.Equals(item.RelationshipWrapper.Key1),
@@ -677,8 +677,8 @@ namespace System.Data.Objects
         /// <param name="item"></param>
         internal void RemoveRelationshipEnd(RelationshipEntry item)
         {
-            Contract.Requires(null != item);
-            Contract.Requires(null != item.RelationshipWrapper);
+            //Contract.Requires(null != item);
+            //Contract.Requires(null != item.RelationshipWrapper);
             Contract.Assert(1 <= _countRelationshipEnds, "negative _relationshipEndCount");
             Contract.Assert(
                 EntityKey.Equals(item.RelationshipWrapper.Key0) || EntityKey.Equals(item.RelationshipWrapper.Key1),
@@ -744,7 +744,7 @@ namespace System.Data.Objects
         /// <param name="promotedEntry">if promoting entity stub to full entity</param>
         internal void UpdateRelationshipEnds(EntityKey oldKey, EntityEntry promotedEntry)
         {
-            Contract.Requires(null != oldKey);
+            //Contract.Requires(null != oldKey);
             Contract.Assert(!ReferenceEquals(this, promotedEntry), "shouldn't be same reference");
 
             // traverse the list to update one of the ends in the relationship entry
@@ -1497,7 +1497,7 @@ namespace System.Data.Objects
         private void ExpandComplexTypeAndAddValues(
             StateManagerMemberMetadata memberMetadata, object oldComplexObject, object newComplexObject, bool useOldComplexObject)
         {
-            Contract.Requires(memberMetadata.IsComplex, "Cannot expand non-complex objects");
+            //Contract.Requires(memberMetadata.IsComplex, "Cannot expand non-complex objects");
             if (newComplexObject == null)
             {
                 throw new InvalidOperationException(Strings.ComplexObject_NullableComplexTypesNotSupported(memberMetadata.CLayerName));
@@ -1594,7 +1594,7 @@ namespace System.Data.Objects
             string entityMemberName, object complexObject, string complexObjectMemberName,
             out StateManagerTypeMetadata typeMetadata, out string changingMemberName, out object changingObject)
         {
-            Contract.Requires(entityMemberName != null);
+            //Contract.Requires(entityMemberName != null);
 
             typeMetadata = null;
             changingMemberName = null;
@@ -1825,8 +1825,8 @@ namespace System.Data.Objects
 
         private void AddComplexObjectSnapshot(object userObject, int ordinal, object complexObject)
         {
-            Contract.Requires(userObject != null);
-            Contract.Requires(ordinal >= 0);
+            //Contract.Requires(userObject != null);
+            //Contract.Requires(ordinal >= 0);
 
             if (complexObject == null)
             {
@@ -2008,7 +2008,7 @@ namespace System.Data.Objects
             ref bool changeDetected,
             bool detectOnly)
         {
-            Contract.Requires(complexMember.IsComplex, "Cannot expand non-complex objects");
+            //Contract.Requires(complexMember.IsComplex, "Cannot expand non-complex objects");
 
             if (complexValue == null)
             {
@@ -2690,7 +2690,7 @@ namespace System.Data.Objects
         // Key entry from the other side of the relationship is removed if is not related to other entries.
         private void DetachRelationshipsEntries(RelationshipManager relationshipManager)
         {
-            Contract.Requires(relationshipManager != null);
+            //Contract.Requires(relationshipManager != null);
             Contract.Assert(!IsKeyEntry, "Should only be detaching relationships with key entries if the source is not a key entry");
 
             foreach (var relationshipEntry in _cache.CopyOfRelationshipsByKey(EntityKey))
@@ -2883,9 +2883,9 @@ namespace System.Data.Objects
         internal static void AddOrIncreaseCounter(
             Dictionary<string, KeyValuePair<object, IntBox>> properties, string propertyName, object propertyValue)
         {
-            Contract.Requires(properties != null);
-            Contract.Requires(propertyName != null);
-            Contract.Requires(propertyValue != null);
+            //Contract.Requires(properties != null);
+            //Contract.Requires(propertyName != null);
+            //Contract.Requires(propertyValue != null);
 
             if (properties.ContainsKey(propertyName))
             {
@@ -2965,9 +2965,9 @@ namespace System.Data.Objects
 
         internal void PromoteKeyEntry(IEntityWrapper wrappedEntity, StateManagerTypeMetadata typeMetadata)
         {
-            Contract.Requires(wrappedEntity != null, "entity wrapper cannot be null.");
-            Contract.Requires(wrappedEntity.Entity != null, "entity cannot be null.");
-            Contract.Requires(typeMetadata != null, "typeMetadata cannot be null.");
+            //Contract.Requires(wrappedEntity != null, "entity wrapper cannot be null.");
+            //Contract.Requires(wrappedEntity.Entity != null, "entity cannot be null.");
+            //Contract.Requires(typeMetadata != null, "typeMetadata cannot be null.");
             Contract.Assert(IsKeyEntry, "ObjectStateEntry should be a key.");
 
             _wrappedEntity = wrappedEntity;
@@ -3035,7 +3035,7 @@ namespace System.Data.Objects
         // Get values of key properties which doesn't already exist in passed in 'properties'
         internal void GetOtherKeyProperties(Dictionary<string, KeyValuePair<object, IntBox>> properties)
         {
-            Contract.Requires(properties != null);
+            //Contract.Requires(properties != null);
             Contract.Assert(_cacheTypeMetadata != null);
             Contract.Assert(_cacheTypeMetadata.DataRecordInfo != null);
             Contract.Assert(_cacheTypeMetadata.DataRecordInfo.RecordType != null);
@@ -3063,7 +3063,7 @@ namespace System.Data.Objects
 
         internal void CompareKeyProperties(object changed)
         {
-            Contract.Requires(changed != null);
+            //Contract.Requires(changed != null);
             Contract.Assert(!IsKeyEntry);
 
             var metadata = _cacheTypeMetadata;
@@ -3103,7 +3103,7 @@ namespace System.Data.Objects
         /// <exception cref="InvalidOperationException">the property is not editable</exception>
         internal void VerifyEntityValueIsEditable(StateManagerTypeMetadata typeMetadata, int ordinal, string memberName)
         {
-            Contract.Requires(typeMetadata != null, "Cannot verify entity or complex object is editable if typeMetadata is null.");
+            //Contract.Requires(typeMetadata != null, "Cannot verify entity or complex object is editable if typeMetadata is null.");
 
             if (State == EntityState.Deleted)
             {
@@ -3400,12 +3400,12 @@ namespace System.Data.Objects
 
         private void UpdateRecord(object value, DbUpdatableDataRecord current, UpdateRecordBehavior behavior, int propertyIndex)
         {
-            Contract.Requires(null != value, "null value");
-            Contract.Requires(null != current, "null CurrentValueRecord");
-            Contract.Requires(!(value is IEntityWrapper));
-            Contract.Requires(
-                propertyIndex == s_EntityRoot ||
-                propertyIndex >= 0, "Unexpected index. Use -1 if the passed value is an entity, not a complex type object");
+            //Contract.Requires(null != value, "null value");
+            //Contract.Requires(null != current, "null CurrentValueRecord");
+            //Contract.Requires(!(value is IEntityWrapper));
+            //Contract.Requires(
+            //    propertyIndex == s_EntityRoot ||
+            //    propertyIndex >= 0, "Unexpected index. Use -1 if the passed value is an entity, not a complex type object");
 
             // get Metadata for type
             var typeMetadata = current._metadata;
@@ -3472,7 +3472,7 @@ namespace System.Data.Objects
 
         internal void ApplyCurrentValuesInternal(IEntityWrapper wrappedCurrentEntity)
         {
-            Contract.Requires(wrappedCurrentEntity != null);
+            //Contract.Requires(wrappedCurrentEntity != null);
             Contract.Assert(!IsKeyEntry, "Cannot apply values to a key KeyEntry.");
 
             if (State != EntityState.Modified
@@ -3496,13 +3496,13 @@ namespace System.Data.Objects
 
         internal void UpdateCurrentValueRecord(object value)
         {
-            Contract.Requires(!(value is IEntityWrapper));
+            //Contract.Requires(!(value is IEntityWrapper));
             _wrappedEntity.UpdateCurrentValueRecord(value, this);
         }
 
         internal void ApplyOriginalValuesInternal(IEntityWrapper wrappedOriginalEntity)
         {
-            Contract.Requires(wrappedOriginalEntity != null);
+            //Contract.Requires(wrappedOriginalEntity != null);
             Contract.Assert(!IsKeyEntry, "Cannot apply values to a key KeyEntry.");
 
             if (State != EntityState.Modified
@@ -3659,7 +3659,7 @@ namespace System.Data.Objects
         internal void FixupEntityReferenceToPrincipal(
             EntityReference relatedEnd, EntityKey foreignKey, bool setIsLoaded, bool replaceExistingRef)
         {
-            Contract.Requires(relatedEnd != null, "Found null RelatedEnd or EntityCollection to principal");
+            //Contract.Requires(relatedEnd != null, "Found null RelatedEnd or EntityCollection to principal");
             if (foreignKey == null)
             {
                 foreignKey = ForeignKeyFactory.CreateKeyFromForeignKeyValues(this, relatedEnd);

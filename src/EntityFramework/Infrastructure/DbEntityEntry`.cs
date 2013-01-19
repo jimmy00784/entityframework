@@ -30,7 +30,7 @@ namespace System.Data.Entity.Infrastructure
         /// <param name = "internalEntityEntry">The internal entry.</param>
         internal DbEntityEntry(InternalEntityEntry internalEntityEntry)
         {
-            Contract.Requires(internalEntityEntry != null);
+            //Contract.Requires(internalEntityEntry != null);
 
             _internalEntityEntry = internalEntityEntry;
         }
@@ -146,7 +146,7 @@ namespace System.Data.Entity.Infrastructure
         /// <returns>An object representing the navigation property.</returns>
         public DbReferenceEntry Reference(string navigationProperty)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(navigationProperty));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(navigationProperty));
 
             return DbReferenceEntry.Create(_internalEntityEntry.Reference(navigationProperty));
         }
@@ -161,7 +161,7 @@ namespace System.Data.Entity.Infrastructure
         public DbReferenceEntry<TEntity, TProperty> Reference<TProperty>(string navigationProperty)
             where TProperty : class
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(navigationProperty));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(navigationProperty));
 
             return
                 DbReferenceEntry<TEntity, TProperty>.Create(
@@ -180,7 +180,7 @@ namespace System.Data.Entity.Infrastructure
             Expression<Func<TEntity, TProperty>> navigationProperty)
             where TProperty : class
         {
-            Contract.Requires(navigationProperty != null);
+            //Contract.Requires(navigationProperty != null);
 
             return
                 DbReferenceEntry<TEntity, TProperty>.Create(
@@ -197,7 +197,7 @@ namespace System.Data.Entity.Infrastructure
         /// <returns>An object representing the navigation property.</returns>
         public DbCollectionEntry Collection(string navigationProperty)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(navigationProperty));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(navigationProperty));
 
             return DbCollectionEntry.Create(_internalEntityEntry.Collection(navigationProperty));
         }
@@ -212,7 +212,7 @@ namespace System.Data.Entity.Infrastructure
         public DbCollectionEntry<TEntity, TElement> Collection<TElement>(string navigationProperty)
             where TElement : class
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(navigationProperty));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(navigationProperty));
 
             return
                 DbCollectionEntry<TEntity, TElement>.Create(
@@ -230,7 +230,7 @@ namespace System.Data.Entity.Infrastructure
         public DbCollectionEntry<TEntity, TElement> Collection<TElement>(
             Expression<Func<TEntity, ICollection<TElement>>> navigationProperty) where TElement : class
         {
-            Contract.Requires(navigationProperty != null);
+            //Contract.Requires(navigationProperty != null);
 
             return
                 Collection<TElement>(
@@ -244,7 +244,7 @@ namespace System.Data.Entity.Infrastructure
         /// <returns>An object representing the property.</returns>
         public DbPropertyEntry Property(string propertyName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
 
             return DbPropertyEntry.Create(_internalEntityEntry.Property(propertyName));
         }
@@ -257,7 +257,7 @@ namespace System.Data.Entity.Infrastructure
         /// <returns>An object representing the property.</returns>
         public DbPropertyEntry<TEntity, TProperty> Property<TProperty>(string propertyName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
 
             return
                 DbPropertyEntry<TEntity, TProperty>.Create(
@@ -275,7 +275,7 @@ namespace System.Data.Entity.Infrastructure
             Justification = "Rule predates more fluent naming conventions.")]
         public DbPropertyEntry<TEntity, TProperty> Property<TProperty>(Expression<Func<TEntity, TProperty>> property)
         {
-            Contract.Requires(property != null);
+            //Contract.Requires(property != null);
 
             return Property<TProperty>(DbHelpers.ParsePropertySelector(property, "Property", "property"));
         }
@@ -287,7 +287,7 @@ namespace System.Data.Entity.Infrastructure
         /// <returns>An object representing the complex property.</returns>
         public DbComplexPropertyEntry ComplexProperty(string propertyName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
 
             return DbComplexPropertyEntry.Create(
                 _internalEntityEntry.Property(propertyName, null, requireComplex: true));
@@ -301,7 +301,7 @@ namespace System.Data.Entity.Infrastructure
         /// <returns>An object representing the complex property.</returns>
         public DbComplexPropertyEntry<TEntity, TComplexProperty> ComplexProperty<TComplexProperty>(string propertyName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
 
             return
                 DbComplexPropertyEntry<TEntity, TComplexProperty>.Create(
@@ -320,7 +320,7 @@ namespace System.Data.Entity.Infrastructure
         public DbComplexPropertyEntry<TEntity, TComplexProperty> ComplexProperty<TComplexProperty>(
             Expression<Func<TEntity, TComplexProperty>> property)
         {
-            Contract.Requires(property != null);
+            //Contract.Requires(property != null);
 
             return ComplexProperty<TComplexProperty>(DbHelpers.ParsePropertySelector(property, "Property", "property"));
         }
@@ -338,7 +338,7 @@ namespace System.Data.Entity.Infrastructure
         /// <returns>An object representing the member.</returns>
         public DbMemberEntry Member(string propertyName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
 
             return DbMemberEntry.Create(_internalEntityEntry.Member(propertyName));
         }
@@ -357,7 +357,7 @@ namespace System.Data.Entity.Infrastructure
         /// <returns>An object representing the member.</returns>
         public DbMemberEntry<TEntity, TMember> Member<TMember>(string propertyName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
 
             return _internalEntityEntry.Member(propertyName, typeof(TMember)).CreateDbMemberEntry<TEntity, TMember>();
         }

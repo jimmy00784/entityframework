@@ -26,8 +26,8 @@ namespace System.Data.Entity.Migrations.Model
         public RenameTableOperation(string name, string newName, object anonymousArguments = null)
             : base(anonymousArguments)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(name));
-            Contract.Requires(!string.IsNullOrWhiteSpace(newName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(name));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(newName));
 
             _name = name;
             _newName = newName;

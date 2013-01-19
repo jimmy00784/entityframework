@@ -41,9 +41,9 @@ namespace System.Data.Mapping.Update.Internal
             : this(translator, stateEntries, stateEntry,
                 translator.GenerateCommandDefinition(functionMapping).CreateCommand())
         {
-            Contract.Requires(functionMapping != null);
-            Contract.Requires(translator != null);
-            Contract.Requires(stateEntries != null);
+            //Contract.Requires(functionMapping != null);
+            //Contract.Requires(translator != null);
+            //Contract.Requires(stateEntries != null);
         }
 
         protected FunctionUpdateCommand(

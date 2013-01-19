@@ -16,7 +16,7 @@ namespace System.Data.Mapping
     {
         internal StorageModificationFunctionMemberPath(IEnumerable<EdmMember> members, AssociationSet associationSetNavigation)
         {
-            Contract.Requires(members != null);
+            //Contract.Requires(members != null);
 
             Members = new ReadOnlyCollection<EdmMember>(new List<EdmMember>(members));
 

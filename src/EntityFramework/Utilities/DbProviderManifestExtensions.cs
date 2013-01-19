@@ -10,7 +10,7 @@ namespace System.Data.Entity.Utilities
         public static string GetStoreTypeName(
             this DbProviderManifest providerManifest, PrimitiveTypeKind primitiveTypeKind)
         {
-            Contract.Requires(providerManifest != null);
+            //Contract.Requires(providerManifest != null);
 
             var edmTypeUsage = TypeUsage.CreateDefaultTypeUsage(
                 PrimitiveType.GetEdmPrimitiveType(primitiveTypeKind));

@@ -18,7 +18,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         internal CascadableNavigationPropertyConfiguration(
             NavigationPropertyConfiguration navigationPropertyConfiguration)
         {
-            Contract.Requires(navigationPropertyConfiguration != null);
+            //Contract.Requires(navigationPropertyConfiguration != null);
 
             _navigationPropertyConfiguration = navigationPropertyConfiguration;
         }

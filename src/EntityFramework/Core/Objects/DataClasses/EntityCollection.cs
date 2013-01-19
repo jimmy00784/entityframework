@@ -240,7 +240,7 @@ namespace System.Data.Objects.DataClasses
         /// collection cannot be related via the current relationship end.</exception>
         public void Attach(IEnumerable<TEntity> entities)
         {
-            Contract.Requires(entities != null);
+            //Contract.Requires(entities != null);
             CheckOwnerNull();
             // TODO: Make this more efficient
             IList<IEntityWrapper> wrappedEntities = new List<IEntityWrapper>();
@@ -265,7 +265,7 @@ namespace System.Data.Objects.DataClasses
         /// <exception cref="InvalidOperationException">Thrown when the entity cannot be related via the current relationship end.</exception>
         public void Attach(TEntity entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
             Attach(new[] { EntityWrapperFactory.WrapEntityUsingContext(entity, ObjectContext) }, false);
         }
 

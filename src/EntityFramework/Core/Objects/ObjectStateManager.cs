@@ -89,7 +89,7 @@ namespace System.Data.Objects
         [CLSCompliant(false)]
         public ObjectStateManager(MetadataWorkspace metadataWorkspace)
         {
-            Contract.Requires(metadataWorkspace != null);
+            //Contract.Requires(metadataWorkspace != null);
             _metadataWorkspace = metadataWorkspace;
 
             _metadataStore = new Dictionary<EdmType, StateManagerTypeMetadata>();
@@ -2183,7 +2183,7 @@ namespace System.Data.Objects
         /// <returns>entry associated with entity</returns>
         public virtual ObjectStateEntry ChangeObjectState(object entity, EntityState entityState)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
             EntityUtil.CheckValidStateForChangeEntityState(entityState);
 
             EntityEntry entry = null;
@@ -2353,8 +2353,8 @@ namespace System.Data.Objects
         private void VerifyParametersForChangeRelationshipState(
             object sourceEntity, object targetEntity, out EntityEntry sourceEntry, out EntityEntry targetEntry)
         {
-            Contract.Requires(sourceEntity != null);
-            Contract.Requires(targetEntity != null);
+            //Contract.Requires(sourceEntity != null);
+            //Contract.Requires(targetEntity != null);
 
             sourceEntry = GetEntityEntryByObjectOrEntityKey(sourceEntity);
             targetEntry = GetEntityEntryByObjectOrEntityKey(targetEntity);
@@ -2524,7 +2524,7 @@ namespace System.Data.Objects
         /// <returns>true if the corresponding ObjectStateEntry was found</returns>
         public virtual bool TryGetObjectStateEntry(object entity, out ObjectStateEntry entry)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
             Debug.Assert(!(entity is IEntityWrapper), "Object is an IEntityWrapper instance instead of the raw entity.");
             entry = null;
 
@@ -2596,7 +2596,7 @@ namespace System.Data.Objects
 
         internal virtual bool TryGetEntityEntry(EntityKey key, out EntityEntry entry)
         {
-            Contract.Requires(key != null);
+            //Contract.Requires(key != null);
 
             entry = null; // must set before checking for null key
             bool result;
@@ -2696,7 +2696,7 @@ namespace System.Data.Objects
         /// <returns>True if a RelationshipManager was found; false if The entity does not implement IEntityWithRelationships and is not tracked by this ObjectStateManager</returns>
         public virtual bool TryGetRelationshipManager(object entity, out RelationshipManager relationshipManager)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
             var withRelationships = entity as IEntityWithRelationships;
             if (withRelationships != null)
             {

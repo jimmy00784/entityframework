@@ -38,7 +38,7 @@ namespace System.Data.Entity.Internal.Validation
         /// </returns>
         public virtual EntityValidator GetEntityValidator(InternalEntityEntry entityEntry)
         {
-            Contract.Requires(entityEntry != null);
+            //Contract.Requires(entityEntry != null);
 
             var entityType = entityEntry.EntityType;
             EntityValidator validator = null;
@@ -65,8 +65,8 @@ namespace System.Data.Entity.Internal.Validation
         public virtual PropertyValidator GetPropertyValidator(
             InternalEntityEntry owningEntity, InternalMemberEntry property)
         {
-            Contract.Requires(owningEntity != null);
-            Contract.Requires(property != null);
+            //Contract.Requires(owningEntity != null);
+            //Contract.Requires(property != null);
 
             var entityValidator = GetEntityValidator(owningEntity);
 
@@ -119,7 +119,7 @@ namespace System.Data.Entity.Internal.Validation
         public virtual EntityValidationContext GetEntityValidationContext(
             InternalEntityEntry entityEntry, IDictionary<object, object> items)
         {
-            Contract.Requires(entityEntry != null);
+            //Contract.Requires(entityEntry != null);
 
             return new EntityValidationContext(entityEntry, new ValidationContext(entityEntry.Entity, null, items));
         }

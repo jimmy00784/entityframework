@@ -82,7 +82,7 @@ namespace System.Data.Entity.Migrations.Design
             string dataDirectory,
             DbConnectionInfo connectionStringInfo)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(assemblyName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(assemblyName));
 
             _assemblyName = assemblyName;
             _configurationTypeName = configurationTypeName;

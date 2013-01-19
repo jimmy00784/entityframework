@@ -19,7 +19,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
 
         public TableMapping(DbTableMetadata table)
         {
-            Contract.Requires(table != null);
+            //Contract.Requires(table != null);
             _table = table;
             _entityTypes = new SortedEntityTypeIndex();
             _columns = new List<ColumnMapping>();

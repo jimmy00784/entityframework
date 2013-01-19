@@ -62,8 +62,8 @@ namespace System.Data.EntityClient.Internal
             DbProviderFactory storeProviderFactory, DbCommandTree commandTree,
             BridgeDataReaderFactory bridgeDataReaderFactory = null)
         {
-            Contract.Requires(storeProviderFactory != null);
-            Contract.Requires(commandTree != null);
+            //Contract.Requires(storeProviderFactory != null);
+            //Contract.Requires(commandTree != null);
 
             _bridgeDataReaderFactory = bridgeDataReaderFactory ?? new BridgeDataReaderFactory();
 

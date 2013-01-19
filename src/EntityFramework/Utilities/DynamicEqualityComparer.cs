@@ -11,7 +11,7 @@ namespace System.Data.Entity.Utilities
 
         public DynamicEqualityComparer(Func<T, T, bool> func)
         {
-            Contract.Requires(func != null);
+            //Contract.Requires(func != null);
 
             _func = func;
         }

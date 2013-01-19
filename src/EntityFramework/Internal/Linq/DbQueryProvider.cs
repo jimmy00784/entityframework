@@ -30,8 +30,8 @@ namespace System.Data.Entity.Internal.Linq
         /// <param name = "provider">The provider to wrap.</param>
         public DbQueryProvider(InternalContext internalContext, ObjectQueryProvider provider)
         {
-            Contract.Requires(internalContext != null);
-            Contract.Requires(provider != null);
+            //Contract.Requires(internalContext != null);
+            //Contract.Requires(provider != null);
 
             _internalContext = internalContext;
             _provider = provider;
@@ -149,7 +149,7 @@ namespace System.Data.Entity.Internal.Linq
         /// </summary>
         protected ObjectQuery CreateObjectQuery(Expression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
 
             expression = new DbQueryVisitor().Visit(expression);
 
@@ -162,7 +162,7 @@ namespace System.Data.Entity.Internal.Linq
         /// </summary>
         protected IInternalQuery CreateInternalQuery(ObjectQuery objectQuery)
         {
-            Contract.Requires(objectQuery != null);
+            //Contract.Requires(objectQuery != null);
 
             var genericInternalQueryType = typeof(InternalQuery<>).MakeGenericType(
                 ((IQueryable)objectQuery).ElementType);

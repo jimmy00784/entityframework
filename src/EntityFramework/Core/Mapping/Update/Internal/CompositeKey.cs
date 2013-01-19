@@ -72,7 +72,7 @@ namespace System.Data.Mapping.Update.Internal
 
             internal CompositeKeyComparer(KeyManager manager)
             {
-                Contract.Requires(manager != null);
+                //Contract.Requires(manager != null);
 
                 _manager = manager;
             }

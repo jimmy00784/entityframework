@@ -34,7 +34,7 @@ namespace System.Data.Entity.Config
         /// <para>The name of the dependency to resolve.</para>
         public SingletonDependencyResolver(T singletonInstance, string name)
         {
-            Contract.Requires(singletonInstance != null);
+            //Contract.Requires(singletonInstance != null);
 
             _singletonInstance = singletonInstance;
             _name = name;

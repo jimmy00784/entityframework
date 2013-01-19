@@ -276,212 +276,212 @@ namespace System.Data.Common.CommandTrees
     {
         public override void Visit(DbExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbAndExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbApplyExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbArithmeticExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbCaseExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbCastExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbComparisonExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbConstantExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbCrossJoinExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbDerefExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbDistinctExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbElementExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbExceptExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbFilterExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbFunctionExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbEntityRefExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbRefKeyExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbGroupByExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbIntersectExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbIsEmptyExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbIsNullExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbIsOfExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbJoinExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbLikeExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbLimitExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbNewInstanceExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbNotExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbNullExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbOfTypeExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbOrExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbParameterReferenceExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbProjectExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbPropertyExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbQuantifierExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbRefExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbRelationshipNavigationExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbScanExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbSkipExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbSortExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbTreatExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbUnionAllExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
 
         public override void Visit(DbVariableReferenceExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
         }
     }
 }

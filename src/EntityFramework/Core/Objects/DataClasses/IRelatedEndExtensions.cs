@@ -14,7 +14,7 @@ namespace System.Data.Objects.DataClasses
         /// <returns>A task representing the asynchronous operation.</returns>
         public static Task LoadAsync(this IRelatedEnd relatedEnd)
         {
-            Contract.Requires(relatedEnd != null);
+            //Contract.Requires(relatedEnd != null);
 
             return relatedEnd.LoadAsync(CancellationToken.None);
         }
@@ -27,7 +27,7 @@ namespace System.Data.Objects.DataClasses
         /// <returns>A task representing the asynchronous operation.</returns>
         public static Task LoadAsync(this IRelatedEnd relatedEnd, MergeOption mergeOption)
         {
-            Contract.Requires(relatedEnd != null);
+            //Contract.Requires(relatedEnd != null);
 
             return relatedEnd.LoadAsync(mergeOption, CancellationToken.None);
         }

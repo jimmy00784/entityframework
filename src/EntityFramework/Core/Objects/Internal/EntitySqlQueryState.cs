@@ -87,7 +87,7 @@ namespace System.Data.Objects
             ObjectQueryExecutionPlanFactory objectQueryExecutionPlanFactory = null)
             : base(elementType, context, parameters, span)
         {
-            Contract.Requires(commandText != null);
+            //Contract.Requires(commandText != null);
             if (string.IsNullOrEmpty(commandText))
             {
                 throw new ArgumentException(Strings.ObjectQuery_InvalidEmptyQuery, "commandText");

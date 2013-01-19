@@ -58,9 +58,9 @@ namespace System.Data.Objects.ELinq
             ParameterExpression rootContextParameter,
             ReadOnlyCollection<ParameterExpression> compiledQueryParameters)
         {
-            Contract.Requires(rootContext != null);
-            Contract.Requires(rootContextParameter != null);
-            Contract.Requires(compiledQueryParameters != null);
+            //Contract.Requires(rootContext != null);
+            //Contract.Requires(rootContextParameter != null);
+            //Contract.Requires(compiledQueryParameters != null);
 
             return new Funcletizer(Mode.CompiledQueryEvaluation, rootContext, rootContextParameter, compiledQueryParameters);
         }
@@ -72,7 +72,7 @@ namespace System.Data.Objects.ELinq
 
         internal static Funcletizer CreateQueryFuncletizer(ObjectContext rootContext)
         {
-            Contract.Requires(rootContext != null);
+            //Contract.Requires(rootContext != null);
 
             return new Funcletizer(Mode.ConventionalQuery, rootContext, null, null);
         }
@@ -103,7 +103,7 @@ namespace System.Data.Objects.ELinq
         /// </summary>
         internal Expression Funcletize(Expression expression, out Func<bool> recompileRequired)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
 
             // Find all candidates for funcletization. Some sub-expressions are reduced to constants,
             // others are reduced to variables. The rules vary based on the _mode.
@@ -168,7 +168,7 @@ namespace System.Data.Objects.ELinq
         /// </summary>
         private static Func<Expression, bool> Nominate(Expression expression, Func<Expression, bool> localCriterion)
         {
-            Contract.Requires(localCriterion != null);
+            //Contract.Requires(localCriterion != null);
             var candidates = new HashSet<Expression>();
             var cannotBeNominated = false;
             Func<Expression, Func<Expression, Expression>, Expression> visit = (exp, baseVisit) =>
@@ -299,7 +299,7 @@ namespace System.Data.Objects.ELinq
         /// </summary>
         private bool TryGetTypeUsageForTerminal(Type type, out TypeUsage typeUsage)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             if (_rootContext.Perspective.TryGetTypeByName(
                 TypeSystem.GetNonNullableType(type).FullName,
@@ -345,9 +345,9 @@ namespace System.Data.Objects.ELinq
                 Func<Expression, bool> isClientConstant,
                 Func<Expression, bool> isClientVariable)
             {
-                Contract.Requires(funcletizer != null);
-                Contract.Requires(isClientConstant != null);
-                Contract.Requires(isClientVariable != null);
+                //Contract.Requires(funcletizer != null);
+                //Contract.Requires(isClientConstant != null);
+                //Contract.Requires(isClientVariable != null);
 
                 _funcletizer = funcletizer;
                 _isClientConstant = isClientConstant;
@@ -573,7 +573,7 @@ namespace System.Data.Objects.ELinq
             /// </summary>
             private Expression InlineObjectQuery(ObjectQuery inlineQuery, Type expressionType)
             {
-                Contract.Requires(inlineQuery != null);
+                //Contract.Requires(inlineQuery != null);
 
                 Expression queryExpression;
                 if (_funcletizer._mode

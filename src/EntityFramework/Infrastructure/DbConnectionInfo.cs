@@ -24,7 +24,7 @@ namespace System.Data.Entity.Infrastructure
         /// <param name = "connectionName">The name of the connection string in the application configuration.</param>
         public DbConnectionInfo(string connectionName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(connectionName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(connectionName));
 
             _connectionName = connectionName;
         }
@@ -36,8 +36,8 @@ namespace System.Data.Entity.Infrastructure
         /// <param name = "providerInvariantName">The name of the provider to use for the connection. Use 'System.Data.SqlClient' for SQL Server.</param>
         public DbConnectionInfo(string connectionString, string providerInvariantName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(connectionString));
-            Contract.Requires(!string.IsNullOrWhiteSpace(providerInvariantName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(connectionString));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(providerInvariantName));
 
             _connectionString = connectionString;
             _providerInvariantName = providerInvariantName;
@@ -49,7 +49,7 @@ namespace System.Data.Entity.Infrastructure
         /// <param name = "config">Configuration to use if connection comes from the configuration file.</param>
         internal ConnectionStringSettings GetConnectionString(AppConfig config)
         {
-            Contract.Requires(config != null);
+            //Contract.Requires(config != null);
 
             if (_connectionName != null)
             {

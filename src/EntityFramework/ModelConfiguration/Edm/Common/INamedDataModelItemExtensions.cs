@@ -10,8 +10,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Common
     {
         public static string UniquifyName(this IEnumerable<INamedDataModelItem> namedDataModelItems, string name)
         {
-            Contract.Requires(namedDataModelItems != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(name));
+            //Contract.Requires(namedDataModelItems != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(name));
 
             var uniqueName = name;
             var i = 0;

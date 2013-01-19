@@ -127,7 +127,7 @@ namespace System.Data.EntityClient
         private EntityParameter(EntityParameter source)
             : this()
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             source.CloneHelper(this);
 
@@ -663,7 +663,7 @@ namespace System.Data.EntityClient
 
         internal virtual void CopyTo(DbParameter destination)
         {
-            Contract.Requires(destination != null);
+            //Contract.Requires(destination != null);
             CloneHelper((EntityParameter)destination);
         }
 

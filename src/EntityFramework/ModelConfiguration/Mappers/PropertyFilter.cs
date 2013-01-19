@@ -28,7 +28,7 @@ namespace System.Data.Entity.ModelConfiguration.Mappers
             IEnumerable<PropertyInfo> explicitlyMappedProperties = null,
             IEnumerable<Type> knownTypes = null)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             explicitlyMappedProperties = explicitlyMappedProperties ?? Enumerable.Empty<PropertyInfo>();
             knownTypes = knownTypes ?? Enumerable.Empty<Type>();

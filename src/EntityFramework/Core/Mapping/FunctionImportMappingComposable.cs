@@ -30,7 +30,7 @@ namespace System.Data.Mapping
             StorageMappingItemCollection mappingItemCollection)
             : base(functionImport, targetFunction)
         {
-            Contract.Requires(mappingItemCollection != null);
+            //Contract.Requires(mappingItemCollection != null);
             Debug.Assert(functionImport.IsComposableAttribute, "functionImport.IsComposableAttribute");
             Debug.Assert(targetFunction.IsComposableAttribute, "targetFunction.IsComposableAttribute");
             Debug.Assert(

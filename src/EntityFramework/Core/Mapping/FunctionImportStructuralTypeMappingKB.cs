@@ -20,8 +20,8 @@ namespace System.Data.Mapping
             IEnumerable<FunctionImportStructuralTypeMapping> structuralTypeMappings,
             ItemCollection itemCollection)
         {
-            Contract.Requires(structuralTypeMappings != null);
-            Contract.Requires(itemCollection != null);
+            //Contract.Requires(structuralTypeMappings != null);
+            //Contract.Requires(itemCollection != null);
 
             m_itemCollection = itemCollection;
 

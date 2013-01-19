@@ -275,7 +275,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters")]
         public void Ignore<TProperty>(Expression<Func<TStructuralType, TProperty>> propertyExpression)
         {
-            Contract.Requires(propertyExpression != null);
+            //Contract.Requires(propertyExpression != null);
 
             Configuration.Ignore(propertyExpression.GetSimplePropertyAccess().Single());
         }

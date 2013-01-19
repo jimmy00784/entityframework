@@ -17,7 +17,7 @@ namespace System.Data.Entity.ModelConfiguration.Conventions
     {
         void IDbMappingConvention.Apply(DbDatabaseMapping databaseMapping)
         {
-            Contract.Requires(databaseMapping != null);
+            //Contract.Requires(databaseMapping != null);
         }
     }
 

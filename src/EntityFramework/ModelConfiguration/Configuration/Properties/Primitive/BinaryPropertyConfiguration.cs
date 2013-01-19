@@ -20,7 +20,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Properties.Primiti
         private BinaryPropertyConfiguration(BinaryPropertyConfiguration source)
             : base(source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             IsRowVersion = source.IsRowVersion;
         }

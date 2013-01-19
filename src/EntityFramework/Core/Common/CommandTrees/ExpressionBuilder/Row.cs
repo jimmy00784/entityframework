@@ -43,7 +43,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <seealso cref="ToExpression"/>
         public static implicit operator DbExpression(Row row)
         {
-            Contract.Requires(row != null);
+            //Contract.Requires(row != null);
             return row.ToExpression();
         }
     }

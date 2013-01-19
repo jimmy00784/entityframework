@@ -505,7 +505,7 @@ namespace System.Data.Mapping.Update.Internal
 
             internal ForeignKeyValueComparer(IEqualityComparer<CompositeKey> baseComparer)
             {
-                Contract.Requires(baseComparer != null);
+                //Contract.Requires(baseComparer != null);
                 _baseComparer = baseComparer;
             }
 

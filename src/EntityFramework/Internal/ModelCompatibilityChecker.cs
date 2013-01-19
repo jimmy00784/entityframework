@@ -9,8 +9,8 @@ namespace System.Data.Entity.Internal
         public virtual bool CompatibleWithModel(
             InternalContext internalContext, ModelHashCalculator modelHashCalculator, bool throwIfNoMetadata)
         {
-            Contract.Requires(internalContext != null);
-            Contract.Requires(modelHashCalculator != null);
+            //Contract.Requires(internalContext != null);
+            //Contract.Requires(modelHashCalculator != null);
 
             if (internalContext.CodeFirstModel == null)
             {

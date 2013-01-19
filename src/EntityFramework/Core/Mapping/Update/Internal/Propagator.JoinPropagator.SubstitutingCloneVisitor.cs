@@ -60,9 +60,9 @@ namespace System.Data.Mapping.Update.Internal
                     PropagatorResult placeholder, CompositeKey key,
                     CompositeKey placeholderKey, PopulateMode mode)
                 {
-                    Contract.Requires(placeholder != null);
-                    Contract.Requires(key != null);
-                    Contract.Requires(placeholderKey != null);
+                    //Contract.Requires(placeholder != null);
+                    //Contract.Requires(key != null);
+                    //Contract.Requires(placeholderKey != null);
 
                     // Figure out which flags to apply to generated elements.
                     var isNull = mode == PopulateMode.NullModified || mode == PopulateMode.NullPreserve;

@@ -48,7 +48,7 @@ namespace System.Data.Entity.Infrastructure
         /// </param>
         public SqlConnectionFactory(string baseConnectionString)
         {
-            Contract.Requires(baseConnectionString != null);
+            //Contract.Requires(baseConnectionString != null);
 
             _baseConnectionString = baseConnectionString;
         }

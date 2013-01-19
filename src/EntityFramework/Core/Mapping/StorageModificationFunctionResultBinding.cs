@@ -12,8 +12,8 @@ namespace System.Data.Mapping
     {
         internal StorageModificationFunctionResultBinding(string columnName, EdmProperty property)
         {
-            Contract.Requires(columnName != null);
-            Contract.Requires(property != null);
+            //Contract.Requires(columnName != null);
+            //Contract.Requires(property != null);
 
             ColumnName = columnName;
             Property = property;

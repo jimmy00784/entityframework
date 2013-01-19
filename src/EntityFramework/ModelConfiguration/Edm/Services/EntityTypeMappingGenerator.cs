@@ -19,8 +19,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Services
 
         public void Generate(EdmEntityType entityType, DbDatabaseMapping databaseMapping)
         {
-            Contract.Requires(entityType != null);
-            Contract.Requires(databaseMapping != null);
+            //Contract.Requires(entityType != null);
+            //Contract.Requires(databaseMapping != null);
 
             var entitySet = databaseMapping.Model.GetEntitySet(entityType);
 

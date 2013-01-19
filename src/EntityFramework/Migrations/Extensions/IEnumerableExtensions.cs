@@ -12,8 +12,8 @@ namespace System.Data.Entity.Migrations.Extensions
     {
         public static void Each<T>(this IEnumerable<T> ts, Action<T, int> action)
         {
-            Contract.Requires(ts != null);
-            Contract.Requires(action != null);
+            //Contract.Requires(ts != null);
+            //Contract.Requires(action != null);
 
             var i = 0;
             foreach (var t in ts)
@@ -24,8 +24,8 @@ namespace System.Data.Entity.Migrations.Extensions
 
         public static void Each<T>(this IEnumerable<T> ts, Action<T> action)
         {
-            Contract.Requires(ts != null);
-            Contract.Requires(action != null);
+            //Contract.Requires(ts != null);
+            //Contract.Requires(action != null);
 
             foreach (var t in ts)
             {
@@ -36,8 +36,8 @@ namespace System.Data.Entity.Migrations.Extensions
         [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         public static void Each<T, S>(this IEnumerable<T> ts, Func<T, S> action)
         {
-            Contract.Requires(ts != null);
-            Contract.Requires(action != null);
+            //Contract.Requires(ts != null);
+            //Contract.Requires(action != null);
 
             foreach (var t in ts)
             {
@@ -47,7 +47,7 @@ namespace System.Data.Entity.Migrations.Extensions
 
         public static string Join<T>(this IEnumerable<T> ts, Func<T, string> selector = null, string separator = ", ")
         {
-            Contract.Requires(ts != null);
+            //Contract.Requires(ts != null);
 
             selector = selector ?? (t => t.ToString());
 

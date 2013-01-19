@@ -47,7 +47,7 @@ namespace System.Data.Objects.ELinq
             // public APIs on ObjectQuery and must be checked here
             // (the base class performs similar checks on the ObjectContext and MergeOption arguments).
             //
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             // closure bindings and initializers are explicitly allowed to be null
 
             _expression = expression;
@@ -67,7 +67,7 @@ namespace System.Data.Objects.ELinq
             ObjectQueryExecutionPlanFactory objectQueryExecutionPlanFactory = null)
             : base(elementType, query)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             _expression = expression;
             _objectQueryExecutionPlanFactory = objectQueryExecutionPlanFactory ?? new ObjectQueryExecutionPlanFactory();
         }

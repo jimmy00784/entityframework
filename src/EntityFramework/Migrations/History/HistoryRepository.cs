@@ -71,7 +71,7 @@ namespace System.Data.Entity.Migrations.History
 
         public virtual XDocument GetModel(string migrationId)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
 
             if (!Exists)
             {
@@ -93,7 +93,7 @@ namespace System.Data.Entity.Migrations.History
 
         public virtual IEnumerable<string> GetPendingMigrations(IEnumerable<string> localMigrations)
         {
-            Contract.Requires(localMigrations != null);
+            //Contract.Requires(localMigrations != null);
 
             if (!Exists)
             {
@@ -131,7 +131,7 @@ namespace System.Data.Entity.Migrations.History
 
         public virtual IEnumerable<string> GetMigrationsSince(string migrationId)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
 
             using (var context = CreateContext())
             {
@@ -161,7 +161,7 @@ namespace System.Data.Entity.Migrations.History
 
         public virtual string GetMigrationId(string migrationName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(migrationName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(migrationName));
 
             if (!Exists)
             {
@@ -259,8 +259,8 @@ namespace System.Data.Entity.Migrations.History
 
         public virtual MigrationOperation CreateInsertOperation(string migrationId, XDocument model)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
-            Contract.Requires(model != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
+            //Contract.Requires(model != null);
 
             // TODO: Can we somehow use DbInsertCommandTree?
             return new InsertHistoryOperation(HistoryContext.TableName, migrationId, new ModelCompressor().Compress(model));
@@ -268,7 +268,7 @@ namespace System.Data.Entity.Migrations.History
 
         public virtual MigrationOperation CreateDeleteOperation(string migrationId)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
 
             // TODO: Can we somehow use DbInsertCommandTree?
             return new DeleteHistoryOperation(HistoryContext.TableName, migrationId);
@@ -276,7 +276,7 @@ namespace System.Data.Entity.Migrations.History
 
         public virtual void BootstrapUsingEFProviderDdl(XDocument model)
         {
-            Contract.Requires(model != null);
+            //Contract.Requires(model != null);
 
             using (var context = CreateContext())
             {
@@ -302,7 +302,7 @@ namespace System.Data.Entity.Migrations.History
 
         private static bool QueryExists<TContext>(HistoryContextBase<TContext> context) where TContext : DbContext
         {
-            Contract.Requires(context != null);
+            //Contract.Requires(context != null);
 
             bool databaseExists;
             using (new TransactionScope(TransactionScopeOption.Suppress))
@@ -333,8 +333,8 @@ namespace System.Data.Entity.Migrations.History
 
         public virtual void AppendHistoryModel(XDocument model, DbProviderInfo providerInfo)
         {
-            Contract.Requires(model != null);
-            Contract.Requires(providerInfo != null);
+            //Contract.Requires(model != null);
+            //Contract.Requires(providerInfo != null);
 
             var csdlNamespace = model.Descendants(EdmXNames.Csdl.SchemaNames).Single().Name.Namespace;
             var mslNamespace = model.Descendants(EdmXNames.Msl.MappingNames).Single().Name.Namespace;

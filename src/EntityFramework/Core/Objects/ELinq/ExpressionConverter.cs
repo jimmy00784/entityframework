@@ -122,8 +122,8 @@ namespace System.Data.Objects.ELinq
 
         internal ExpressionConverter(Funcletizer funcletizer, Expression expression)
         {
-            Contract.Requires(funcletizer != null);
-            Contract.Requires(expression != null);
+            //Contract.Requires(funcletizer != null);
+            //Contract.Requires(expression != null);
 
             // Funcletize the expression (identify subexpressions that should be evaluated
             // locally)

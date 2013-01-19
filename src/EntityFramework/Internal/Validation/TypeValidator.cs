@@ -27,8 +27,8 @@ namespace System.Data.Entity.Internal.Validation
         public TypeValidator(
             IEnumerable<PropertyValidator> propertyValidators, IEnumerable<IValidator> typeLevelValidators)
         {
-            Contract.Requires(typeLevelValidators != null);
-            Contract.Requires(propertyValidators != null);
+            //Contract.Requires(typeLevelValidators != null);
+            //Contract.Requires(propertyValidators != null);
 
             _typeLevelValidators = typeLevelValidators;
             _propertyValidators = propertyValidators;
@@ -119,8 +119,8 @@ namespace System.Data.Entity.Internal.Validation
                 EntityValidationContext entityValidationContext, InternalPropertyEntry parentProperty,
                 List<DbValidationError> validationErrors)
             {
-                Contract.Requires(entityValidationContext != null);
-                Contract.Requires(validationErrors != null);
+                //Contract.Requires(entityValidationContext != null);
+                //Contract.Requires(validationErrors != null);
             }
         }
     }

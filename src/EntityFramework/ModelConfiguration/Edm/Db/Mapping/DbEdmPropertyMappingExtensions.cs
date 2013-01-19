@@ -9,7 +9,7 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db.Mapping
     {
         public static void SyncNullabilityCSSpace(this DbEdmPropertyMapping propertyMapping)
         {
-            Contract.Requires(propertyMapping != null);
+            //Contract.Requires(propertyMapping != null);
 
             var isNullable = propertyMapping.PropertyPath.Last().PropertyType.IsNullable;
 

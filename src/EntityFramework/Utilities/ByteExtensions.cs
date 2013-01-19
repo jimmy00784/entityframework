@@ -10,7 +10,7 @@ namespace System.Data.Entity.Utilities
     {
         public static string ToHexString(this IEnumerable<byte> bytes)
         {
-            Contract.Requires(bytes != null);
+            //Contract.Requires(bytes != null);
 
             var stringBuilder = new StringBuilder();
 

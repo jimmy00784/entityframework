@@ -145,7 +145,7 @@ namespace System.Data.Objects.DataClasses
         /// <returns>A new or existing RelationshipManager for the given entity</returns>
         public static RelationshipManager Create(IEntityWithRelationships owner)
         {
-            Contract.Requires(owner != null);
+            //Contract.Requires(owner != null);
             var rm = new RelationshipManager();
             rm._owner = owner;
             return rm;
@@ -432,8 +432,8 @@ namespace System.Data.Objects.DataClasses
         // Internal version of GetRelatedEnd which returns the RelatedEnd as a RelatedEnd rather than an IRelatedEnd
         internal RelatedEnd GetRelatedEndInternal(string relationshipName, string targetRoleName)
         {
-            Contract.Requires(relationshipName != null);
-            Contract.Requires(targetRoleName != null);
+            //Contract.Requires(relationshipName != null);
+            //Contract.Requires(targetRoleName != null);
 
             var wrappedOwner = WrappedOwner;
             if (wrappedOwner.Context == null
@@ -560,9 +560,9 @@ namespace System.Data.Objects.DataClasses
             string relationshipName, string targetRoleName, EntityReference<TTargetEntity> entityReference)
             where TTargetEntity : class
         {
-            Contract.Requires(relationshipName != null);
-            Contract.Requires(targetRoleName != null);
-            Contract.Requires(entityReference != null);
+            //Contract.Requires(relationshipName != null);
+            //Contract.Requires(targetRoleName != null);
+            //Contract.Requires(entityReference != null);
 
             if (entityReference.WrappedOwner.Entity != null)
             {
@@ -620,9 +620,9 @@ namespace System.Data.Objects.DataClasses
             string relationshipName, string targetRoleName, EntityCollection<TTargetEntity> entityCollection)
             where TTargetEntity : class
         {
-            Contract.Requires(relationshipName != null);
-            Contract.Requires(targetRoleName != null);
-            Contract.Requires(entityCollection != null);
+            //Contract.Requires(relationshipName != null);
+            //Contract.Requires(targetRoleName != null);
+            //Contract.Requires(entityCollection != null);
 
             if (entityCollection.WrappedOwner.Entity != null)
             {
@@ -665,7 +665,7 @@ namespace System.Data.Objects.DataClasses
         /// </summary>
         private string PrependNamespaceToRelationshipName(string relationshipName)
         {
-            Contract.Requires(relationshipName != null);
+            //Contract.Requires(relationshipName != null);
 
             if (!relationshipName.Contains('.'))
             {

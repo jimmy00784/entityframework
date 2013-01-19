@@ -223,42 +223,42 @@ namespace System.Data.Objects.DataClasses
 
         public void Add(IEntityWithRelationships entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
 
             throw new NotImplementedException();
         }
 
         public void Add(object entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
 
             throw new NotImplementedException();
         }
 
         public bool Remove(IEntityWithRelationships entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
 
             throw new NotImplementedException();
         }
 
         public bool Remove(object entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
 
             throw new NotImplementedException();
         }
 
         public void Attach(IEntityWithRelationships entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
 
             throw new NotImplementedException();
         }
 
         public void Attach(object entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
 
             throw new NotImplementedException();
         }

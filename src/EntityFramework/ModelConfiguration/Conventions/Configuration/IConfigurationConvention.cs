@@ -17,7 +17,7 @@ namespace System.Data.Entity.ModelConfiguration.Conventions
     {
         void IConfigurationConvention.Apply(ModelConfiguration modelConfiguration)
         {
-            Contract.Requires(modelConfiguration != null);
+            //Contract.Requires(modelConfiguration != null);
         }
     }
 

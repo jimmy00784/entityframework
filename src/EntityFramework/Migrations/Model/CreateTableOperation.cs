@@ -28,7 +28,7 @@ namespace System.Data.Entity.Migrations.Model
         public CreateTableOperation(string name, object anonymousArguments = null)
             : base(anonymousArguments)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(name));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(name));
 
             _name = name;
         }
@@ -57,7 +57,7 @@ namespace System.Data.Entity.Migrations.Model
             get { return _primaryKey; }
             set
             {
-                Contract.Requires(value != null);
+                //Contract.Requires(value != null);
 
                 _primaryKey = value;
                 _primaryKey.Table = Name;

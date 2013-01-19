@@ -80,7 +80,7 @@ namespace System.Data.Mapping.Update.Internal
                     DbExpression joinCondition, out ReadOnlyCollection<DbExpression> leftKeySelectors,
                     out ReadOnlyCollection<DbExpression> rightKeySelectors)
                 {
-                    Contract.Requires(joinCondition != null);
+                    //Contract.Requires(joinCondition != null);
 
                     // Constructs a new predicate visitor, which implements a visitor for expression nodes
                     // and returns no values. This visitor instead builds up a list of properties as leaves

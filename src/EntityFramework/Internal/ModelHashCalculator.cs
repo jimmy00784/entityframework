@@ -23,9 +23,9 @@ namespace System.Data.Entity.Internal
         /// </summary>
         public virtual string Calculate(DbCompiledModel compiledModel)
         {
-            Contract.Requires(compiledModel != null);
-            Contract.Requires(compiledModel.ProviderInfo != null);
-            Contract.Requires(compiledModel.CachedModelBuilder != null);
+            //Contract.Requires(compiledModel != null);
+            //Contract.Requires(compiledModel.ProviderInfo != null);
+            //Contract.Requires(compiledModel.CachedModelBuilder != null);
 
             var providerInfo = compiledModel.ProviderInfo;
             var modelBuilder = compiledModel.CachedModelBuilder.Clone();

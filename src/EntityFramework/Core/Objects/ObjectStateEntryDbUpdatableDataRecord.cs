@@ -13,9 +13,9 @@ namespace System.Data.Objects
         internal ObjectStateEntryDbUpdatableDataRecord(EntityEntry cacheEntry, StateManagerTypeMetadata metadata, object userObject)
             : base(cacheEntry, metadata, userObject)
         {
-            Contract.Requires(cacheEntry != null);
-            Contract.Requires(userObject != null);
-            Contract.Requires(metadata != null);
+            //Contract.Requires(cacheEntry != null);
+            //Contract.Requires(userObject != null);
+            //Contract.Requires(metadata != null);
             Debug.Assert(!cacheEntry.IsKeyEntry, "Cannot create an ObjectStateEntryDbUpdatableDataRecord for a key entry");
             switch (cacheEntry.State)
             {
@@ -33,7 +33,7 @@ namespace System.Data.Objects
         internal ObjectStateEntryDbUpdatableDataRecord(RelationshipEntry cacheEntry)
             : base(cacheEntry)
         {
-            Contract.Requires(cacheEntry != null);
+            //Contract.Requires(cacheEntry != null);
             switch (cacheEntry.State)
             {
                 case EntityState.Unchanged:

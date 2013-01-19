@@ -19,7 +19,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Properties.Primiti
         private DecimalPropertyConfiguration(DecimalPropertyConfiguration source)
             : base(source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             Precision = source.Precision;
             Scale = source.Scale;

@@ -24,7 +24,7 @@ namespace System.Data.Entity.Migrations.Infrastructure
         public AutomaticDataLossException(string message)
             : base(message)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(message));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(message));
         }
 
         /// <summary>

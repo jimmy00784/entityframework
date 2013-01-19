@@ -19,9 +19,9 @@ namespace System.Data.Mapping
             List<FunctionImportEntityTypeMappingCondition> columnConditions, BitArray impliedEntityTypes)
         {
             // validate arguments
-            Contract.Requires(parent != null);
-            Contract.Requires(columnConditions != null);
-            Contract.Requires(impliedEntityTypes != null);
+            //Contract.Requires(parent != null);
+            //Contract.Requires(columnConditions != null);
+            //Contract.Requires(impliedEntityTypes != null);
 
             Debug.Assert(
                 columnConditions.Count == parent.DiscriminatorColumns.Count,

@@ -133,7 +133,7 @@ namespace System.Data.Metadata.Edm
         /// <exception cref="System.ArgumentNullException">if name argument is null</exception>
         public bool TryGetEntitySetByName(string name, bool ignoreCase, out EntitySet entitySet)
         {
-            Contract.Requires(name != null);
+            //Contract.Requires(name != null);
             EntitySetBase baseEntitySet = null;
             entitySet = null;
             if (BaseEntitySets.TryGetValue(name, ignoreCase, out baseEntitySet))
@@ -173,7 +173,7 @@ namespace System.Data.Metadata.Edm
         /// <exception cref="System.ArgumentNullException">if name argument is null</exception>
         public bool TryGetRelationshipSetByName(string name, bool ignoreCase, out RelationshipSet relationshipSet)
         {
-            Contract.Requires(name != null);
+            //Contract.Requires(name != null);
             EntitySetBase baseEntitySet = null;
             relationshipSet = null;
             if (BaseEntitySets.TryGetValue(name, ignoreCase, out baseEntitySet))

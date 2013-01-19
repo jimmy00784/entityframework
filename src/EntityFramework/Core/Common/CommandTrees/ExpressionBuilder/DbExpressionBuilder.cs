@@ -196,7 +196,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
 
         private static DbFunctionAggregate CreateFunctionAggregate(EdmFunction function, DbExpression argument, bool isDistinct)
         {
-            Contract.Requires(argument != null);
+            //Contract.Requires(argument != null);
             var funcArgs = ArgumentValidation.ValidateFunctionAggregate(function, new[] { argument });
             var resultType = function.ReturnParameter.TypeUsage;
             return new DbFunctionAggregate(resultType, funcArgs, function, isDistinct);
@@ -258,7 +258,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
 
         private static DbLambda CreateLambda(DbExpression body, IEnumerable<DbVariableReferenceExpression> variables)
         {
-            Contract.Requires(body != null);
+            //Contract.Requires(body != null);
 
             var validVars = ArgumentValidation.ValidateLambda(variables);
             return new DbLambda(validVars, body);
@@ -336,8 +336,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// </exception>
         public static DbQuantifierExpression All(this DbExpressionBinding input, DbExpression predicate)
         {
-            Contract.Requires(predicate != null);
-            Contract.Requires(input != null);
+            //Contract.Requires(predicate != null);
+            //Contract.Requires(input != null);
 
             var booleanResultType = ArgumentValidation.ValidateQuantifier(predicate);
             return new DbQuantifierExpression(DbExpressionKind.All, booleanResultType, input, predicate);
@@ -355,8 +355,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// </exception>
         public static DbQuantifierExpression Any(this DbExpressionBinding input, DbExpression predicate)
         {
-            Contract.Requires(predicate != null);
-            Contract.Requires(input != null);
+            //Contract.Requires(predicate != null);
+            //Contract.Requires(input != null);
 
             var booleanResultType = ArgumentValidation.ValidateQuantifier(predicate);
             return new DbQuantifierExpression(DbExpressionKind.Any, booleanResultType, input, predicate);
@@ -515,7 +515,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
             this DbGroupExpressionBinding input, IEnumerable<KeyValuePair<string, DbExpression>> keys,
             IEnumerable<KeyValuePair<string, DbAggregate>> aggregates)
         {
-            Contract.Requires(input != null);
+            //Contract.Requires(input != null);
 
             DbExpressionList validKeys;
             ReadOnlyCollection<DbAggregate> validAggregates;
@@ -532,8 +532,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// <exception cref="ArgumentNullException"><paramref name="input"/> or <paramref name="projection"/> is null</exception>
         public static DbProjectExpression Project(this DbExpressionBinding input, DbExpression projection)
         {
-            Contract.Requires(projection != null);
-            Contract.Requires(input != null);
+            //Contract.Requires(projection != null);
+            //Contract.Requires(input != null);
 
             var resultType = ArgumentValidation.ValidateProject(projection);
             return new DbProjectExpression(resultType, input, projection);
@@ -557,8 +557,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// </exception>
         public static DbSkipExpression Skip(this DbExpressionBinding input, IEnumerable<DbSortClause> sortOrder, DbExpression count)
         {
-            Contract.Requires(count != null);
-            Contract.Requires(input != null);
+            //Contract.Requires(count != null);
+            //Contract.Requires(input != null);
 
             var validSortOrder = ArgumentValidation.ValidateSkip(sortOrder, count);
             return new DbSkipExpression(input.Expression.ResultType, input, validSortOrder, count);
@@ -579,7 +579,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// </exception>
         public static DbSortExpression Sort(this DbExpressionBinding input, IEnumerable<DbSortClause> sortOrder)
         {
-            Contract.Requires(input != null);
+            //Contract.Requires(input != null);
 
             var validSortOrder = ArgumentValidation.ValidateSort(sortOrder);
             return new DbSortExpression(input.Expression.ResultType, input, validSortOrder);
@@ -1836,8 +1836,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         private static DbExpressionBinding ConvertToBinding<TResult>(
             DbExpression source, Func<DbExpression, TResult> argument, out TResult argumentResult)
         {
-            Contract.Requires(source != null);
-            Contract.Requires(argument != null);
+            //Contract.Requires(source != null);
+            //Contract.Requires(argument != null);
 
             var alias = ExtractAlias(argument.Method);
             var binding = source.BindAs(alias);
@@ -1849,9 +1849,9 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
             DbExpression left, DbExpression right,
             Func<DbExpression, DbExpression, DbExpression> argument, out DbExpression argumentExp)
         {
-            Contract.Requires(left != null);
-            Contract.Requires(right != null);
-            Contract.Requires(argument != null);
+            //Contract.Requires(left != null);
+            //Contract.Requires(right != null);
+            //Contract.Requires(argument != null);
 
             var aliases = ExtractAliases(argument.Method);
             var leftBinding = left.BindAs(aliases[0]);
@@ -2295,7 +2295,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
             this DbExpression outer, DbExpression inner, Func<DbExpression, DbExpression> outerKey,
             Func<DbExpression, DbExpression> innerKey, Func<DbExpression, DbExpression, TSelector> selector)
         {
-            Contract.Requires(selector != null);
+            //Contract.Requires(selector != null);
 
             // Defer argument validation for all but the selector to the selector-less overload of Join
             var joinExpression = outer.Join(inner, outerKey, innerKey);
@@ -2441,7 +2441,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// </remarks>
         public static DbProjectExpression Select<TProjection>(this DbExpression source, Func<DbExpression, TProjection> projection)
         {
-            Contract.Requires(projection != null);
+            //Contract.Requires(projection != null);
             TProjection intermediateProjection;
             var input = ConvertToBinding(source, projection, out intermediateProjection);
             var projectionExp = ResolveToExpression(intermediateProjection);
@@ -2511,7 +2511,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         public static DbProjectExpression SelectMany<TSelector>(
             this DbExpression source, Func<DbExpression, DbExpression> apply, Func<DbExpression, DbExpression, TSelector> selector)
         {
-            Contract.Requires(selector != null);
+            //Contract.Requires(selector != null);
 
             DbExpression functorResult;
             var inputBinding = ConvertToBinding(source, apply, out functorResult);
@@ -2542,7 +2542,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         /// </exception>
         public static DbSkipExpression Skip(this DbSortExpression argument, DbExpression count)
         {
-            Contract.Requires(argument != null);
+            //Contract.Requires(argument != null);
             return argument.Input.Skip(argument.SortOrder, count);
         }
 
@@ -2566,8 +2566,8 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder
         private static DbSortExpression CreateThenBy(
             DbSortExpression source, Func<DbExpression, DbExpression> sortKey, bool ascending, string collation, bool useCollation)
         {
-            Contract.Requires(source != null);
-            Contract.Requires(sortKey != null);
+            //Contract.Requires(source != null);
+            //Contract.Requires(sortKey != null);
             var sortKeyResult = sortKey(source.Input.Variable);
             DbSortClause sortClause;
             if (useCollation)

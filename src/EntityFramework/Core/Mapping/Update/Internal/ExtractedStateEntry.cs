@@ -27,8 +27,8 @@ namespace System.Data.Mapping.Update.Internal
 
         internal ExtractedStateEntry(UpdateTranslator translator, IEntityStateEntry stateEntry)
         {
-            Contract.Requires(translator != null);
-            Contract.Requires(stateEntry != null);
+            //Contract.Requires(translator != null);
+            //Contract.Requires(stateEntry != null);
 
             State = stateEntry.State;
             Source = stateEntry;

@@ -25,7 +25,7 @@ namespace System.Data.Entity.Internal.Linq
         /// <param name = "internalQuery">The backing query.</param>
         public InternalDbQuery(IInternalQuery<TElement> internalQuery)
         {
-            Contract.Requires(internalQuery != null);
+            //Contract.Requires(internalQuery != null);
 
             _internalQuery = internalQuery;
         }

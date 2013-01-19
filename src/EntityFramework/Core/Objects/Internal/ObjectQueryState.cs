@@ -65,10 +65,10 @@ namespace System.Data.Objects.Internal
         protected ObjectQueryState(Type elementType, ObjectContext context, ObjectParameterCollection parameters, Span span)
         {
             // Validate the element type
-            Contract.Requires(elementType != null);
+            //Contract.Requires(elementType != null);
 
             // Validate the context
-            Contract.Requires(context != null);
+            //Contract.Requires(context != null);
 
             // Parameters and Span are specifically allowed to be null
 

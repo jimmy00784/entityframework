@@ -41,7 +41,7 @@ namespace System.Data.Entity.Config
 
         public virtual DbProviderServices GetInstanceByConvention(string providerInvariantName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(providerInvariantName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(providerInvariantName));
 
             var providerTemplate =
                 providerInvariantName.Equals("System.Data.SqlClient", StringComparison.OrdinalIgnoreCase)

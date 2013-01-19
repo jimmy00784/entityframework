@@ -25,8 +25,8 @@ namespace System.Data.Entity.Internal
         /// <param name = "parameters">The parameters.</param>
         internal InternalSqlQuery(string sql, object[] parameters)
         {
-            Contract.Requires(sql != null);
-            Contract.Requires(parameters != null);
+            //Contract.Requires(sql != null);
+            //Contract.Requires(parameters != null);
 
             _sql = sql;
             _parameters = parameters;

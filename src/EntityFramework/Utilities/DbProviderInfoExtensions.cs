@@ -8,7 +8,7 @@ namespace System.Data.Entity.Utilities
     {
         public static bool IsSqlCe(this DbProviderInfo providerInfo)
         {
-            Contract.Requires(providerInfo != null);
+            //Contract.Requires(providerInfo != null);
 
             return !string.IsNullOrWhiteSpace(providerInfo.ProviderInvariantName) &&
                    providerInfo.ProviderInvariantName.StartsWith(

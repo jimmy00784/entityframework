@@ -17,7 +17,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
 
         public ColumnMapping(DbTableColumnMetadata column)
         {
-            Contract.Requires(column != null);
+            //Contract.Requires(column != null);
             _column = column;
             _propertyMappings = new List<PropertyMappingSpecification>();
         }

@@ -34,7 +34,7 @@ namespace System.Data.Objects.ELinq
             ObjectQueryExecutionPlanFactory objectQueryExecutionPlanFactory = null)
             : base(elementType, context, lambda)
         {
-            Contract.Requires(parameterValues != null);
+            //Contract.Requires(parameterValues != null);
 
             _cacheToken = cacheToken;
             _parameterValues = parameterValues;

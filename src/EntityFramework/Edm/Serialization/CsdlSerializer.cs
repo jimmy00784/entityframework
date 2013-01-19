@@ -25,8 +25,8 @@ namespace System.Data.Entity.Edm.Serialization
         /// <param name = "xmlWriter"> The XmlWriter to serialize to </param>
         public bool Serialize(EdmModel model, XmlWriter xmlWriter)
         {
-            Contract.Requires(model != null);
-            Contract.Requires(xmlWriter != null);
+            //Contract.Requires(model != null);
+            //Contract.Requires(xmlWriter != null);
 
             if (model.Namespaces.Count != 1
                 || model.Containers.Count != 1)

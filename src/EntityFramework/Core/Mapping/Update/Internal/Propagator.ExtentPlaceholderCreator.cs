@@ -105,7 +105,7 @@ namespace System.Data.Mapping.Update.Internal
             /// <returns>A default record for the </returns>
             internal static PropagatorResult CreatePlaceholder(EntitySetBase extent)
             {
-                Contract.Requires(extent != null);
+                //Contract.Requires(extent != null);
 
                 var creator = new ExtentPlaceholderCreator();
 
@@ -133,7 +133,7 @@ namespace System.Data.Mapping.Update.Internal
             /// <returns></returns>
             private PropagatorResult CreateEntitySetPlaceholder(EntitySet entitySet)
             {
-                Contract.Requires(entitySet != null);
+                //Contract.Requires(entitySet != null);
                 var members = entitySet.ElementType.Properties;
                 var memberValues = new PropagatorResult[members.Count];
 
@@ -192,7 +192,7 @@ namespace System.Data.Mapping.Update.Internal
             /// <returns>Placeholder element for the given member.</returns>
             private PropagatorResult CreateMemberPlaceholder(EdmMember member)
             {
-                Contract.Requires(member != null);
+                //Contract.Requires(member != null);
 
                 return Visit(member);
             }

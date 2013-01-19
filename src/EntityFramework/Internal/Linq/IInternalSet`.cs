@@ -47,7 +47,7 @@ namespace System.Data.Entity.Internal.Linq
 
         TEntity IInternalSet<TEntity>.Create(Type derivedEntityType)
         {
-            Contract.Requires(derivedEntityType != null);
+            //Contract.Requires(derivedEntityType != null);
 
             throw new NotImplementedException();
         }

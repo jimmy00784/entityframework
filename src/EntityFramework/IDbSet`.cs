@@ -175,21 +175,21 @@ namespace System.Data.Entity
 
         TEntity IDbSet<TEntity>.Add(TEntity entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
 
             throw new NotImplementedException();
         }
 
         TEntity IDbSet<TEntity>.Remove(TEntity entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
 
             throw new NotImplementedException();
         }
 
         TEntity IDbSet<TEntity>.Attach(TEntity entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
 
             throw new NotImplementedException();
         }

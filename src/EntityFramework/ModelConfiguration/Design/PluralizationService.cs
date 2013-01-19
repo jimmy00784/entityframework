@@ -24,7 +24,7 @@ namespace System.Data.Entity.ModelConfiguration.Design.PluralizationServices
         /// <returns>PluralizationService</returns>
         public static PluralizationService CreateService(CultureInfo culture)
         {
-            Contract.Requires(culture != null);
+            //Contract.Requires(culture != null);
 
             if (culture.TwoLetterISOLanguageName == "en")
             {

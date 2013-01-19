@@ -20,7 +20,7 @@ namespace System.Data.Common.CommandTrees
         /// <exception cref="ArgumentNullException"><paramref name="expression"/> is null</exception>
         protected virtual void VisitUnaryExpression(DbUnaryExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
 
             VisitExpression(expression.Argument);
         }
@@ -32,7 +32,7 @@ namespace System.Data.Common.CommandTrees
         /// <exception cref="ArgumentNullException"><paramref name="expression"/> is null</exception>
         protected virtual void VisitBinaryExpression(DbBinaryExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
 
             VisitExpression(expression.Left);
             VisitExpression(expression.Right);
@@ -45,7 +45,7 @@ namespace System.Data.Common.CommandTrees
         /// <exception cref="ArgumentNullException"><paramref name="binding"/> is null</exception>
         protected virtual void VisitExpressionBindingPre(DbExpressionBinding binding)
         {
-            Contract.Requires(binding != null);
+            //Contract.Requires(binding != null);
             VisitExpression(binding.Expression);
         }
 
@@ -64,7 +64,7 @@ namespace System.Data.Common.CommandTrees
         /// <exception cref="ArgumentNullException"><paramref name="binding"/> is null</exception>
         protected virtual void VisitGroupExpressionBindingPre(DbGroupExpressionBinding binding)
         {
-            Contract.Requires(binding != null);
+            //Contract.Requires(binding != null);
             VisitExpression(binding.Expression);
         }
 
@@ -91,7 +91,7 @@ namespace System.Data.Common.CommandTrees
         /// <exception cref="ArgumentNullException"><paramref name="lambda"/> is null</exception>
         protected virtual void VisitLambdaPre(DbLambda lambda)
         {
-            Contract.Requires(lambda != null);
+            //Contract.Requires(lambda != null);
         }
 
         /// <summary>
@@ -114,7 +114,7 @@ namespace System.Data.Common.CommandTrees
         public virtual void VisitExpression(DbExpression expression)
         {
             // #433613: PreSharp warning 56506: Parameter 'expression' to this public method must be validated: A null-dereference can occur here.
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             expression.Accept(this);
         }
 
@@ -125,7 +125,7 @@ namespace System.Data.Common.CommandTrees
         /// <exception cref="ArgumentNullException"><paramref name="expressionList"/> is null</exception>
         public virtual void VisitExpressionList(IList<DbExpression> expressionList)
         {
-            Contract.Requires(expressionList != null);
+            //Contract.Requires(expressionList != null);
             for (var idx = 0; idx < expressionList.Count; idx++)
             {
                 VisitExpression(expressionList[idx]);
@@ -139,7 +139,7 @@ namespace System.Data.Common.CommandTrees
         /// <exception cref="ArgumentNullException"><paramref name="aggregates"/> is null</exception>
         public virtual void VisitAggregateList(IList<DbAggregate> aggregates)
         {
-            Contract.Requires(aggregates != null);
+            //Contract.Requires(aggregates != null);
             for (var idx = 0; idx < aggregates.Count; idx++)
             {
                 VisitAggregate(aggregates[idx]);
@@ -154,7 +154,7 @@ namespace System.Data.Common.CommandTrees
         public virtual void VisitAggregate(DbAggregate aggregate)
         {
             // #433613: PreSharp warning 56506: Parameter 'aggregate' to this public method must be validated: A null-dereference can occur here.
-            Contract.Requires(aggregate != null);
+            //Contract.Requires(aggregate != null);
             VisitExpressionList(aggregate.Arguments);
         }
 

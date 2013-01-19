@@ -12,9 +12,9 @@ namespace System.Data.Entity.Internal
 
         public DefaultModelCacheKey(Type contextType, string providerName, string schema)
         {
-            Contract.Requires(contextType != null);
-            Contract.Requires(typeof(DbContext).IsAssignableFrom(contextType));
-            Contract.Requires(!string.IsNullOrWhiteSpace(providerName));
+            //Contract.Requires(contextType != null);
+            //Contract.Requires(typeof(DbContext).IsAssignableFrom(contextType));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(providerName));
 
             _contextType = contextType;
             _providerName = providerName;
@@ -50,7 +50,7 @@ namespace System.Data.Entity.Internal
 
         private bool Equals(DefaultModelCacheKey other)
         {
-            Contract.Requires(other != null);
+            //Contract.Requires(other != null);
 
             return _contextType == other._contextType
                    && string.Equals(_providerName, other._providerName)

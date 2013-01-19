@@ -283,7 +283,7 @@ namespace System.Data.Entity.Edm
         /// <returns> <c>true</c> if the given name corresponds to an EDM primitive type name; otherwise <c>false</c> . </returns>
         public static bool TryGetByName(string primitiveTypeName, out EdmPrimitiveType primitiveType)
         {
-            Contract.Requires(primitiveTypeName != null);
+            //Contract.Requires(primitiveTypeName != null);
 
             EdmPrimitiveTypeKind kind;
             if (EdmUtil.TryGetPrimitiveTypeKindFromString(primitiveTypeName, out kind))

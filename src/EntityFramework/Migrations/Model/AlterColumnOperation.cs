@@ -29,8 +29,8 @@ namespace System.Data.Entity.Migrations.Model
             string table, ColumnModel column, bool isDestructiveChange, object anonymousArguments = null)
             : base(anonymousArguments)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(table));
-            Contract.Requires(column != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(table));
+            //Contract.Requires(column != null);
 
             _table = table;
             _column = column;
@@ -54,7 +54,7 @@ namespace System.Data.Entity.Migrations.Model
             object anonymousArguments = null)
             : this(table, column, isDestructiveChange, anonymousArguments)
         {
-            Contract.Requires(inverse != null);
+            //Contract.Requires(inverse != null);
 
             _inverse = inverse;
         }

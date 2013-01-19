@@ -47,10 +47,10 @@ namespace System.Data.Mapping.Update.Internal
             /// <param name="parent">Handler of propagation for the entire update mapping view</param>
             internal JoinPropagator(ChangeNode left, ChangeNode right, DbJoinExpression node, Propagator parent)
             {
-                Contract.Requires(left != null);
-                Contract.Requires(right != null);
-                Contract.Requires(node != null);
-                Contract.Requires(parent != null);
+                //Contract.Requires(left != null);
+                //Contract.Requires(right != null);
+                //Contract.Requires(node != null);
+                //Contract.Requires(parent != null);
 
                 m_left = left;
                 m_right = right;

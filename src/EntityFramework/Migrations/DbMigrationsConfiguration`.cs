@@ -34,7 +34,7 @@ namespace System.Data.Entity.Migrations
         /// <param name = "context">Context to be used for updating seed data.</param>
         protected virtual void Seed(TContext context)
         {
-            Contract.Requires(context != null);
+            //Contract.Requires(context != null);
         }
 
         internal override void OnSeed(DbContext context)

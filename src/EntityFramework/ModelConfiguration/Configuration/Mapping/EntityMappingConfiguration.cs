@@ -37,7 +37,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
 
         private EntityMappingConfiguration(EntityMappingConfiguration source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             _tableName = source._tableName;
 
@@ -68,7 +68,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
             get { return _tableName; }
             set
             {
-                Contract.Requires(value != null);
+                //Contract.Requires(value != null);
 
                 _tableName = value;
             }
@@ -79,7 +79,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
             get { return _properties; }
             set
             {
-                Contract.Requires(value != null);
+                //Contract.Requires(value != null);
                 if (_properties == null)
                 {
                     _properties = new List<PropertyPath>();
@@ -90,7 +90,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
 
         private void Property(PropertyPath property)
         {
-            Contract.Requires(property != null);
+            //Contract.Requires(property != null);
 
             if (!_properties.Where(pp => pp.SequenceEqual(property)).Any())
             {
@@ -109,7 +109,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
 
         public void AddValueCondition(ValueConditionConfiguration valueCondition)
         {
-            Contract.Requires(valueCondition != null);
+            //Contract.Requires(valueCondition != null);
 
             var existingValueCondition =
                 ValueConditions
@@ -133,7 +133,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
             get { return _notNullConditions; }
             set
             {
-                Contract.Requires(value != null);
+                //Contract.Requires(value != null);
 
                 value.Each(AddNullabilityCondition);
             }
@@ -141,7 +141,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
 
         public void AddNullabilityCondition(NotNullConditionConfiguration notNullConditionConfiguration)
         {
-            Contract.Requires(notNullConditionConfiguration != null);
+            //Contract.Requires(notNullConditionConfiguration != null);
 
             if (!NullabilityConditions.Contains(notNullConditionConfiguration))
             {
@@ -176,9 +176,9 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
             int configurationIndex,
             int configurationCount)
         {
-            Contract.Requires(entityType != null);
-            Contract.Requires(databaseMapping != null);
-            Contract.Requires(providerManifest != null);
+            //Contract.Requires(entityType != null);
+            //Contract.Requires(databaseMapping != null);
+            //Contract.Requires(providerManifest != null);
 
             var isIdentityTable = entityType.BaseType == null && configurationIndex == 0;
 

@@ -111,8 +111,8 @@ namespace System.Data.Entity
             ConventionsConfiguration conventionsConfiguration,
             DbModelBuilderVersion modelBuilderVersion = DbModelBuilderVersion.Latest)
         {
-            Contract.Requires(modelConfiguration != null);
-            Contract.Requires(conventionsConfiguration != null);
+            //Contract.Requires(modelConfiguration != null);
+            //Contract.Requires(conventionsConfiguration != null);
             if (!(Enum.IsDefined(typeof(DbModelBuilderVersion), modelBuilderVersion)))
             {
                 throw new ArgumentOutOfRangeException("modelBuilderVersion");
@@ -125,7 +125,7 @@ namespace System.Data.Entity
 
         private DbModelBuilder(DbModelBuilder source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             _modelConfiguration = source._modelConfiguration.Clone();
             _conventionsConfiguration = source._conventionsConfiguration.Clone();
@@ -173,7 +173,7 @@ namespace System.Data.Entity
         /// <returns>The same DbModelBuilder instance so that multiple calls can be chained.</returns>
         public virtual DbModelBuilder Ignore(IEnumerable<Type> types)
         {
-            Contract.Requires(types != null);
+            //Contract.Requires(types != null);
 
             foreach (var type in types)
             {
@@ -207,7 +207,7 @@ namespace System.Data.Entity
         /// <returns>The configuration object for the specified entity type.</returns>
         internal virtual EntityTypeConfiguration Entity(Type entityType)
         {
-            Contract.Requires(entityType != null);
+            //Contract.Requires(entityType != null);
 
             var config = _modelConfiguration.Entity(entityType);
             config.IsReplaceable = true;
@@ -253,7 +253,7 @@ namespace System.Data.Entity
         /// <returns>The model that was built.</returns>
         public virtual DbModel Build(DbConnection providerConnection)
         {
-            Contract.Requires(providerConnection != null);
+            //Contract.Requires(providerConnection != null);
 
             DbProviderManifest providerManifest;
             var providerInfo = providerConnection.GetProviderInfo(out providerManifest);
@@ -270,7 +270,7 @@ namespace System.Data.Entity
         /// <returns>The model that was built.</returns>
         public virtual DbModel Build(DbProviderInfo providerInfo)
         {
-            Contract.Requires(providerInfo != null);
+            //Contract.Requires(providerInfo != null);
 
             var providerManifest = GetProviderManifest(providerInfo);
 
@@ -286,8 +286,8 @@ namespace System.Data.Entity
 
         private DbModel Build(DbProviderManifest providerManifest, DbProviderInfo providerInfo)
         {
-            Contract.Requires(providerManifest != null);
-            Contract.Requires(providerInfo != null);
+            //Contract.Requires(providerManifest != null);
+            //Contract.Requires(providerInfo != null);
 
             var model = new EdmModel().Initialize(_modelBuilderVersion.GetEdmVersion());
             model.SetProviderInfo(providerInfo);
@@ -327,7 +327,7 @@ namespace System.Data.Entity
 
         private void MapTypes(EdmModel model)
         {
-            Contract.Requires(model != null);
+            //Contract.Requires(model != null);
 
             var typeMapper = new TypeMapper(new MappingContext(_modelConfiguration, _conventionsConfiguration, model));
 

@@ -38,7 +38,7 @@ namespace System.Data.Entity.Internal.Validation
         /// </param>
         public ValidationAttributeValidator(ValidationAttribute validationAttribute, DisplayAttribute displayAttribute)
         {
-            Contract.Requires(validationAttribute != null);
+            //Contract.Requires(validationAttribute != null);
 
             _validationAttribute = validationAttribute;
             _displayAttribute = displayAttribute;

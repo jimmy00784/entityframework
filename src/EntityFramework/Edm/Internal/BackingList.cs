@@ -17,7 +17,7 @@ namespace System.Data.Entity.Edm.Internal
 
         internal void SetValue(IList<TElement> value)
         {
-            Contract.Requires(value != null);
+            //Contract.Requires(value != null);
 
             instance = value;
         }

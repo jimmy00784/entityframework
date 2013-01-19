@@ -31,7 +31,7 @@ namespace System.Data.Common.EntitySql
         /// </summary>
         internal TypeResolver(Perspective perspective, ParserOptions parserOptions)
         {
-            Contract.Requires(perspective != null);
+            //Contract.Requires(perspective != null);
 
             _perspective = perspective;
             _parserOptions = parserOptions;

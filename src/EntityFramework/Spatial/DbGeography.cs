@@ -20,8 +20,8 @@ namespace System.Data.Entity.Spatial
 
         internal DbGeography(DbSpatialServices spatialServices, object spatialProviderValue)
         {
-            Contract.Requires(spatialServices != null);
-            Contract.Requires(spatialProviderValue != null);
+            //Contract.Requires(spatialServices != null);
+            //Contract.Requires(spatialProviderValue != null);
 
             _spatialProvider = spatialServices;
             _providerValue = spatialProviderValue;
@@ -81,7 +81,7 @@ namespace System.Data.Entity.Spatial
         /// <exception cref="ArgumentNullException"><paramref name="wellKnownBinary"/> is null.</exception>
         public static DbGeography FromBinary(byte[] wellKnownBinary)
         {
-            Contract.Requires(wellKnownBinary != null);
+            //Contract.Requires(wellKnownBinary != null);
             return DbSpatialServices.Default.GeographyFromBinary(wellKnownBinary);
         }
 
@@ -95,7 +95,7 @@ namespace System.Data.Entity.Spatial
         /// <exception cref="ArgumentException"><paramref name="coordinateSystemId"/> is not valid.</exception>
         public static DbGeography FromBinary(byte[] wellKnownBinary, int coordinateSystemId)
         {
-            Contract.Requires(wellKnownBinary != null);
+            //Contract.Requires(wellKnownBinary != null);
             return DbSpatialServices.Default.GeographyFromBinary(wellKnownBinary, coordinateSystemId);
         }
 
@@ -109,7 +109,7 @@ namespace System.Data.Entity.Spatial
         /// <exception cref="ArgumentException"><paramref name="coordinateSystemId"/> is not valid.</exception>
         public static DbGeography LineFromBinary(byte[] lineWellKnownBinary, int coordinateSystemId)
         {
-            Contract.Requires(lineWellKnownBinary != null);
+            //Contract.Requires(lineWellKnownBinary != null);
             return DbSpatialServices.Default.GeographyLineFromBinary(lineWellKnownBinary, coordinateSystemId);
         }
 
@@ -123,7 +123,7 @@ namespace System.Data.Entity.Spatial
         /// <exception cref="ArgumentException"><paramref name="coordinateSystemId"/> is not valid.</exception>
         public static DbGeography PointFromBinary(byte[] pointWellKnownBinary, int coordinateSystemId)
         {
-            Contract.Requires(pointWellKnownBinary != null);
+            //Contract.Requires(pointWellKnownBinary != null);
             return DbSpatialServices.Default.GeographyPointFromBinary(pointWellKnownBinary, coordinateSystemId);
         }
 
@@ -137,7 +137,7 @@ namespace System.Data.Entity.Spatial
         /// <exception cref="ArgumentException"><paramref name="coordinateSystemId"/> is not valid.</exception>
         public static DbGeography PolygonFromBinary(byte[] polygonWellKnownBinary, int coordinateSystemId)
         {
-            Contract.Requires(polygonWellKnownBinary != null);
+            //Contract.Requires(polygonWellKnownBinary != null);
             return DbSpatialServices.Default.GeographyPolygonFromBinary(polygonWellKnownBinary, coordinateSystemId);
         }
 
@@ -159,7 +159,7 @@ namespace System.Data.Entity.Spatial
             Justification = "Match OGC, EDM")]
         public static DbGeography MultiLineFromBinary(byte[] multiLineWellKnownBinary, int coordinateSystemId)
         {
-            Contract.Requires(multiLineWellKnownBinary != null);
+            //Contract.Requires(multiLineWellKnownBinary != null);
             return DbSpatialServices.Default.GeographyMultiLineFromBinary(multiLineWellKnownBinary, coordinateSystemId);
         }
 
@@ -181,7 +181,7 @@ namespace System.Data.Entity.Spatial
             Justification = "Match OGC, EDM")]
         public static DbGeography MultiPointFromBinary(byte[] multiPointWellKnownBinary, int coordinateSystemId)
         {
-            Contract.Requires(multiPointWellKnownBinary != null);
+            //Contract.Requires(multiPointWellKnownBinary != null);
             return DbSpatialServices.Default.GeographyMultiPointFromBinary(multiPointWellKnownBinary, coordinateSystemId);
         }
 
@@ -199,7 +199,7 @@ namespace System.Data.Entity.Spatial
             Justification = "Match OGC, EDM")]
         public static DbGeography MultiPolygonFromBinary(byte[] multiPolygonWellKnownBinary, int coordinateSystemId)
         {
-            Contract.Requires(multiPolygonWellKnownBinary != null);
+            //Contract.Requires(multiPolygonWellKnownBinary != null);
             return DbSpatialServices.Default.GeographyMultiPolygonFromBinary(multiPolygonWellKnownBinary, coordinateSystemId);
         }
 
@@ -213,7 +213,7 @@ namespace System.Data.Entity.Spatial
         /// <exception cref="ArgumentException"><paramref name="coordinateSystemId"/> is not valid.</exception>
         public static DbGeography GeographyCollectionFromBinary(byte[] geographyCollectionWellKnownBinary, int coordinateSystemId)
         {
-            Contract.Requires(geographyCollectionWellKnownBinary != null);
+            //Contract.Requires(geographyCollectionWellKnownBinary != null);
             return DbSpatialServices.Default.GeographyCollectionFromBinary(geographyCollectionWellKnownBinary, coordinateSystemId);
         }
 
@@ -230,7 +230,7 @@ namespace System.Data.Entity.Spatial
         [SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Gml")]
         public static DbGeography FromGml(string geographyMarkup)
         {
-            Contract.Requires(geographyMarkup != null);
+            //Contract.Requires(geographyMarkup != null);
             return DbSpatialServices.Default.GeographyFromGml(geographyMarkup);
         }
 
@@ -245,7 +245,7 @@ namespace System.Data.Entity.Spatial
         [SuppressMessage("Microsoft.Naming", "CA1704:IdentifiersShouldBeSpelledCorrectly", MessageId = "Gml")]
         public static DbGeography FromGml(string geographyMarkup, int coordinateSystemId)
         {
-            Contract.Requires(geographyMarkup != null);
+            //Contract.Requires(geographyMarkup != null);
             return DbSpatialServices.Default.GeographyFromGml(geographyMarkup, coordinateSystemId);
         }
 
@@ -261,7 +261,7 @@ namespace System.Data.Entity.Spatial
         /// <exception cref="ArgumentNullException"><paramref name="wellKnownText"/> is null.</exception>
         public static DbGeography FromText(string wellKnownText)
         {
-            Contract.Requires(wellKnownText != null);
+            //Contract.Requires(wellKnownText != null);
             return DbSpatialServices.Default.GeographyFromText(wellKnownText);
         }
 
@@ -275,7 +275,7 @@ namespace System.Data.Entity.Spatial
         /// <exception cref="ArgumentException"><paramref name="coordinateSystemId"/> is not valid.</exception>
         public static DbGeography FromText(string wellKnownText, int coordinateSystemId)
         {
-            Contract.Requires(wellKnownText != null);
+            //Contract.Requires(wellKnownText != null);
             return DbSpatialServices.Default.GeographyFromText(wellKnownText, coordinateSystemId);
         }
 
@@ -289,7 +289,7 @@ namespace System.Data.Entity.Spatial
         /// <exception cref="ArgumentException"><paramref name="coordinateSystemId"/> is not valid.</exception>
         public static DbGeography LineFromText(string lineWellKnownText, int coordinateSystemId)
         {
-            Contract.Requires(lineWellKnownText != null);
+            //Contract.Requires(lineWellKnownText != null);
             return DbSpatialServices.Default.GeographyLineFromText(lineWellKnownText, coordinateSystemId);
         }
 
@@ -303,7 +303,7 @@ namespace System.Data.Entity.Spatial
         /// <exception cref="ArgumentException"><paramref name="coordinateSystemId"/> is not valid.</exception>
         public static DbGeography PointFromText(string pointWellKnownText, int coordinateSystemId)
         {
-            Contract.Requires(pointWellKnownText != null);
+            //Contract.Requires(pointWellKnownText != null);
             return DbSpatialServices.Default.GeographyPointFromText(pointWellKnownText, coordinateSystemId);
         }
 
@@ -317,7 +317,7 @@ namespace System.Data.Entity.Spatial
         /// <exception cref="ArgumentException"><paramref name="coordinateSystemId"/> is not valid.</exception>
         public static DbGeography PolygonFromText(string polygonWellKnownText, int coordinateSystemId)
         {
-            Contract.Requires(polygonWellKnownText != null);
+            //Contract.Requires(polygonWellKnownText != null);
             return DbSpatialServices.Default.GeographyPolygonFromText(polygonWellKnownText, coordinateSystemId);
         }
 
@@ -339,7 +339,7 @@ namespace System.Data.Entity.Spatial
             Justification = "Match OGC, EDM")]
         public static DbGeography MultiLineFromText(string multiLineWellKnownText, int coordinateSystemId)
         {
-            Contract.Requires(multiLineWellKnownText != null);
+            //Contract.Requires(multiLineWellKnownText != null);
             return DbSpatialServices.Default.GeographyMultiLineFromText(multiLineWellKnownText, coordinateSystemId);
         }
 
@@ -361,7 +361,7 @@ namespace System.Data.Entity.Spatial
             Justification = "Match OGC, EDM")]
         public static DbGeography MultiPointFromText(string multiPointWellKnownText, int coordinateSystemId)
         {
-            Contract.Requires(multiPointWellKnownText != null);
+            //Contract.Requires(multiPointWellKnownText != null);
             return DbSpatialServices.Default.GeographyMultiPointFromText(multiPointWellKnownText, coordinateSystemId);
         }
 
@@ -379,7 +379,7 @@ namespace System.Data.Entity.Spatial
             Justification = "Match OGC, EDM")]
         public static DbGeography MultiPolygonFromText(string multiPolygonWellKnownText, int coordinateSystemId)
         {
-            Contract.Requires(multiPolygonWellKnownText != null);
+            //Contract.Requires(multiPolygonWellKnownText != null);
             return DbSpatialServices.Default.GeographyMultiPolygonFromText(multiPolygonWellKnownText, coordinateSystemId);
         }
 
@@ -393,7 +393,7 @@ namespace System.Data.Entity.Spatial
         /// <exception cref="ArgumentException"><paramref name="coordinateSystemId"/> is not valid.</exception>
         public static DbGeography GeographyCollectionFromText(string geographyCollectionWellKnownText, int coordinateSystemId)
         {
-            Contract.Requires(geographyCollectionWellKnownText != null);
+            //Contract.Requires(geographyCollectionWellKnownText != null);
             return DbSpatialServices.Default.GeographyCollectionFromText(geographyCollectionWellKnownText, coordinateSystemId);
         }
 
@@ -487,7 +487,7 @@ namespace System.Data.Entity.Spatial
         /// <exception cref="ArgumentNullException"><paramref name="other"/> is null.</exception>
         public bool SpatialEquals(DbGeography other)
         {
-            Contract.Requires(other != null);
+            //Contract.Requires(other != null);
             return _spatialProvider.SpatialEquals(this, other);
         }
 
@@ -499,7 +499,7 @@ namespace System.Data.Entity.Spatial
         /// <exception cref="ArgumentNullException"><paramref name="other"/> is null.</exception>
         public bool Disjoint(DbGeography other)
         {
-            Contract.Requires(other != null);
+            //Contract.Requires(other != null);
             return _spatialProvider.Disjoint(this, other);
         }
 
@@ -511,7 +511,7 @@ namespace System.Data.Entity.Spatial
         /// <exception cref="ArgumentNullException"><paramref name="other"/> is null.</exception>
         public bool Intersects(DbGeography other)
         {
-            Contract.Requires(other != null);
+            //Contract.Requires(other != null);
             return _spatialProvider.Intersects(this, other);
         }
 
@@ -542,7 +542,7 @@ namespace System.Data.Entity.Spatial
         /// <exception cref="ArgumentNullException"><paramref name="other"/> is null.</exception>
         public double? Distance(DbGeography other)
         {
-            Contract.Requires(other != null);
+            //Contract.Requires(other != null);
             return _spatialProvider.Distance(this, other);
         }
 
@@ -554,7 +554,7 @@ namespace System.Data.Entity.Spatial
         /// <exception cref="ArgumentNullException"><paramref name="other"/> is null.</exception>
         public DbGeography Intersection(DbGeography other)
         {
-            Contract.Requires(other != null);
+            //Contract.Requires(other != null);
             return _spatialProvider.Intersection(this, other);
         }
 
@@ -566,7 +566,7 @@ namespace System.Data.Entity.Spatial
         /// <exception cref="ArgumentNullException"><paramref name="other"/> is null.</exception>
         public DbGeography Union(DbGeography other)
         {
-            Contract.Requires(other != null);
+            //Contract.Requires(other != null);
             return _spatialProvider.Union(this, other);
         }
 
@@ -578,7 +578,7 @@ namespace System.Data.Entity.Spatial
         /// <exception cref="ArgumentNullException"><paramref name="other"/> is null.</exception>
         public DbGeography Difference(DbGeography other)
         {
-            Contract.Requires(other != null);
+            //Contract.Requires(other != null);
             return _spatialProvider.Difference(this, other);
         }
 
@@ -590,7 +590,7 @@ namespace System.Data.Entity.Spatial
         /// <exception cref="ArgumentNullException"><paramref name="other"/> is null.</exception>
         public DbGeography SymmetricDifference(DbGeography other)
         {
-            Contract.Requires(other != null);
+            //Contract.Requires(other != null);
             return _spatialProvider.SymmetricDifference(this, other);
         }
 

@@ -519,7 +519,7 @@ namespace System.Data.Entity
         /// <returns>A new IQueryable<T> with the defined query path.</returns>
         public static IQueryable<T> Include<T>(this IQueryable<T> source, string path) where T : class
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
             // Explicitly not checking the value of path since we don't care for the extension method.
 
             // We could use dynamic here, but the problem is that we want to do nothing if the method
@@ -563,7 +563,7 @@ namespace System.Data.Entity
         /// <returns>A new IQueryable with the defined query path.</returns>
         public static IQueryable Include(this IQueryable source, string path)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
             // Explicitly not checking the value of path since we don't care for the extension method.
 
             // We could use dynamic here, but the problem is that we want to do nothing if the method
@@ -626,8 +626,8 @@ namespace System.Data.Entity
         public static IQueryable<T> Include<T, TProperty>(
             this IQueryable<T> source, Expression<Func<T, TProperty>> path) where T : class
         {
-            Contract.Requires(source != null);
-            Contract.Requires(path != null);
+            //Contract.Requires(source != null);
+            //Contract.Requires(path != null);
 
             string include;
             if (!DbHelpers.TryParsePath(path.Body, out include)
@@ -654,7 +654,7 @@ namespace System.Data.Entity
         /// <returns>A new query with NoTracking applied, or the source query if NoTracking is not supported.</returns>
         public static IQueryable<T> AsNoTracking<T>(this IQueryable<T> source) where T : class
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             var asDbQuery = source as DbQuery<T>;
             return asDbQuery != null ? asDbQuery.AsNoTracking() : CommonAsNoTracking(source);
@@ -670,7 +670,7 @@ namespace System.Data.Entity
         /// <returns>A new query with NoTracking applied, or the source query if NoTracking is not supported.</returns>
         public static IQueryable AsNoTracking(this IQueryable source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             var asDbQuery = source as DbQuery;
             return asDbQuery != null ? asDbQuery.AsNoTracking() : CommonAsNoTracking(source);
@@ -681,7 +681,7 @@ namespace System.Data.Entity
         /// </summary>
         private static T CommonAsNoTracking<T>(T source) where T : class
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             var asObjectQuery = source as ObjectQuery;
             if (asObjectQuery != null)
@@ -712,7 +712,7 @@ namespace System.Data.Entity
         /// <param name = "source">The source query.</param>
         public static void Load(this IQueryable source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             var enumerator = source.GetEnumerator();
             try
@@ -741,7 +741,7 @@ namespace System.Data.Entity
         /// <returns>A Task representing the asynchronous operation.</returns>
         public static Task LoadAsync(this IQueryable source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
             Contract.Ensures(Contract.Result<Task>() != null);
 
             return source.LoadAsync(CancellationToken.None);
@@ -758,7 +758,7 @@ namespace System.Data.Entity
         /// <returns>A Task representing the asynchronous operation.</returns>
         public static Task LoadAsync(this IQueryable source, CancellationToken cancellationToken)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
             Contract.Ensures(Contract.Result<Task>() != null);
 
             return source.ForEachAsync(e => { }, cancellationToken);
@@ -777,8 +777,8 @@ namespace System.Data.Entity
         /// <returns>A Task representing the asynchronous operation.</returns>
         public static Task ForEachAsync(this IQueryable source, Action<object> action)
         {
-            Contract.Requires(source != null);
-            Contract.Requires(action != null);
+            //Contract.Requires(source != null);
+            //Contract.Requires(action != null);
             Contract.Ensures(Contract.Result<Task>() != null);
 
             return source.ForEachAsync(action, CancellationToken.None);
@@ -794,8 +794,8 @@ namespace System.Data.Entity
         /// <returns>A Task representing the asynchronous operation.</returns>
         public static Task ForEachAsync(this IQueryable source, Action<object> action, CancellationToken cancellationToken)
         {
-            Contract.Requires(source != null);
-            Contract.Requires(action != null);
+            //Contract.Requires(source != null);
+            //Contract.Requires(action != null);
             Contract.Ensures(Contract.Result<Task>() != null);
 
             var enumerable = source as IDbAsyncEnumerable;
@@ -820,8 +820,8 @@ namespace System.Data.Entity
         /// <returns>A Task representing the asynchronous operation.</returns>
         public static Task ForEachAsync<T>(this IQueryable<T> source, Action<T> action)
         {
-            Contract.Requires(source != null);
-            Contract.Requires(action != null);
+            //Contract.Requires(source != null);
+            //Contract.Requires(action != null);
             Contract.Ensures(Contract.Result<Task>() != null);
 
             return source.ForEachAsync(action, CancellationToken.None);
@@ -838,8 +838,8 @@ namespace System.Data.Entity
         /// <returns>A Task representing the asynchronous operation.</returns>
         public static Task ForEachAsync<T>(this IQueryable<T> source, Action<T> action, CancellationToken cancellationToken)
         {
-            Contract.Requires(source != null);
-            Contract.Requires(action != null);
+            //Contract.Requires(source != null);
+            //Contract.Requires(action != null);
             Contract.Ensures(Contract.Result<Task>() != null);
 
             var enumerable = source as IDbAsyncEnumerable<T>;
@@ -866,7 +866,7 @@ namespace System.Data.Entity
         [SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
         public static Task<List<object>> ToListAsync(this IQueryable source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
             Contract.Ensures(Contract.Result<Task<List<object>>>() != null);
 
             return source.ToListAsync(CancellationToken.None);
@@ -902,7 +902,7 @@ namespace System.Data.Entity
         [SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
         public static Task<List<T>> ToListAsync<T>(this IQueryable<T> source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
             Contract.Ensures(Contract.Result<Task<List<T>>>() != null);
 
             return source.ToListAsync(CancellationToken.None);
@@ -938,7 +938,7 @@ namespace System.Data.Entity
         [SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
         public static Task<object[]> ToArrayAsync(this IQueryable source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
             Contract.Ensures(Contract.Result<Task<object[]>>() != null);
 
             return source.ToArrayAsync(CancellationToken.None);
@@ -972,7 +972,7 @@ namespace System.Data.Entity
         [SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
         public static Task<T[]> ToArrayAsync<T>(this IQueryable<T> source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
             Contract.Ensures(Contract.Result<Task<T[]>>() != null);
 
             return source.ToArrayAsync(CancellationToken.None);
@@ -1013,8 +1013,8 @@ namespace System.Data.Entity
         public static Task<Dictionary<TKey, TSource>> ToDictionaryAsync<TSource, TKey>(
             this IQueryable<TSource> source, Func<TSource, TKey> keySelector)
         {
-            Contract.Requires(source != null);
-            Contract.Requires(keySelector != null);
+            //Contract.Requires(source != null);
+            //Contract.Requires(keySelector != null);
             Contract.Ensures(Contract.Result<Task<Dictionary<TKey, TSource>>>() != null);
 
             return ToDictionaryAsync(source, keySelector, IdentityFunction<TSource>.Instance, null, CancellationToken.None);
@@ -1036,8 +1036,8 @@ namespace System.Data.Entity
         public static Task<Dictionary<TKey, TSource>> ToDictionaryAsync<TSource, TKey>(
             this IQueryable<TSource> source, Func<TSource, TKey> keySelector, CancellationToken cancellationToken)
         {
-            Contract.Requires(source != null);
-            Contract.Requires(keySelector != null);
+            //Contract.Requires(source != null);
+            //Contract.Requires(keySelector != null);
             Contract.Ensures(Contract.Result<Task<Dictionary<TKey, TSource>>>() != null);
 
             return ToDictionaryAsync(source, keySelector, IdentityFunction<TSource>.Instance, null, cancellationToken);
@@ -1059,8 +1059,8 @@ namespace System.Data.Entity
         public static Task<Dictionary<TKey, TSource>> ToDictionaryAsync<TSource, TKey>(
             this IQueryable<TSource> source, Func<TSource, TKey> keySelector, IEqualityComparer<TKey> comparer)
         {
-            Contract.Requires(source != null);
-            Contract.Requires(keySelector != null);
+            //Contract.Requires(source != null);
+            //Contract.Requires(keySelector != null);
             Contract.Ensures(Contract.Result<Task<Dictionary<TKey, TSource>>>() != null);
 
             return ToDictionaryAsync(source, keySelector, IdentityFunction<TSource>.Instance, comparer, CancellationToken.None);
@@ -1084,8 +1084,8 @@ namespace System.Data.Entity
             this IQueryable<TSource> source, Func<TSource, TKey> keySelector, IEqualityComparer<TKey> comparer,
             CancellationToken cancellationToken)
         {
-            Contract.Requires(source != null);
-            Contract.Requires(keySelector != null);
+            //Contract.Requires(source != null);
+            //Contract.Requires(keySelector != null);
             Contract.Ensures(Contract.Result<Task<Dictionary<TKey, TSource>>>() != null);
 
             return ToDictionaryAsync(source, keySelector, IdentityFunction<TSource>.Instance, comparer, cancellationToken);
@@ -1110,9 +1110,9 @@ namespace System.Data.Entity
         public static Task<Dictionary<TKey, TElement>> ToDictionaryAsync<TSource, TKey, TElement>(
             this IQueryable<TSource> source, Func<TSource, TKey> keySelector, Func<TSource, TElement> elementSelector)
         {
-            Contract.Requires(source != null);
-            Contract.Requires(keySelector != null);
-            Contract.Requires(elementSelector != null);
+            //Contract.Requires(source != null);
+            //Contract.Requires(keySelector != null);
+            //Contract.Requires(elementSelector != null);
             Contract.Ensures(Contract.Result<Task<Dictionary<TKey, TElement>>>() != null);
 
             return ToDictionaryAsync(source, keySelector, elementSelector, null, CancellationToken.None);
@@ -1138,9 +1138,9 @@ namespace System.Data.Entity
             this IQueryable<TSource> source, Func<TSource, TKey> keySelector, Func<TSource, TElement> elementSelector,
             CancellationToken cancellationToken)
         {
-            Contract.Requires(source != null);
-            Contract.Requires(keySelector != null);
-            Contract.Requires(elementSelector != null);
+            //Contract.Requires(source != null);
+            //Contract.Requires(keySelector != null);
+            //Contract.Requires(elementSelector != null);
             Contract.Ensures(Contract.Result<Task<Dictionary<TKey, TElement>>>() != null);
 
             return ToDictionaryAsync(source, keySelector, elementSelector, null, cancellationToken);
@@ -1166,9 +1166,9 @@ namespace System.Data.Entity
             this IQueryable<TSource> source, Func<TSource, TKey> keySelector, Func<TSource, TElement> elementSelector,
             IEqualityComparer<TKey> comparer)
         {
-            Contract.Requires(source != null);
-            Contract.Requires(keySelector != null);
-            Contract.Requires(elementSelector != null);
+            //Contract.Requires(source != null);
+            //Contract.Requires(keySelector != null);
+            //Contract.Requires(elementSelector != null);
             Contract.Ensures(Contract.Result<Task<Dictionary<TKey, TElement>>>() != null);
 
             return ToDictionaryAsync(source, keySelector, elementSelector, comparer, CancellationToken.None);

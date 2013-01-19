@@ -28,7 +28,7 @@ namespace System.Data.Entity.Infrastructure
         /// <param name = "internalValues">The internal dictionary.</param>
         internal DbPropertyValues(InternalPropertyValues internalValues)
         {
-            Contract.Requires(internalValues != null);
+            //Contract.Requires(internalValues != null);
 
             _internalValues = internalValues;
         }
@@ -59,7 +59,7 @@ namespace System.Data.Entity.Infrastructure
             Justification = "Naming is intentional.")]
         public void SetValues(object obj)
         {
-            Contract.Requires(obj != null);
+            //Contract.Requires(obj != null);
 
             _internalValues.SetValues(obj);
         }
@@ -86,7 +86,7 @@ namespace System.Data.Entity.Infrastructure
         /// <param name = "dictionary">The dictionary to read values from.</param>
         public void SetValues(DbPropertyValues propertyValues)
         {
-            Contract.Requires(propertyValues != null);
+            //Contract.Requires(propertyValues != null);
 
             _internalValues.SetValues(propertyValues._internalValues);
         }
@@ -114,7 +114,7 @@ namespace System.Data.Entity.Infrastructure
         {
             get
             {
-                Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
+                //Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
 
                 var value = _internalValues[propertyName];
 
@@ -128,7 +128,7 @@ namespace System.Data.Entity.Infrastructure
             }
             set
             {
-                Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
+                //Contract.Requires(!string.IsNullOrWhiteSpace(propertyName));
 
                 _internalValues[propertyName] = value;
             }

@@ -23,7 +23,7 @@ namespace System.Data.Entity.Migrations.Model
         public SqlOperation(string sql, object anonymousArguments = null)
             : base(anonymousArguments)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(sql));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(sql));
 
             _sql = sql;
         }

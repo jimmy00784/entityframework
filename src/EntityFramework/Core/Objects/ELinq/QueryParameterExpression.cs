@@ -24,8 +24,8 @@ namespace System.Data.Objects.ELinq
             Expression funcletizedExpression,
             IEnumerable<ParameterExpression> compiledQueryParameters)
         {
-            Contract.Requires(parameterReference != null);
-            Contract.Requires(funcletizedExpression != null);
+            //Contract.Requires(parameterReference != null);
+            //Contract.Requires(funcletizedExpression != null);
             _compiledQueryParameters = compiledQueryParameters ?? Enumerable.Empty<ParameterExpression>();
             _parameterReference = parameterReference;
             _type = funcletizedExpression.Type;

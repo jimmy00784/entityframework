@@ -23,7 +23,7 @@ namespace System.Data.Common.CommandTrees
         internal DbModificationCommandTree(MetadataWorkspace metadata, DataSpace dataSpace, DbExpressionBinding target)
             : base(metadata, dataSpace)
         {
-            Contract.Requires(target != null);
+            //Contract.Requires(target != null);
 
             _target = target;
         }

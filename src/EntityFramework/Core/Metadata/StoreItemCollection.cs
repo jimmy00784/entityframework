@@ -82,7 +82,7 @@ namespace System.Data.Metadata.Edm
             IEnumerable<string> filePaths)
             : base(DataSpace.SSpace)
         {
-            Contract.Requires(filePaths != null);
+            //Contract.Requires(filePaths != null);
             EntityUtil.CheckArgumentEmpty(ref xmlReaders, Strings.StoreItemCollectionMustHaveOneArtifact, "xmlReader");
 
             Init(
@@ -101,7 +101,7 @@ namespace System.Data.Metadata.Edm
         public StoreItemCollection(IEnumerable<XmlReader> xmlReaders)
             : base(DataSpace.SSpace)
         {
-            Contract.Requires(xmlReaders != null);
+            //Contract.Requires(xmlReaders != null);
             EntityUtil.CheckArgumentEmpty(ref xmlReaders, Strings.StoreItemCollectionMustHaveOneArtifact, "xmlReader");
 
             var composite = MetadataArtifactLoader.CreateCompositeFromXmlReaders(xmlReaders);
@@ -128,7 +128,7 @@ namespace System.Data.Metadata.Edm
         public StoreItemCollection(params string[] filePaths)
             : base(DataSpace.SSpace)
         {
-            Contract.Requires(filePaths != null);
+            //Contract.Requires(filePaths != null);
             IEnumerable<string> enumerableFilePaths = filePaths;
             EntityUtil.CheckArgumentEmpty(ref enumerableFilePaths, Strings.StoreItemCollectionMustHaveOneArtifact, "filePaths");
 
@@ -169,7 +169,7 @@ namespace System.Data.Metadata.Edm
             out string providerManifestToken,
             out Memoizer<EdmFunction, EdmFunction> cachedCTypeFunction)
         {
-            Contract.Requires(xmlReaders != null);
+            //Contract.Requires(xmlReaders != null);
             // 'filePaths' can be null
 
             cachedCTypeFunction = new Memoizer<EdmFunction, EdmFunction>(ConvertFunctionSignatureToCType, null);

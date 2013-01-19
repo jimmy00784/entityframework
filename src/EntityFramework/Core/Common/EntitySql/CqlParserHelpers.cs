@@ -30,7 +30,7 @@ namespace System.Data.Common.EntitySql
             // The common practice is to make the null check at the public surface, 
             // however this method is a convergence zone from multiple public entry points and it makes sense to
             // check for null once, here.
-            Contract.Requires(parserOptions != null);
+            //Contract.Requires(parserOptions != null);
 
             _parserOptions = parserOptions;
             yydebug = debug;
@@ -47,7 +47,7 @@ namespace System.Data.Common.EntitySql
             // The common practice is to make the null check at the public surface, 
             // however this method is a convergence zone from multiple public entry points and it makes sense to
             // check for null once, here.
-            Contract.Requires(query != null);
+            //Contract.Requires(query != null);
             if (String.IsNullOrEmpty(query)
                 || query.Trim().Length == 0)
             {

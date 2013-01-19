@@ -21,9 +21,9 @@ namespace System.Data.Objects
 
         internal ObjectStateEntryDbDataRecord(EntityEntry cacheEntry, StateManagerTypeMetadata metadata, object userObject)
         {
-            Contract.Requires(cacheEntry != null);
-            Contract.Requires(userObject != null);
-            Contract.Requires(metadata != null);
+            //Contract.Requires(cacheEntry != null);
+            //Contract.Requires(userObject != null);
+            //Contract.Requires(metadata != null);
             Debug.Assert(!cacheEntry.IsKeyEntry, "Cannot create an ObjectStateEntryDbDataRecord for a key entry");
             switch (cacheEntry.State)
             {
@@ -42,7 +42,7 @@ namespace System.Data.Objects
 
         internal ObjectStateEntryDbDataRecord(RelationshipEntry cacheEntry)
         {
-            Contract.Requires(cacheEntry != null);
+            //Contract.Requires(cacheEntry != null);
             Debug.Assert(!cacheEntry.IsKeyEntry, "Cannot create an ObjectStateEntryDbDataRecord for a key entry");
             switch (cacheEntry.State)
             {

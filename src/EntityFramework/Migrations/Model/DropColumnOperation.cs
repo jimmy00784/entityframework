@@ -43,8 +43,8 @@ namespace System.Data.Entity.Migrations.Model
             string table, string name, AddColumnOperation inverse, object anonymousArguments = null)
             : base(anonymousArguments)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(table));
-            Contract.Requires(!string.IsNullOrWhiteSpace(name));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(table));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(name));
 
             _table = table;
             _name = name;

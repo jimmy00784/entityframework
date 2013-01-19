@@ -29,9 +29,9 @@ namespace System.Data.Mapping.Update.Internal
             DbModificationCommandTree tree, Dictionary<int, string> outputIdentifiers)
             : base(translator, originalValues, currentValues)
         {
-            Contract.Requires(processor != null);
-            Contract.Requires(translator != null);
-            Contract.Requires(tree != null);
+            //Contract.Requires(processor != null);
+            //Contract.Requires(translator != null);
+            //Contract.Requires(tree != null);
 
             _processor = processor;
             _operator = modificationOperator;

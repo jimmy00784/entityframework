@@ -22,7 +22,7 @@ namespace System.Data.Entity.ModelConfiguration.Mappers
 
         public TypeMapper(MappingContext mappingContext)
         {
-            Contract.Requires(mappingContext != null);
+            //Contract.Requires(mappingContext != null);
 
             _mappingContext = mappingContext;
 
@@ -41,7 +41,7 @@ namespace System.Data.Entity.ModelConfiguration.Mappers
 
         public EdmEnumType MapEnumType(Type type)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
             Contract.Assert(type.IsEnum);
 
             var enumType = _mappingContext.Model.GetEnumType(type.Name);
@@ -80,7 +80,7 @@ namespace System.Data.Entity.ModelConfiguration.Mappers
 
         public EdmComplexType MapComplexType(Type type, bool discoverNested = false)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             if (!type.IsValidStructuralType())
             {
@@ -124,7 +124,7 @@ namespace System.Data.Entity.ModelConfiguration.Mappers
 
         public EdmEntityType MapEntityType(Type type)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             if (!type.IsValidStructuralType())
             {
@@ -198,10 +198,10 @@ namespace System.Data.Entity.ModelConfiguration.Mappers
             Func<TStructuralTypeConfiguration> structuralTypeConfiguration)
             where TStructuralTypeConfiguration : StructuralTypeConfiguration
         {
-            Contract.Requires(type != null);
-            Contract.Requires(annotations != null);
-            Contract.Requires(propertyMappingAction != null);
-            Contract.Requires(structuralTypeConfiguration != null);
+            //Contract.Requires(type != null);
+            //Contract.Requires(annotations != null);
+            //Contract.Requires(propertyMappingAction != null);
+            //Contract.Requires(structuralTypeConfiguration != null);
 
             annotations.SetClrType(type);
 
@@ -230,8 +230,8 @@ namespace System.Data.Entity.ModelConfiguration.Mappers
 
         private void MapDerivedTypes(Type type, EdmEntityType entityType)
         {
-            Contract.Requires(type != null);
-            Contract.Requires(entityType != null);
+            //Contract.Requires(type != null);
+            //Contract.Requires(entityType != null);
 
             if (type.IsSealed)
             {
@@ -258,9 +258,9 @@ namespace System.Data.Entity.ModelConfiguration.Mappers
 
         private void LiftDerivedType(Type derivedType, EdmEntityType derivedEntityType, EdmEntityType entityType)
         {
-            Contract.Requires(derivedType != null);
-            Contract.Requires(derivedEntityType != null);
-            Contract.Requires(entityType != null);
+            //Contract.Requires(derivedType != null);
+            //Contract.Requires(derivedEntityType != null);
+            //Contract.Requires(entityType != null);
 
             _mappingContext.Model.ReplaceEntitySet(derivedEntityType, _mappingContext.Model.GetEntitySet(entityType));
 
@@ -269,8 +269,8 @@ namespace System.Data.Entity.ModelConfiguration.Mappers
 
         private void LiftDeclaredProperties(Type type, EdmEntityType entityType)
         {
-            Contract.Requires(type != null);
-            Contract.Requires(entityType != null);
+            //Contract.Requires(type != null);
+            //Contract.Requires(entityType != null);
 
             var entityTypeConfiguration
                 = _mappingContext.ModelConfiguration.GetStructuralTypeConfiguration(type) as EntityTypeConfiguration;
@@ -301,8 +301,8 @@ namespace System.Data.Entity.ModelConfiguration.Mappers
             Type type, IList<TProperty> properties, EntityTypeConfiguration entityTypeConfiguration)
             where TProperty : EdmStructuralMember
         {
-            Contract.Requires(type != null);
-            Contract.Requires(properties != null);
+            //Contract.Requires(type != null);
+            //Contract.Requires(properties != null);
 
             for (var i = properties.Count - 1; i >= 0; i--)
             {

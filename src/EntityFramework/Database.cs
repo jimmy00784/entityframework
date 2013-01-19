@@ -46,7 +46,7 @@ namespace System.Data.Entity
         /// <param name = "context">The context that defines the database connection and model.</param>
         internal Database(InternalContext internalContext)
         {
-            Contract.Requires(internalContext != null);
+            //Contract.Requires(internalContext != null);
 
             _internalContext = internalContext;
         }
@@ -274,7 +274,7 @@ namespace System.Data.Entity
         [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
         public static bool Exists(string nameOrConnectionString)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(nameOrConnectionString));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(nameOrConnectionString));
 
             return PerformDatabaseOp(
                 new LazyInternalConnection(nameOrConnectionString), new DatabaseOperations().Exists);
@@ -290,7 +290,7 @@ namespace System.Data.Entity
         [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
         public static bool Delete(string nameOrConnectionString)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(nameOrConnectionString));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(nameOrConnectionString));
 
             return PerformDatabaseOp(
                 new LazyInternalConnection(nameOrConnectionString), new DatabaseOperations().DeleteIfExists);
@@ -303,7 +303,7 @@ namespace System.Data.Entity
         /// <returns>True if the database exists; false otherwise.</returns>
         public static bool Exists(DbConnection existingConnection)
         {
-            Contract.Requires(existingConnection != null);
+            //Contract.Requires(existingConnection != null);
 
             return PerformDatabaseOp(existingConnection, new DatabaseOperations().Exists);
         }
@@ -315,7 +315,7 @@ namespace System.Data.Entity
         /// <returns>True if the database did exist and was deleted; false otherwise.</returns>
         public static bool Delete(DbConnection existingConnection)
         {
-            Contract.Requires(existingConnection != null);
+            //Contract.Requires(existingConnection != null);
 
             return PerformDatabaseOp(existingConnection, new DatabaseOperations().DeleteIfExists);
         }
@@ -345,7 +345,7 @@ namespace System.Data.Entity
             get { return _defaultConnectionFactory.Value; }
             set
             {
-                Contract.Requires(value != null);
+                //Contract.Requires(value != null);
 
                 _defaultConnectionFactory = new Lazy<IDbConnectionFactory>(() => value, isThreadSafe: true);
             }
@@ -436,8 +436,8 @@ namespace System.Data.Entity
         /// <returns>A <see cref = "DbSqlQuery{TElement}" /> object that will execute the query when it is enumerated.</returns>
         public DbSqlQuery<TElement> SqlQuery<TElement>(string sql, params object[] parameters)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(sql));
-            Contract.Requires(parameters != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(sql));
+            //Contract.Requires(parameters != null);
 
             return new DbSqlQuery<TElement>(new InternalSqlNonSetQuery(_internalContext, typeof(TElement), sql, parameters));
         }
@@ -456,9 +456,9 @@ namespace System.Data.Entity
         /// <returns>A <see cref = "DbSqlQuery" /> object that will execute the query when it is enumerated.</returns>
         public DbSqlQuery SqlQuery(Type elementType, string sql, params object[] parameters)
         {
-            Contract.Requires(elementType != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(sql));
-            Contract.Requires(parameters != null);
+            //Contract.Requires(elementType != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(sql));
+            //Contract.Requires(parameters != null);
 
             return new DbSqlQuery(new InternalSqlNonSetQuery(_internalContext, elementType, sql, parameters));
         }
@@ -471,8 +471,8 @@ namespace System.Data.Entity
         /// <returns>The result returned by the database after executing the command.</returns>
         public int ExecuteSqlCommand(string sql, params object[] parameters)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(sql));
-            Contract.Requires(parameters != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(sql));
+            //Contract.Requires(parameters != null);
 
             return _internalContext.ExecuteSqlCommand(sql, parameters);
         }
@@ -486,8 +486,8 @@ namespace System.Data.Entity
         /// <returns>A Task containing the result returned by the database after executing the command.</returns>
         public Task<int> ExecuteSqlCommandAsync(string sql, params object[] parameters)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(sql));
-            Contract.Requires(parameters != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(sql));
+            //Contract.Requires(parameters != null);
 
             return ExecuteSqlCommandAsync(sql, CancellationToken.None, parameters);
         }
@@ -503,8 +503,8 @@ namespace System.Data.Entity
         [SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic")]
         public Task<int> ExecuteSqlCommandAsync(string sql, CancellationToken cancellationToken, params object[] parameters)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(sql));
-            Contract.Requires(parameters != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(sql));
+            //Contract.Requires(parameters != null);
 
             return _internalContext.ExecuteSqlCommandAsync(sql, cancellationToken, parameters);
         }

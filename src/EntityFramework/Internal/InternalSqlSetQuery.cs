@@ -27,7 +27,7 @@ namespace System.Data.Entity.Internal
         internal InternalSqlSetQuery(IInternalSet set, string sql, bool isNoTracking, object[] parameters)
             : base(sql, parameters)
         {
-            Contract.Requires(set != null);
+            //Contract.Requires(set != null);
 
             _set = set;
             _isNoTracking = isNoTracking;

@@ -22,7 +22,7 @@ namespace System.Data.Entity.Infrastructure
         /// <param name = "internalContext">The internal context.</param>
         internal DbContextConfiguration(InternalContext internalContext)
         {
-            Contract.Requires(internalContext != null);
+            //Contract.Requires(internalContext != null);
 
             _internalContext = internalContext;
         }

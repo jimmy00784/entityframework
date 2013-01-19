@@ -107,7 +107,7 @@ namespace System.Data.Entity.Internal
         /// <returns>Quoted string</returns>
         public static string QuoteIdentifier(string identifier)
         {
-            Contract.Requires(identifier != null);
+            //Contract.Requires(identifier != null);
 
             return "[" + identifier.Replace("]", "]]") + "]";
         }
@@ -126,7 +126,7 @@ namespace System.Data.Entity.Internal
         /// <returns><c>true</c> if the string should be treated as a connection string; <c>false</c> if it should be treated as a name.</returns>
         public static bool TreatAsConnectionString(string nameOrConnectionString)
         {
-            Contract.Requires(nameOrConnectionString != null);
+            //Contract.Requires(nameOrConnectionString != null);
 
             return nameOrConnectionString.IndexOf('=') >= 0;
         }
@@ -141,7 +141,7 @@ namespace System.Data.Entity.Internal
         /// <returns>True if a name is found; false otherwise.</returns>
         public static bool TryGetConnectionName(string nameOrConnectionString, out string name)
         {
-            Contract.Requires(nameOrConnectionString != null);
+            //Contract.Requires(nameOrConnectionString != null);
 
             // No '=' at all means just treat the whole string as a name
             var firstEquals = nameOrConnectionString.IndexOf('=');
@@ -180,7 +180,7 @@ namespace System.Data.Entity.Internal
         /// </returns>
         public static bool IsFullEFConnectionString(string nameOrConnectionString)
         {
-            Contract.Requires(nameOrConnectionString != null);
+            //Contract.Requires(nameOrConnectionString != null);
 
             // TODO: Once we merge with System.Data.Entity we can use the full connection string parsing that is present there.
             // For now we use a heuristic which could give a false positive on a very strange store connection string,
@@ -209,7 +209,7 @@ namespace System.Data.Entity.Internal
         public static string ParsePropertySelector<TEntity, TProperty>(
             Expression<Func<TEntity, TProperty>> property, string methodName, string paramName)
         {
-            Contract.Requires(property != null);
+            //Contract.Requires(property != null);
 
             string path;
             if (!TryParsePath(property.Body, out path)
@@ -232,7 +232,7 @@ namespace System.Data.Entity.Internal
         /// <returns>True if matching succeeded; false if the expression could not be parsed.</returns>
         public static bool TryParsePath(Expression expression, out string path)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
 
             path = null;
             var withoutConvert = expression.RemoveConvert(); // Removes boxing
@@ -309,7 +309,7 @@ namespace System.Data.Entity.Internal
         /// </summary>
         public static IDictionary<string, Type> GetPropertyTypes(Type type)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             IDictionary<string, Type> types;
             if (!_propertyTypes.TryGetValue(type, out types))
@@ -331,7 +331,7 @@ namespace System.Data.Entity.Internal
         /// </summary>
         public static IDictionary<string, Action<object, object>> GetPropertySetters(Type type)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             IDictionary<string, Action<object, object>> setters;
             if (!_propertySetters.TryGetValue(type, out setters))
@@ -396,7 +396,7 @@ namespace System.Data.Entity.Internal
         /// </summary>
         public static IDictionary<string, Func<object, object>> GetPropertyGetters(Type type)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             IDictionary<string, Func<object, object>> getters;
             if (!_propertyGetters.TryGetValue(type, out getters))
@@ -432,7 +432,7 @@ namespace System.Data.Entity.Internal
         /// <returns>A new query with NoTracking applied.</returns>
         public static IQueryable CreateNoTrackingQuery(ObjectQuery query)
         {
-            Contract.Requires(query != null);
+            //Contract.Requires(query != null);
 
             var asIQueryable = (IQueryable)query;
             var newQuery = (ObjectQuery)asIQueryable.Provider.CreateQuery(asIQueryable.Expression);
@@ -500,7 +500,7 @@ namespace System.Data.Entity.Internal
         /// <returns>Dot separated path to the property.</returns>
         public static string GetPropertyPath(InternalMemberEntry property)
         {
-            Contract.Requires(property != null);
+            //Contract.Requires(property != null);
 
             return string.Join(".", GetPropertyPathSegments(property).Reverse());
         }
@@ -512,7 +512,7 @@ namespace System.Data.Entity.Internal
         /// <returns>Names of the property and its ancestor properties.</returns>
         private static IEnumerable<string> GetPropertyPathSegments(InternalMemberEntry property)
         {
-            Contract.Requires(property != null);
+            //Contract.Requires(property != null);
 
             do
             {
@@ -555,7 +555,7 @@ namespace System.Data.Entity.Internal
         /// <returns>The database name to use.</returns>
         public static string DatabaseName(this Type contextType)
         {
-            Contract.Requires(contextType != null);
+            //Contract.Requires(contextType != null);
             Contract.Assert(typeof(DbContext).IsAssignableFrom(contextType));
 
             // ToString seems to give us what we need.

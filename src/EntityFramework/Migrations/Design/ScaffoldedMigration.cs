@@ -26,7 +26,7 @@ namespace System.Data.Entity.Migrations.Design
             get { return _migrationId; }
             set
             {
-                Contract.Requires(!string.IsNullOrWhiteSpace(value));
+                //Contract.Requires(!string.IsNullOrWhiteSpace(value));
 
                 _migrationId = value;
             }
@@ -40,7 +40,7 @@ namespace System.Data.Entity.Migrations.Design
             get { return _userCode; }
             set
             {
-                Contract.Requires(!string.IsNullOrWhiteSpace(value));
+                //Contract.Requires(!string.IsNullOrWhiteSpace(value));
 
                 _userCode = value;
             }
@@ -54,7 +54,7 @@ namespace System.Data.Entity.Migrations.Design
             get { return _designerCode; }
             set
             {
-                Contract.Requires(!string.IsNullOrWhiteSpace(value));
+                //Contract.Requires(!string.IsNullOrWhiteSpace(value));
 
                 _designerCode = value;
             }
@@ -69,7 +69,7 @@ namespace System.Data.Entity.Migrations.Design
             get { return _language; }
             set
             {
-                Contract.Requires(!string.IsNullOrWhiteSpace(value));
+                //Contract.Requires(!string.IsNullOrWhiteSpace(value));
 
                 _language = value;
             }
@@ -83,7 +83,7 @@ namespace System.Data.Entity.Migrations.Design
             get { return _directory; }
             set
             {
-                Contract.Requires(!string.IsNullOrWhiteSpace(value));
+                //Contract.Requires(!string.IsNullOrWhiteSpace(value));
 
                 _directory = value;
             }

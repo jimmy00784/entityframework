@@ -35,7 +35,7 @@ namespace System.Data.Entity.Internal
         /// </summary>
         public DbSetDiscoveryService(DbContext context)
         {
-            Contract.Requires(context != null);
+            //Contract.Requires(context != null);
 
             _context = context;
         }

@@ -34,7 +34,7 @@ namespace System.Data.Entity.Infrastructure
     {
         DbConnection IDbConnectionFactory.CreateConnection(string nameOrConnectionString)
         {
-            Contract.Requires(!String.IsNullOrWhiteSpace(nameOrConnectionString));
+            //Contract.Requires(!String.IsNullOrWhiteSpace(nameOrConnectionString));
 
             throw new NotImplementedException();
         }

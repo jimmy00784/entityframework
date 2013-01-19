@@ -29,7 +29,7 @@ namespace System.Data.Entity.Internal
         public SortableBindingList(List<T> list)
             : base(list)
         {
-            Contract.Requires(list != null);
+            //Contract.Requires(list != null);
         }
 
         #endregion

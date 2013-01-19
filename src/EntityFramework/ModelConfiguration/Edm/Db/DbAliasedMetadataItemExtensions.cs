@@ -11,16 +11,16 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db
         public static string UniquifyIdentifier(
             this IEnumerable<DbAliasedMetadataItem> aliasedMetadataItems, string identifier)
         {
-            Contract.Requires(aliasedMetadataItems != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(identifier));
+            //Contract.Requires(aliasedMetadataItems != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(identifier));
 
             return Uniquify(aliasedMetadataItems.Select(n => n.DatabaseIdentifier), identifier);
         }
 
         public static string UniquifyName(this IEnumerable<DbAliasedMetadataItem> aliasedMetadataItems, string name)
         {
-            Contract.Requires(aliasedMetadataItems != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(name));
+            //Contract.Requires(aliasedMetadataItems != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(name));
 
             return Uniquify(aliasedMetadataItems.Select(n => n.Name), name);
         }

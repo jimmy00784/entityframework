@@ -28,7 +28,7 @@ namespace System.Data.Common
         /// <param name="memberInfo"></param>
         public DataRecordInfo(TypeUsage metadata, IEnumerable<EdmMember> memberInfo)
         {
-            Contract.Requires(metadata != null);
+            //Contract.Requires(metadata != null);
             var members = TypeHelpers.GetAllStructuralMembers(metadata.EdmType);
 
             var fieldList = new List<FieldMetadata>(members.Count);

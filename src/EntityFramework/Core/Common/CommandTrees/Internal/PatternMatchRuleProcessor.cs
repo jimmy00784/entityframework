@@ -26,7 +26,7 @@ namespace System.Data.Common.CommandTrees.Internal
 
         private DbExpression Process(DbExpression expression)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
             expression = VisitExpression(expression);
             return expression;
         }
@@ -38,7 +38,7 @@ namespace System.Data.Common.CommandTrees.Internal
 
         internal static Func<DbExpression, DbExpression> Create(params PatternMatchRule[] rules)
         {
-            Contract.Requires(rules != null);
+            //Contract.Requires(rules != null);
 
             return new PatternMatchRuleProcessor(new ReadOnlyCollection<PatternMatchRule>(rules)).Process;
         }

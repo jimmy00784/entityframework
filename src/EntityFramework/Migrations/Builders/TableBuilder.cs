@@ -25,7 +25,7 @@ namespace System.Data.Entity.Migrations.Builders
         /// <param name = "migration">The migration the table is created in.</param>
         public TableBuilder(CreateTableOperation createTableOperation, DbMigration migration)
         {
-            Contract.Requires(createTableOperation != null);
+            //Contract.Requires(createTableOperation != null);
 
             _createTableOperation = createTableOperation;
             _migration = migration;
@@ -59,7 +59,7 @@ namespace System.Data.Entity.Migrations.Builders
             string name = null,
             object anonymousArguments = null)
         {
-            Contract.Requires(keyExpression != null);
+            //Contract.Requires(keyExpression != null);
 
             var addPrimaryKeyOperation = new AddPrimaryKeyOperation(anonymousArguments)
                 {
@@ -100,7 +100,7 @@ namespace System.Data.Entity.Migrations.Builders
         public TableBuilder<TColumns> Index(
             Expression<Func<TColumns, object>> indexExpression, bool unique = false, object anonymousArguments = null)
         {
-            Contract.Requires(indexExpression != null);
+            //Contract.Requires(indexExpression != null);
 
             var createIndexOperation
                 = new CreateIndexOperation(anonymousArguments)
@@ -153,8 +153,8 @@ namespace System.Data.Entity.Migrations.Builders
             string name = null,
             object anonymousArguments = null)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(principalTable));
-            Contract.Requires(dependentKeyExpression != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(principalTable));
+            //Contract.Requires(dependentKeyExpression != null);
 
             var addForeignKeyOperation = new AddForeignKeyOperation(anonymousArguments)
                 {

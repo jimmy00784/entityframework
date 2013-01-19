@@ -18,7 +18,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Properties.Primiti
         private DateTimePropertyConfiguration(DateTimePropertyConfiguration source)
             : base(source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             Precision = source.Precision;
         }

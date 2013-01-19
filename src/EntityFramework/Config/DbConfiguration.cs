@@ -41,8 +41,8 @@ namespace System.Data.Entity.Config
 
         internal DbConfiguration(ResolverChain appConfigChain, ResolverChain normalResolverChain, RootDependencyResolver rootResolver)
         {
-            Contract.Requires(appConfigChain != null);
-            Contract.Requires(normalResolverChain != null);
+            //Contract.Requires(appConfigChain != null);
+            //Contract.Requires(normalResolverChain != null);
 
             _rootResolver = rootResolver;
             _resolvers = new CompositeResolver<ResolverChain, ResolverChain>(appConfigChain, normalResolverChain);
@@ -60,7 +60,7 @@ namespace System.Data.Entity.Config
             get { return DbConfigurationManager.Instance.GetConfiguration(); }
             set
             {
-                Contract.Requires(value != null);
+                //Contract.Requires(value != null);
 
                 DbConfigurationManager.Instance.SetConfiguration(value);
             }
@@ -73,7 +73,7 @@ namespace System.Data.Entity.Config
 
         internal virtual void AddAppConfigResolver(IDbDependencyResolver resolver)
         {
-            Contract.Requires(resolver != null);
+            //Contract.Requires(resolver != null);
 
             _resolvers.First.Add(resolver);
         }
@@ -93,7 +93,7 @@ namespace System.Data.Entity.Config
         /// <param name="resolver">The resolver to add.</param>
         protected internal void AddDependencyResolver(IDbDependencyResolver resolver)
         {
-            Contract.Requires(resolver != null);
+            //Contract.Requires(resolver != null);
             CheckNotLocked("AddDependencyResolver");
 
             // New resolvers always run after the config resolvers so that config always wins over code
@@ -111,8 +111,8 @@ namespace System.Data.Entity.Config
         [CLSCompliant(false)]
         protected internal void AddProvider(string providerInvariantName, DbProviderServices provider)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(providerInvariantName));
-            Contract.Requires(provider != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(providerInvariantName));
+            //Contract.Requires(provider != null);
             CheckNotLocked("AddProvider");
 
             AddDependencyResolver(new SingletonDependencyResolver<DbProviderServices>(provider, providerInvariantName));
@@ -127,7 +127,7 @@ namespace System.Data.Entity.Config
         [CLSCompliant(false)]
         public DbProviderServices GetProvider(string providerInvariantName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(providerInvariantName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(providerInvariantName));
 
             return _resolvers.GetService<DbProviderServices>(providerInvariantName);
         }
@@ -135,7 +135,7 @@ namespace System.Data.Entity.Config
         // TODO: Make this actually work
         protected internal void SetDatabaseInitializer<TContext>(IDatabaseInitializer<TContext> strategy) where TContext : DbContext
         {
-            Contract.Requires(strategy != null);
+            //Contract.Requires(strategy != null);
             CheckNotLocked("SetDatabaseInitializer");
 
             AddDependencyResolver(new SingletonDependencyResolver<IDatabaseInitializer<TContext>>(strategy));
@@ -159,7 +159,7 @@ namespace System.Data.Entity.Config
         {
             protected internal set
             {
-                Contract.Requires(value != null);
+                //Contract.Requires(value != null);
                 CheckNotLocked("DefaultConnectionFactory");
 
                 AddDependencyResolver(new SingletonDependencyResolver<IDbConnectionFactory>(value));
@@ -178,7 +178,7 @@ namespace System.Data.Entity.Config
         {
             protected internal set
             {
-                Contract.Requires(value != null);
+                //Contract.Requires(value != null);
                 CheckNotLocked("ModelCacheKeyFactory");
 
                 AddDependencyResolver(new SingletonDependencyResolver<IDbModelCacheKeyFactory>(value));

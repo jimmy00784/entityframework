@@ -32,8 +32,8 @@ namespace System.Data.Entity.Internal
         public ClonedObjectContext(
             ObjectContextProxy objectContext, string connectionString, bool transferLoadedAssemblies = true)
         {
-            Contract.Requires(objectContext != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(connectionString));
+            //Contract.Requires(objectContext != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(connectionString));
 
             var clonedConnection =
                 DbProviderServices.GetProviderFactory(objectContext.Connection.StoreConnection).CreateConnection();
@@ -76,7 +76,7 @@ namespace System.Data.Entity.Internal
         /// </summary>
         private void TransferLoadedAssemblies(ObjectContextProxy source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             var objectItemCollection = source.GetObjectItemCollection();
 

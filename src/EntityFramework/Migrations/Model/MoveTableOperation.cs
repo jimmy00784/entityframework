@@ -26,7 +26,7 @@ namespace System.Data.Entity.Migrations.Model
         public MoveTableOperation(string name, string newSchema, object anonymousArguments = null)
             : base(anonymousArguments)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(name));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(name));
 
             _name = name;
             _newSchema = newSchema;

@@ -23,8 +23,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         {
             internal override void Configure(DbAssociationSetMapping associationSetMapping, DbDatabaseMetadata database)
             {
-                Contract.Requires(associationSetMapping != null);
-                Contract.Requires(database != null);
+                //Contract.Requires(associationSetMapping != null);
+                //Contract.Requires(database != null);
             }
         }
 

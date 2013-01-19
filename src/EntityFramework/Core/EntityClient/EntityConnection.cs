@@ -103,8 +103,8 @@ namespace System.Data.EntityClient
         public EntityConnection(MetadataWorkspace workspace, DbConnection connection)
             : this(workspace, connection, false)
         {
-            Contract.Requires(workspace != null);
-            Contract.Requires(connection != null);
+            //Contract.Requires(workspace != null);
+            //Contract.Requires(connection != null);
         }
 
         /// <summary>

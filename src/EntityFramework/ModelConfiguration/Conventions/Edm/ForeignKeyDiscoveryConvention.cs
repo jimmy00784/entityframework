@@ -115,11 +115,11 @@ namespace System.Data.Entity.ModelConfiguration.Conventions
                 EdmEntityType principalEntityType,
                 EdmProperty principalKeyProperty)
             {
-                Contract.Requires(associationType != null);
-                Contract.Requires(dependentAssociationEnd != null);
-                Contract.Requires(dependentProperty != null);
-                Contract.Requires(principalEntityType != null);
-                Contract.Requires(principalKeyProperty != null);
+                //Contract.Requires(associationType != null);
+                //Contract.Requires(dependentAssociationEnd != null);
+                //Contract.Requires(dependentProperty != null);
+                //Contract.Requires(principalEntityType != null);
+                //Contract.Requires(principalKeyProperty != null);
 
                 return false;
             }

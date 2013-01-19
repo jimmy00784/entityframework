@@ -32,7 +32,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         public CascadableNavigationPropertyConfiguration Map(
             Action<ForeignKeyAssociationMappingConfiguration> configurationAction)
         {
-            Contract.Requires(configurationAction != null);
+            //Contract.Requires(configurationAction != null);
 
             NavigationPropertyConfiguration.Constraint = IndependentConstraintConfiguration.Instance;
 

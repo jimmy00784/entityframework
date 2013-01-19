@@ -60,7 +60,7 @@ namespace System.Data
         internal InternalMappingException(string message, ErrorLog errorLog)
             : base(message)
         {
-            Contract.Requires(errorLog != null);
+            //Contract.Requires(errorLog != null);
             m_errorLog = errorLog;
         }
 
@@ -68,7 +68,7 @@ namespace System.Data
         internal InternalMappingException(string message, ErrorLog.Record record)
             : base(message)
         {
-            Contract.Requires(record != null);
+            //Contract.Requires(record != null);
             m_errorLog = new ErrorLog();
             m_errorLog.AddEntry(record);
         }

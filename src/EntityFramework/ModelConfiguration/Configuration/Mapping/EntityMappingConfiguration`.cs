@@ -28,7 +28,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         internal EntityMappingConfiguration(EntityMappingConfiguration entityMappingConfiguration)
         {
-            Contract.Requires(entityMappingConfiguration != null);
+            //Contract.Requires(entityMappingConfiguration != null);
 
             _entityMappingConfiguration = entityMappingConfiguration;
         }
@@ -53,7 +53,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters")]
         public void Properties<TObject>(Expression<Func<TEntityType, TObject>> propertiesExpression)
         {
-            Contract.Requires(propertiesExpression != null);
+            //Contract.Requires(propertiesExpression != null);
 
             _entityMappingConfiguration.Properties
                 = propertiesExpression.GetComplexPropertyAccessList().ToList();
@@ -77,7 +77,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         /// <param name = "tableName">Name of the table.</param>
         public void ToTable(string tableName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(tableName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(tableName));
 
             var qualifiedName = tableName;
             string schemaName;
@@ -93,7 +93,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         /// <param name = "schemaName">Schema of the table.</param>
         public void ToTable(string tableName, string schemaName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(tableName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(tableName));
 
             _entityMappingConfiguration.TableName = new DatabaseName(tableName, schemaName);
         }
@@ -105,7 +105,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         /// <returns>A configuration object to further configure the discriminator column and values.</returns>
         public ValueConditionConfiguration Requires(string discriminator)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(discriminator));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(discriminator));
 
             return new ValueConditionConfiguration(_entityMappingConfiguration, discriminator);
         }
@@ -124,7 +124,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters")]
         public NotNullConditionConfiguration Requires<TProperty>(Expression<Func<TEntityType, TProperty>> property)
         {
-            Contract.Requires(property != null);
+            //Contract.Requires(property != null);
 
             return new NotNullConditionConfiguration(_entityMappingConfiguration, property.GetComplexPropertyAccess());
         }

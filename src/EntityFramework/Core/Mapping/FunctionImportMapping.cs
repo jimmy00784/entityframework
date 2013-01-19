@@ -11,8 +11,8 @@ namespace System.Data.Mapping
     {
         internal FunctionImportMapping(EdmFunction functionImport, EdmFunction targetFunction)
         {
-            Contract.Requires(functionImport != null);
-            Contract.Requires(targetFunction != null);
+            //Contract.Requires(functionImport != null);
+            //Contract.Requires(targetFunction != null);
 
             FunctionImport = functionImport;
             TargetFunction = targetFunction;

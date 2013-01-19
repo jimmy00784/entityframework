@@ -20,14 +20,14 @@ namespace System.Data.Entity.Internal
 
         public ProviderConfig(EntityFrameworkSection entityFrameworkSettings)
         {
-            Contract.Requires(entityFrameworkSettings != null);
+            //Contract.Requires(entityFrameworkSettings != null);
 
             _entityFrameworkSettings = entityFrameworkSettings;
         }
 
         public virtual DbProviderServices TryGetDbProviderServices(string providerInvariantName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(providerInvariantName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(providerInvariantName));
 
             var providerElement = TryGetProviderElement(providerInvariantName);
 
@@ -38,7 +38,7 @@ namespace System.Data.Entity.Internal
 
         public virtual Func<MigrationSqlGenerator> TryGetMigrationSqlGeneratorFactory(string providerInvariantName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(providerInvariantName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(providerInvariantName));
 
             var providerElement = TryGetProviderElement(providerInvariantName);
 

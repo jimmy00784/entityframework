@@ -19,7 +19,7 @@ namespace System.Data.Entity.Config
 
         public AppConfigDependencyResolver(AppConfig appConfig)
         {
-            Contract.Requires(appConfig != null);
+            //Contract.Requires(appConfig != null);
 
             _appConfig = appConfig;
         }

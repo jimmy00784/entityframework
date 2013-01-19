@@ -37,7 +37,7 @@ namespace System.Data.Entity
         /// <param name="connectionStringName">The name of the connection string to use for migration.</param>
         public MigrateDatabaseToLatestVersion(string connectionStringName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(connectionStringName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(connectionStringName));
 
             _config = new TMigrationsConfiguration
                 {

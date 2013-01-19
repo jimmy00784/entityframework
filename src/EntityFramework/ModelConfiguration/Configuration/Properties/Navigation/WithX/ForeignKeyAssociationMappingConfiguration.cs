@@ -28,7 +28,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         private ForeignKeyAssociationMappingConfiguration(ForeignKeyAssociationMappingConfiguration source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             _keyColumnNames.AddRange(source._keyColumnNames);
             _tableName = source._tableName;
@@ -50,7 +50,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         /// <returns>The same ForeignKeyAssociationMappingConfiguration instance so that multiple calls can be chained.</returns>
         public ForeignKeyAssociationMappingConfiguration MapKey(params string[] keyColumnNames)
         {
-            Contract.Requires(keyColumnNames != null);
+            //Contract.Requires(keyColumnNames != null);
 
             _keyColumnNames.Clear();
             _keyColumnNames.AddRange(keyColumnNames);
@@ -71,7 +71,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         /// <returns>The same ForeignKeyAssociationMappingConfiguration instance so that multiple calls can be chained.</returns>
         public ForeignKeyAssociationMappingConfiguration ToTable(string tableName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(tableName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(tableName));
 
             return ToTable(tableName, null);
         }
@@ -90,7 +90,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         /// <returns>The same ForeignKeyAssociationMappingConfiguration instance so that multiple calls can be chained.</returns>
         public ForeignKeyAssociationMappingConfiguration ToTable(string tableName, string schemaName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(tableName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(tableName));
 
             _tableName = new DatabaseName(tableName, schemaName);
 

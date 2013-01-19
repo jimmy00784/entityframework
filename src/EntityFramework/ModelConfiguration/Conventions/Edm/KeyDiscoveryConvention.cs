@@ -37,8 +37,8 @@ namespace System.Data.Entity.ModelConfiguration.Conventions
             protected override EdmProperty MatchKeyProperty(
                 EdmEntityType entityType, IEnumerable<EdmProperty> primitiveProperties)
             {
-                Contract.Requires(entityType != null);
-                Contract.Requires(primitiveProperties != null);
+                //Contract.Requires(entityType != null);
+                //Contract.Requires(primitiveProperties != null);
 
                 return null;
             }

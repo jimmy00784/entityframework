@@ -53,8 +53,8 @@ namespace System.Data.Entity.Internal.ConfigFile
 
         public ProviderElement AddProvider(string invariantName, string providerTypeName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(invariantName));
-            Contract.Requires(!string.IsNullOrWhiteSpace(providerTypeName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(invariantName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(providerTypeName));
 
             var element = (ProviderElement)CreateNewElement();
             base.BaseAdd(element);

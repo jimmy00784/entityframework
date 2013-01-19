@@ -55,7 +55,7 @@ namespace System.Data.Mapping.Update.Internal
             /// <param name="row">Row to match</param>
             private Evaluator(PropagatorResult row)
             {
-                Contract.Requires(row != null);
+                //Contract.Requires(row != null);
 
                 m_row = row;
             }

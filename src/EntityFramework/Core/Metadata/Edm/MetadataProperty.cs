@@ -40,7 +40,7 @@ namespace System.Data.Metadata.Edm
         /// <param name="value">The value of the attribute</param>
         internal MetadataProperty(string name, EdmType edmType, bool isCollectionType, object value)
         {
-            Contract.Requires(edmType != null);
+            //Contract.Requires(edmType != null);
 
             _name = name;
             _value = value;

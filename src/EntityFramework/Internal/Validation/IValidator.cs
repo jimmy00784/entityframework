@@ -34,7 +34,7 @@ namespace System.Data.Entity.Internal.Validation
         IEnumerable<DbValidationError> IValidator.Validate(
             EntityValidationContext entityValidationContext, InternalMemberEntry property)
         {
-            Contract.Requires(entityValidationContext != null);
+            //Contract.Requires(entityValidationContext != null);
             Contract.Ensures(Contract.Result<IEnumerable<DbValidationError>>() != null);
 
             throw new NotImplementedException();

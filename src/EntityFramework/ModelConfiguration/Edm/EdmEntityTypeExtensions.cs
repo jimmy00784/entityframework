@@ -14,7 +14,7 @@ namespace System.Data.Entity.ModelConfiguration.Edm
     {
         public static EdmEntityType GetRootType(this EdmEntityType entityType)
         {
-            Contract.Requires(entityType != null);
+            //Contract.Requires(entityType != null);
 
             var rootType = entityType;
 
@@ -30,8 +30,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm
             Justification = "Used by test code.")]
         public static bool IsAncestorOf(this EdmEntityType ancestor, EdmEntityType entityType)
         {
-            Contract.Requires(ancestor != null);
-            Contract.Requires(entityType != null);
+            //Contract.Requires(ancestor != null);
+            //Contract.Requires(entityType != null);
 
             while (entityType != null)
             {
@@ -46,14 +46,14 @@ namespace System.Data.Entity.ModelConfiguration.Edm
 
         public static IEnumerable<EdmProperty> KeyProperties(this EdmEntityType entityType)
         {
-            Contract.Requires(entityType != null);
+            //Contract.Requires(entityType != null);
 
             return entityType.GetRootType().DeclaredKeyProperties;
         }
 
         public static object GetConfiguration(this EdmEntityType entityType)
         {
-            Contract.Requires(entityType != null);
+            //Contract.Requires(entityType != null);
 
             return entityType.Annotations.GetConfiguration();
         }
@@ -62,14 +62,14 @@ namespace System.Data.Entity.ModelConfiguration.Edm
             Justification = "Used by test code.")]
         public static void SetConfiguration(this EdmEntityType entityType, object configuration)
         {
-            Contract.Requires(entityType != null);
+            //Contract.Requires(entityType != null);
 
             entityType.Annotations.SetConfiguration(configuration);
         }
 
         public static Type GetClrType(this EdmEntityType entityType)
         {
-            Contract.Requires(entityType != null);
+            //Contract.Requires(entityType != null);
 
             return entityType.Annotations.GetClrType();
         }
@@ -78,8 +78,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm
             Justification = "Used by test code.")]
         public static void SetClrType(this EdmEntityType entityType, Type type)
         {
-            Contract.Requires(entityType != null);
-            Contract.Requires(type != null);
+            //Contract.Requires(entityType != null);
+            //Contract.Requires(type != null);
 
             entityType.Annotations.SetClrType(type);
         }
@@ -88,7 +88,7 @@ namespace System.Data.Entity.ModelConfiguration.Edm
         // Note that the pre-order traversal is important for correctness of the transformations.
         public static IEnumerable<EdmEntityType> TypeHierarchyIterator(this EdmEntityType entityType, EdmModel model)
         {
-            Contract.Requires(entityType != null);
+            //Contract.Requires(entityType != null);
 
             yield return entityType;
 
@@ -110,8 +110,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm
             Justification = "Used by test code.")]
         public static EdmProperty AddPrimitiveProperty(this EdmEntityType entityType, string name)
         {
-            Contract.Requires(entityType != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(name));
+            //Contract.Requires(entityType != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(name));
 
             var property = new EdmProperty().AsPrimitive();
 
@@ -125,9 +125,9 @@ namespace System.Data.Entity.ModelConfiguration.Edm
         public static EdmProperty AddComplexProperty(
             this EdmEntityType entityType, string name, EdmComplexType complexType)
         {
-            Contract.Requires(entityType != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(name));
-            Contract.Requires(complexType != null);
+            //Contract.Requires(entityType != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(name));
+            //Contract.Requires(complexType != null);
 
             var property = new EdmProperty
                 {
@@ -143,16 +143,16 @@ namespace System.Data.Entity.ModelConfiguration.Edm
             Justification = "Used by test code.")]
         public static EdmProperty GetDeclaredPrimitiveProperty(this EdmEntityType entityType, string name)
         {
-            Contract.Requires(entityType != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(name));
+            //Contract.Requires(entityType != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(name));
 
             return entityType.GetDeclaredPrimitiveProperties().SingleOrDefault(p => p.Name == name);
         }
 
         public static EdmProperty GetDeclaredPrimitiveProperty(this EdmEntityType entityType, PropertyInfo propertyInfo)
         {
-            Contract.Requires(entityType != null);
-            Contract.Requires(propertyInfo != null);
+            //Contract.Requires(entityType != null);
+            //Contract.Requires(propertyInfo != null);
 
             return entityType
                 .GetDeclaredPrimitiveProperties()
@@ -161,7 +161,7 @@ namespace System.Data.Entity.ModelConfiguration.Edm
 
         public static IEnumerable<EdmProperty> GetDeclaredPrimitiveProperties(this EdmEntityType entityType)
         {
-            Contract.Requires(entityType != null);
+            //Contract.Requires(entityType != null);
 
             return entityType.DeclaredProperties.Where(p => p.PropertyType.IsUnderlyingPrimitiveType);
         }
@@ -169,9 +169,9 @@ namespace System.Data.Entity.ModelConfiguration.Edm
         public static EdmNavigationProperty AddNavigationProperty(
             this EdmEntityType entityType, string name, EdmAssociationType associationType)
         {
-            Contract.Requires(entityType != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(name));
-            Contract.Requires(associationType != null);
+            //Contract.Requires(entityType != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(name));
+            //Contract.Requires(associationType != null);
 
             var navigationProperty = new EdmNavigationProperty
                 {
@@ -189,8 +189,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm
             Justification = "Used by test code.")]
         public static EdmNavigationProperty GetNavigationProperty(this EdmEntityType entityType, string name)
         {
-            Contract.Requires(entityType != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(name));
+            //Contract.Requires(entityType != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(name));
 
             return entityType.NavigationProperties.SingleOrDefault(np => np.Name == name);
         }
@@ -198,16 +198,16 @@ namespace System.Data.Entity.ModelConfiguration.Edm
         public static EdmNavigationProperty GetNavigationProperty(
             this EdmEntityType entityType, PropertyInfo propertyInfo)
         {
-            Contract.Requires(entityType != null);
-            Contract.Requires(propertyInfo != null);
+            //Contract.Requires(entityType != null);
+            //Contract.Requires(propertyInfo != null);
 
             return entityType.NavigationProperties.SingleOrDefault(np => np.GetClrPropertyInfo().IsSameAs(propertyInfo));
         }
 
         public static bool IsRootOfSet(this EdmEntityType entityType, IEnumerable<EdmEntityType> set)
         {
-            Contract.Requires(entityType != null);
-            Contract.Requires(set != null);
+            //Contract.Requires(entityType != null);
+            //Contract.Requires(set != null);
 
             return set.All(
                 et => et == entityType // same type

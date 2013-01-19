@@ -35,7 +35,7 @@ namespace System.Data.Common.CommandTrees
             IEnumerable<KeyValuePair<string, TypeUsage>> parameters)
             : base(metadata, dataSpace)
         {
-            Contract.Requires(edmFunction != null);
+            //Contract.Requires(edmFunction != null);
 
             _edmFunction = edmFunction;
             _resultType = resultType;

@@ -14,10 +14,10 @@ namespace System.Data.Entity.ModelConfiguration.Edm
         public static EdmProperty AddComplexProperty(
             this EdmComplexType complexType, string name, EdmComplexType targetComplexType)
         {
-            Contract.Requires(complexType != null);
-            Contract.Requires(complexType.Properties != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(name));
-            Contract.Requires(targetComplexType != null);
+            //Contract.Requires(complexType != null);
+            //Contract.Requires(complexType.Properties != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(name));
+            //Contract.Requires(targetComplexType != null);
 
             var property = new EdmProperty
                 {
@@ -33,7 +33,7 @@ namespace System.Data.Entity.ModelConfiguration.Edm
             Justification = "Used by test code.")]
         public static object GetConfiguration(this EdmComplexType complexType)
         {
-            Contract.Requires(complexType != null);
+            //Contract.Requires(complexType != null);
 
             return complexType.Annotations.GetConfiguration();
         }
@@ -42,14 +42,14 @@ namespace System.Data.Entity.ModelConfiguration.Edm
             Justification = "Used by test code.")]
         public static void SetConfiguration(this EdmComplexType complexType, object configuration)
         {
-            Contract.Requires(complexType != null);
+            //Contract.Requires(complexType != null);
 
             complexType.Annotations.SetConfiguration(configuration);
         }
 
         public static Type GetClrType(this EdmComplexType complexType)
         {
-            Contract.Requires(complexType != null);
+            //Contract.Requires(complexType != null);
 
             return complexType.Annotations.GetClrType();
         }
@@ -58,8 +58,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm
             Justification = "Used by test code.")]
         public static void SetClrType(this EdmComplexType complexType, Type type)
         {
-            Contract.Requires(complexType != null);
-            Contract.Requires(type != null);
+            //Contract.Requires(complexType != null);
+            //Contract.Requires(type != null);
 
             complexType.Annotations.SetClrType(type);
         }
@@ -68,9 +68,9 @@ namespace System.Data.Entity.ModelConfiguration.Edm
             Justification = "Used by test code.")]
         public static EdmProperty AddPrimitiveProperty(this EdmComplexType complexType, string name)
         {
-            Contract.Requires(complexType != null);
-            Contract.Requires(complexType.Properties != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(name));
+            //Contract.Requires(complexType != null);
+            //Contract.Requires(complexType.Properties != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(name));
 
             var property = new EdmProperty().AsPrimitive();
             property.Name = name;
@@ -84,9 +84,9 @@ namespace System.Data.Entity.ModelConfiguration.Edm
             Justification = "Used by test code.")]
         public static EdmProperty GetPrimitiveProperty(this EdmComplexType complexType, string name)
         {
-            Contract.Requires(complexType != null);
-            Contract.Requires(complexType.Properties != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(name));
+            //Contract.Requires(complexType != null);
+            //Contract.Requires(complexType.Properties != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(name));
 
             return complexType.Properties.SingleOrDefault(p => p.Name == name);
         }

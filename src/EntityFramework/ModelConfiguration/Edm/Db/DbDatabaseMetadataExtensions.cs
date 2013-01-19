@@ -23,7 +23,7 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db
         public static DbDatabaseMetadata Initialize(
             this DbDatabaseMetadata database, double version = DataModelVersions.Version3)
         {
-            Contract.Requires(database != null);
+            //Contract.Requires(database != null);
 
             database.Version = version;
             database.Name = "CodeFirstDatabase";
@@ -40,7 +40,7 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db
         [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
         public static StoreItemCollection ToStoreItemCollection(this DbDatabaseMetadata database)
         {
-            Contract.Requires(database != null);
+            //Contract.Requires(database != null);
 
             // Provider information should be first class in EDM when we ship
             // but for now we use our annotation
@@ -70,8 +70,8 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db
 
         public static DbTableMetadata AddTable(this DbDatabaseMetadata database, string name)
         {
-            Contract.Requires(database != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(name));
+            //Contract.Requires(database != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(name));
             Contract.Assert(database.Schemas.Count == 1);
 
             var schema = database.Schemas.Single();
@@ -105,16 +105,16 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db
 
         public static void RemoveTable(this DbDatabaseMetadata database, DbTableMetadata table)
         {
-            Contract.Requires(database != null);
-            Contract.Requires(table != null);
+            //Contract.Requires(database != null);
+            //Contract.Requires(table != null);
 
             database.Schemas.Select(s => s.Tables).Each(ts => ts.Remove(table));
         }
 
         public static DbTableMetadata FindTableByName(this DbDatabaseMetadata database, DatabaseName tableName)
         {
-            Contract.Requires(database != null);
-            Contract.Requires(tableName != null);
+            //Contract.Requires(database != null);
+            //Contract.Requires(tableName != null);
 
             return database.Schemas.Single().Tables.SingleOrDefault(
                 t =>
@@ -128,15 +128,15 @@ namespace System.Data.Entity.ModelConfiguration.Edm.Db
 
         public static DbProviderInfo GetProviderInfo(this DbDatabaseMetadata database)
         {
-            Contract.Requires(database != null);
+            //Contract.Requires(database != null);
 
             return (DbProviderInfo)database.Annotations.GetAnnotation(ProviderInfoAnnotation);
         }
 
         public static void SetProviderInfo(this DbDatabaseMetadata database, DbProviderInfo providerInfo)
         {
-            Contract.Requires(database != null);
-            Contract.Requires(providerInfo != null);
+            //Contract.Requires(database != null);
+            //Contract.Requires(providerInfo != null);
 
             database.Annotations.SetAnnotation(ProviderInfoAnnotation, providerInfo);
         }

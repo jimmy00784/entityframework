@@ -38,7 +38,7 @@ namespace System.Data.Entity.Infrastructure
         /// <param name = "providerInvariantName">The provider invariant name that specifies the version of SQL Server Compact Edition that should be used.</param>
         public SqlCeConnectionFactory(string providerInvariantName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(providerInvariantName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(providerInvariantName));
 
             _providerInvariantName = providerInvariantName;
             _databaseDirectory = "|DataDirectory|";
@@ -63,9 +63,9 @@ namespace System.Data.Entity.Infrastructure
         public SqlCeConnectionFactory(
             string providerInvariantName, string databaseDirectory, string baseConnectionString)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(providerInvariantName));
-            Contract.Requires(databaseDirectory != null);
-            Contract.Requires(baseConnectionString != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(providerInvariantName));
+            //Contract.Requires(databaseDirectory != null);
+            //Contract.Requires(baseConnectionString != null);
 
             _providerInvariantName = providerInvariantName;
             _databaseDirectory = databaseDirectory;

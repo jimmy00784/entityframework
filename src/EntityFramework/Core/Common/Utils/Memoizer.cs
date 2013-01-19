@@ -28,7 +28,7 @@ namespace System.Data.Common.Utils
         /// are the same.</param>
         internal Memoizer(Func<TArg, TResult> function, IEqualityComparer<TArg> argComparer)
         {
-            Contract.Requires(function != null);
+            //Contract.Requires(function != null);
 
             _function = function;
             _resultCache = new Dictionary<TArg, Result>(argComparer);

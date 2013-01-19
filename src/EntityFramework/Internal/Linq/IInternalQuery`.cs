@@ -57,7 +57,7 @@ namespace System.Data.Entity.Internal.Linq
 
         IInternalQuery<TElement> IInternalQuery<TElement>.Include(string path)
         {
-            Contract.Requires(!String.IsNullOrWhiteSpace(path));
+            //Contract.Requires(!String.IsNullOrWhiteSpace(path));
 
             throw new NotImplementedException();
         }

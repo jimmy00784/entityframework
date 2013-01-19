@@ -34,7 +34,7 @@ namespace System.Data.Mapping.Update.Internal
         /// <param name="table">Table for which changes are being processed.</param>
         internal TableChangeProcessor(EntitySet table)
         {
-            Contract.Requires(table != null);
+            //Contract.Requires(table != null);
 
             m_table = table;
 

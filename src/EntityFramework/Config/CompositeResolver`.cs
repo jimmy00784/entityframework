@@ -17,8 +17,8 @@ namespace System.Data.Entity.Config
 
         public CompositeResolver(TFirst firstResolver, TSecond secondResolver)
         {
-            Contract.Requires(firstResolver != null);
-            Contract.Requires(secondResolver != null);
+            //Contract.Requires(firstResolver != null);
+            //Contract.Requires(secondResolver != null);
 
             _firstResolver = firstResolver;
             _secondResolver = secondResolver;

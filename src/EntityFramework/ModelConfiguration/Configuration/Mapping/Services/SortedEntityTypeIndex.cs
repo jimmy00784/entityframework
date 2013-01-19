@@ -21,8 +21,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
 
         public void Add(EdmEntitySet entitySet, EdmEntityType entityType)
         {
-            Contract.Requires(entitySet != null);
-            Contract.Requires(entityType != null);
+            //Contract.Requires(entitySet != null);
+            //Contract.Requires(entityType != null);
 
             var i = 0;
 
@@ -49,8 +49,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
 
         public bool Contains(EdmEntitySet entitySet, EdmEntityType entityType)
         {
-            Contract.Requires(entitySet != null);
-            Contract.Requires(entityType != null);
+            //Contract.Requires(entitySet != null);
+            //Contract.Requires(entityType != null);
 
             List<EdmEntityType> setTypes;
             return _entityTypes.TryGetValue(entitySet, out setTypes) && setTypes.Contains(entityType);
@@ -59,8 +59,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Mapping
         [SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         public bool IsRoot(EdmEntitySet entitySet, EdmEntityType entityType)
         {
-            Contract.Requires(entitySet != null);
-            Contract.Requires(entityType != null);
+            //Contract.Requires(entitySet != null);
+            //Contract.Requires(entityType != null);
 
             var isRoot = true;
             var entityTypes = _entityTypes[entitySet];

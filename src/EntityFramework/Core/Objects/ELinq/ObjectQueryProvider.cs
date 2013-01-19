@@ -32,7 +32,7 @@ namespace System.Data.Objects.ELinq
         /// <param name="context">The ObjectContext of the provider.</param>
         internal ObjectQueryProvider(ObjectContext context)
         {
-            Contract.Requires(null != context);
+            //Contract.Requires(null != context);
             _context = context;
         }
 
@@ -45,7 +45,7 @@ namespace System.Data.Objects.ELinq
         internal ObjectQueryProvider(ObjectQuery query)
             : this(query.Context)
         {
-            Contract.Requires(null != query);
+            //Contract.Requires(null != query);
             _query = query;
         }
 

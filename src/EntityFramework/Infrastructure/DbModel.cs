@@ -22,8 +22,8 @@ namespace System.Data.Entity.Infrastructure
         /// </summary>
         internal DbModel(DbDatabaseMapping databaseMapping, DbModelBuilder modelBuilder)
         {
-            Contract.Requires(databaseMapping != null);
-            Contract.Requires(modelBuilder != null);
+            //Contract.Requires(databaseMapping != null);
+            //Contract.Requires(modelBuilder != null);
 
             _databaseMapping = databaseMapping;
             _cachedModelBuilder = modelBuilder;

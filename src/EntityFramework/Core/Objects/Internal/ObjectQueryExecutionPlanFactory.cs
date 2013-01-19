@@ -131,8 +131,8 @@ namespace System.Data.Objects.Internal
         public ObjectResult<TResultType> ExecuteCommandTree<TResultType>(
             ObjectContext context, DbQueryCommandTree query, MergeOption mergeOption)
         {
-            Contract.Requires(context != null);
-            Contract.Requires(query != null);
+            //Contract.Requires(context != null);
+            //Contract.Requires(query != null);
 
             var execPlan = Prepare(context, query, typeof(TResultType), mergeOption, null, null, DbExpressionBuilder.AliasGenerator);
             return execPlan.Execute<TResultType>(context, null);

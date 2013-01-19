@@ -44,7 +44,7 @@ namespace System.Data.Objects
         // ObjectStateEntry will not be detached and creation will be handled from ObjectStateManager
         internal ObjectStateEntry(ObjectStateManager cache, EntitySet entitySet, EntityState state)
         {
-            Contract.Requires(cache != null);
+            //Contract.Requires(cache != null);
 
             _cache = cache;
             _entitySet = entitySet;
@@ -372,14 +372,14 @@ namespace System.Data.Objects
 
             public override void ApplyCurrentValues(object currentEntity)
             {
-                Contract.Requires<ArgumentNullException>(currentEntity != null);
+                //Contract.Requires<ArgumentNullException>(currentEntity != null);
 
                 throw new NotImplementedException();
             }
 
             public override void ApplyOriginalValues(object originalEntity)
             {
-                Contract.Requires(originalEntity != null);
+                //Contract.Requires(originalEntity != null);
 
                 throw new NotImplementedException();
             }
@@ -387,16 +387,16 @@ namespace System.Data.Objects
             internal override void EntityComplexMemberChanging(
                 string entityMemberName, object complexObject, string complexObjectMemberName)
             {
-                Contract.Requires(complexObjectMemberName != null);
-                Contract.Requires(complexObject != null);
+                //Contract.Requires(complexObjectMemberName != null);
+                //Contract.Requires(complexObject != null);
 
                 throw new NotImplementedException();
             }
 
             internal override void EntityComplexMemberChanged(string entityMemberName, object complexObject, string complexObjectMemberName)
             {
-                Contract.Requires(complexObjectMemberName != null);
-                Contract.Requires(complexObject != null);
+                //Contract.Requires(complexObjectMemberName != null);
+                //Contract.Requires(complexObject != null);
 
                 throw new NotImplementedException();
             }

@@ -26,8 +26,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         internal NotNullConditionConfiguration(
             EntityMappingConfiguration entityMapConfiguration, PropertyPath propertyPath)
         {
-            Contract.Requires(entityMapConfiguration != null);
-            Contract.Requires(propertyPath != null);
+            //Contract.Requires(entityMapConfiguration != null);
+            //Contract.Requires(propertyPath != null);
 
             _entityMappingConfiguration = entityMapConfiguration;
             PropertyPath = propertyPath;
@@ -35,8 +35,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         private NotNullConditionConfiguration(EntityMappingConfiguration owner, NotNullConditionConfiguration source)
         {
-            Contract.Requires(source != null);
-            Contract.Requires(owner != null);
+            //Contract.Requires(source != null);
+            //Contract.Requires(owner != null);
 
             _entityMappingConfiguration = owner;
             PropertyPath = source.PropertyPath;
@@ -61,7 +61,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         internal void Configure(
             DbDatabaseMapping databaseMapping, DbEntityTypeMappingFragment fragment, EdmEntityType entityType)
         {
-            Contract.Requires(fragment != null);
+            //Contract.Requires(fragment != null);
 
             var edmPropertyPath = EntityMappingConfiguration.PropertyPathToEdmPropertyPath(PropertyPath, entityType);
 

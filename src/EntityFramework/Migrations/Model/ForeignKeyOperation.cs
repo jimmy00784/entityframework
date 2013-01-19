@@ -41,7 +41,7 @@ namespace System.Data.Entity.Migrations.Model
             get { return _principalTable; }
             set
             {
-                Contract.Requires(!string.IsNullOrWhiteSpace(value));
+                //Contract.Requires(!string.IsNullOrWhiteSpace(value));
 
                 _principalTable = value;
             }
@@ -55,7 +55,7 @@ namespace System.Data.Entity.Migrations.Model
             get { return _dependentTable; }
             set
             {
-                Contract.Requires(!string.IsNullOrWhiteSpace(value));
+                //Contract.Requires(!string.IsNullOrWhiteSpace(value));
 
                 _dependentTable = value;
             }

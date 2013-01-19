@@ -30,8 +30,8 @@ namespace System.Data.Mapping
             ObjectItemCollection objectCollection)
             : base(DataSpace.OCSpace)
         {
-            Contract.Requires(edmCollection != null);
-            Contract.Requires(objectCollection != null);
+            //Contract.Requires(edmCollection != null);
+            //Contract.Requires(objectCollection != null);
             m_edmCollection = edmCollection;
             m_objectCollection = objectCollection;
             LoadPrimitiveMaps();

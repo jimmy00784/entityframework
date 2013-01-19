@@ -50,7 +50,7 @@ namespace System.Data.Mapping
         /// <param name="lineInfo">Empty for default rename mapping.</param>
         internal string GetRename(EdmType type, out IXmlLineInfo lineInfo)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             Debug.Assert(type is StructuralType, "we can only rename structural type");
 
@@ -115,7 +115,7 @@ namespace System.Data.Mapping
 
         internal void AddRename(FunctionImportReturnTypeStructuralTypeColumn renamedColumn)
         {
-            Contract.Requires(renamedColumn != null);
+            //Contract.Requires(renamedColumn != null);
 
             if (!renamedColumn.IsTypeOf)
             {

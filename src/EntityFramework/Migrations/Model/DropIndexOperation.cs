@@ -36,7 +36,7 @@ namespace System.Data.Entity.Migrations.Model
         public DropIndexOperation(CreateIndexOperation inverse, object anonymousArguments = null)
             : base(anonymousArguments)
         {
-            Contract.Requires(inverse != null);
+            //Contract.Requires(inverse != null);
 
             _inverse = inverse;
         }

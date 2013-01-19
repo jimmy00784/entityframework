@@ -41,7 +41,7 @@ namespace System.Data.Entity.Internal
         public EagerInternalContext(DbContext owner, ObjectContext objectContext, bool objectContextOwned)
             : base(owner)
         {
-            Contract.Requires(objectContext != null);
+            //Contract.Requires(objectContext != null);
 
             _objectContext = objectContext;
             _objectContextOwned = objectContextOwned;

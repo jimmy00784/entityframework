@@ -232,7 +232,7 @@ namespace System.Data.Mapping
         /// /// <param name="entitySetName">the name of the entity set</param>
         internal StorageSetMapping GetEntitySetMapping(String entitySetName)
         {
-            Contract.Requires(entitySetName != null);
+            //Contract.Requires(entitySetName != null);
             //Key for EntitySetMapping should be EntitySet name and Entoty type name
             StorageSetMapping setMapping = null;
             m_entitySetMappings.TryGetValue(entitySetName, out setMapping);
@@ -246,7 +246,7 @@ namespace System.Data.Mapping
         /// <returns>the mapping for the entity set if it exists, null if it does not exist</returns>
         internal StorageSetMapping GetRelationshipSetMapping(string relationshipSetName)
         {
-            Contract.Requires(relationshipSetName != null);
+            //Contract.Requires(relationshipSetName != null);
             StorageSetMapping setMapping = null;
             m_associationSetMappings.TryGetValue(relationshipSetName, out setMapping);
             return setMapping;

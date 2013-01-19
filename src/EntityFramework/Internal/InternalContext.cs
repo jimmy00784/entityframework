@@ -110,7 +110,7 @@ namespace System.Data.Entity.Internal
         /// <param name = "owner">The owner <see cref = "DbContext" />.</param>
         protected InternalContext(DbContext owner)
         {
-            Contract.Requires(owner != null);
+            //Contract.Requires(owner != null);
 
             _owner = owner;
             AutoDetectChangesEnabled = true;
@@ -247,7 +247,7 @@ namespace System.Data.Entity.Internal
         /// </summary>
         public virtual bool ModelMatches(XDocument model)
         {
-            Contract.Requires(model != null);
+            //Contract.Requires(model != null);
 
             return !new EdmModelDiffer().Diff(model, Owner.GetModel()).Any();
         }
@@ -723,8 +723,8 @@ namespace System.Data.Entity.Internal
         /// <returns>The query results.</returns>
         public virtual IEnumerator<TElement> ExecuteSqlQuery<TElement>(string sql, object[] parameters)
         {
-            Contract.Requires(sql != null);
-            Contract.Requires(parameters != null);
+            //Contract.Requires(sql != null);
+            //Contract.Requires(parameters != null);
             Contract.Ensures(Contract.Result<IEnumerator<TElement>>() != null);
 
             return new LazyEnumerator<TElement>(() =>
@@ -759,8 +759,8 @@ namespace System.Data.Entity.Internal
         /// <returns>Task containing the query results.</returns>
         public virtual IDbAsyncEnumerator<TElement> ExecuteSqlQueryAsync<TElement>(string sql, object[] parameters)
         {
-            Contract.Requires(sql != null);
-            Contract.Requires(parameters != null);
+            //Contract.Requires(sql != null);
+            //Contract.Requires(parameters != null);
             Contract.Ensures(Contract.Result<IDbAsyncEnumerator<TElement>>() != null);
 
             return new LazyAsyncEnumerator<TElement>(async () =>
@@ -866,8 +866,8 @@ namespace System.Data.Entity.Internal
         /// <returns>The return value from the database.</returns>
         public virtual int ExecuteSqlCommand(string sql, object[] parameters)
         {
-            Contract.Requires(sql != null);
-            Contract.Requires(parameters != null);
+            //Contract.Requires(sql != null);
+            //Contract.Requires(parameters != null);
 
             Initialize();
 
@@ -884,8 +884,8 @@ namespace System.Data.Entity.Internal
         /// <returns>A Task containing the return value from the database.</returns>
         public virtual Task<int> ExecuteSqlCommandAsync(string sql, CancellationToken cancellationToken, object[] parameters)
         {
-            Contract.Requires(sql != null);
-            Contract.Requires(parameters != null);
+            //Contract.Requires(sql != null);
+            //Contract.Requires(parameters != null);
             Contract.Ensures(Contract.Result<Task<int>>() != null);
 
             Initialize();
@@ -905,7 +905,7 @@ namespace System.Data.Entity.Internal
         /// <returns>The state entry or null.</returns>
         public virtual IEntityStateEntry GetStateEntry(object entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
 
             DetectChanges();
 
@@ -962,7 +962,7 @@ namespace System.Data.Entity.Internal
         /// <returns>A new exception wrapping the given exception.</returns>
         public virtual Exception WrapUpdateException(UpdateException updateException)
         {
-            Contract.Requires(updateException != null);
+            //Contract.Requires(updateException != null);
             Contract.Assert(updateException.StateEntries != null);
 
             if (updateException.StateEntries.Any(e => e.Entity == null))
@@ -1386,7 +1386,7 @@ namespace System.Data.Entity.Internal
 
         public override void OverrideConnection(IInternalConnection connection)
         {
-            Contract.Requires(connection != null);
+            //Contract.Requires(connection != null);
             throw new NotImplementedException();
         }
     }

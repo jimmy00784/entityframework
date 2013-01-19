@@ -35,7 +35,7 @@ namespace System.Data.Entity.ModelConfiguration
 
         internal EntityTypeConfiguration(EntityTypeConfiguration entityTypeConfiguration)
         {
-            Contract.Requires(entityTypeConfiguration != null);
+            //Contract.Requires(entityTypeConfiguration != null);
 
             _entityTypeConfiguration = entityTypeConfiguration;
         }
@@ -74,7 +74,7 @@ namespace System.Data.Entity.ModelConfiguration
         [SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters")]
         public EntityTypeConfiguration<TEntityType> HasKey<TKey>(Expression<Func<TEntityType, TKey>> keyExpression)
         {
-            Contract.Requires(keyExpression != null);
+            //Contract.Requires(keyExpression != null);
 
             _entityTypeConfiguration.Key(keyExpression.GetSimplePropertyAccessList().Select(p => p.Single()));
 
@@ -89,7 +89,7 @@ namespace System.Data.Entity.ModelConfiguration
         /// <returns>The same EntityTypeConfiguration instance so that multiple calls can be chained.</returns>
         public EntityTypeConfiguration<TEntityType> HasEntitySetName(string entitySetName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
 
             _entityTypeConfiguration.EntitySetName = entitySetName;
 
@@ -104,7 +104,7 @@ namespace System.Data.Entity.ModelConfiguration
         /// <param name = "tableName">The name of the table.</param>
         public void ToTable(string tableName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(tableName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(tableName));
 
             var qualifiedName = tableName;
             string schemaName;
@@ -119,7 +119,7 @@ namespace System.Data.Entity.ModelConfiguration
         /// <param name = "schemaName">The database schema of the table.</param>
         public void ToTable(string tableName, string schemaName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(tableName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(tableName));
 
             _entityTypeConfiguration.ToTable(tableName, schemaName);
         }
@@ -141,7 +141,7 @@ namespace System.Data.Entity.ModelConfiguration
         public EntityTypeConfiguration<TEntityType> Map(
             Action<EntityMappingConfiguration<TEntityType>> entityMappingConfigurationAction)
         {
-            Contract.Requires(entityMappingConfigurationAction != null);
+            //Contract.Requires(entityMappingConfigurationAction != null);
 
             var entityMappingConfiguration = new EntityMappingConfiguration<TEntityType>();
 
@@ -165,7 +165,7 @@ namespace System.Data.Entity.ModelConfiguration
             Action<EntityMappingConfiguration<TDerived>> derivedTypeMapConfigurationAction)
             where TDerived : class, TEntityType
         {
-            Contract.Requires(derivedTypeMapConfigurationAction != null);
+            //Contract.Requires(derivedTypeMapConfigurationAction != null);
 
             var entityMappingConfiguration = new EntityMappingConfiguration<TDerived>();
             derivedTypeMapConfigurationAction(entityMappingConfiguration);
@@ -206,7 +206,7 @@ namespace System.Data.Entity.ModelConfiguration
             Expression<Func<TEntityType, TTargetEntity>> navigationPropertyExpression)
             where TTargetEntity : class
         {
-            Contract.Requires(navigationPropertyExpression != null);
+            //Contract.Requires(navigationPropertyExpression != null);
 
             return new OptionalNavigationPropertyConfiguration<TEntityType, TTargetEntity>(
                 _entityTypeConfiguration.Navigation(navigationPropertyExpression.GetSimplePropertyAccess().Single()));
@@ -230,7 +230,7 @@ namespace System.Data.Entity.ModelConfiguration
             Expression<Func<TEntityType, TTargetEntity>> navigationPropertyExpression)
             where TTargetEntity : class
         {
-            Contract.Requires(navigationPropertyExpression != null);
+            //Contract.Requires(navigationPropertyExpression != null);
 
             return new RequiredNavigationPropertyConfiguration<TEntityType, TTargetEntity>(
                 _entityTypeConfiguration.Navigation(navigationPropertyExpression.GetSimplePropertyAccess().Single()));
@@ -252,7 +252,7 @@ namespace System.Data.Entity.ModelConfiguration
             Expression<Func<TEntityType, ICollection<TTargetEntity>>> navigationPropertyExpression)
             where TTargetEntity : class
         {
-            Contract.Requires(navigationPropertyExpression != null);
+            //Contract.Requires(navigationPropertyExpression != null);
 
             return new ManyNavigationPropertyConfiguration<TEntityType, TTargetEntity>(
                 _entityTypeConfiguration.Navigation(navigationPropertyExpression.GetSimplePropertyAccess().Single()));

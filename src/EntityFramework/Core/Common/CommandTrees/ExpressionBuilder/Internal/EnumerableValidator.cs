@@ -99,7 +99,7 @@ namespace System.Data.Common.CommandTrees.ExpressionBuilder.Internal
             Func<List<TElementOut>, TResult> collect,
             Func<TElementIn, int, string> deriveName)
         {
-            Contract.Requires(argument != null);
+            //Contract.Requires(argument != null);
 
             Debug.Assert(map != null, "Set EnumerableValidator.ConvertElement before calling validate");
             Debug.Assert(collect != null, "Set EnumerableValidator.CreateResult before calling validate");

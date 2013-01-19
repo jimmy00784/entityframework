@@ -10,7 +10,7 @@ namespace System.Data.Entity.Utilities
         [SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
         public static object GetValue(this MemberInfo memberInfo)
         {
-            Contract.Requires(memberInfo != null);
+            //Contract.Requires(memberInfo != null);
             Contract.Assert(memberInfo is PropertyInfo || memberInfo is FieldInfo);
 
             var asPropertyInfo = memberInfo as PropertyInfo;

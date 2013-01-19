@@ -560,7 +560,7 @@ namespace System.Data.Objects.ELinq
         /// <returns>Canonical description of method (suitable for lookup)</returns>
         internal static string GetCanonicalMethodDescription(MethodInfo method)
         {
-            Contract.Requires(method != null);
+            //Contract.Requires(method != null);
 
             // retrieve all generic type arguments and assign them numbers based on order
             Dictionary<Type, int> genericArgumentOrdinals = null;

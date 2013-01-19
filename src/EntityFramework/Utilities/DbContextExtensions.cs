@@ -13,7 +13,7 @@ namespace System.Data.Entity.Utilities
         [SuppressMessage("Microsoft.Usage", "CA2202:Do not dispose objects multiple times")]
         public static XDocument GetModel(this DbContext context)
         {
-            Contract.Requires(context != null);
+            //Contract.Requires(context != null);
 
             return GetModel(w => EdmxWriter.WriteEdmx(context, w));
         }
@@ -21,7 +21,7 @@ namespace System.Data.Entity.Utilities
         [SuppressMessage("Microsoft.Usage", "CA2202:Do not dispose objects multiple times")]
         public static XDocument GetModel(Action<XmlWriter> writeXml)
         {
-            Contract.Requires(writeXml != null);
+            //Contract.Requires(writeXml != null);
 
             using (var memoryStream = new MemoryStream())
             {

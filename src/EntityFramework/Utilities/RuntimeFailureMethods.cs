@@ -8,7 +8,7 @@ namespace System.Data.Entity.Utilities
     /// <summary>
     ///     Code Contracts hook methods - Called when contracts fail. Here we detect the most common preconditions
     ///     so we can throw the correct exceptions. It also means that we can write preconditions using the
-    ///     simplest Contract.Requires() form.
+    ///     simplest //Contract.Requires() form.
     /// </summary>
     internal static class RuntimeFailureMethods
     {

@@ -71,14 +71,14 @@ namespace System.Data.Entity.Infrastructure
 
         public Task<object> ExecuteAsync(Expression expression, CancellationToken cancellationToken)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
 
             throw new NotImplementedException();
         }
 
         public Task<TResult> ExecuteAsync<TResult>(Expression expression, CancellationToken cancellationToken)
         {
-            Contract.Requires(expression != null);
+            //Contract.Requires(expression != null);
 
             throw new NotImplementedException();
         }

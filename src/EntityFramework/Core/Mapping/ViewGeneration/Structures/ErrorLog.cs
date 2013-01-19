@@ -54,7 +54,7 @@ namespace System.Data.Mapping.ViewGeneration.Structures
 
         internal void AddEntry(Record record)
         {
-            Contract.Requires(record != null);
+            //Contract.Requires(record != null);
             m_log.Add(record);
         }
 

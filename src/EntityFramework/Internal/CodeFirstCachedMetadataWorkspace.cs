@@ -33,7 +33,7 @@ namespace System.Data.Entity.Internal
         /// <param name = "databaseMapping">The code first EDM model.</param>
         public CodeFirstCachedMetadataWorkspace(DbDatabaseMapping databaseMapping)
         {
-            Contract.Requires(databaseMapping != null);
+            //Contract.Requires(databaseMapping != null);
 
             _providerInfo = databaseMapping.Database.GetProviderInfo();
 

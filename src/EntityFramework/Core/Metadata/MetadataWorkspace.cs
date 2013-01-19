@@ -60,8 +60,8 @@ namespace System.Data.Metadata.Edm
         public MetadataWorkspace(IEnumerable<string> paths, IEnumerable<Assembly> assembliesToConsider)
         {
             // we are intentionally not checking to see if the paths enumerable is empty
-            Contract.Requires(paths != null);
-            Contract.Requires(assembliesToConsider != null);
+            //Contract.Requires(paths != null);
+            //Contract.Requires(assembliesToConsider != null);
 
             EntityUtil.CheckArgumentContainsNull(ref paths, "paths");
             EntityUtil.CheckArgumentContainsNull(ref assembliesToConsider, "assembliesToConsider");
@@ -210,7 +210,7 @@ namespace System.Data.Metadata.Edm
         [CLSCompliant(false)]
         public virtual void RegisterItemCollection(ItemCollection collection)
         {
-            Contract.Requires(collection != null);
+            //Contract.Requires(collection != null);
 
             ItemCollection existing;
 
@@ -390,7 +390,7 @@ namespace System.Data.Metadata.Edm
         /// <exception cref="System.ArgumentNullException">thrown if assembly argument is null</exception>
         public virtual void LoadFromAssembly(Assembly assembly, Action<string> logLoadMessage)
         {
-            Contract.Requires(assembly != null);
+            //Contract.Requires(assembly != null);
             var collection = (ObjectItemCollection)GetItemCollection(DataSpace.OSpace);
             ExplicitLoadFromAssembly(assembly, collection, logLoadMessage);
         }
@@ -1060,7 +1060,7 @@ namespace System.Data.Metadata.Edm
         private bool TryGetObjectSpaceType<T>(T edmSpaceType, out T objectSpaceType)
             where T : EdmType
         {
-            Contract.Requires(edmSpaceType != null);
+            //Contract.Requires(edmSpaceType != null);
 
             Debug.Assert(
                 edmSpaceType == null || edmSpaceType is StructuralType || edmSpaceType is EnumType,
@@ -1173,7 +1173,7 @@ namespace System.Data.Metadata.Edm
         private bool TryGetEdmSpaceType<T>(T objectSpaceType, out T edmSpaceType)
             where T : EdmType
         {
-            Contract.Requires(objectSpaceType != null);
+            //Contract.Requires(objectSpaceType != null);
 
             Debug.Assert(
                 objectSpaceType == null || objectSpaceType is StructuralType || objectSpaceType is EnumType,
@@ -1291,7 +1291,7 @@ namespace System.Data.Metadata.Edm
         /// <returns></returns>
         internal virtual TypeUsage GetOSpaceTypeUsage(TypeUsage edmSpaceTypeUsage)
         {
-            Contract.Requires(edmSpaceTypeUsage != null);
+            //Contract.Requires(edmSpaceTypeUsage != null);
             Debug.Assert(edmSpaceTypeUsage.EdmType != null, "The TypeUsage object does not have an EDMType.");
 
             EdmType clrType = null;
@@ -1470,8 +1470,8 @@ namespace System.Data.Metadata.Edm
         private ReadOnlyCollection<EdmMember> GetInterestingMembers(
             EntitySetBase entitySet, EntityTypeBase entityType, StorageMappingItemCollection.InterestingMembersKind interestingMembersKind)
         {
-            Contract.Requires(entitySet != null);
-            Contract.Requires(entityType != null);
+            //Contract.Requires(entitySet != null);
+            //Contract.Requires(entityType != null);
 
             Debug.Assert(entitySet.EntityContainer != null);
 

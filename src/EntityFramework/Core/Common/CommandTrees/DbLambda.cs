@@ -95,8 +95,8 @@ namespace System.Data.Common.CommandTrees
         /// </exception>
         public static DbLambda Create(TypeUsage argument1Type, Func<DbExpression, DbExpression> lambdaFunction)
         {
-            Contract.Requires(argument1Type != null);
-            Contract.Requires(lambdaFunction != null);
+            //Contract.Requires(argument1Type != null);
+            //Contract.Requires(lambdaFunction != null);
 
             var variables = CreateVariables(lambdaFunction.Method, argument1Type);
             var body = lambdaFunction(variables[0]);
@@ -118,9 +118,9 @@ namespace System.Data.Common.CommandTrees
         public static DbLambda Create(
             TypeUsage argument1Type, TypeUsage argument2Type, Func<DbExpression, DbExpression, DbExpression> lambdaFunction)
         {
-            Contract.Requires(argument1Type != null);
-            Contract.Requires(argument2Type != null);
-            Contract.Requires(lambdaFunction != null);
+            //Contract.Requires(argument1Type != null);
+            //Contract.Requires(argument2Type != null);
+            //Contract.Requires(lambdaFunction != null);
 
             var variables = CreateVariables(lambdaFunction.Method, argument1Type, argument2Type);
             var body = lambdaFunction(variables[0], variables[1]);
@@ -144,10 +144,10 @@ namespace System.Data.Common.CommandTrees
             TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type,
             Func<DbExpression, DbExpression, DbExpression, DbExpression> lambdaFunction)
         {
-            Contract.Requires(argument1Type != null);
-            Contract.Requires(argument2Type != null);
-            Contract.Requires(argument3Type != null);
-            Contract.Requires(lambdaFunction != null);
+            //Contract.Requires(argument1Type != null);
+            //Contract.Requires(argument2Type != null);
+            //Contract.Requires(argument3Type != null);
+            //Contract.Requires(lambdaFunction != null);
 
             var variables = CreateVariables(lambdaFunction.Method, argument1Type, argument2Type, argument3Type);
             var body = lambdaFunction(variables[0], variables[1], variables[2]);
@@ -172,11 +172,11 @@ namespace System.Data.Common.CommandTrees
             TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type,
             Func<DbExpression, DbExpression, DbExpression, DbExpression, DbExpression> lambdaFunction)
         {
-            Contract.Requires(argument1Type != null);
-            Contract.Requires(argument2Type != null);
-            Contract.Requires(argument3Type != null);
-            Contract.Requires(argument4Type != null);
-            Contract.Requires(lambdaFunction != null);
+            //Contract.Requires(argument1Type != null);
+            //Contract.Requires(argument2Type != null);
+            //Contract.Requires(argument3Type != null);
+            //Contract.Requires(argument4Type != null);
+            //Contract.Requires(lambdaFunction != null);
 
             var variables = CreateVariables(lambdaFunction.Method, argument1Type, argument2Type, argument3Type, argument4Type);
             var body = lambdaFunction(variables[0], variables[1], variables[2], variables[3]);
@@ -202,12 +202,12 @@ namespace System.Data.Common.CommandTrees
             TypeUsage argument1Type, TypeUsage argument2Type, TypeUsage argument3Type, TypeUsage argument4Type, TypeUsage argument5Type,
             Func<DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression> lambdaFunction)
         {
-            Contract.Requires(argument1Type != null);
-            Contract.Requires(argument2Type != null);
-            Contract.Requires(argument3Type != null);
-            Contract.Requires(argument4Type != null);
-            Contract.Requires(argument5Type != null);
-            Contract.Requires(lambdaFunction != null);
+            //Contract.Requires(argument1Type != null);
+            //Contract.Requires(argument2Type != null);
+            //Contract.Requires(argument3Type != null);
+            //Contract.Requires(argument4Type != null);
+            //Contract.Requires(argument5Type != null);
+            //Contract.Requires(lambdaFunction != null);
 
             var variables = CreateVariables(
                 lambdaFunction.Method, argument1Type, argument2Type, argument3Type, argument4Type, argument5Type);
@@ -237,13 +237,13 @@ namespace System.Data.Common.CommandTrees
             TypeUsage argument6Type,
             Func<DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression> lambdaFunction)
         {
-            Contract.Requires(argument1Type != null);
-            Contract.Requires(argument2Type != null);
-            Contract.Requires(argument3Type != null);
-            Contract.Requires(argument4Type != null);
-            Contract.Requires(argument5Type != null);
-            Contract.Requires(argument6Type != null);
-            Contract.Requires(lambdaFunction != null);
+            //Contract.Requires(argument1Type != null);
+            //Contract.Requires(argument2Type != null);
+            //Contract.Requires(argument3Type != null);
+            //Contract.Requires(argument4Type != null);
+            //Contract.Requires(argument5Type != null);
+            //Contract.Requires(argument6Type != null);
+            //Contract.Requires(lambdaFunction != null);
 
             var variables = CreateVariables(
                 lambdaFunction.Method, argument1Type, argument2Type, argument3Type, argument4Type, argument5Type, argument6Type);
@@ -275,14 +275,14 @@ namespace System.Data.Common.CommandTrees
             Func<DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression>
                 lambdaFunction)
         {
-            Contract.Requires(argument1Type != null);
-            Contract.Requires(argument2Type != null);
-            Contract.Requires(argument3Type != null);
-            Contract.Requires(argument4Type != null);
-            Contract.Requires(argument5Type != null);
-            Contract.Requires(argument6Type != null);
-            Contract.Requires(argument7Type != null);
-            Contract.Requires(lambdaFunction != null);
+            //Contract.Requires(argument1Type != null);
+            //Contract.Requires(argument2Type != null);
+            //Contract.Requires(argument3Type != null);
+            //Contract.Requires(argument4Type != null);
+            //Contract.Requires(argument5Type != null);
+            //Contract.Requires(argument6Type != null);
+            //Contract.Requires(argument7Type != null);
+            //Contract.Requires(lambdaFunction != null);
 
             var variables = CreateVariables(
                 lambdaFunction.Method, argument1Type, argument2Type, argument3Type, argument4Type, argument5Type, argument6Type,
@@ -317,15 +317,15 @@ namespace System.Data.Common.CommandTrees
                 <DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression,
                     DbExpression> lambdaFunction)
         {
-            Contract.Requires(argument1Type != null);
-            Contract.Requires(argument2Type != null);
-            Contract.Requires(argument3Type != null);
-            Contract.Requires(argument4Type != null);
-            Contract.Requires(argument5Type != null);
-            Contract.Requires(argument6Type != null);
-            Contract.Requires(argument7Type != null);
-            Contract.Requires(argument8Type != null);
-            Contract.Requires(lambdaFunction != null);
+            //Contract.Requires(argument1Type != null);
+            //Contract.Requires(argument2Type != null);
+            //Contract.Requires(argument3Type != null);
+            //Contract.Requires(argument4Type != null);
+            //Contract.Requires(argument5Type != null);
+            //Contract.Requires(argument6Type != null);
+            //Contract.Requires(argument7Type != null);
+            //Contract.Requires(argument8Type != null);
+            //Contract.Requires(lambdaFunction != null);
 
             var variables = CreateVariables(
                 lambdaFunction.Method, argument1Type, argument2Type, argument3Type, argument4Type, argument5Type, argument6Type,
@@ -363,16 +363,16 @@ namespace System.Data.Common.CommandTrees
                 <DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression,
                     DbExpression, DbExpression> lambdaFunction)
         {
-            Contract.Requires(argument1Type != null);
-            Contract.Requires(argument2Type != null);
-            Contract.Requires(argument3Type != null);
-            Contract.Requires(argument4Type != null);
-            Contract.Requires(argument5Type != null);
-            Contract.Requires(argument6Type != null);
-            Contract.Requires(argument7Type != null);
-            Contract.Requires(argument8Type != null);
-            Contract.Requires(argument9Type != null);
-            Contract.Requires(lambdaFunction != null);
+            //Contract.Requires(argument1Type != null);
+            //Contract.Requires(argument2Type != null);
+            //Contract.Requires(argument3Type != null);
+            //Contract.Requires(argument4Type != null);
+            //Contract.Requires(argument5Type != null);
+            //Contract.Requires(argument6Type != null);
+            //Contract.Requires(argument7Type != null);
+            //Contract.Requires(argument8Type != null);
+            //Contract.Requires(argument9Type != null);
+            //Contract.Requires(lambdaFunction != null);
 
             var variables = CreateVariables(
                 lambdaFunction.Method, argument1Type, argument2Type, argument3Type, argument4Type, argument5Type, argument6Type,
@@ -411,17 +411,17 @@ namespace System.Data.Common.CommandTrees
                 <DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression,
                     DbExpression, DbExpression, DbExpression> lambdaFunction)
         {
-            Contract.Requires(argument1Type != null);
-            Contract.Requires(argument2Type != null);
-            Contract.Requires(argument3Type != null);
-            Contract.Requires(argument4Type != null);
-            Contract.Requires(argument5Type != null);
-            Contract.Requires(argument6Type != null);
-            Contract.Requires(argument7Type != null);
-            Contract.Requires(argument8Type != null);
-            Contract.Requires(argument9Type != null);
-            Contract.Requires(argument10Type != null);
-            Contract.Requires(lambdaFunction != null);
+            //Contract.Requires(argument1Type != null);
+            //Contract.Requires(argument2Type != null);
+            //Contract.Requires(argument3Type != null);
+            //Contract.Requires(argument4Type != null);
+            //Contract.Requires(argument5Type != null);
+            //Contract.Requires(argument6Type != null);
+            //Contract.Requires(argument7Type != null);
+            //Contract.Requires(argument8Type != null);
+            //Contract.Requires(argument9Type != null);
+            //Contract.Requires(argument10Type != null);
+            //Contract.Requires(lambdaFunction != null);
 
             var variables = CreateVariables(
                 lambdaFunction.Method, argument1Type, argument2Type, argument3Type, argument4Type, argument5Type, argument6Type,
@@ -463,18 +463,18 @@ namespace System.Data.Common.CommandTrees
                 <DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression,
                     DbExpression, DbExpression, DbExpression, DbExpression> lambdaFunction)
         {
-            Contract.Requires(argument1Type != null);
-            Contract.Requires(argument2Type != null);
-            Contract.Requires(argument3Type != null);
-            Contract.Requires(argument4Type != null);
-            Contract.Requires(argument5Type != null);
-            Contract.Requires(argument6Type != null);
-            Contract.Requires(argument7Type != null);
-            Contract.Requires(argument8Type != null);
-            Contract.Requires(argument9Type != null);
-            Contract.Requires(argument10Type != null);
-            Contract.Requires(argument11Type != null);
-            Contract.Requires(lambdaFunction != null);
+            //Contract.Requires(argument1Type != null);
+            //Contract.Requires(argument2Type != null);
+            //Contract.Requires(argument3Type != null);
+            //Contract.Requires(argument4Type != null);
+            //Contract.Requires(argument5Type != null);
+            //Contract.Requires(argument6Type != null);
+            //Contract.Requires(argument7Type != null);
+            //Contract.Requires(argument8Type != null);
+            //Contract.Requires(argument9Type != null);
+            //Contract.Requires(argument10Type != null);
+            //Contract.Requires(argument11Type != null);
+            //Contract.Requires(lambdaFunction != null);
 
             var variables = CreateVariables(
                 lambdaFunction.Method, argument1Type, argument2Type, argument3Type, argument4Type, argument5Type, argument6Type,
@@ -518,19 +518,19 @@ namespace System.Data.Common.CommandTrees
                 <DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression,
                     DbExpression, DbExpression, DbExpression, DbExpression, DbExpression> lambdaFunction)
         {
-            Contract.Requires(argument1Type != null);
-            Contract.Requires(argument2Type != null);
-            Contract.Requires(argument3Type != null);
-            Contract.Requires(argument4Type != null);
-            Contract.Requires(argument5Type != null);
-            Contract.Requires(argument6Type != null);
-            Contract.Requires(argument7Type != null);
-            Contract.Requires(argument8Type != null);
-            Contract.Requires(argument9Type != null);
-            Contract.Requires(argument10Type != null);
-            Contract.Requires(argument11Type != null);
-            Contract.Requires(argument12Type != null);
-            Contract.Requires(lambdaFunction != null);
+            //Contract.Requires(argument1Type != null);
+            //Contract.Requires(argument2Type != null);
+            //Contract.Requires(argument3Type != null);
+            //Contract.Requires(argument4Type != null);
+            //Contract.Requires(argument5Type != null);
+            //Contract.Requires(argument6Type != null);
+            //Contract.Requires(argument7Type != null);
+            //Contract.Requires(argument8Type != null);
+            //Contract.Requires(argument9Type != null);
+            //Contract.Requires(argument10Type != null);
+            //Contract.Requires(argument11Type != null);
+            //Contract.Requires(argument12Type != null);
+            //Contract.Requires(lambdaFunction != null);
 
             var variables = CreateVariables(
                 lambdaFunction.Method, argument1Type, argument2Type, argument3Type, argument4Type, argument5Type, argument6Type,
@@ -575,20 +575,20 @@ namespace System.Data.Common.CommandTrees
                 <DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression,
                     DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression> lambdaFunction)
         {
-            Contract.Requires(argument1Type != null);
-            Contract.Requires(argument2Type != null);
-            Contract.Requires(argument3Type != null);
-            Contract.Requires(argument4Type != null);
-            Contract.Requires(argument5Type != null);
-            Contract.Requires(argument6Type != null);
-            Contract.Requires(argument7Type != null);
-            Contract.Requires(argument8Type != null);
-            Contract.Requires(argument9Type != null);
-            Contract.Requires(argument10Type != null);
-            Contract.Requires(argument11Type != null);
-            Contract.Requires(argument12Type != null);
-            Contract.Requires(argument13Type != null);
-            Contract.Requires(lambdaFunction != null);
+            //Contract.Requires(argument1Type != null);
+            //Contract.Requires(argument2Type != null);
+            //Contract.Requires(argument3Type != null);
+            //Contract.Requires(argument4Type != null);
+            //Contract.Requires(argument5Type != null);
+            //Contract.Requires(argument6Type != null);
+            //Contract.Requires(argument7Type != null);
+            //Contract.Requires(argument8Type != null);
+            //Contract.Requires(argument9Type != null);
+            //Contract.Requires(argument10Type != null);
+            //Contract.Requires(argument11Type != null);
+            //Contract.Requires(argument12Type != null);
+            //Contract.Requires(argument13Type != null);
+            //Contract.Requires(lambdaFunction != null);
 
             var variables = CreateVariables(
                 lambdaFunction.Method, argument1Type, argument2Type, argument3Type, argument4Type, argument5Type, argument6Type,
@@ -634,21 +634,21 @@ namespace System.Data.Common.CommandTrees
                 <DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression,
                     DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression> lambdaFunction)
         {
-            Contract.Requires(argument1Type != null);
-            Contract.Requires(argument2Type != null);
-            Contract.Requires(argument3Type != null);
-            Contract.Requires(argument4Type != null);
-            Contract.Requires(argument5Type != null);
-            Contract.Requires(argument6Type != null);
-            Contract.Requires(argument7Type != null);
-            Contract.Requires(argument8Type != null);
-            Contract.Requires(argument9Type != null);
-            Contract.Requires(argument10Type != null);
-            Contract.Requires(argument11Type != null);
-            Contract.Requires(argument12Type != null);
-            Contract.Requires(argument13Type != null);
-            Contract.Requires(argument14Type != null);
-            Contract.Requires(lambdaFunction != null);
+            //Contract.Requires(argument1Type != null);
+            //Contract.Requires(argument2Type != null);
+            //Contract.Requires(argument3Type != null);
+            //Contract.Requires(argument4Type != null);
+            //Contract.Requires(argument5Type != null);
+            //Contract.Requires(argument6Type != null);
+            //Contract.Requires(argument7Type != null);
+            //Contract.Requires(argument8Type != null);
+            //Contract.Requires(argument9Type != null);
+            //Contract.Requires(argument10Type != null);
+            //Contract.Requires(argument11Type != null);
+            //Contract.Requires(argument12Type != null);
+            //Contract.Requires(argument13Type != null);
+            //Contract.Requires(argument14Type != null);
+            //Contract.Requires(lambdaFunction != null);
 
             var variables = CreateVariables(
                 lambdaFunction.Method, argument1Type, argument2Type, argument3Type, argument4Type, argument5Type, argument6Type,
@@ -697,22 +697,22 @@ namespace System.Data.Common.CommandTrees
                     DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression>
                 lambdaFunction)
         {
-            Contract.Requires(argument1Type != null);
-            Contract.Requires(argument2Type != null);
-            Contract.Requires(argument3Type != null);
-            Contract.Requires(argument4Type != null);
-            Contract.Requires(argument5Type != null);
-            Contract.Requires(argument6Type != null);
-            Contract.Requires(argument7Type != null);
-            Contract.Requires(argument8Type != null);
-            Contract.Requires(argument9Type != null);
-            Contract.Requires(argument10Type != null);
-            Contract.Requires(argument11Type != null);
-            Contract.Requires(argument12Type != null);
-            Contract.Requires(argument13Type != null);
-            Contract.Requires(argument14Type != null);
-            Contract.Requires(argument15Type != null);
-            Contract.Requires(lambdaFunction != null);
+            //Contract.Requires(argument1Type != null);
+            //Contract.Requires(argument2Type != null);
+            //Contract.Requires(argument3Type != null);
+            //Contract.Requires(argument4Type != null);
+            //Contract.Requires(argument5Type != null);
+            //Contract.Requires(argument6Type != null);
+            //Contract.Requires(argument7Type != null);
+            //Contract.Requires(argument8Type != null);
+            //Contract.Requires(argument9Type != null);
+            //Contract.Requires(argument10Type != null);
+            //Contract.Requires(argument11Type != null);
+            //Contract.Requires(argument12Type != null);
+            //Contract.Requires(argument13Type != null);
+            //Contract.Requires(argument14Type != null);
+            //Contract.Requires(argument15Type != null);
+            //Contract.Requires(lambdaFunction != null);
 
             var variables = CreateVariables(
                 lambdaFunction.Method, argument1Type, argument2Type, argument3Type, argument4Type, argument5Type, argument6Type,
@@ -764,23 +764,23 @@ namespace System.Data.Common.CommandTrees
                     DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression, DbExpression,
                     DbExpression> lambdaFunction)
         {
-            Contract.Requires(argument1Type != null);
-            Contract.Requires(argument2Type != null);
-            Contract.Requires(argument3Type != null);
-            Contract.Requires(argument4Type != null);
-            Contract.Requires(argument5Type != null);
-            Contract.Requires(argument6Type != null);
-            Contract.Requires(argument7Type != null);
-            Contract.Requires(argument8Type != null);
-            Contract.Requires(argument9Type != null);
-            Contract.Requires(argument10Type != null);
-            Contract.Requires(argument11Type != null);
-            Contract.Requires(argument12Type != null);
-            Contract.Requires(argument13Type != null);
-            Contract.Requires(argument14Type != null);
-            Contract.Requires(argument15Type != null);
-            Contract.Requires(argument16Type != null);
-            Contract.Requires(lambdaFunction != null);
+            //Contract.Requires(argument1Type != null);
+            //Contract.Requires(argument2Type != null);
+            //Contract.Requires(argument3Type != null);
+            //Contract.Requires(argument4Type != null);
+            //Contract.Requires(argument5Type != null);
+            //Contract.Requires(argument6Type != null);
+            //Contract.Requires(argument7Type != null);
+            //Contract.Requires(argument8Type != null);
+            //Contract.Requires(argument9Type != null);
+            //Contract.Requires(argument10Type != null);
+            //Contract.Requires(argument11Type != null);
+            //Contract.Requires(argument12Type != null);
+            //Contract.Requires(argument13Type != null);
+            //Contract.Requires(argument14Type != null);
+            //Contract.Requires(argument15Type != null);
+            //Contract.Requires(argument16Type != null);
+            //Contract.Requires(lambdaFunction != null);
 
             var variables = CreateVariables(
                 lambdaFunction.Method, argument1Type, argument2Type, argument3Type, argument4Type, argument5Type, argument6Type,

@@ -131,7 +131,7 @@ namespace System.Data.Entity
         /// </remarks>
         public object Attach(object entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
 
             InternalSet.Attach(entity);
             return entity;
@@ -149,7 +149,7 @@ namespace System.Data.Entity
         /// </remarks>
         public object Add(object entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
 
             InternalSet.Add(entity);
             return entity;
@@ -169,7 +169,7 @@ namespace System.Data.Entity
         /// </remarks>
         public object Remove(object entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
 
             InternalSet.Remove(entity);
             return entity;
@@ -259,8 +259,8 @@ namespace System.Data.Entity
         /// <returns>A <see cref = "DbSqlSetQuery" /> object that will execute the query when it is enumerated.</returns>
         public DbSqlSetQuery SqlQuery(string sql, params object[] parameters)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(sql));
-            Contract.Requires(parameters != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(sql));
+            //Contract.Requires(parameters != null);
 
             return new DbSqlSetQuery(new InternalSqlSetQuery(InternalSet, sql, false, parameters));
         }
@@ -297,7 +297,7 @@ namespace System.Data.Entity
         {
             public override object Create(Type derivedEntityType)
             {
-                Contract.Requires(derivedEntityType != null);
+                //Contract.Requires(derivedEntityType != null);
 
                 throw new NotImplementedException();
             }

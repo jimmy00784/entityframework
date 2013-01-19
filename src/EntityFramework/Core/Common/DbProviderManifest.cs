@@ -200,7 +200,7 @@ namespace System.Data.Common
         /// <returns>The argument with the wildcards and the escape character escaped</returns>
         public virtual string EscapeLikeArgument(string argument)
         {
-            Contract.Requires(argument != null);
+            //Contract.Requires(argument != null);
 
             throw new ProviderIncompatibleException(Strings.ProviderShouldOverrideEscapeLikeArgument);
         }
@@ -213,14 +213,14 @@ namespace System.Data.Common
     {
         public override TypeUsage GetEdmType(TypeUsage storeType)
         {
-            Contract.Requires(storeType != null);
+            //Contract.Requires(storeType != null);
 
             throw new NotImplementedException();
         }
 
         public override TypeUsage GetStoreType(TypeUsage edmType)
         {
-            Contract.Requires(edmType != null);
+            //Contract.Requires(edmType != null);
 
             throw new NotImplementedException();
         }

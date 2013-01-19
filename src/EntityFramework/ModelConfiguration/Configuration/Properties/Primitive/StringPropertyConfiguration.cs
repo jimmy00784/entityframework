@@ -18,7 +18,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Properties.Primiti
         private StringPropertyConfiguration(StringPropertyConfiguration source)
             : base(source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             IsUnicode = source.IsUnicode;
         }

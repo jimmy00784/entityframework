@@ -38,7 +38,7 @@ namespace System.Data.Entity.Migrations.Model
             get { return _table; }
             set
             {
-                Contract.Requires(!string.IsNullOrWhiteSpace(value));
+                //Contract.Requires(!string.IsNullOrWhiteSpace(value));
 
                 _table = value;
             }

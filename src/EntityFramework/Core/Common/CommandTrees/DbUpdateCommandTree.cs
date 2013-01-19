@@ -31,8 +31,8 @@ namespace System.Data.Common.CommandTrees
             ReadOnlyModificationClauses setClauses, DbExpression returning)
             : base(metadata, dataSpace, target)
         {
-            Contract.Requires(predicate != null);
-            Contract.Requires(setClauses != null);
+            //Contract.Requires(predicate != null);
+            //Contract.Requires(setClauses != null);
             // returning is allowed to be null
 
             _predicate = predicate;

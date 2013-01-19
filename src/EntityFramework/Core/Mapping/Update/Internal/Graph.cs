@@ -30,7 +30,7 @@ namespace System.Data.Mapping.Update.Internal
         /// equivalent</param>
         internal Graph(IEqualityComparer<TVertex> comparer)
         {
-            Contract.Requires(comparer != null);
+            //Contract.Requires(comparer != null);
 
             m_comparer = comparer;
             m_successorMap = new Dictionary<TVertex, HashSet<TVertex>>(comparer);

@@ -10,7 +10,7 @@ namespace System.Data.Entity.Utilities
     {
         public static XDocument GetModel(this DbModel model)
         {
-            Contract.Requires(model != null);
+            //Contract.Requires(model != null);
 
             return DbContextExtensions.GetModel(w => EdmxWriter.WriteEdmx(model, w));
         }

@@ -30,7 +30,7 @@ namespace System.Data.Common.CommandTrees
             DbExpression returning)
             : base(metadata, dataSpace, target)
         {
-            Contract.Requires(setClauses != null);
+            //Contract.Requires(setClauses != null);
             // returning may be null
 
             _setClauses = setClauses;

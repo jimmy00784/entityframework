@@ -19,7 +19,7 @@ namespace System.Data.Common.CommandTrees
         internal DbDeleteCommandTree(MetadataWorkspace metadata, DataSpace dataSpace, DbExpressionBinding target, DbExpression predicate)
             : base(metadata, dataSpace, target)
         {
-            Contract.Requires(predicate != null);
+            //Contract.Requires(predicate != null);
 
             _predicate = predicate;
         }

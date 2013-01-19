@@ -23,7 +23,7 @@ namespace System.Data.Entity.Internal
             InternalPropertyEntry parentPropertyEntry, PropertyEntryMetadata propertyMetadata)
             : base(parentPropertyEntry.InternalEntityEntry, propertyMetadata)
         {
-            Contract.Requires(parentPropertyEntry != null);
+            //Contract.Requires(parentPropertyEntry != null);
 
             _parentPropertyEntry = parentPropertyEntry;
         }

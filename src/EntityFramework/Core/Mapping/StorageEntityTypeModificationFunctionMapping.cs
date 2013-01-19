@@ -17,7 +17,7 @@ namespace System.Data.Mapping
             StorageModificationFunctionMapping insertFunctionMapping,
             StorageModificationFunctionMapping updateFunctionMapping)
         {
-            Contract.Requires(entityType != null);
+            //Contract.Requires(entityType != null);
 
             EntityType = entityType;
             DeleteFunctionMapping = deleteFunctionMapping;

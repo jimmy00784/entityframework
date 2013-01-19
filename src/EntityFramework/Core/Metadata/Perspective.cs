@@ -22,7 +22,7 @@ namespace System.Data.Metadata.Edm
             MetadataWorkspace metadataWorkspace,
             DataSpace targetDataspace)
         {
-            Contract.Requires(metadataWorkspace != null);
+            //Contract.Requires(metadataWorkspace != null);
 
             m_metadataWorkspace = metadataWorkspace;
             m_targetDataspace = targetDataspace;
@@ -52,7 +52,7 @@ namespace System.Data.Metadata.Edm
         /// <param name="outMember">returns the member in target space, if a match is found</param>
         internal virtual bool TryGetMember(StructuralType type, String memberName, bool ignoreCase, out EdmMember outMember)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
             EntityUtil.CheckStringArgument(memberName, "memberName");
             outMember = null;
             return type.Members.TryGetValue(memberName, ignoreCase, out outMember);
@@ -60,7 +60,7 @@ namespace System.Data.Metadata.Edm
 
         internal virtual bool TryGetEnumMember(EnumType type, String memberName, bool ignoreCase, out EnumMember outMember)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
             EntityUtil.CheckStringArgument(memberName, "memberName");
             outMember = null;
             return type.Members.TryGetValue(memberName, ignoreCase, out outMember);

@@ -31,7 +31,7 @@ namespace System.Data.Entity.Infrastructure
         /// <param name = "internalQuery">The backing query.</param>
         internal DbQuery(IInternalQuery<TResult> internalQuery)
         {
-            Contract.Requires(internalQuery != null);
+            //Contract.Requires(internalQuery != null);
 
             _internalQuery = internalQuery;
         }
@@ -54,7 +54,7 @@ namespace System.Data.Entity.Infrastructure
         /// <returns>A new DbQuery<T> with the defined query path.</returns>
         public DbQuery<TResult> Include(string path)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(path));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(path));
 
             return new DbQuery<TResult>(_internalQuery.Include(path));
         }

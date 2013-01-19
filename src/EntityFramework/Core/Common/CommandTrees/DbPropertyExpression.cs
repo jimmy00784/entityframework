@@ -98,7 +98,7 @@ namespace System.Data.Common.CommandTrees
 
         public static implicit operator KeyValuePair<string, DbExpression>(DbPropertyExpression value)
         {
-            Contract.Requires(value != null);
+            //Contract.Requires(value != null);
             return value.ToKeyValuePair();
         }
     }

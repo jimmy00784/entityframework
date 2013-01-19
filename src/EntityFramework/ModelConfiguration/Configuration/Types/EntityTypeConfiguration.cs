@@ -48,7 +48,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
         private EntityTypeConfiguration(EntityTypeConfiguration source)
             : base(source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             _keyProperties.AddRange(source._keyProperties);
             source._navigationPropertyConfigurations.Each(
@@ -105,7 +105,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
 
         internal virtual void Key(IEnumerable<PropertyInfo> keyProperties)
         {
-            Contract.Requires(keyProperties != null);
+            //Contract.Requires(keyProperties != null);
 
             ClearKey();
 
@@ -120,7 +120,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
         public virtual void Key(
             PropertyInfo propertyInfo, OverridableConfigurationParts? overridableConfigurationParts = null)
         {
-            Contract.Requires(propertyInfo != null);
+            //Contract.Requires(propertyInfo != null);
 
             if (!propertyInfo.IsValidEdmScalarProperty())
             {
@@ -168,7 +168,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
             get { return _entitySetName; }
             set
             {
-                Contract.Requires(!string.IsNullOrWhiteSpace(value));
+                //Contract.Requires(!string.IsNullOrWhiteSpace(value));
 
                 _entitySetName = value;
             }
@@ -191,14 +191,14 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
 
         public void ToTable(string tableName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(tableName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(tableName));
 
             ToTable(tableName, null);
         }
 
         public void ToTable(string tableName, string schemaName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(tableName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(tableName));
 
             IsTableNameConfigured = true;
 
@@ -225,7 +225,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
 
         internal void AddMappingConfiguration(EntityMappingConfiguration mappingConfiguration, bool cloneable = true)
         {
-            Contract.Requires(mappingConfiguration != null);
+            //Contract.Requires(mappingConfiguration != null);
 
             if (_entityMappingConfigurations.Contains(mappingConfiguration))
             {
@@ -264,8 +264,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
 
         internal void AddSubTypeMappingConfiguration(Type subType, EntityMappingConfiguration mappingConfiguration)
         {
-            Contract.Requires(subType != null);
-            Contract.Requires(mappingConfiguration != null);
+            //Contract.Requires(subType != null);
+            //Contract.Requires(mappingConfiguration != null);
 
             EntityMappingConfiguration _;
             if (_entitySubTypesMappingConfigurations.TryGetValue(subType, out _))
@@ -283,7 +283,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
 
         internal NavigationPropertyConfiguration Navigation(PropertyInfo propertyInfo)
         {
-            Contract.Requires(propertyInfo != null);
+            //Contract.Requires(propertyInfo != null);
 
             NavigationPropertyConfiguration navigationPropertyConfiguration;
             if (!_navigationPropertyConfigurations.TryGetValue(propertyInfo, out navigationPropertyConfiguration))
@@ -297,8 +297,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
 
         internal virtual void Configure(EdmEntityType entityType, EdmModel model)
         {
-            Contract.Requires(entityType != null);
-            Contract.Requires(model != null);
+            //Contract.Requires(entityType != null);
+            //Contract.Requires(model != null);
 
             ConfigureKey(entityType);
             Configure(entityType.Name, entityType.Properties, entityType.Annotations);
@@ -308,8 +308,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
 
         private void ConfigureEntitySetName(EdmEntityType entityType, EdmModel model)
         {
-            Contract.Requires(entityType != null);
-            Contract.Requires(model != null);
+            //Contract.Requires(entityType != null);
+            //Contract.Requires(model != null);
 
             if ((EntitySetName == null)
                 || (entityType.BaseType != null))
@@ -328,7 +328,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
 
         private void ConfigureKey(EdmEntityType entityType)
         {
-            Contract.Requires(entityType != null);
+            //Contract.Requires(entityType != null);
 
             if (!_keyProperties.Any())
             {
@@ -377,8 +377,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
 
         private void ConfigureAssociations(EdmEntityType entityType, EdmModel model)
         {
-            Contract.Requires(entityType != null);
-            Contract.Requires(model != null);
+            //Contract.Requires(entityType != null);
+            //Contract.Requires(model != null);
 
             foreach (var configuration in _navigationPropertyConfigurations)
             {
@@ -400,8 +400,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
             DbDatabaseMapping databaseMapping,
             DbProviderManifest providerManifest)
         {
-            Contract.Requires(databaseMapping != null);
-            Contract.Requires(providerManifest != null);
+            //Contract.Requires(databaseMapping != null);
+            //Contract.Requires(providerManifest != null);
 
             var entityType
                 = (entityTypeMapping != null)
@@ -448,9 +448,9 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
             DbDatabaseMapping databaseMapping,
             DbProviderManifest providerManifest)
         {
-            Contract.Requires(entityType != null);
-            Contract.Requires(databaseMapping != null);
-            Contract.Requires(providerManifest != null);
+            //Contract.Requires(entityType != null);
+            //Contract.Requires(databaseMapping != null);
+            //Contract.Requires(providerManifest != null);
 
             var entityTypeMapping
                 = databaseMapping.GetEntityTypeMapping(entityType.GetClrType());
@@ -472,9 +472,9 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
             DbDatabaseMapping databaseMapping, EdmEntityType entityType, DbProviderManifest providerManifest,
             bool allowOverride = false)
         {
-            Contract.Requires(databaseMapping != null);
-            Contract.Requires(entityType != null);
-            Contract.Requires(providerManifest != null);
+            //Contract.Requires(databaseMapping != null);
+            //Contract.Requires(entityType != null);
+            //Contract.Requires(providerManifest != null);
 
             var entityTypeMappings = databaseMapping.GetEntityTypeMappings(entityType);
 
@@ -495,7 +495,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
 
         private void ConfigureAssociationMappings(DbDatabaseMapping databaseMapping, EdmEntityType entityType)
         {
-            Contract.Requires(databaseMapping != null);
+            //Contract.Requires(databaseMapping != null);
 
             foreach (var configuration in _navigationPropertyConfigurations)
             {
@@ -521,7 +521,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
 
         private static void ConfigureDependentKeys(DbDatabaseMapping databaseMapping)
         {
-            Contract.Requires(databaseMapping != null);
+            //Contract.Requires(databaseMapping != null);
 
             var defaultSchema = databaseMapping.Database.Schemas.Single();
 
@@ -553,7 +553,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration.Types
             IEnumerable<DbEntityTypeMapping> entityTypeMappings, IEnumerable<EdmProperty> properties,
             IList<EdmProperty> propertyPath)
         {
-            Contract.Requires(entityTypeMappings != null);
+            //Contract.Requires(entityTypeMappings != null);
 
             var entityType = entityTypeMappings.First().EntityType;
 

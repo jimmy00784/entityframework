@@ -24,8 +24,8 @@ namespace System.Data.Entity.Internal
         /// <param name = "memberMetadata">The member metadata.</param>
         protected InternalMemberEntry(InternalEntityEntry internalEntityEntry, MemberEntryMetadata memberMetadata)
         {
-            Contract.Requires(internalEntityEntry != null);
-            Contract.Requires(memberMetadata != null);
+            //Contract.Requires(internalEntityEntry != null);
+            //Contract.Requires(memberMetadata != null);
 
             _internalEntityEntry = internalEntityEntry;
             _memberMetadata = memberMetadata;

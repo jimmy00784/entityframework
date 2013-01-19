@@ -34,7 +34,7 @@ namespace System.Data.Common.Internal.Materialization
 
         public CompensatingCollection(IEnumerable<TElement> source)
         {
-            Contract.Requires(source != null);
+            //Contract.Requires(source != null);
 
             _source = source;
             _expression = Expression.Constant(source);

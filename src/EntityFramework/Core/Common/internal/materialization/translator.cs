@@ -35,9 +35,9 @@ namespace System.Data.Common.Internal.Materialization
             QueryCacheManager queryCacheManager, ColumnMap columnMap, MetadataWorkspace workspace, SpanIndex spanIndex,
             MergeOption mergeOption, bool valueLayer)
         {
-            Contract.Requires(queryCacheManager != null);
-            Contract.Requires(columnMap != null);
-            Contract.Requires(workspace != null);
+            //Contract.Requires(queryCacheManager != null);
+            //Contract.Requires(columnMap != null);
+            //Contract.Requires(workspace != null);
 
             Contract.Ensures(Contract.Result<ShaperFactory>() != null);
 
@@ -93,10 +93,10 @@ namespace System.Data.Common.Internal.Materialization
             QueryCacheManager queryCacheManager, ColumnMap columnMap, MetadataWorkspace workspace, SpanIndex spanIndex,
             MergeOption mergeOption, bool valueLayer)
         {
-            Contract.Requires(elementType != null);
-            Contract.Requires(queryCacheManager != null);
-            Contract.Requires(columnMap != null);
-            Contract.Requires(workspace != null);
+            //Contract.Requires(elementType != null);
+            //Contract.Requires(queryCacheManager != null);
+            //Contract.Requires(columnMap != null);
+            //Contract.Requires(workspace != null);
 
             Contract.Ensures(Contract.Result<ShaperFactory>() != null);
 
@@ -164,7 +164,7 @@ namespace System.Data.Common.Internal.Materialization
 
             public TranslatorVisitor(MetadataWorkspace workspace, SpanIndex spanIndex, MergeOption mergeOption, bool valueLayer)
             {
-                Contract.Requires(workspace != null);
+                //Contract.Requires(workspace != null);
 
                 _workspace = workspace;
                 _spanIndex = spanIndex;
@@ -1431,7 +1431,7 @@ namespace System.Data.Common.Internal.Materialization
             /// </summary>
             private ObjectTypeMapping LookupObjectMapping(EdmType edmType)
             {
-                Contract.Requires(null != edmType);
+                //Contract.Requires(null != edmType);
 
                 ObjectTypeMapping result;
 

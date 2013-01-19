@@ -105,7 +105,7 @@ namespace System.Data.Entity.Migrations.Infrastructure
 
         private XDocument BuildColumnNormalizedSourceModel(IEnumerable<RenameColumnOperation> renamedColumns)
         {
-            Contract.Requires(renamedColumns != null);
+            //Contract.Requires(renamedColumns != null);
 
             var columnNormalizedSourceModel = new XDocument(_source.Model); // clone
 
@@ -244,9 +244,9 @@ namespace System.Data.Entity.Migrations.Infrastructure
         private static IEnumerable<RenameColumnOperation> FindRenamedMappedColumns(
             XElement parent1, XElement parent2, string table)
         {
-            Contract.Requires(parent1 != null);
-            Contract.Requires(parent2 != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(table));
+            //Contract.Requires(parent1 != null);
+            //Contract.Requires(parent2 != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(table));
 
             return (from p1 in parent1.Elements(EdmXNames.Msl.ScalarPropertyNames)
                     from p2 in parent2.Elements(EdmXNames.Msl.ScalarPropertyNames)
@@ -274,9 +274,9 @@ namespace System.Data.Entity.Migrations.Infrastructure
         private static IEnumerable<RenameColumnOperation> FindRenamedDiscriminatorColumns(
             XElement parent1, XElement parent2, string table)
         {
-            Contract.Requires(parent1 != null);
-            Contract.Requires(parent2 != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(table));
+            //Contract.Requires(parent1 != null);
+            //Contract.Requires(parent2 != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(table));
 
             return from p1 in parent1.Elements(EdmXNames.Msl.ConditionNames)
                    from p2 in parent2.Elements(EdmXNames.Msl.ConditionNames)
@@ -365,8 +365,8 @@ namespace System.Data.Entity.Migrations.Infrastructure
 
         private bool DiffColumns(XElement column1, XElement column2)
         {
-            Contract.Requires(column1 != null);
-            Contract.Requires(column2 != null);
+            //Contract.Requires(column1 != null);
+            //Contract.Requires(column2 != null);
 
             if (_consistentProviders)
             {
@@ -453,7 +453,7 @@ namespace System.Data.Entity.Migrations.Infrastructure
 
         private IEnumerable<PrimaryKeyOperation> FindChangedPrimaryKeys(XDocument columnNormalizedSourceModel)
         {
-            Contract.Requires(columnNormalizedSourceModel != null);
+            //Contract.Requires(columnNormalizedSourceModel != null);
 
             return from et1 in columnNormalizedSourceModel.Descendants(EdmXNames.Ssdl.EntityTypeNames)
                    from et2 in _target.Model.Descendants(EdmXNames.Ssdl.EntityTypeNames)
@@ -501,8 +501,8 @@ namespace System.Data.Entity.Migrations.Infrastructure
 
         private static bool DiffAssociations(XElement a1, XElement a2)
         {
-            Contract.Requires(a1 != null);
-            Contract.Requires(a2 != null);
+            //Contract.Requires(a1 != null);
+            //Contract.Requires(a2 != null);
 
             return CanonicalDeepEquals(
                 a1.Descendants(EdmXNames.Ssdl.PrincipalNames).Single(),
@@ -529,10 +529,10 @@ namespace System.Data.Entity.Migrations.Infrastructure
             string isSystem,
             ModelMetadata modelMetadata)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
-            Contract.Requires(!string.IsNullOrWhiteSpace(tableName));
-            Contract.Requires(!string.IsNullOrWhiteSpace(schema));
-            Contract.Requires(modelMetadata != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(tableName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(schema));
+            //Contract.Requires(modelMetadata != null);
 
             var createTableOperation = new CreateTableOperation(GetQualifiedTableName(tableName, schema));
 
@@ -558,9 +558,9 @@ namespace System.Data.Entity.Migrations.Infrastructure
         private static ColumnModel BuildColumnModel(
             XElement property, string entitySetName, ModelMetadata modelMetadata)
         {
-            Contract.Requires(property != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
-            Contract.Requires(modelMetadata != null);
+            //Contract.Requires(property != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
+            //Contract.Requires(modelMetadata != null);
 
             var nameAttribute = property.NameAttribute();
             var nullableAttribute = property.NullableAttribute();
@@ -647,8 +647,8 @@ namespace System.Data.Entity.Migrations.Infrastructure
 
         private AddForeignKeyOperation BuildAddForeignKeyOperation(XDocument edmx, XElement association)
         {
-            Contract.Requires(edmx != null);
-            Contract.Requires(association != null);
+            //Contract.Requires(edmx != null);
+            //Contract.Requires(association != null);
 
             var addForeignKeyOperation = new AddForeignKeyOperation();
 
@@ -672,8 +672,8 @@ namespace System.Data.Entity.Migrations.Infrastructure
 
         private DropForeignKeyOperation BuildDropForeignKeyOperation(XDocument edmx, XElement association)
         {
-            Contract.Requires(edmx != null);
-            Contract.Requires(association != null);
+            //Contract.Requires(edmx != null);
+            //Contract.Requires(association != null);
 
             var dropForeignKeyOperation
                 = new DropForeignKeyOperation(BuildAddForeignKeyOperation(edmx, association));
@@ -686,9 +686,9 @@ namespace System.Data.Entity.Migrations.Infrastructure
         private void BuildForeignKeyOperation(
             XDocument edmx, XElement association, ForeignKeyOperation foreignKeyOperation)
         {
-            Contract.Requires(edmx != null);
-            Contract.Requires(association != null);
-            Contract.Requires(foreignKeyOperation != null);
+            //Contract.Requires(edmx != null);
+            //Contract.Requires(association != null);
+            //Contract.Requires(foreignKeyOperation != null);
 
             var principal = association.Descendants(EdmXNames.Ssdl.PrincipalNames).Single();
             var dependent = association.Descendants(EdmXNames.Ssdl.DependentNames).Single();
@@ -719,16 +719,16 @@ namespace System.Data.Entity.Migrations.Infrastructure
 
         public virtual string GetQualifiedTableName(string table, string schema)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(table));
-            Contract.Requires(!string.IsNullOrWhiteSpace(schema));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(table));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(schema));
 
             return schema + "." + table;
         }
 
         private string GetQualifiedTableName(XDocument model, string entitySetName)
         {
-            Contract.Requires(model != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
+            //Contract.Requires(model != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(entitySetName));
 
             var schemaAndTable
                 = (from es in model.Descendants(EdmXNames.Ssdl.EntitySetNames)
@@ -745,8 +745,8 @@ namespace System.Data.Entity.Migrations.Infrastructure
 
         private string GetQualifiedTableNameFromType(XDocument model, string entityTypeName)
         {
-            Contract.Requires(model != null);
-            Contract.Requires(!string.IsNullOrWhiteSpace(entityTypeName));
+            //Contract.Requires(model != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(entityTypeName));
 
             var schemaAndTable
                 = (from es in model.Descendants(EdmXNames.Ssdl.EntitySetNames)

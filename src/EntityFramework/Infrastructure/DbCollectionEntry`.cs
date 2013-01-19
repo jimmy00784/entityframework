@@ -32,7 +32,7 @@ namespace System.Data.Entity.Infrastructure
         /// <returns>The new entry.</returns>
         internal static DbCollectionEntry<TEntity, TElement> Create(InternalCollectionEntry internalCollectionEntry)
         {
-            Contract.Requires(internalCollectionEntry != null);
+            //Contract.Requires(internalCollectionEntry != null);
 
             // Note that the implementation of this Create method is different than for the other DbMemberEntry classes.
             // This is because the DbMemberEntry is defined in terms of the ICollection<TElement> while this class
@@ -47,7 +47,7 @@ namespace System.Data.Entity.Infrastructure
         /// <param name = "internalCollectionEntry">The internal entry.</param>
         internal DbCollectionEntry(InternalCollectionEntry internalCollectionEntry)
         {
-            Contract.Requires(internalCollectionEntry != null);
+            //Contract.Requires(internalCollectionEntry != null);
 
             _internalCollectionEntry = internalCollectionEntry;
         }

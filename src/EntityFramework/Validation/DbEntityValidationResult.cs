@@ -35,8 +35,8 @@ namespace System.Data.Entity.Validation
         /// </param>
         public DbEntityValidationResult(DbEntityEntry entry, IEnumerable<DbValidationError> validationErrors)
         {
-            Contract.Requires(entry != null);
-            Contract.Requires(validationErrors != null);
+            //Contract.Requires(entry != null);
+            //Contract.Requires(validationErrors != null);
 
             _entry = entry.InternalEntry;
             _validationErrors = validationErrors.ToList();
@@ -53,8 +53,8 @@ namespace System.Data.Entity.Validation
         /// </param>
         internal DbEntityValidationResult(InternalEntityEntry entry, IEnumerable<DbValidationError> validationErrors)
         {
-            Contract.Requires(entry != null);
-            Contract.Requires(validationErrors != null);
+            //Contract.Requires(entry != null);
+            //Contract.Requires(validationErrors != null);
 
             _entry = entry;
             _validationErrors = validationErrors.ToList();

@@ -88,7 +88,7 @@ namespace System.Data.Entity
         [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
         protected DbContext(DbCompiledModel model)
         {
-            Contract.Requires(model != null);
+            //Contract.Requires(model != null);
 
             InitializeLazyInternalContext(new LazyInternalConnection(GetType().DatabaseName()), model);
         }
@@ -102,7 +102,7 @@ namespace System.Data.Entity
         [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
         public DbContext(string nameOrConnectionString)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(nameOrConnectionString));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(nameOrConnectionString));
 
             InitializeLazyInternalContext(new LazyInternalConnection(nameOrConnectionString));
         }
@@ -117,8 +117,8 @@ namespace System.Data.Entity
         [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
         public DbContext(string nameOrConnectionString, DbCompiledModel model)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(nameOrConnectionString));
-            Contract.Requires(model != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(nameOrConnectionString));
+            //Contract.Requires(model != null);
 
             InitializeLazyInternalContext(new LazyInternalConnection(nameOrConnectionString), model);
         }
@@ -133,7 +133,7 @@ namespace System.Data.Entity
         [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
         public DbContext(DbConnection existingConnection, bool contextOwnsConnection)
         {
-            Contract.Requires(existingConnection != null);
+            //Contract.Requires(existingConnection != null);
 
             InitializeLazyInternalContext(new EagerInternalConnection(existingConnection, contextOwnsConnection));
         }
@@ -150,8 +150,8 @@ namespace System.Data.Entity
         [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
         public DbContext(DbConnection existingConnection, DbCompiledModel model, bool contextOwnsConnection)
         {
-            Contract.Requires(existingConnection != null);
-            Contract.Requires(model != null);
+            //Contract.Requires(existingConnection != null);
+            //Contract.Requires(model != null);
 
             InitializeLazyInternalContext(new EagerInternalConnection(existingConnection, contextOwnsConnection), model);
         }
@@ -164,7 +164,7 @@ namespace System.Data.Entity
         /// </summary>
         public DbContext(ObjectContext objectContext, bool dbContextOwnsObjectContext)
         {
-            Contract.Requires(objectContext != null);
+            //Contract.Requires(objectContext != null);
 
             DbConfigurationManager.Instance.EnsureLoadedForContext(GetType());
 
@@ -265,7 +265,7 @@ namespace System.Data.Entity
         /// </remarks>
         public DbSet Set(Type entityType)
         {
-            Contract.Requires(entityType != null);
+            //Contract.Requires(entityType != null);
 
             return (DbSet)InternalContext.Set(entityType);
         }
@@ -369,7 +369,7 @@ namespace System.Data.Entity
         /// <returns>true to proceed with validation. false otherwise.</returns>
         protected virtual bool ShouldValidateEntity(DbEntityEntry entityEntry)
         {
-            Contract.Requires(entityEntry != null);
+            //Contract.Requires(entityEntry != null);
 
             return (entityEntry.State & (EntityState.Added | EntityState.Modified)) != 0;
         }
@@ -387,7 +387,7 @@ namespace System.Data.Entity
         protected virtual DbEntityValidationResult ValidateEntity(
             DbEntityEntry entityEntry, IDictionary<object, object> items)
         {
-            Contract.Requires(entityEntry != null);
+            //Contract.Requires(entityEntry != null);
 
             return entityEntry.InternalEntry.GetValidationResult(items);
         }
@@ -419,7 +419,7 @@ namespace System.Data.Entity
         /// <returns>An entry for the entity.</returns>
         public DbEntityEntry<TEntity> Entry<TEntity>(TEntity entity) where TEntity : class
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
 
             return new DbEntityEntry<TEntity>(new InternalEntityEntry(InternalContext, entity));
         }
@@ -432,7 +432,7 @@ namespace System.Data.Entity
         /// <returns>An entry for the entity.</returns>
         public DbEntityEntry Entry(object entity)
         {
-            Contract.Requires(entity != null);
+            //Contract.Requires(entity != null);
 
             return new DbEntityEntry(new InternalEntityEntry(InternalContext, entity));
         }

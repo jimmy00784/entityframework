@@ -47,7 +47,7 @@ namespace System.Data.Entity.Infrastructure
         /// <param name = "modelaseMapping">The EDM metadata model.</param>
         internal DbCompiledModel(DbModel model)
         {
-            Contract.Requires(model != null);
+            //Contract.Requires(model != null);
 
             _workspace = new CodeFirstCachedMetadataWorkspace(model.DatabaseMapping);
             _cachedModelBuilder = model.CachedModelBuilder;
@@ -96,7 +96,7 @@ namespace System.Data.Entity.Infrastructure
         [SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
         public TContext CreateObjectContext<TContext>(DbConnection existingConnection) where TContext : ObjectContext
         {
-            Contract.Requires(existingConnection != null);
+            //Contract.Requires(existingConnection != null);
 
             var metadataWorkspace = _workspace.GetMetadataWorkspace(existingConnection);
             var entityConnection = new EntityConnection(metadataWorkspace, existingConnection);

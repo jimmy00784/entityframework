@@ -31,7 +31,7 @@ namespace System.Data.Common.EntitySql
         /// <returns><see cref="ParseResult"/> containing <see cref="DbCommandTree"/> and information describing inline function definitions if any.</returns>
         public ParseResult Parse(string query, params DbParameterReferenceExpression[] parameters)
         {
-            Contract.Requires(query != null);
+            //Contract.Requires(query != null);
             if (parameters != null)
             {
                 IEnumerable<DbParameterReferenceExpression> paramsEnum = parameters;
@@ -47,7 +47,7 @@ namespace System.Data.Common.EntitySql
         /// </summary>
         public DbLambda ParseLambda(string query, params DbVariableReferenceExpression[] variables)
         {
-            Contract.Requires(query != null);
+            //Contract.Requires(query != null);
             if (variables != null)
             {
                 IEnumerable<DbVariableReferenceExpression> varsEnum = variables;

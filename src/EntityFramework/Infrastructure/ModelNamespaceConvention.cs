@@ -23,7 +23,7 @@ namespace System.Data.Entity.Infrastructure
         /// <param name = "modelNamespace">The model namespace.</param>
         internal ModelNamespaceConvention(string modelNamespace)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(modelNamespace));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(modelNamespace));
 
             _modelNamespace = modelNamespace;
         }

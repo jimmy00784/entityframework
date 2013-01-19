@@ -31,10 +31,10 @@ namespace System.Data.Query.ResultAssembly
         public virtual DbDataReader Create(
             DbDataReader storeDataReader, ColumnMap columnMap, MetadataWorkspace workspace, IEnumerable<ColumnMap> nextResultColumnMaps)
         {
-            Contract.Requires(storeDataReader != null);
-            Contract.Requires(columnMap != null);
-            Contract.Requires(workspace != null);
-            Contract.Requires(nextResultColumnMaps != null);
+            //Contract.Requires(storeDataReader != null);
+            //Contract.Requires(columnMap != null);
+            //Contract.Requires(workspace != null);
+            //Contract.Requires(nextResultColumnMaps != null);
 
             var shaperInfo = CreateShaperInfo(storeDataReader, columnMap, workspace);
             DbDataReader result = new BridgeDataReader(
@@ -46,9 +46,9 @@ namespace System.Data.Query.ResultAssembly
         private KeyValuePair<Shaper<RecordState>, CoordinatorFactory<RecordState>> CreateShaperInfo(
             DbDataReader storeDataReader, ColumnMap columnMap, MetadataWorkspace workspace)
         {
-            Contract.Requires(storeDataReader != null);
-            Contract.Requires(columnMap != null);
-            Contract.Requires(workspace != null);
+            //Contract.Requires(storeDataReader != null);
+            //Contract.Requires(columnMap != null);
+            //Contract.Requires(workspace != null);
 
             var cacheManager = workspace.GetQueryCacheManager();
             const MergeOption NoTracking = MergeOption.NoTracking;

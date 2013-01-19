@@ -19,7 +19,7 @@ namespace System.Data.Entity.Config
 
         public CachingDependencyResolver(IDbDependencyResolver underlyingResolver)
         {
-            Contract.Requires(underlyingResolver != null);
+            //Contract.Requires(underlyingResolver != null);
 
             _underlyingResolver = underlyingResolver;
         }

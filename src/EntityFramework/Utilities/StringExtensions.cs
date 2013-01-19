@@ -17,8 +17,8 @@ namespace System.Data.Entity.Utilities
 
         public static IEnumerable<string> Break(this string s, int width = 1000)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(s));
-            Contract.Requires(width > 0);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(s));
+            //Contract.Requires(width > 0);
 
             var processed = 0;
 
@@ -37,7 +37,7 @@ namespace System.Data.Entity.Utilities
 
         public static string MigrationName(this string migrationId)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
             Contract.Assert(migrationId.IsValidMigrationId());
 
             return migrationId.Substring(16);
@@ -56,7 +56,7 @@ namespace System.Data.Entity.Utilities
 
         public static bool IsValidMigrationId(this string migrationId)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
 
             return _migrationIdPattern.IsMatch(migrationId)
                    || migrationId == DbMigrator.InitialDatabase;
@@ -64,14 +64,14 @@ namespace System.Data.Entity.Utilities
 
         public static bool IsAutomaticMigration(this string migrationId)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
 
             return migrationId.EndsWith(Strings.AutomaticMigration, StringComparison.Ordinal);
         }
 
         public static string ToAutomaticMigrationId(this string migrationId)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(migrationId));
 
             var timeStampInt = Convert.ToInt64(migrationId.Substring(0, 15), CultureInfo.InvariantCulture) - 1;
 

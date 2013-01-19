@@ -38,7 +38,7 @@ namespace System.Data.Mapping
         /// <param name="item"></param>
         internal virtual Map GetMap(GlobalItem item)
         {
-            Contract.Requires(item != null);
+            //Contract.Requires(item != null);
 
             //will only be implemented by Mapping Item Collections
             throw Error.NotSupported();
@@ -65,7 +65,7 @@ namespace System.Data.Mapping
         /// <exception cref="ArgumentException"> Thrown if mapping space is not valid</exception>
         internal virtual Map GetMap(string identity, DataSpace typeSpace, bool ignoreCase)
         {
-            Contract.Requires(identity != null);
+            //Contract.Requires(identity != null);
 
             //will only be implemented by Mapping Item Collections
             throw Error.NotSupported();
@@ -93,7 +93,7 @@ namespace System.Data.Mapping
         /// <exception cref="ArgumentException"> Thrown if mapping space is not valid</exception>
         internal virtual Map GetMap(string identity, DataSpace typeSpace)
         {
-            Contract.Requires(identity != null);
+            //Contract.Requires(identity != null);
 
             //will only be implemented by Mapping Item Collections
             throw Error.NotSupported();

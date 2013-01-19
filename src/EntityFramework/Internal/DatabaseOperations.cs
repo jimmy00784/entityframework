@@ -24,7 +24,7 @@ namespace System.Data.Entity.Internal
         /// </summary>
         public virtual bool Create(ObjectContext objectContext)
         {
-            Contract.Requires(objectContext != null);
+            //Contract.Requires(objectContext != null);
 
             objectContext.CreateDatabase();
             return true;
@@ -38,7 +38,7 @@ namespace System.Data.Entity.Internal
         [SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes")]
         public virtual bool Exists(ObjectContext objectContext)
         {
-            Contract.Requires(objectContext != null);
+            //Contract.Requires(objectContext != null);
 
             try
             {
@@ -84,7 +84,7 @@ namespace System.Data.Entity.Internal
         /// </summary>
         public virtual bool DeleteIfExists(ObjectContext objectContext)
         {
-            Contract.Requires(objectContext != null);
+            //Contract.Requires(objectContext != null);
 
             if (Exists(objectContext))
             {

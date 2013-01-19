@@ -31,7 +31,7 @@ namespace System.Data.Entity
     {
         public void InitializeDatabase(TContext context)
         {
-            Contract.Requires(context != null);
+            //Contract.Requires(context != null);
 
             throw new NotImplementedException();
         }

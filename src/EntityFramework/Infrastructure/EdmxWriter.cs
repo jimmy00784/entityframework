@@ -29,8 +29,8 @@ namespace System.Data.Entity.Infrastructure
         /// <param name = "writer">The writer.</param>
         public static void WriteEdmx(DbContext context, XmlWriter writer)
         {
-            Contract.Requires(context != null);
-            Contract.Requires(writer != null);
+            //Contract.Requires(context != null);
+            //Contract.Requires(writer != null);
 
             var internalContext = context.InternalContext;
             if (internalContext is EagerInternalContext)
@@ -60,8 +60,8 @@ namespace System.Data.Entity.Infrastructure
         /// <param name = "writer">The writer.</param>
         public static void WriteEdmx(DbModel model, XmlWriter writer)
         {
-            Contract.Requires(model != null);
-            Contract.Requires(writer != null);
+            //Contract.Requires(model != null);
+            //Contract.Requires(writer != null);
 
             new EdmxSerializer().Serialize(
                 model.DatabaseMapping, model.DatabaseMapping.Database.GetProviderInfo(), writer);

@@ -66,8 +66,8 @@ namespace System.Data.Entity.Migrations
         /// <param name = "migrationSqlGenerator">The SQL generator to be used.</param>
         public void SetSqlGenerator(string providerInvariantName, MigrationSqlGenerator migrationSqlGenerator)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(providerInvariantName));
-            Contract.Requires(migrationSqlGenerator != null);
+            //Contract.Requires(!string.IsNullOrWhiteSpace(providerInvariantName));
+            //Contract.Requires(migrationSqlGenerator != null);
 
             _sqlGenerators[providerInvariantName] = migrationSqlGenerator;
         }
@@ -79,7 +79,7 @@ namespace System.Data.Entity.Migrations
         /// <returns>The SQL generator that is set for the database provider.</returns>
         public MigrationSqlGenerator GetSqlGenerator(string providerInvariantName)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(providerInvariantName));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(providerInvariantName));
 
             MigrationSqlGenerator migrationSqlGenerator;
             if (!_sqlGenerators.TryGetValue(providerInvariantName, out migrationSqlGenerator))
@@ -102,8 +102,8 @@ namespace System.Data.Entity.Migrations
             get { return _contextType; }
             set
             {
-                Contract.Requires(value != null);
-                Contract.Requires(typeof(DbContext).IsAssignableFrom(value));
+                //Contract.Requires(value != null);
+                //Contract.Requires(typeof(DbContext).IsAssignableFrom(value));
 
                 _contextType = value;
 
@@ -124,7 +124,7 @@ namespace System.Data.Entity.Migrations
             get { return _migrationsDirectory; }
             set
             {
-                Contract.Requires(!string.IsNullOrWhiteSpace(value));
+                //Contract.Requires(!string.IsNullOrWhiteSpace(value));
 
                 _migrationsDirectory = value;
             }
@@ -138,7 +138,7 @@ namespace System.Data.Entity.Migrations
             get { return _codeGenerator; }
             set
             {
-                Contract.Requires(value != null);
+                //Contract.Requires(value != null);
 
                 _codeGenerator = value;
             }
@@ -152,7 +152,7 @@ namespace System.Data.Entity.Migrations
             get { return _migrationsAssembly; }
             set
             {
-                Contract.Requires(value != null);
+                //Contract.Requires(value != null);
 
                 _migrationsAssembly = value;
             }
@@ -166,7 +166,7 @@ namespace System.Data.Entity.Migrations
             get { return _connectionInfo; }
             set
             {
-                Contract.Requires(value != null);
+                //Contract.Requires(value != null);
 
                 _connectionInfo = value;
             }
@@ -181,7 +181,7 @@ namespace System.Data.Entity.Migrations
 
         internal virtual void OnSeed(DbContext context)
         {
-            Contract.Requires(context != null);
+            //Contract.Requires(context != null);
         }
 
         internal EdmModelDiffer ModelDiffer
@@ -189,7 +189,7 @@ namespace System.Data.Entity.Migrations
             get { return _modelDiffer; }
             set
             {
-                Contract.Requires(value != null);
+                //Contract.Requires(value != null);
 
                 _modelDiffer = value;
             }

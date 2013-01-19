@@ -19,8 +19,8 @@ namespace System.Data.Entity.Edm.Serialization
         public virtual bool Serialize(
             DbDatabaseMetadata dbDatabase, string provider, string providerManifestToken, XmlWriter xmlWriter)
         {
-            Contract.Requires(dbDatabase != null);
-            Contract.Requires(xmlWriter != null);
+            //Contract.Requires(dbDatabase != null);
+            //Contract.Requires(xmlWriter != null);
 
             // validate the model first
             // TODO: Add the validation code once the DbSchema Validator is done.

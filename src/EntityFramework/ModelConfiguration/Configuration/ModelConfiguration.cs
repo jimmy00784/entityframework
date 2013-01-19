@@ -73,7 +73,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         internal virtual void Add(EntityTypeConfiguration entityTypeConfiguration)
         {
-            Contract.Requires(entityTypeConfiguration != null);
+            //Contract.Requires(entityTypeConfiguration != null);
 
             EntityTypeConfiguration existingConfiguration;
 
@@ -100,7 +100,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         internal virtual void Add(ComplexTypeConfiguration complexTypeConfiguration)
         {
-            Contract.Requires(complexTypeConfiguration != null);
+            //Contract.Requires(complexTypeConfiguration != null);
 
             if ((_entityConfigurations.ContainsKey(complexTypeConfiguration.ClrType)
                  || _complexTypeConfigurations.ContainsKey(complexTypeConfiguration.ClrType)))
@@ -113,7 +113,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         internal virtual EntityTypeConfiguration Entity(Type entityType, bool explicitEntity = false)
         {
-            Contract.Requires(entityType != null);
+            //Contract.Requires(entityType != null);
 
             if (_complexTypeConfigurations.ContainsKey(entityType))
             {
@@ -137,7 +137,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         [SuppressMessage("Microsoft.Naming", "CA1719:ParameterNamesShouldNotMatchMemberNames", MessageId = "0#")]
         public virtual ComplexTypeConfiguration ComplexType(Type complexType)
         {
-            Contract.Requires(complexType != null);
+            //Contract.Requires(complexType != null);
 
             if (_entityConfigurations.ContainsKey(complexType))
             {
@@ -156,14 +156,14 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         public virtual void Ignore(Type type)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             _ignoredTypes.Add(type);
         }
 
         internal virtual StructuralTypeConfiguration GetStructuralTypeConfiguration(Type type)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             EntityTypeConfiguration entityTypeConfiguration;
             if (_entityConfigurations.TryGetValue(type, out entityTypeConfiguration))
@@ -182,21 +182,21 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         internal virtual bool IsComplexType(Type type)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             return _complexTypeConfigurations.ContainsKey(type);
         }
 
         internal virtual bool IsIgnoredType(Type type)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             return _ignoredTypes.Contains(type);
         }
 
         internal virtual IEnumerable<PropertyInfo> GetConfiguredProperties(Type type)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             var structuralTypeConfiguration = GetStructuralTypeConfiguration(type);
 
@@ -207,8 +207,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         internal virtual bool IsIgnoredProperty(Type type, PropertyInfo propertyInfo)
         {
-            Contract.Requires(type != null);
-            Contract.Requires(propertyInfo != null);
+            //Contract.Requires(type != null);
+            //Contract.Requires(propertyInfo != null);
 
             var structuralTypeConfiguration = GetStructuralTypeConfiguration(type);
 
@@ -219,7 +219,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         internal void Configure(EdmModel model)
         {
-            Contract.Requires(model != null);
+            //Contract.Requires(model != null);
 
             ConfigureEntities(model);
             ConfigureComplexTypes(model);
@@ -227,7 +227,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         internal void ConfigureEntities(EdmModel model)
         {
-            Contract.Requires(model != null);
+            //Contract.Requires(model != null);
 
             foreach (var entityTypeConfiguration in ActiveEntityConfigurations)
             {
@@ -242,7 +242,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         private void ConfigureComplexTypes(EdmModel model)
         {
-            Contract.Requires(model != null);
+            //Contract.Requires(model != null);
 
             foreach (var complexTypeConfiguration in ActiveComplexTypeConfigurations)
             {
@@ -256,8 +256,8 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         internal void Configure(DbDatabaseMapping databaseMapping, DbProviderManifest providerManifest)
         {
-            Contract.Requires(databaseMapping != null);
-            Contract.Requires(providerManifest != null);
+            //Contract.Requires(databaseMapping != null);
+            //Contract.Requires(providerManifest != null);
 
             foreach (var structuralTypeConfiguration
                 in databaseMapping.Model.GetComplexTypes()
@@ -279,7 +279,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         private void ConfigureDefaultSchema(DbDatabaseMapping databaseMapping)
         {
-            Contract.Requires(databaseMapping != null);
+            //Contract.Requires(databaseMapping != null);
 
             if (!string.IsNullOrWhiteSpace(DefaultSchema))
             {
@@ -348,7 +348,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         private static void ConfigureTables(DbDatabaseMetadata database)
         {
-            Contract.Requires(database != null);
+            //Contract.Requires(database != null);
             Contract.Assert(database.Schemas.Count() == 1);
 
             var defaultSchema = database.Schemas.Single();
@@ -362,9 +362,9 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
         private static void ConfigureTable(
             DbDatabaseMetadata database, DbSchemaMetadata containingSchema, DbTableMetadata table)
         {
-            Contract.Requires(database != null);
-            Contract.Requires(containingSchema != null);
-            Contract.Requires(table != null);
+            //Contract.Requires(database != null);
+            //Contract.Requires(containingSchema != null);
+            //Contract.Requires(table != null);
 
             var tableName = table.GetTableName();
 
@@ -495,7 +495,7 @@ namespace System.Data.Entity.ModelConfiguration.Configuration
 
         private static void RemoveRedundantColumnConditions(DbDatabaseMapping databaseMapping)
         {
-            Contract.Requires(databaseMapping != null);
+            //Contract.Requires(databaseMapping != null);
 
             // Remove all the default discriminators where there is only one table using it
             (from esm in databaseMapping.GetEntitySetMappings()

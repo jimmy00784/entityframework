@@ -13,8 +13,8 @@ namespace System.Data.Mapping
         internal StorageModificationFunctionParameterBinding(
             FunctionParameter parameter, StorageModificationFunctionMemberPath memberPath, bool isCurrent)
         {
-            Contract.Requires(parameter != null);
-            Contract.Requires(memberPath != null);
+            //Contract.Requires(parameter != null);
+            //Contract.Requires(memberPath != null);
 
             Parameter = parameter;
             MemberPath = memberPath;

@@ -36,7 +36,7 @@ namespace System.Data.Entity.Internal
         [SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public LazyInternalConnection(string nameOrConnectionString)
         {
-            Contract.Requires(!string.IsNullOrWhiteSpace(nameOrConnectionString));
+            //Contract.Requires(!string.IsNullOrWhiteSpace(nameOrConnectionString));
 
             _nameOrConnectionString = nameOrConnectionString;
             AppConfig = AppConfig.DefaultInstance;
@@ -50,7 +50,7 @@ namespace System.Data.Entity.Internal
         [SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public LazyInternalConnection(DbConnectionInfo connectionInfo)
         {
-            Contract.Requires(connectionInfo != null);
+            //Contract.Requires(connectionInfo != null);
 
             _connectionInfo = connectionInfo;
             AppConfig = AppConfig.DefaultInstance;
@@ -302,7 +302,7 @@ namespace System.Data.Entity.Internal
         /// <returns>True if a connection from the app.config file was found and used.</returns>
         private bool TryInitializeFromAppConfig(string name, AppConfig config)
         {
-            Contract.Requires(config != null);
+            //Contract.Requires(config != null);
 
             var appConfigConnection = FindConnectionInConfig(name, config);
             if (appConfigConnection != null)

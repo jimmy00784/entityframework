@@ -17,9 +17,9 @@ namespace System.Data.Mapping
             LineInfo lineInfo)
             : base(columnsRenameList, lineInfo)
         {
-            Contract.Requires(isOfTypeEntityTypes != null);
-            Contract.Requires(entityTypes != null);
-            Contract.Requires(conditions != null);
+            //Contract.Requires(isOfTypeEntityTypes != null);
+            //Contract.Requires(entityTypes != null);
+            //Contract.Requires(conditions != null);
 
             IsOfTypeEntityTypes = new ReadOnlyCollection<EntityType>(isOfTypeEntityTypes.ToList());
             EntityTypes = new ReadOnlyCollection<EntityType>(entityTypes.ToList());
