@@ -1039,8 +1039,8 @@ namespace System.Data.Entity.SqlServer.SqlGen
 
         private void AppendSpatialConstant(SqlBuilder result, IDbSpatialValue spatialValue)
         {
-            Contract.Requires(result != null);
-            Contract.Requires(spatialValue != null);
+            //Contract.Requires(result != null);
+            //Contract.Requires(spatialValue != null);
 
             // Spatial constants are represented by calls to a static constructor function. The attempt is made to extract an
             // appropriate representation from the value (which may not implement the required methods). If an SRID value and

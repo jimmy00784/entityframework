@@ -31,8 +31,8 @@ namespace System.Data.Entity.SqlServer
 
         public SqlSpatialServices(SqlTypesAssemblyLoader sqlTypesAssemblyLoader, Func<SqlTypesAssemblyLoader, SqlTypesAssembly> getSqlTypes)
         {
-            Contract.Requires(getSqlTypes != null);
-            Contract.Requires(sqlTypesAssemblyLoader != null);
+            //Contract.Requires(getSqlTypes != null);
+            //Contract.Requires(sqlTypesAssemblyLoader != null);
 
             _sqlTypesAssemblyLoader = sqlTypesAssemblyLoader;
             _sqlTypesAssemblySingleton = new Lazy<SqlTypesAssembly>(() => getSqlTypes(sqlTypesAssemblyLoader), isThreadSafe: true);

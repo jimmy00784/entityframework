@@ -75,8 +75,8 @@ namespace System.Data.Entity.SqlServer
         [SuppressMessage("Microsoft.Security", "CA2100:Review SQL queries for security vulnerabilities")]
         private static DbCommand CreateCommand(DbProviderManifest providerManifest, DbCommandTree commandTree)
         {
-            Contract.Requires(providerManifest != null);
-            Contract.Requires(commandTree != null);
+            //Contract.Requires(providerManifest != null);
+            //Contract.Requires(commandTree != null);
 
             var sqlManifest = (providerManifest as SqlProviderManifest);
             if (sqlManifest == null)
@@ -886,7 +886,7 @@ namespace System.Data.Entity.SqlServer
         /// <returns></returns>
         private static string GetMdfFileName(string attachDBFile)
         {
-            Contract.Requires(!string.IsNullOrEmpty(attachDBFile));
+            //Contract.Requires(!string.IsNullOrEmpty(attachDBFile));
 
             return ExpandDataDirectory(attachDBFile);
         }

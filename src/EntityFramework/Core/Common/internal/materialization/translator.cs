@@ -39,9 +39,9 @@ namespace System.Data.Common.Internal.Materialization
             //Contract.Requires(columnMap != null);
             //Contract.Requires(workspace != null);
 
-            Contract.Ensures(Contract.Result<ShaperFactory>() != null);
+            //Contract.Ensures(Contract.Result<ShaperFactory>() != null);
 
-            Contract.Assert(columnMap is CollectionColumnMap, "root column map must be a collection for a query");
+            //Contract.Assert(columnMap is CollectionColumnMap, "root column map must be a collection for a query");
 
             // If the query cache already contains a plan, then we're done
             ShaperFactory<T> result;

@@ -241,7 +241,7 @@ namespace System.Data.Common
 
         public DbSpatialServices GetSpatialServices(string manifestToken)
         {
-            Contract.Ensures(Contract.Result<DbSpatialServices>() != null);
+            //Contract.Ensures(Contract.Result<DbSpatialServices>() != null);
 
             // First check if spatial services can be resolved and only if this fails
             // go on to ask the provider for spatial services.

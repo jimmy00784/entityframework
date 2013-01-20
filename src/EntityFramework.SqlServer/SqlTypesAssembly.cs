@@ -338,7 +338,7 @@ namespace System.Data.Entity.SqlServer
 
         internal object ConvertToSqlTypesGeography(DbGeography geographyValue)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
             var result = GetSqlTypesSpatialValue(geographyValue.AsSpatialValue(), SqlGeographyType);
             return result;
         }
@@ -357,7 +357,7 @@ namespace System.Data.Entity.SqlServer
 
         internal object ConvertToSqlTypesGeometry(DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
 
             var result = GetSqlTypesSpatialValue(geometryValue.AsSpatialValue(), SqlGeometryType);
             return result;

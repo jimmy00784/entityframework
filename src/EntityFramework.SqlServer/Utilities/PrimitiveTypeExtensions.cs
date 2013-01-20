@@ -8,7 +8,7 @@ namespace System.Data.Entity.SqlServer.Utilities
     {
         internal static bool IsSpatialType(this PrimitiveType type)
         {
-            Contract.Requires(type != null);
+            //Contract.Requires(type != null);
 
             var kind = type.PrimitiveTypeKind;
 

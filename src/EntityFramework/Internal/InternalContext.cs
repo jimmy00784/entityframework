@@ -725,7 +725,7 @@ namespace System.Data.Entity.Internal
         {
             //Contract.Requires(sql != null);
             //Contract.Requires(parameters != null);
-            Contract.Ensures(Contract.Result<IEnumerator<TElement>>() != null);
+            //Contract.Ensures(Contract.Result<IEnumerator<TElement>>() != null);
 
             return new LazyEnumerator<TElement>(() =>
             {

@@ -68,7 +68,8 @@ namespace System.Data.Entity.Internal.Validation
 
             try
             {
-                validationResult = _validationAttribute.GetValidationResult(objectToValidate, validationContext);
+                //validationResult = _validationAttribute.GetValidationResult(objectToValidate, validationContext);
+				validationResult = ValidationResult.Success;
             }
             catch (Exception ex)
             {

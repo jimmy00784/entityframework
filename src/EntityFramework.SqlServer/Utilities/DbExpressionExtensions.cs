@@ -21,7 +21,7 @@ namespace System.Data.Entity.SqlServer.Utilities
             DbExpressionKind kind,
             Func<DbExpression, IEnumerable<DbExpression>> getChildNodes)
         {
-            Contract.Requires(getChildNodes != null);
+            //Contract.Requires(getChildNodes != null);
 
             var nodes = new Stack<DbExpression>();
             nodes.Push(root);

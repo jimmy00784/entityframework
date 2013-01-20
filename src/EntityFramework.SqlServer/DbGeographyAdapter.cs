@@ -13,7 +13,7 @@ namespace System.Data.Entity.SqlServer
 
         internal DbGeographyAdapter(DbGeography value)
         {
-            Contract.Requires(value != null);
+            //Contract.Requires(value != null);
 
             _value = value;
         }

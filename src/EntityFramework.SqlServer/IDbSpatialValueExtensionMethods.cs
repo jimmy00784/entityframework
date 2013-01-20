@@ -14,7 +14,7 @@ namespace System.Data.Entity.SqlServer
         /// <returns>An instance of <see cref="IDbSpatialValue"/> that wraps the specified geography value</returns>
         internal static IDbSpatialValue AsSpatialValue(this DbGeography geographyValue)
         {
-            Contract.Requires(geographyValue != null);
+            //Contract.Requires(geographyValue != null);
 
             return new DbGeographyAdapter(geographyValue);
         }
@@ -27,7 +27,7 @@ namespace System.Data.Entity.SqlServer
         /// <returns>An instance of <see cref="IDbSpatialValue"/> that wraps the specified geometry value</returns>
         internal static IDbSpatialValue AsSpatialValue(this DbGeometry geometryValue)
         {
-            Contract.Requires(geometryValue != null);
+            //Contract.Requires(geometryValue != null);
 
             return new DbGeometryAdapter(geometryValue);
         }

@@ -9,7 +9,7 @@ namespace System.Data.Entity.SqlServer.Utilities
     {
         internal static bool IsCSpace(this EdmFunction function)
         {
-            Contract.Requires(function != null);
+            //Contract.Requires(function != null);
 
             var property = function.MetadataProperties.FirstOrDefault(p => p.Name == "DataSpace");
             return property != null && (DataSpace)property.Value == DataSpace.CSpace;
@@ -17,7 +17,7 @@ namespace System.Data.Entity.SqlServer.Utilities
 
         internal static bool IsCanonicalFunction(this EdmFunction function)
         {
-            Contract.Requires(function != null);
+            //Contract.Requires(function != null);
 
             return (IsCSpace(function) && function.NamespaceName == "Edm");
         }
