@@ -68,7 +68,14 @@ namespace System.Data.Common.Utils
 
             // note: you need to release the global cache lock before (potentially) acquiring
             // a result lock in result.GetValue()
-            return result.GetValue();
+            try
+			{
+				return result.GetValue();
+			}
+			catch
+			{
+				return default(TResult);
+			}
         }
 
         internal bool TryGetValue(TArg arg, out TResult value)
